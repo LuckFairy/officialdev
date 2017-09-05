@@ -1,0 +1,57 @@
+extends ./layout
+
+block title
+	- var name = "合利宝支付服务-服务协议"
+	title #{name}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/about.css")
+
+block content
+	.container.serve
+		include ./header
+		.section.page
+			//- 下载列表
+			.page-container.page3(data-id="page3")
+				.banner.banner1
+					.banner1-bg
+						img(src="dist/images/banner@12x.png")
+					.banner-txt
+						h2 服务协议
+						//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+				.section-introduce
+					.section-container
+						.container-bulletin.download-container
+							//- 服务协议
+							.bulletin-box
+								a.download(href="#bulletin",data-id="bulletin",class="current")
+									h2 服务协议下载
+								.bulletin-content
+									.download-main#download
+										.bulletin-main-box.news-lists#down-box
+											//- ul.bulletin-main
+										ul.pagination#down-pagination
+
+		+rightContact
+		include ./footer.jade
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+block append script
+	script(type="text/javascript" src="dist/js/jquery.pagination.js")
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript" src="dist/js/pact.js")
+

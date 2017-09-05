@@ -1,0 +1,47 @@
+header.header#header
+	//- 顶部菜单
+	.top-menu-container
+		.top-menu
+			.logo
+				a.home-link(href="http://www.mesonft.com/")
+					img(src="dist/images/logo_honglei@12x.png")
+					span 民盛金科成员企业
+			mixin topMenu
+				ul.top-menu-tab
+					each val, key in {"serve-line":"客服热线：400-096-6263","personal":"个人账号","merchant":"商家账号"}
+						if(key == "personal")
+							li
+								a(href="https://ewallet.helipay.com/",class= key,target="_blank")
+									span
+									span= val
+									span
+						else
+							li
+								a(href="#",class= key)
+									span
+									span= val
+									span
+								if(key == 'merchant')
+									ul.dropdown
+										li
+											a(href="http://customer.helipay.com/customer",target="_blank")
+												span 线上商户管理平台
+										li
+											a(href="https://merchant.helipay.com/",target="_blank")
+												span 收单代理人控制台
+
+			//- 顶部菜单-右侧
+			+topMenu
+	.nav-container#main-nav
+		.main-nav-container
+			mixin navigation
+				nav.nav#navigation
+					.logo
+						a(href="index.html")
+							img(src="dist/images/logo_helibao@12x.png")
+					ul.nav-menu#nav-menu
+						each val in [{"title":"关于公司","links":"about.html","dataId":"about"},{"title":"产品中心","links":"product.html","dataId":"product"},{"title":"解决方案","links":"solve.html","dataId":"solve"},{"title":"行业服务","links":"business.html","dataId":"business"},{"title":"合利宝APP","links":"wallet.html","dataId":"wallet"},{"title":"服务中心","links":"serve.html","dataId":"serve"}]
+							li.detail-menu-list
+								a(href="#{val.links}",data-id="#{val.dataId}")= val.title
+			//- 主导航条
+			+navigation

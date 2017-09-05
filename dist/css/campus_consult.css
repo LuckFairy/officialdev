@@ -1,0 +1,153 @@
+			@media screen and (max-width: 1281px) {
+				.wrapper {
+					/*width: 75%;*/
+					padding:0 12.5%;
+				}
+			}
+			
+			@media screen and (max-width: 1367px) {
+				.wrapper {
+					/*width: 70.278184%;*/
+					padding:0 14.860908%;
+				}
+			}
+			
+			@media screen and (max-width: 1441px) {
+				.wrapper {
+					/*width: 66.666667%;*/
+					padding:0 16.666665%;
+				}
+			}
+			body, button, html, input, select, textarea{
+				font:12px/1 "微软雅黑",sans-serif;
+			}
+			.section{
+				min-width: 980px;
+			}
+			.top-cont {
+				height: 432px;
+				position: relative;
+				background: #F8F8F9;
+				/*padding: 0 18.75%;*/
+			}
+			.guideBox{
+				position: absolute;
+				top:-57px;
+				left:18.75%;
+				width: 62.5%;
+				background:url(../images/school/box.png) no-repeat 100% 100%;
+				background-size: 100% 100%;
+			}
+			.guideBox .left{
+				float: left;
+				width: 78.166%;
+				color:#929292;
+				font-size: 12px;
+			}
+			.guideBox .left h1{
+				color: #424242;
+				font-size: 18px;
+				font-weight: normal;
+			}
+			.ul-first{
+				margin-top: 100px;
+				padding:0 14%;
+				overflow: hidden;
+			}
+			.ul-first li{
+				float:left;
+				width: 25%;
+				text-align: center;
+			}
+			.ul-first li p{
+				margin-top: 12px;
+				line-height: 18px;
+			}
+			.dot{
+				width:38.16%;
+				height: 0px;
+				border-top:1px dashed #e5e9f2;
+				margin: 0 auto;
+				margin-top: 40px;
+			}
+			.ul-two {
+				margin-top:32px ;
+				padding:0 14%;
+				overflow: hidden;
+			}
+			.ul-two li{
+				float: left;
+				width: 28%;
+				text-align: center;
+			}
+			.ul-two li>img{
+				margin-top: 15px;
+			}
+			.ul-two li div img{
+				width: 34px;
+				height: 34px;
+			}
+			.ul-two li div h1{
+				font-size: 14px;
+				margin-top: 20px;
+			}
+			.ul-two li div p{
+				line-height: 18px;
+				margin-top:12px;
+				margin-bottom: 32px;
+				font-size: 12px;
+			}
+			.guideBox .right{
+				float: right;
+				width: 18.83%;
+				margin-right: 3%;
+				color: #fff;
+				text-align: right;
+			}
+			.guideBox .right h1{
+				margin-top: 128px;
+				font-size: 28px;
+				font-weight: normal;
+				clear: both;
+			}
+			.line{
+				width:28px;
+				height: 4px;
+				background:#fff;
+				margin:18px 0;
+				float:right;
+			}
+			.guideBox .right p{
+				clear: both;
+				line-height: 24px;
+				font-size: 20px;
+			}
+			
+			.bottom-cont{
+				width: 62.5%;
+				margin:0 auto;
+				background: #fff;
+				color:#424242;
+				overflow: hidden;
+				text-align: center;
+			}
+			.bottom-cont h1{
+				margin-top:50px;
+				
+			}
+			.bottom-cont>div{
+				margin-top: 40px;
+			}
+			.bottom-cont dl{
+				float: left;
+				width:50%;
+			}
+			.bottom-cont dl dt{
+				font-size: 16px;
+			}
+			.bottom-cont dl dd{
+				color:#4e92df;
+				margin-top: 10px;
+				margin-bottom: 52px;
+				font-size: 28px;
+			}

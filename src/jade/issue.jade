@@ -1,0 +1,98 @@
+extends ./layout
+
+block title
+	- var title = "常见问题"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/serve.css")
+
+block content
+	.container.serve
+		include ./header
+		.section.page
+			mixin qaqSection
+				.banner.banner1
+					.banner1-bg
+						img(src="dist/images/banner@12x.png")
+					.banner-txt
+						h2 常见问题
+						//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+				.search-container
+					.search-wrapper
+						.title
+							h2 搜索常见问题
+						.input-box
+							input(type="text",name="qaq",value="",placeholder="输入问题关键字")
+							button#search-btn.search-btn
+								img(src="dist/images/icon_questions_search@12x.png")
+				.questions-container
+					.questions-wrapper
+						.title#title
+							ul.title-list
+								- var list = [{"title":"全部问题","dataid":"khqa",'index':'5','anthor':'?&flag=5'},{"title":"开户问题","dataid":"khqa",'index':'0','anthor':'?&flag=0'},{"title":"账号问题","dataid":"zhqa",'index':'1','anthor':'?&flag=1'},{"title":"交易问题","dataid":"jyqa",'index':'2','anthor':'?&flag=2'},{"title":"其他问题","dataid":"qtqa",'index':'3','anthor':'?&flag=3'}]
+								each val, index in list
+									if(index == '0')
+										li(data-index='#{val.index}')
+											a(href="javascript:;",class="current") #{val.title}
+									else
+										li(data-index='#{val.index}')
+											a(href="javascript:;") #{val.title}
+						.wraps
+							.questions-content#question
+								.main-content#all-quetion
+								//- #pagination.pagination
+							.questions-content#pay-question-box
+								.main-content#pay-quetion
+			.page-container.page(data-id="page2")
+				+qaqSection
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/jquery.pagination.js")
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript" src="dist/js/getQuestion.js")
+	script(type="text/javascript").
+		$(function() {
+			var pageList = $('#title .title-list li');
+			var hashGroup = ["#all","#pay","#account","#transaction","#other"];
+			var hashLen = hashGroup.length;
+			// 历史记录处理程序
+			function hasnChangeHandler() {
+				var hash = location.hash;
+				for(var i = 0; i < hashLen; i++) {
+					hash == hashGroup[i] ? (
+						pageClick([i])
+					) : "";
+				}
+			}
+			// 点击处理程序
+			function pageClick(index) {
+				pageList.eq(index).click();
+			}
+			// 更改历史记录
+			pageList.each(function(index) {
+				$(this).bind('click', function() {
+					window.location.hash = hashGroup[index]
+				});
+			});
+			// 触发历史记录处理程序
+			window.onhashchange = hasnChangeHandler;
+			// 初始化
+			hasnChangeHandler();
+		});

@@ -1,0 +1,91 @@
+extends ./layout
+
+block title
+	- var title = "合利宝APP-个人钱包"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/person.css")
+
+block content
+	.container.wallet
+		include ./header
+		.section.page
+			.page-container
+				.container-ui
+					.wrapper-ui
+						.banner-ui
+							.left-box-ui
+								.tip-box-ui
+									.title-ui
+										h2 快乐支付触手可及
+									.mian-box-ui
+										p
+											|合利宝APP，一款专为微小商户研发的收款软件。
+											|用户通过合利宝APP足不出户，尽情享受收款、还款、付款缴费
+											|充值、查询等多项金融服务。
+								.ico-box-ui
+									.qrcode-box-ui
+										img(src="dist/images/wallet/ewm.png")
+									.btn-box-ui
+										a(href="javascript:;",class="btn btn-ui btn-android")
+											span.ico
+												img(src="dist/images/wallet/Android.png")
+											span.txt Android版下载
+										a(href="javascript:;",class="btn btn-ui btn-ios")
+											span.ico
+												img(src="dist/images/wallet/ios.png")
+											span.txt ios版下载
+							.right-box-ui
+								.ico-box-ui
+									img(src="dist/images/wallet/peopl.png")
+					.content-wrapper-ui
+						mixin sectionShow(dir,src,icoArr,descArr)
+							.content-main-ui(data-rel="#{dir}")
+								.img-banner-ui
+									img(src="dist/images/wallet/#{src}.png")
+								.desc-box-ui
+									.desc-main-ui
+										each val in descArr
+											.title-ui
+												h2 #{val.title}
+												h3 #{val.min}
+											.main-list-ui
+												p #{val.pre1}
+												p #{val.pre2}
+									.ico-list-ui
+										each val in icoArr
+											.ico-box-ui
+												img(src="dist/images/wallet/#{val.src}.png")
+												if (val.txt !== '')
+													span #{val.txt}
+
+						- var icoArr = [{"src":"pic1","txt":"实时"},{"src":"pic2","txt":"简单"},{"src":"pic3","txt":"安全"}]
+						- var qicoArr = [{"src":"pic4","txt":""},{"src":"pic5","txt":""},{"src":"pic6","txt":""},{"src":"pic7","txt":""}]
+						- var nicoArr = [{"src":"pic8","txt":""},{"src":"pic9","txt":""}]
+						- var descArr = [{"index":"1","title":"随时随地 快速收款","min":"Collection","pre1":"手机在手，随时收款","pre2":"实时到帐，操作简单，资金安全。"}]
+						- var qdescArr = [{"index":"2","title":"生活缴费 方便快捷","min":"Pay cost","pre1":"水电煤缴费、手机充值、流量充值","pre2":"足不出户，缴费天下"}]
+						- var ndescArr = [{"index":"3","title":"全新设计 极致体验","min":"Experience","pre1":"全新界面，流程优化","pre2":"让使用更简单"}]
+						+sectionShow("positive","pic01",icoArr,descArr)
+						+sectionShow("reverse","pic02",qicoArr,qdescArr)
+						+sectionShow("positive","pic03",nicoArr,ndescArr)
+		//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")

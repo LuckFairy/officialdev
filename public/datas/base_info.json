@@ -1,0 +1,113 @@
+[{
+    "id": "1",
+    "docName": "营业执照(副本)",
+    "docAmount": "3份",
+    "isRequired": "true",
+    "seal": "复印件加盖公章",
+    "imgName": "yb_yyzz",
+    "desc": "需在有效期内，且有近1年的年检记录"
+}, {
+    "id": "2",
+    "docName": "组织机构代码(副本)",
+    "docAmount": "3份",
+    "isRequired": "true",
+    "seal": "复印件加盖公章",
+    "imgName": "yb_zzjgdm",
+    "desc": "需在有效期内"
+}, {
+    "id": "3",
+    "docName": "国、地税登记证(副本)",
+    "docAmount": "1份",
+    "isRequired": "true",
+    "seal": "复印件加盖公章",
+    "imgName": "yb_ssdjz",
+    "desc": "需在有效期内"
+}, {
+    "id": "4",
+    "docName": "银行开户许可证",
+    "docAmount": "1份",
+    "isRequired": "true",
+    "seal": "复印件加盖公章",
+    "imgName": "yb_khxkz",
+    "desc": " "
+}, {
+    "id": "5",
+    "docName": "增值电信业务经营许可证",
+    "docAmount": "1份",
+    "isRequired": "false",
+    "seal": "打印件加盖公章",
+    "imgName": "yb_zzdx",
+    "desc": "从事增值电信业务必须提供"
+}, {
+    "id": "6",
+    "docName": "ICP域名备案证明",
+    "docAmount": "1份",
+    "isRequired": "false",
+    "seal": "复印件加盖公章",
+    "imgName": "yb_ymbazm",
+    "desc": "请登录政府网站打印详细页，并加盖公章"
+}, {
+    "id": "7",
+    "docName": "打印官网首页)",
+    "docAmount": "1份",
+    "isRequired": "true",
+    "seal": "复印件加盖公章",
+    "imgName": "yb_gwsy",
+    "desc": " "
+}, {
+    "id": "8",
+    "docName": "其他审批证明",
+    "docAmount": "1份",
+    "isRequired": "false",
+    "seal": " ",
+    "imgName": "yb_qtzm",
+    "desc": "如经营专项业务，或经营特殊业务等的政府批文"
+}, {
+    "id": "9",
+    "docName": "法定代表人身份证",
+    "docAmount": "1份",
+    "isRequired": "true",
+    "seal": "复印件签字",
+    "imgName": "yb_sfz",
+    "desc": "正反面的彩色扫描件或彩色照片"
+}, {
+    "id": "10",
+    "docName": "账户管理人身份证",
+    "docAmount": "1份",
+    "isRequired": "true",
+    "seal": "复印件加盖公章",
+    "imgName": "yb_sfz",
+    "desc": "正反面的彩色扫描件或彩色照片"
+}, {
+    "id": "11",
+    "docName": "被授权人签署人身份证",
+    "docAmount": "1份",
+    "isRequired": "true",
+    "seal": "复印件加盖公章",
+    "imgName": "yb_sfz",
+    "desc": "正反面的彩色扫描件或彩色照片"
+}, {
+    "id": "12",
+    "docName": "公司简介",
+    "docAmount": "1份",
+    "isRequired": "true",
+    "seal": "复印件加盖公章",
+    "imgName": "yb_gsjj",
+    "desc": " "
+}, {
+    "id": "13",
+    "docName": "交易规则、风控制度",
+    "docAmount": "1份",
+    "isRequired": "true",
+    "seal": "复印件加盖公章",
+    "imgName": "yb_jygz",
+    "desc": " "
+}, {
+    "id": "14",
+    "docName": "3张营业场所照片",
+    "docAmount": "1份",
+    "isRequired": "false",
+    "seal": "复印件加盖公章",
+    "imgName": "yb_yycs",
+    "desc": "其中：1张为前台全景，应挂有公司商标和全名；另外2张为营业场所全景"
+}]

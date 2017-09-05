@@ -1,0 +1,111 @@
+header.header#header
+	//- 顶部菜单
+	.top-menu-container
+		.top-menu
+			.logo
+				a.home-link(href="http://www.mesonft.com/")
+					img(src="dist/images/logo_honglei@12x.png")
+					span 民盛金科成员企业
+			mixin topMenu
+				ul.top-menu-tab
+					each val, key in {"serve-line":"客服热线：400-096-6263","personal":"个人账号","merchant":"商家账号"}
+						if(key == "personal")
+							li
+								a(href="https://ewallet.helipay.com/",class= key,target="_blank")
+									span
+									span= val
+									span
+						else
+							li
+								a(href="#",class= key)
+									span
+									span= val
+									span
+								if(key == 'merchant')
+									ul.dropdown
+										li
+											a(href="http://customer.helipay.com/customer",target="_blank")
+												span 线上商户管理平台
+										li
+											a(href="https://merchant.helipay.com/",target="_blank")
+												span 收单代理人控制台
+
+			//- 顶部菜单-右侧
+			+topMenu
+	.nav-container#main-nav
+		.main-nav-container
+			mixin navigation
+				nav.nav#navigation
+					.logo
+						a(href="index.html")
+							img(src="dist/images/logo_helibao@12x.png")
+					ul.nav-menu#nav-menu
+						each val in [{"title":"关于公司","links":"about.html","dataId":"about"},{"title":"产品中心","links":"product.html","dataId":"product"},{"title":"解决方案","links":"solve.html","dataId":"solve"},{"title":"行业服务","links":"business.html","dataId":"business"},{"title":"合利宝APP","links":"down/hlqb.html","dataId":"wallet"},{"title":"服务中心","links":"serve.html","dataId":"serve"}]
+							li.detail-menu-list
+								a(href="#{val.links}",data-id="#{val.dataId}")= val.title
+			//- 主导航条
+			+navigation
+		.nav-container-detail#detail
+			.nav-detail-box#detail-box
+				.nav-detail-mask
+					mixin navDetailWapper
+						.nav-detail-wapper
+							ul.nav-menu-box
+								each val in [{"index":"1","title":"公司介绍","links":"about.html","dataid":"about"},{"index":"2","title":"公司历史","links":"history.html","dataid":"about"},{"index":"3","title":"公司新闻","links":"news.html","dataid":"about"},{"index":"4","title":"联系我们","links":"contactus.html","dataid":"about"},{"index":"5","title":"招聘英才","links":"recruit.html","dataid":"about"}]
+									li
+										a(href="#{val.links}",data-id="about")
+											span
+												img(src= "dist/images/ico_menu_about_white#{val.index}@12x.png")
+											span= val.title
+					+navDetailWapper
+					mixin navDetailWapper2
+						.nav-detail-wapper
+							ul.nav-menu-box
+								each val in [{"index":"1","title":"智能POS","links":"product.html","dataid":"product"},{"index":"2","title":"M-POS","links":"mpos.html","dataid":"product"},{"index":"3","title":"蓝牙POS","links":"lypos.html","dataid":"product"},{"index":"4","title":"传统POS","links":"ctpos.html","dataid":"product"}]
+									li
+										a(href="#{val.links}",data-id="product")
+											span
+												img(src= "dist/images/ico_menu_product_white#{val.index}@12x.png")
+											span= val.title
+					+navDetailWapper2
+					mixin navDetailWapper3
+						.nav-detail-wapper
+							ul.nav-menu-box
+								each val in [{"index":"1","title":"网关支付","links":"solve.html","dataid":"solve"},{"index":"2","title":"快捷支付","links":"quick.html","dataid":"solve"},{"index":"3","title":"二维码支付","links":"qcode.html","dataid":"page3"},{"index":"4","title":"委托支付","links":"wtpay.html","dataid":"page4"},{"index":"5","title":"POS收单","links":"pospay.html","dataid":"page5"},{"index":"7","title":"跨境支付","links":"crosspay.html","dataid":"page7"}]
+									li
+										a(href="#{val.links}",data-id="solve")
+											span
+												img(src= "dist/images/ico_menu_industry_white#{val.index}@12x.png")
+											span= val.title
+					+navDetailWapper3
+					mixin navDetailWapper4
+						.nav-detail-wapper
+							ul.nav-menu-box
+								each val in [{"index":"1","title":"银行服务","links":"business.html","dataid":"business"}]
+									li
+										a(href="#{val.links}",data-id="business")
+											span
+												img(src= "dist/images/ico_menu_trade_white#{val.index}@12x.png")
+											span= val.title
+					+navDetailWapper4
+					mixin navDetailWapper5
+						.nav-detail-wapper
+							ul.nav-menu-box
+								//- each val in [{"index":"1","title":"商户钱包","links":"wallet.html","dataid":"wallet"},{"index":"2","title":"个人钱包","links":"person.html","dataid":"wallet"},{"index":"4","title":"合利宝APP","links":"down/hlqb.html","dataid":"wallet"},{"index":"5","title":"合利宝","links":"down/mpos.html","dataid":"wallet"}]
+								each val in [{"index":"4","title":"合利宝APP","links":"down/hlqb.html","dataid":"wallet"},{"index":"5","title":"合利宝","links":"down/mpos.html","dataid":"wallet"}]
+									li
+										a(href="#{val.links}",data-id="wallet")
+											span
+												img(src= "dist/images/ico_menu_wallet_white#{val.index}@12x.png")
+											span= val.title
+					+navDetailWapper5
+					mixin navDetailWapper6
+						.nav-detail-wapper
+							ul.nav-menu-box
+								each val in [{"index":"1","title":"签约指南","links":"serve.html","dataid":"page1"},{"index":"2","title":"常见问题","links":"issue.html","dataid":"page2"},{"index":"3","title":"下载中心","links":"download.html","dataid":"page3"},{"index":"4","title":"用户体验中心","links":"userexp.html","dataid":"page4"},{"index":"6","title":"金融之窗","links":"finance.html","dataid":"page6"},{"index":"7","title":"客服服务","links":"customer.html","dataid":"page7"},{"index":"8","title":"收费说明","links":"charges.html","dataid":"page8"},{"index":"9","title":"服务协议","links":"pact.html","dataid":"page9"}]
+									li
+										a(href="#{val.links}",data-id="serve")
+											span
+												img(src= "dist/images/ico_menu_service_white#{val.index}@12x.png")
+											span= val.title
+					+navDetailWapper6

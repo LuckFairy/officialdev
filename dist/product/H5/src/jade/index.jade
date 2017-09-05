@@ -1,0 +1,278 @@
+extends ./layout.jade
+
+block title
+	- var name = "合利宝产品介绍"
+	title #{name}
+
+block content
+	.loading-container#loading
+		.loading
+			-for (var n = 0; n < 4; n++)
+				.load
+					span
+	//- 第一张图片用于分享
+	.share-img
+		img(src="dist/images/share.png")
+	.share-container#share-container
+		#share
+	//- 音乐播放器
+	.music-container#music
+		.music-box.active.swiper-no-swiping#music-box
+			audio#bg-music(autoplay="autoplay" loop="loop")
+				source(src="music.mp3" type="audio/mp3")
+	.swiper-container
+		.swiper-wrapper
+			mixin homePage(title)
+				section.swiper-slide.sec1
+					.page-inner
+						.logo-box
+							img.img-box(src="dist/images/logo@12x.png")
+						.title= title
+						.list-container
+							each val in ["dist/images/index-title-s1@12x.png","dist/images/index-title-s2@12x.png","dist/images/index-title@12x.png","dist/images/index-title-s4@12x.png","dist/images/index-title-s3@12x.png"]
+								.home-list
+									img(src= val)
+							.home-list
+								.text 广州合利宝科技支付有限公司
+						.arrow
+			+homePage('民盛金科 (002647) 成员企业')
+					//- 目录页 第二屏
+			mixin listPage(title)
+				section.swiper-slide.sec2
+					.page-inner
+						.logo-box
+							img.img-box(src="dist/images/logo@12x.png")
+						.title= title
+						.list-container
+							each val in ["dist/images/list@12x.png"]
+								.list-box
+									img(src= val)
+						.arrow
+			+listPage('民盛金科 (002647) 成员企业')
+					//- 网关支付 第三屏
+			mixin gatePage(tit)
+				section.swiper-slide.sec3
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-zhifu-wg@12x.png","dist/images/wg-ico2@12x.png"]
+								.gate-list
+									img(src= val)
+
+							.gate-list
+								.text-box
+									h2 随时查账
+									p 先进的交易管理系统，带给你完美的体验
+									p 支持18家主流银行的借记卡和信用卡
+									p 随时随地查看交易明细
+						.arrow
+			+gatePage('标准支付解决方案')
+			//- 快捷支付 第四屏
+			mixin quickPage(tit)
+				section.swiper-slide.sec4
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-zhifu-kj@12x.png","dist/images/kj-1@12x.png","dist/images/kj-5@12x.png"]
+								.quick-list
+									img(src= val)
+						.text-box
+							h2 快速极致
+							p 不需要开通网银，提供卡号、户名、手机
+							p 通过短信验证码极速支付
+							p 支付成功率高，云端风控更安全
+						.arrow
+			+quickPage('标准支付解决方案')
+			//- 二维码支付 第五屏
+			mixin QRcodePage(tit)
+				section.swiper-slide.sec5
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/QR-zhif-title@12x.png","dist/images/QR-1@12x.png"]
+								.QRcode-list
+									img(src= val)
+						.text-box
+							h2 方便快捷
+							p 无硬件、多平台兼容的二维码支付系统
+							p 速度快、成功率高
+							p 带给顾客完美的支付体验
+						.arrow
+			+QRcodePage('标准支付解决方案')
+			//- 委托支付 第六屏
+			mixin entPage(tit)
+				section.swiper-slide.sec6
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-zhifu-wt@12x.png","dist/images/wt-zhif-3@12x.png","dist/images/wt-zhif-4@12x.png"]
+								.ent-list
+									img(src= val)
+						.text-box
+							h2 专业可靠
+							p 支持全国交易、覆盖银行全面、到账迅速
+							p 统一的代收代付接口
+							p 系统安全有保障
+						.arrow
+			+entPage('标准支付解决方案')
+			//- 智能POS机 第七屏
+			mixin intellPage(tit)
+				section.swiper-slide.sec7
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-pos-zn@12x.png","dist/images/znpos-1@12x.png","dist/images/znpos-3@12x.png"]
+										.intell-list
+											img(src= val)
+						.arrow
+			+intellPage('智能POS机')
+			//- M-POS机 第八屏
+			mixin mPosPage(tit)
+				section.swiper-slide.sec8
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-pos-m@12x.png","dist/images/mpos-1@12x.png","dist/images/mpos-2@12x.png","dist/images/mpos-4@12x.png"]
+								.mPos-list
+									img(src= val)
+						.arrow
+			+mPosPage('M-POS机')
+			//- 蓝牙POS机 第九屏
+			mixin bluetPage(tit)
+				section.swiper-slide.sec9
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-pos-ly@12x.png","dist/images/lypos-2@12x.png","dist/images/lypos-1@12x.png","dist/images/lypos-4@12x.png"]
+								.bluet-list
+									img(src= val)
+						.arrow
+			+bluetPage('蓝牙POS机')
+			//- 传统POS机 第十屏
+			mixin traPage(tit)
+				section.swiper-slide.sec10
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-pos-ct@12x.png","dist/images/ctpos-1@12x.png","dist/images/ctpos-2@12x.png","dist/images/mpos-4@12x.png"]
+								.tra-list
+									img(src= val)
+						.arrow
+			+traPage('传统POS机')
+			//- pos收单 第十一屏
+			mixin posRecPage(tit)
+				section.swiper-slide.sec11
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-zhifu-possd@12x.png","dist/images/possd-3@12x.png","dist/images/possd-2@12x.png","dist/images/possd-1@12x.png"]
+								.posRec-list
+									img(src= val)
+						.text-box
+							h2 值得信赖
+							p 行业更优惠的费率、系统更安全
+							p 支持多种支付方式、提供多样化的选择
+							p 多样化的服务
+						.arrow
+			+posRecPage('pos收单')
+			//- 大宗交易 第十二屏
+			mixin bulkPage(tit)
+				section.swiper-slide.sec12
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-zhifu-dz@12x.png","dist/images/dzjy-1@12x.png","dist/images/dzjy-3@12x.png"]
+								.bulk-list
+									img(src= val)
+						.text-box.corss-text
+							h2 创新交易
+							p 引入第三方支付公司作为第三方存管的模式
+							p 为大宗商品交易市场提供了全方位的一站式支付结算方案
+							p 针对交易所不同需求提供了通道模式和存管模式的解决方案
+						.arrow
+			//- +bulkPage('大宗交易')
+			//- 跨境支付 第十三屏
+			mixin crossPage(tit)
+				section.swiper-slide.sec13
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-zhifu-kuajing@12x.png","dist/images/kuajing-1@12x.png"]
+								.cross-list
+									img(src= val)
+						.text-box.corss-text
+							h2 值得信赖
+							p 致力于为广大开证电子商务的境内外商户
+							p 提供环球采购货款结算服务整体解决方案
+							p 为客户提供产品支付服务、账户服务、跨境交易服务
+						.arrow
+			+crossPage('跨境支付')
+			//- 优质服务 第十四屏
+			mixin serPage(tit)
+				section.swiper-slide.sec14
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-24xiaoshi@12x.png","dist/images/24hour-1@12x.png"]
+								.ser-list
+									img(src= val)
+							.ser-list
+								p 400-096-6263
+						.text-box
+							h2 24小时服务
+							p 售前、售中、售后专业服务
+							p 网络保障、通信保障、数据保障
+							p 整体安全保障
+						.arrow
+			+serPage('优质服务')
+			//- 客户资源 第十五屏
+			mixin clientPage(tit)
+				section.swiper-slide.sec15
+					.page-inner
+						.tit= tit
+						.list-container
+							.client-list
+								img(src="dist/images/title-kefuziyuan@12x.png")
+							.client-list
+								.client-list-box
+									each val in ['dist/images/kfzy-1@12x.png','dist/images/kfzy-2@12x.png','dist/images/kfzy-3@12x.png','dist/images/kfzy-4@12x.png','dist/images/kfzy-5@12x.png','dist/images/kfzy-6@12x.png','dist/images/kfzy-7@12x.png','dist/images/kfzy-8.png','dist/images/kfzy-9.png','dist/images/kfzy-10.png']
+										.list-box-item
+											img(src= val)
+						.arrow
+			+clientPage('客户资源')
+			//- 合作银行 第十六屏
+			mixin bankPage(tit)
+				section.swiper-slide.sec16
+					.page-inner
+						.tit= tit
+						.list-container
+							each val in ["dist/images/title-kefuziyuan@12x.png","dist/images/banklist@12x.png"]
+								.bank-list
+									img(src= val)
+						.arrow
+			+bankPage('合作银行')
+			//- 末页 第十七屏
+			mixin lastPage(tit)
+				section.swiper-slide.sec17
+					.page-inner
+						.tit= tit
+						.list-container
+							.last-list
+								img(src="dist/images/logo@12x.png")
+							.last-list
+								p 合利、共赢、与你共创未来
+							.last-list
+								img(src="dist/images/gw.jpg" class="swiper-no-swiping")
+								p 合利宝官微
+							.last-list
+								img(src="dist/images/wsh.jpg" class="swiper-no-swiping")
+								p 合利宝微生活
+						//- .visits#visits
+						//- 	.v-box
+						//- 		.v-item
+						//- 			a(href="javascript:;") 合利科技
+						//- 		.v-item
+						//- 			a(href="javascript:;",id="visited")
+						.arrow
+			+lastPage('合利宝微信公众号')
+		.swiper-pagination

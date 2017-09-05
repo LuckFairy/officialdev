@@ -1,0 +1,121 @@
+extends ./layout
+
+block title
+	- var title = "合利宝服务-服务中心"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/serve.css")
+
+block content
+	.container.serve
+		include ./header
+		.section.page
+			mixin fullSection
+				.banner.banner1
+					.banner1-bg
+						img(src="dist/images/banner@12x.png")
+					.banner-txt
+						h2 签约指南
+						//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+				.serve-tab
+					.tab-box
+						ul
+							li.active
+								a(href="javascript:;")
+									img(src="dist/images/icon_service_1@12x.png")
+									span 普通在线交易商户
+							//- li
+							//- 	a(href="")
+							//- 		img(src="dist/images/icon_service_2@12x.png")
+							//- 		span 大宗在线交易商户
+							//- li
+							//- 	a(href="")
+							//- 		img(src="dist/images/icon_service_3@12x.png")
+							//- 		span 个人账户
+				.guide-container-ui
+					section.general-container-ui
+						.serve-list
+							.list-wrapper
+								.list-title
+									h2
+										span 申请
+										a(href="javascript:;") 普通在线交易商户
+										span 需要准备一下资料：
+								.list-item
+									ol
+										li
+											a.anchor(href="#base-body-section")
+												span 企业提供的基本资料
+												span.warring 建议先提供电子版，方便我司初审
+										li
+											a.anchor(href="#input-body-section")
+												span 企业填写的资料
+												span.warring 资料审核需要2～3个工作日
+										li
+											a.anchor(href="#detail-body-section")
+												span 协议及附件
+												span.warring 建议“企业填写的资料”提交后，再提交附件
+						.guide-wrapper-ui
+							.guide-content-ui
+								mixin tableContainer(tit,colArr,thArr,flag)
+									.table-box-ui(id="#{flag}-section")
+										.title-ui
+											h2 #{tit}
+										.main-table-ui
+											section.table-head
+												table
+													colgroup
+														each val in colArr
+															col(style="width: #{val.width}")
+													thead
+														tr
+															each val in thArr
+																th(style="width: #{val.width}") #{val.title}
+											section.table-body
+												table
+													colgroup
+														each val in colArr
+															col(style="width: #{val.width}")
+													tbody(id="#{flag}")
+												section.remark-info
+													h2 备注：
+													ul#basic-remark
+								- var basetit = "企业提供基本资料"
+								- var baseflag = "base-body"
+								- var basecolArr = [{"width":"6%"},{"width":"28%"},{"width":"4%"},{"width":"10%"},{"width":"12%"},{"width":"10%"},{"width":"30%"}]
+								- var basetitArr = [{"title":"序号"},{"title":"文档名称"},{"title":"份数"},{"title":"是否必须提供"},{"title":"盖章"},{"title":"样本"},{"title":"说明"}]
+								+tableContainer(basetit,basecolArr,basetitArr,baseflag)
+								- var inputtit = "企业填写资料"
+								- var inputflag = "input-body"
+								- var inputcolArr = [{"width":"6%"},{"width":"28%"},{"width":"4%"},{"width":"10%"},{"width":"12%"},{"width":"10%"},{"width":"30%"}]
+								- var inputtitArr = [{"title":"序号"},{"title":"文档名称"},{"title":"份数"},{"title":"是否必须提供"},{"title":"盖章"},{"title":"样本"},{"title":"说明"}]
+								+tableContainer(inputtit,inputcolArr,inputtitArr,inputflag)
+								- var detailtit = "协议及附件明细"
+								- var detailflag = "detail-body"
+								- var detailcolArr = [{"width":"6%"},{"width":"30%"},{"width":"8%"},{"width":"20%"},{"width":"10%"},{"width":"26%"}]
+								- var detailtitArr = [{"title":"序号"},{"title":"文档名称"},{"title":"份数"},{"title":"盖章"},{"title":"样本"},{"title":"说明"}]
+								+tableContainer(detailtit,detailcolArr,detailtitArr,detailflag)
+			.page-container.page(data-id="page1")
+				+fullSection
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/serve.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript" src="dist/js/guide.js")

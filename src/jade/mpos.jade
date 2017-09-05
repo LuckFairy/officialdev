@@ -1,0 +1,78 @@
+extends ./layout
+
+block title
+	- var title = "MPOS-合利宝POS支付"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/product.css")
+
+block content
+	.container.product
+		include ./header
+		.section.page
+			.page-container.page2(data-id="page2")
+				mixin fullSection
+					.banner.banner1
+						.banner1-bg
+							img(src="dist/images/banner@12x.png")
+						.banner-txt
+							h2 合利宝M-POS
+							p MPOS是合利宝推出的面向小微商户的移动收单产品。
+				+fullSection
+				.product-wrapper
+					.product-desc
+						.title
+							h2 合利宝M-POS
+						.desc-box
+							p
+								|MPOS是合利宝推出的面向小微商户的移动收单产品。
+								|它通过蓝牙及音频连接技术配合相关的客户端，
+								|实现与Android和IOS智能手机进行通讯，
+								|为使用者提供收款、转账、信用卡还款、
+								|手机充值等多项金融服务。
+							p
+								|合利宝MPOS除了功能贴心全面之外，还通过银行卡检测中心检测，
+								|并获得银联颁发的受理终端设备安全认证证书，在安全上达到金融级别。
+								|机身配置物理密码键盘，用户敏感信息采用硬件加密技术，从源头上保证用户数据安全。
+								|刷卡器如果一旦拆开，安全数据就会销毁，
+								|从源头上防止被安装恶意软件，避免使用者丢失重要信息。
+						.pro-schema
+							img(src="dist/images/ico_product_suit@12x.png")
+							span 适用客户：商店、保险顾问、家政服务、快递、导游导购，以及自由职业者等行业。
+					.product-img
+						img(src="dist/images/img_product_mpos@12x.png")
+				.product-scenes
+					.scenes-wrapper
+						.scenes-box
+							- var scenes = [{"index":"5","title":"纤薄机身 超长待机","pre":"17.6mm纤薄机身  传统POS机体积的1/4"},{"index":"6","title":"安心支付 到账稳定有保障","pre":"通过银行卡检测中心认证；通过银联受理终端准入认证；与全国主流商业银行合作，银联卡全支持，到账有保障"},{"index":"7","title":"低成本投入 多平台支持","pre":"远低于同类产品的价格，减少终端投入，节约成本；支持连接智能手机、平板电脑、个人电脑，多平台使用，更加便捷"},{"index":"8","title":"融合支付 选择多体验好","pre":"主流支付方式一应俱全，支持刷卡支付、支付宝、微信支付、Apple Pay等；同时支持 NFC，一触即付3毫秒极速收款"}]
+							each val in scenes
+								.scenes-item
+									.item-img
+										img(src="dist/images/ico_product_adv#{val.index}@12x.png")
+									.item-desc
+										.title
+											h2= val.title
+										.desc-box
+											p= val.pre
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+

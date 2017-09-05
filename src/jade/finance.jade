@@ -1,0 +1,135 @@
+extends ./layout
+
+block title
+	- var title = "金融知识-金融之窗-合利宝支付"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/serve.css")
+
+block content
+	.container.serve
+		include ./header
+		.section.page
+			.page-container.page(data-id="page1")
+				mixin fullSection
+					.banner.banner1
+						.banner1-bg
+							img(src="dist/images/banner@12x.png")
+						.banner-txt
+							h2 金融之窗
+							//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+					.finance-container
+						.finance-tab
+							.tab-box
+								ul.tab-ul
+									- var list = [{"title":"反洗钱知识","rel":"money","img":"icon_Financialwindow_1active","dataid":"fxq"},{"title":"信息安全","rel":"security","img":"icon_Financialwindow_2","dataid":"xxaq"},{"title":"支付系统","rel":"payment","img":"icon_Financialwindow_3","dataid":"zfxt"},{"title":"金融知识读本","rel":"knowledge","img":"icon_Financialwindow_4","dataid":"jrzs"}]
+									each val, index in list
+										if(index == '0')
+											li(data-id="#{val.dataid}")
+												a(href="javascript:;",class="active",data-rel="#{val.rel}")
+													img(src="dist/images/#{val.img}@12x.png")
+													span #{val.title}
+										else
+											li(data-id="#{val.dataid}")
+												a(href="javascript:;",data-rel="#{val.rel}")
+													img(src="dist/images/#{val.img}@12x.png")
+													span #{val.title}
+						.content-container
+							.finance-wrapper
+								.mask-ui#mask-ui
+									#loading.loading-container
+										.loading
+											- for(var i=0;i<4;i++)
+												.load
+													span
+								#finance-info.finance-info
+									.title-box
+										.title
+											//- h2 反洗钱知识
+									.main-box
+								#finance-billboard.finance-info.finance-billboard
+									aside.billboard-sidebar#billboard-sidebar
+										.toggle-template#toggle-btn
+											.arrow-bar
+										section.sidebar
+											.sidebar-title-ui
+												h2 宣传栏
+											.sidebar-menu
+												ul.sidebar-link
+													li(data-rel="download")
+														a.active(href="javascript:;") 防范电信诈骗课堂
+													li(data-rel="reads")
+														a(href="javascript:;") 金融贴士
+									section.billboard-main
+										.container-billboard(data-id="download")
+											//- 公告快
+											.billboard-box
+												a.billboard(href="#billboard",data-id="billboard",class="current")
+													h2 下载文档
+												.billboard-content
+													.content-main#billboard
+														.billboard-main-box#billboard-box
+															//- ul.billboard-main-list
+														ul.pagination#billboard-pagination
+										.container-billboard(data-id="reads")
+											.billboard-box
+												a.billboard(href="#billboard",data-id="billboard",class="current")
+													h2 阅读文章
+												.content-main#article
+													.article-main-box#article-box
+														ul.article-main
+													ul.pagination#article-pagination
+				+fullSection
+		//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/jquery.pagination.js")
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/finance.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript" src="dist/js/published.js")
+	script(type="text/javascript").
+		$(function() {
+			hasnChangeHandler();
+		});
+		var pageList = $('.tab-ul li');
+		var hashGroup = ["#mony","#security","#payment","#knowledge"];
+		var hashLen = hashGroup.length;
+		// 历史记录处理程序
+		function hasnChangeHandler() {
+			var hash = location.hash;
+			for(var i = 0; i < hashLen; i++) {
+				hash == hashGroup[i] ? (
+					pageClick([i])
+				) : "";
+			}
+		}
+		// 点击处理程序
+		function pageClick(index) {
+			pageList.eq(index).click();
+		}
+		// 更改历史记录
+		pageList.each(function(index) {
+			$(this).bind('click', function() {
+				window.location.hash = hashGroup[index]
+			});
+		});
+		// 触发历史记录处理程序
+		window.onhashchange = hasnChangeHandler;
+

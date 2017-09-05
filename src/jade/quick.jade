@@ -1,0 +1,112 @@
+extends ./layout
+
+block title
+	- var title = "合利宝解决方案-快捷支付"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/product.css")
+
+block content
+	.container.solve
+		include ./header
+		.section.page
+			mixin sectionPage(title,decs,scenes,img,i,use)
+				.page-container.page(data-id="page#{i}")
+						mixin fullSection
+							.banner.banner1
+								.banner1-bg
+									img(src="dist/images/banner@12x.png")
+								.banner-txt
+									h2 快捷支付
+									//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+						+fullSection
+						.product-wrapper
+							.product-desc
+								.title
+									h2 #{title}
+								.desc-box
+									each val in decs
+										p #{val}
+								.pro-schema
+									img(src="dist/images/ico_product_suit@12x.png")
+									span #{use}
+									span.wrap-span 电子机票：航空公司、机票代理
+									span.wrap-span 酒店：预订、消费
+									span.wrap-span 商旅：旅行社、会务
+									span.wrap-span 教育考试：考试报名、辅导
+									span.wrap-span 实名缴费：全球通缴费、公用事业缴费
+									span.wrap-span 保险：保费缴纳、代理人结算；
+							.product-img
+								img(src= "dist/images/#{img}.png")
+						.product-scenes
+							.scenes-wrapper
+								.title
+									h2 产品优势
+								.scenes-box
+									each val in scenes
+										.scenes-item
+											.item-img
+												if(val.index !== '')
+													img(src="dist/images/ico_project_adv#{val.index}@12x.png")
+											.item-desc
+												.title
+													if(val.title !== '')
+														h2= val.title
+												.desc-box
+													if(val.pre !== '')
+														p= val.pre
+			- var title = "快捷支付"
+			- var decs = ["用户购买商品时,不需开通网银,只需提供银行卡卡号、户名、手机号码等信息,银行验证手机号码正确性后，发送手机动态口令到用户手机号上,用户输入正确的手机动态口令,即可完成支付。合利宝快捷支付是为互联网和移动设备推出的一种支付解决方案，有银行卡就能快速付，支付成功率高。让用户得到极致的支付体验。支持所有PC、手机、一次接入，全网覆盖","为商家提供线上收款服务、退款、资金管理及订单查询的服务。"]
+			- var scenes = [{"index":"5","title":"极致支付体验","pre":"持卡人无需通过繁复的手续开通网上银行，有信用卡即可通过电话或网络完成支付。用户可选择绑定支付卡信息，二次支付只需输入CVV2和短信验证码，免除中间帐户登陆，让支付提速。交易无需密码，支付流程便捷。"},{"index":"6","title":"大额支付 弥补不足","pre":"支付额度取决于信用卡本身额度，远大于扫码支付的限额，弥补了信用卡个人网银支付额度小的劣势，并作为网银支付产品有力补充，满足商家大额收款的需求"},{"index":"7","title":"支持多家主流银行","pre":"支持支持国内18家主流银行的借记卡和信用卡，以及国内主要的商业银行。"},{"index":"8","title":"接入方式多样","pre":"为商户提供三种不同的接入方式，包 括：接口、网关、商户后台。全方位 满足商户各类需求。"}]
+			- var img ="img_project_kj"
+			- var use ="使用场景：适用于各类实名并能有效进行风险防控的行业。"
+			+sectionPage(title,decs,scenes,img,2,use)
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript").
+		$(function() {
+			var box = $('.item-img');
+			var contentBox = $('.list-content');
+			box.each(function(){
+				$(this).find('.txt').on('click', function() {
+					var dataID = $(this).attr('data-id');
+					// console.log(dataID);
+					$(this).addClass('active').parent().siblings().children('.txt').removeClass('active');
+					showContent(dataID,contentBox);
+				});
+			});
+			function showContent(linkID, secArr) {
+				var secs = $(secArr);
+				secs.each(function() {
+					var self = $(this);
+					if ($(this).attr('data-id') != linkID) {
+						setTimeout(function() {
+							self.hide();
+						},60);
+					} else {
+						setTimeout(function() {
+							self.show();
+						},60);
+					}
+				});
+			}
+		});

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="description" content="广州唯一拥有全牌照的第三方支付公司，与你共创未来！">
+		<meta name="keywords" content="支付">
+		<title>合利宝产品介绍</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="dist/css/layout.css">
+		<link rel="stylesheet" type="text/css" href="dist/css/app.css">
+		<link rel="stylesheet" type="text/css" href="dist/css/swiper-3.4.0.min.css">
+		<script type="text/javascript">
+			(function() {
+				setRootSize();
+			})();
+			document.onreadystatechange = completeLoading;
+
+			function setRootSize() {
+				document.addEventListener('DOMContentLoaded', function() {
+					var html = document.documentElement;
+					var windowWidth = html.clientWidth;
+					// 等价于html.style.fontSize = windowWidth / 640 * 100 + 'px';
+					html.style.fontSize = windowWidth / 6.4 + 'px';
+				}, false);
+			}
+
+			function completeLoading() {
+				if(document.readyState == 'complete') {
+					// 测试时关闭loading页面
+					var loading = document.getElementById('loading');
+					loading.style.visibility = 'hidden';
+					// 内容加载完成后可执行滑动
+					var shareContainer = document.getElementById('share-container');
+					var mySwiper = new Swiper('.swiper-container', {
+						direction: 'vertical',
+						loop: true,
+//						autoplay: 6000,
+						speed: 800,
+						noSwiping: false,
+						// effect : 'coverflow',
+						autoplayDisableOnInteraction: false,
+						pagination: '.swiper-pagination',
+						paginationType: 'bullets',
+						onTouchMove: function(swiper) {
+							shareContainer.classList.remove('active');
+						},
+						onDoubleTap: function(swiper) {
+							shareContainer.classList.toggle('active');
+						}
+					});
+					document.title = "合利宝产品介绍";
+					document.documentURI = "http://www.helipay.com/manual/";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="loading" class="loading-container">
+			<div class="loading">
+				<div class="load"><span></span></div>
+				<div class="load"><span></span></div>
+				<div class="load"><span></span></div>
+				<div class="load"><span></span></div>
+			</div>
+		</div>
+		<div class="share-img"><img src="dist/images/share.png"></div>
+		<div id="share-container" class="share-container">
+			<div id="share"></div>
+		</div>
+		<div id="music" class="music-container">
+			<div id="music-box" class="music-box active swiper-no-swiping">
+				<audio id="bg-music" autoplay="autoplay" loop="loop">
+					<source src="music.mp3" type="audio/mp3">
+				</audio>
+			</div>
+		</div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<section class="swiper-slide sec1">
+					<div class="page-inner">
+						<div class="logo-box"><img src="dist/images/logo@12x.png" class="img-box"></div>
+						<div class="title">民盛金科 (002647) 成员企业</div>
+						<div class="list-container">
+							<div class="home-list"><img src="dist/images/index-title-s1@12x.png"></div>
+							<div class="home-list"><img src="dist/images/index-title-s2@12x.png"></div>
+							<div class="home-list"><img src="dist/images/index-title@12x.png"></div>
+							<div class="home-list"><img src="dist/images/index-title-s4@12x.png"></div>
+							<div class="home-list"><img src="dist/images/index-title-s3@12x.png"></div>
+							<div class="home-list">
+								<div class="text">广州合利宝科技支付有限公司</div>
+							</div>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec2">
+					<div class="page-inner">
+						<div class="logo-box"><img src="dist/images/logo@12x.png" class="img-box"></div>
+						<div class="title">民盛金科 (002647) 成员企业</div>
+						<div class="list-container">
+							<div class="list-box"><img src="dist/images/list@12x.png"></div>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec3">
+					<div class="page-inner">
+						<div class="tit">标准支付解决方案</div>
+						<div class="list-container">
+							<div class="gate-list"><img src="dist/images/title-zhifu-wg@12x.png"></div>
+							<div class="gate-list"><img src="dist/images/wg-ico2@12x.png"></div>
+							<div class="gate-list">
+								<div class="text-box">
+									<h2>随时查账</h2>
+									<p>先进的交易管理系统，带给你完美的体验</p>
+									<p>支持18家主流银行的借记卡和信用卡</p>
+									<p>随时随地查看交易明细</p>
+								</div>
+							</div>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec4">
+					<div class="page-inner">
+						<div class="tit">标准支付解决方案</div>
+						<div class="list-container">
+							<div class="quick-list"><img src="dist/images/title-zhifu-kj@12x.png"></div>
+							<div class="quick-list"><img src="dist/images/kj-1@12x.png"></div>
+							<div class="quick-list"><img src="dist/images/kj-5@12x.png"></div>
+						</div>
+						<div class="text-box">
+							<h2>快速极致</h2>
+							<p>不需要开通网银，提供卡号、户名、手机</p>
+							<p>通过短信验证码极速支付</p>
+							<p>支付成功率高，云端风控更安全</p>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec5">
+					<div class="page-inner">
+						<div class="tit">标准支付解决方案</div>
+						<div class="list-container">
+							<div class="QRcode-list"><img src="dist/images/QR-zhif-title@12x.png"></div>
+							<div class="QRcode-list"><img src="dist/images/QR-1@12x.png"></div>
+						</div>
+						<div class="text-box">
+							<h2>方便快捷</h2>
+							<p>无硬件、多平台兼容的二维码支付系统</p>
+							<p>速度快、成功率高</p>
+							<p>带给顾客完美的支付体验</p>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec6">
+					<div class="page-inner">
+						<div class="tit">标准支付解决方案</div>
+						<div class="list-container">
+							<div class="ent-list"><img src="dist/images/title-zhifu-wt@12x.png"></div>
+							<div class="ent-list"><img src="dist/images/wt-zhif-3@12x.png"></div>
+							<div class="ent-list"><img src="dist/images/wt-zhif-4@12x.png"></div>
+						</div>
+						<div class="text-box">
+							<h2>专业可靠</h2>
+							<p>支持全国交易、覆盖银行全面、到账迅速</p>
+							<p>统一的代收代付接口</p>
+							<p>系统安全有保障</p>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec7">
+					<div class="page-inner">
+						<div class="tit">智能POS机</div>
+						<div class="list-container">
+							<div class="intell-list"><img src="dist/images/title-pos-zn@12x.png"></div>
+							<div class="intell-list"><img src="dist/images/znpos-1@12x.png"></div>
+							<div class="intell-list"><img src="dist/images/znpos-3@12x.png"></div>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec8">
+					<div class="page-inner">
+						<div class="tit">M-POS机</div>
+						<div class="list-container">
+							<div class="mPos-list"><img src="dist/images/title-pos-m@12x.png"></div>
+							<div class="mPos-list"><img src="dist/images/mpos-1@12x.png"></div>
+							<div class="mPos-list"><img src="dist/images/mpos-2@12x.png"></div>
+							<div class="mPos-list"><img src="dist/images/mpos-4@12x.png"></div>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec9">
+					<div class="page-inner">
+						<div class="tit">蓝牙POS机</div>
+						<div class="list-container">
+							<div class="bluet-list"><img src="dist/images/title-pos-ly@12x.png"></div>
+							<div class="bluet-list"><img src="dist/images/lypos-2@12x.png"></div>
+							<div class="bluet-list"><img src="dist/images/lypos-1@12x.png"></div>
+							<div class="bluet-list"><img src="dist/images/lypos-4@12x.png"></div>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec10">
+					<div class="page-inner">
+						<div class="tit">传统POS机</div>
+						<div class="list-container">
+							<div class="tra-list"><img src="dist/images/title-pos-ct@12x.png"></div>
+							<div class="tra-list"><img src="dist/images/ctpos-1@12x.png"></div>
+							<div class="tra-list"><img src="dist/images/ctpos-2@12x.png"></div>
+							<div class="tra-list"><img src="dist/images/mpos-4@12x.png"></div>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec11">
+					<div class="page-inner">
+						<div class="tit">pos收单</div>
+						<div class="list-container">
+							<div class="posRec-list"><img src="dist/images/title-zhifu-possd@12x.png"></div>
+							<div class="posRec-list"><img src="dist/images/possd-3@12x.png"></div>
+							<div class="posRec-list"><img src="dist/images/possd-2@12x.png"></div>
+							<div class="posRec-list"><img src="dist/images/possd-1@12x.png"></div>
+						</div>
+						<div class="text-box">
+							<h2>值得信赖</h2>
+							<p>行业更优惠的费率、系统更安全</p>
+							<p>支持多种支付方式、提供多样化的选择</p>
+							<p>多样化的服务</p>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec13">
+					<div class="page-inner">
+						<div class="tit">跨境支付</div>
+						<div class="list-container">
+							<div class="cross-list"><img src="dist/images/title-zhifu-kuajing@12x.png"></div>
+							<div class="cross-list"><img src="dist/images/kuajing-1@12x.png"></div>
+						</div>
+						<div class="text-box corss-text">
+							<h2>值得信赖</h2>
+							<p>致力于为广大开证电子商务的境内外商户</p>
+							<p>提供环球采购货款结算服务整体解决方案</p>
+							<p>为客户提供产品支付服务、账户服务、跨境交易服务</p>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec14">
+					<div class="page-inner">
+						<div class="tit">优质服务</div>
+						<div class="list-container">
+							<div class="ser-list"><img src="dist/images/title-24xiaoshi@12x.png"></div>
+							<div class="ser-list"><img src="dist/images/24hour-1@12x.png"></div>
+							<div class="ser-list">
+								<p>400-096-6263</p>
+							</div>
+						</div>
+						<div class="text-box">
+							<h2>24小时服务</h2>
+							<p>售前、售中、售后专业服务</p>
+							<p>网络保障、通信保障、数据保障</p>
+							<p>整体安全保障</p>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec15">
+					<div class="page-inner">
+						<div class="tit">客户资源</div>
+						<div class="list-container">
+							<div class="client-list"><img src="dist/images/title-kefuziyuan@12x.png"></div>
+							<div class="client-list">
+								<div class="client-list-box">
+									<div class="list-box-item"><img src="dist/images/kfzy-1@12x.png"></div>
+									<div class="list-box-item"><img src="dist/images/kfzy-2@12x.png"></div>
+									<div class="list-box-item"><img src="dist/images/kfzy-3@12x.png"></div>
+									<div class="list-box-item"><img src="dist/images/kfzy-4@12x.png"></div>
+									<div class="list-box-item"><img src="dist/images/kfzy-5@12x.png"></div>
+									<div class="list-box-item"><img src="dist/images/kfzy-6@12x.png"></div>
+									<div class="list-box-item"><img src="dist/images/kfzy-7@12x.png"></div>
+									<div class="list-box-item"><img src="dist/images/kfzy-8.png"></div>
+									<div class="list-box-item"><img src="dist/images/kfzy-9.png"></div>
+									<div class="list-box-item"><img src="dist/images/kfzy-10.png"></div>
+								</div>
+							</div>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec16">
+					<div class="page-inner">
+						<div class="tit">合作银行</div>
+						<div class="list-container">
+							<div class="bank-list"><img src="dist/images/title-kefuziyuan@12x.png"></div>
+							<div class="bank-list"><img src="dist/images/banklist@12x.png"></div>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+				<section class="swiper-slide sec17">
+					<div class="page-inner">
+						<div class="tit">合利宝微信公众号</div>
+						<div class="list-container">
+							<div class="last-list"><img src="dist/images/logo@12x.png"></div>
+							<div class="last-list">
+								<p>合利、共赢、与你共创未来</p>
+							</div>
+							<div class="last-list"><img src="dist/images/gw.jpg" class="swiper-no-swiping">
+								<p>合利宝官微</p>
+							</div>
+							<div class="last-list"><img src="dist/images/wsh.jpg" class="swiper-no-swiping">
+								<p>合利宝微生活</p>
+							</div>
+						</div>
+						<div class="arrow"></div>
+					</div>
+				</section>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<script type="text/javascript" src="dist/js/swiper-3.4.0.min.js"></script>
+		<script type="text/javascript" src="dist/js/app.js"></script>
+	</body>
+
+</html>

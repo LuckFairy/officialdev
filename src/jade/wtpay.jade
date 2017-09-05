@@ -1,0 +1,210 @@
+extends ./layout
+
+block title
+	- var title = "合利宝解决方案-委托支付"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/product.css")
+
+block content
+	.container.solve
+		include ./header
+		.section.page
+			mixin sectionPage(title,decs,scenes,img,i,use)
+				.page-container.page(data-id="page#{i}")
+						mixin fullSection
+							.banner.banner1
+								.banner1-bg
+									img(src="dist/images/banner@12x.png")
+								.banner-txt
+									h2 委托收付款
+									//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+						+fullSection
+						.product-wrapper
+							.product-desc
+								.title
+									h2 #{title}
+								.desc-box
+									each val in decs
+										p #{val}
+								.pro-schema
+									img(src="dist/images/ico_product_suit@12x.png")
+									span #{use}
+							.product-img
+								img(src= "dist/images/#{img}.png")
+						.product-scenes
+							.scenes-wrapper
+								.title
+									h2 产品优势
+								.scenes-box
+									each val in scenes
+										.scenes-item
+											.item-img
+												if(val.index !== '')
+													img(src="dist/images/ico_project_adv#{val.index}@12x.png")
+											.item-desc
+												.title
+													if(val.title !== '')
+														h2= val.title
+												.desc-box
+													if(val.pre !== '')
+														p= val.pre
+			mixin sectionPage1(title,decs,scenes,img,list,contentlist,i)
+				.page-container.page(data-id="page#{i}")
+						mixin fullSection
+							.banner.banner1
+								.banner1-bg
+									img(src="dist/images/banner@12x.png")
+
+						+fullSection
+						.product-wrapper
+							.product-desc
+								.title
+									h2 #{title}
+								.desc-box
+									each val in decs
+										p #{val}
+								.pro-schema
+									img(src="dist/images/ico_product_suit@12x.png")
+									span 使用场景：各类电商
+							.product-img
+								img(src= "dist/images/#{img}.png")
+						.product-scenes
+							.scenes-wrapper
+								.title
+									h2 产品优势
+								.features-box
+									.scenes-box-left
+										each val, index in list
+											.item-img
+												.txt(data-id="box-#{index}")
+													span= val
+									.scenes-box-right
+										.img-wrapper
+											.img-box
+												img(src="dist/images/ico_industry_abi_speaker@12x.png")
+										each val in contentlist
+											.list-content(data-id="#{val.index}")
+												.list-title
+													h3 #{val.title}
+												.content-box
+													p #{val.content}
+						.product-scenes.product-scenes-white
+							.scenes-wrapper
+								.title
+									h2 产品优势
+									h3 交易所与合利宝系统之间每天进行自动对帐处理
+								.scenes-box.scenes-box-bottom
+									each val in scenes
+										.scenes-item
+											.item-img
+												if(val.index !== '')
+													img(src="dist/images/ico_industry_adv#{val.index}@12x.png")
+											.item-desc
+												.title
+													if(val.title !== '')
+														h2= val.title
+												.desc-box
+													if(val.pre !== '')
+														p= val.pre
+			mixin sectionPage2(title,decs,scenes,img,i)
+				.page-container.page(data-id="page#{i}")
+						mixin fullSection
+							.banner.banner1
+								.banner1-bg
+									img(src="dist/images/banner@12x.png")
+
+						+fullSection
+						.product-wrapper
+							.product-desc
+								.title
+									h2 #{title}
+								.desc-box
+									each val in decs
+										p #{val}
+								.pro-schema
+									img(src="dist/images/ico_product_suit@12x.png")
+									span 使用场景：各类电商
+							.product-img
+								img(src= "dist/images/#{img}.png")
+						.product-scenes
+							.scenes-wrapper
+								.title
+									h2 入网流程
+								.scenes-box
+									.img-time
+										img(src="dist/images/ico_project_adv15@12x.png")
+
+						.product-scenes.product-scenes-white
+							.scenes-wrapper
+								.title
+									h2 产品优势
+									h3 交易所与合利宝系统之间每天进行自动对帐处理
+								.scenes-box.scenes-box-bottom
+									each val in scenes
+										.scenes-item
+											.item-img
+												if(val.index !== '')
+													img(src="dist/images/ico_industry_adv#{val.index}@12x.png")
+											.item-desc
+												.title
+													if(val.title !== '')
+														h2= val.title
+												.desc-box
+													if(val.pre !== '')
+														p= val.pre
+			- var title = "委托收付款"
+			- var decs = ["委托收款是指在收费单位得到持卡人授权后，委托合利宝从持卡人的银行卡帐户中扣除收费款项的业务形式；委托付款是指付费单位在提供付款目标相关银行账户信息及对应款项后，通过合利宝代付系统，向目标账户划款的业务模式；支持对私账户和对公账户。"]
+			- var scenes = [{"index":"9","title":"扣款方便","pre":"一次签约后，即可快速完成后续收款"},{"index":"6","title":"银行合作、通道全面","pre":"覆盖全国性银行借记卡、贷记卡以及绝大部分区域银行"},{"index":"11","title":"多渠道、价格最优","pre":"多渠道为宠户选择最低成本通道，成本相对竞争对手具有优势"},{"index":"10","title":"额度高、结算灵活","pre":"T+0 、T+1 结算快、方便、安全"}]
+			- var img ="img_project_wt"
+			- var use ="使用场景：公用事业收费、代理中介收费、消费分期收款、企业红包等；"
+			+sectionPage(title,decs,scenes,img,4,use)
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript").
+		$(function() {
+			footerPosition();
+			var box = $('.item-img');
+			var contentBox = $('.list-content');
+			box.each(function(){
+				$(this).find('.txt').on('click', function() {
+					var dataID = $(this).attr('data-id');
+					$(this).addClass('active').parent().siblings().children('.txt').removeClass('active');
+					showContent(dataID,contentBox);
+				});
+			});
+			function showContent(linkID, secArr) {
+				var secs = $(secArr);
+				secs.each(function() {
+					var self = $(this);
+					if ($(this).attr('data-id') != linkID) {
+						setTimeout(function() {
+							self.hide();
+						},60);
+					} else {
+						setTimeout(function() {
+							self.show();
+						},60);
+					}
+				});
+			}
+		});

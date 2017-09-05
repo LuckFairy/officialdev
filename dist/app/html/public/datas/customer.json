@@ -1,0 +1,62 @@
+[{
+    "id": "1",
+    "proName": "24小时在线客服",
+    "proImg": "../images/icon_serve_cusservice1@12x.png",
+    "intros": [{
+        "intro": "7x24小时全天候在线客服，随时为你解决问题，为你服务。"
+    }],
+    "contents": [{
+        "content": {
+            "img": "../images/icon_serve_cusservice1_1@12x.png",
+            "title": "个人用户咨询",
+            "pre": "可咨询个人账号在交易、缴费过程中遇到的问题。"
+        }
+    }, {
+        "content": {
+            "img": "../images/icon_serve_cusservice1_2@12x.png",
+            "title": "商户咨询",
+            "pre": "可咨询商户账号在收款、结账过程中遇到的问题。"
+        }
+    }]
+}, {
+    "id": "2",
+    "proName": "电话客服",
+    "proImg": "../images/icon_serve_cusservice2@12x.png",
+    "intros": [{
+        "intro": "7x24小时全天候热线客服，随时为您解答问题，为您的业务保驾护航。"
+    }],
+    "contents": [{
+        "content": {
+            "img": "../images/icon_serve_cusservice2@12x.png",
+            "title": "客服热线",
+            "pre": "00-096-6263。"
+        }
+    }, {
+        "content": {
+            "img": "../images/icon_serve_cusservice2@12x.png",
+            "title": "致电客服",
+            "pre": "致电400客服请根据语音提示，选择咨询内容。"
+        }
+    }]
+}, {
+    "id": "3",
+    "proName": "微信客服",
+    "proImg": "../images/icon_serve_cusservice3@12x.png",
+    "intros": [{
+        "intro": "微信搜索：合利宝支付官微，关注合利宝支付公众号，随时咨询问题。"
+    }],
+    "contents": [{
+        "content": {
+            "img": "../images/icon_serve_cusservice3@12x.png",
+            "title": "合利宝微信客服",
+            "pre": "欢迎手机扫一扫二维码，关注合利宝支付管微（hlbzfgw），快捷自助，移动查询！"
+        }
+    }]
+}, {
+    "id": "4",
+    "proName": "投诉建议",
+    "proImg": "../images/icon_serve_cusservice4@12x.png",
+    "intros": [{
+        "intro": "将您遇到的问题告诉我们，我们帮您解决。"
+    }]
+}]

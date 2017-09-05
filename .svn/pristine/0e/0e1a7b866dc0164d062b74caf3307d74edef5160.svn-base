@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=11;IE=9; IE=8; IE=7; IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="keywords" content="合利宝公司介绍，合利宝广州/北京/深圳/上海,关于合利宝">
+		<meta name="description" content="合利宝支付，广州市唯一拥有支付全牌照的第三方支付公司，提供支付服务，包括互联网支付/移动电话支付/银行卡收单/跨境支付/合利金融/合利征信/合利保理">
+		<title>关于合利宝-合利宝支付-关于我们</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/layout.css">
+		<link rel="stylesheet" type="text/css" href="../css/animation.css">
+		<link rel="stylesheet" type="text/css" href="../css/about.css">
+		<!--if lt IE9-->
+		<script type="text/javascript" src="../js/html5shiv.min.js"></script>
+		<script type="text/javascript" src="../js/selectivizr.min.js"></script>
+		<script type="text/javascript" src="../js/respond.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/campus.css" />
+		<link rel="stylesheet" type="text/css" href="../css/campus_we.css" />
+	</head>
+
+	<body>
+
+		<div class="container campus">
+			<div class="top" id="top"></div>
+			<!--内容-->
+			<div class="section page">
+				<div data-id="page1" class="page-container page1">
+					<div class="banner banner1">
+						<div class="banner1-bg"><img src="../images/banner@12x.png"></div>
+						<div class="banner-txt">
+							<h2>认识我们</h2>
+						</div>
+					</div>
+					<div class="section-introduce">
+						<div class="clear">
+							<div class="container-shareholder">
+								<div class="shareholder-box">
+
+									<!--校园左边-->
+									<div class="contLeft">
+
+										<ul class="tabList">
+											<li class="active" data-type="1">
+												<img src="../images/school/menu_company.png" alt="" />
+												<span>公司介绍</span>
+												<div></div>
+											</li>
+											<!--<li data-type = "2">
+												<img src="../images/school/menu_culture.png"/>
+												<span>企业文化</span>
+												<div></div>
+											</li>-->
+											<li data-type="2">
+												<img src="../images/school/menu_welfare.png" alt="" />
+												<span>员工福利</span>
+												<div></div>
+											</li>
+											<li data-type="3">
+												<img src="../images/school/menu_study.png" alt="" />
+												<span>学习成长</span>
+												<div></div>
+											</li>
+										</ul>
+										<div class="weixin-code">
+											<img src="../images/school/icon_wechat.png" />
+											<p>微信扫码关注<br/>合利宝微生活</p>
+										</div>
+										<div><img src="../images/school/erweima.png" alt="" /><img src="../images/school/erwei_mingsheng.jpg" alt="" /></div>
+									</div>
+									<div class="shareholder-content" style="float: left;width: 78%;">
+										<!--<ul class="shareholder-title">
+											<li>
+												<a  class="active"><span >公司简绍</span></a>
+											</li>
+										</ul>-->
+										<div class="introduce-box tabcon">
+											<div class="sublist" style="display: block;">
+												<ul class="company-intro">
+													<li class="title">
+														<span>公司简介</span>
+													</li>
+													<li>
+														<p>广州合利宝支付科技有限公司（以下简称“合利宝”）为上市公司民盛金科（002647）旗下广东合利金融科技服务有限公司（以下简称“合利金融”）控股子公司。合利宝拥有中国人民银行颁发的支付业务许可证，为广州市唯一拥有支付全牌照的第三方支付公司。</p>
+														<p>合利宝提供的支付服务包括互联网支付、移动电话支付及银行卡收单，实现了为客户提供从线上到线下，从境内到境外的全方位支付服务以及全新的支付体验。公司正处于快速发展阶段，总部位于广州国家级中央商务区CBD珠江新城，分公司遍布北京、深圳、上海、沈阳、广西、福建、天津等二十多个省、自治区和直辖市。合利金融旗下还设有合利征信、合利保理、互联网小贷等公司，致力于为客户提供综合金融服务。</p>
+
+													</li>
+												</ul>
+												<ul class="company-event">
+													<li class="title">
+														<span>公司大事记</span>
+													</li>
+													<li class="event-lists">
+														<div class="event-bg"></div>
+														<div class="event-cont clear">
+															<div class="clear">
+																<dl></dl>
+																<dl></dl>
+																<dl>
+																	<div class="text">
+																		<dt>2013年7月</dt>
+																		<dd class="line"></dd>
+																		<dd>合利宝成立</dd>
+																	</div>
+																	<div class="bg"></div>
+																</dl>
+
+																<dl>
+																	<div class="text">
+																		<dt>2013年8月</dt>
+																		<dd class="line"></dd>
+																		<dd>合利宝通过中国人民银行指定的检测机构和认证中心的检测和认证</dd>
+																	</div>
+																	<div class="bg"></div>
+																</dl>
+																<dl>
+																	<div class="text">
+
+																		<dt>2013年9月</dt>
+																		<dd class="line"></dd>
+																		<dd>中国人民银行广州分行的公示</dd>
+																	</div>
+																	<div class="bg"></div>
+																</dl>
+
+															</div>
+															<div class="clear">
+																<dl style="width: 9%;"></dl>
+																<dl>
+																	<div class="text">
+
+																		<dt>2014年7月10日</dt>
+																		<dd class="line"></dd>
+																		<dd>合利宝获得中国人民银行颁布的支付业务许可证</dd>
+																	</div>
+																	<div class="bg"></div>
+																</dl>
+																<dl>
+																	<div class="text">
+
+																		<dt>2014年8月</dt>
+																		<dd class="line"></dd>
+																		<dd>合利宝获取跨境人民币结算资质</dd>
+																	</div>
+																	<div class="bg"></div>
+																</dl>
+																<dl>
+																	<div class="text">
+
+																		<dt>2015年11月</dt>
+																		<dd class="line"></dd>
+																		<dd>合利宝移动电话支付（远程支付）正式上线</dd>
+																	</div>
+																	<div class="bg"></div>
+																</dl>
+																<dl>
+																	<div class="text">
+
+																		<dt>2015年12月</dt>
+																		<dd class="line"></dd>
+																		<dd>浙商银行入股</dd>
+																	</div>
+																	<div class="bg"></div>
+																</dl>
+
+															</div>
+															<div class="clear">
+																<dl>
+																	<div class="text">
+
+																		<dt>2016年2月</dt>
+																		<dd class="line"></dd>
+																		<dd>第一家跨境电商平台正式接入，并上线运行</dd>
+																	</div>
+																	<div class="bg"></div>
+																</dl>
+																<dl>
+																	<div class="text">
+
+																		<dt>2016年3月</dt>
+																		<dd class="line"></dd>
+																		<dd>合利宝线下收单正式上线</dd>
+																	</div>
+																	<div class="bg"></div>
+																</dl>
+																<dl>
+																	<div class="text">
+
+																		<dt>2016年9月</dt>
+																		<dd class="line"></dd>
+																		<dd>民盛金科收购合利宝</dd>
+																	</div>
+																	<div class="bg"></div>
+																</dl>
+
+															</div>
+														</div>
+													</li>
+												</ul>
+												<ul class="p-list">
+													<li class="title">
+														<span>愿景</span>
+													</li>
+													<li>
+														<p>商户经营助手，企业金融和支付专家</p>
+													</li>
+													<li class="title">
+														<span>使命</span>
+													</li>
+													<li>
+														<p>国内领先的支付及金融服务提供商</p>
+													</li>
+													<li class="title"><span>目标</span></li>
+													<li>
+														<p>三年内打造集支付、金融、电商、大数据于一体的多元化集团</p>
+													</li>
+													<li class="title"><span>互联网金融产业</span></li>
+													<li>
+														<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一直备受百姓关注，随着信息大数据时代的到来，以互联网为代表的信息技术，特别是移动支付、大数据、搜索引擎、社交网络和云计算等的发展，诸多金融模式应运而生，这些将会对传统金融模式产生强烈的冲击，市场上将会诞生新的课题，相对于业界而言，互联网金融模式会产生巨大的商业机会，也会促进竞争格局的大变化。</p>
+													</li>
+													<li class="title"><span>合利宝支付</span></li>
+													<li>
+														<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一直坚持科技金融的发展势态必将呈现健康、创新、规范发展的趋势，借助各类智能终端、移动互联网、大数据等方式，通过支付、理财、商城、信贷等多种形式介入，立志成为创新金融发展的引领者！</p>
+													</li>
+												</ul>
+
+											</div>
+
+											<div class="sublist">
+												<ul>
+													<li class="title"><span>薪酬待遇</span></li>
+													<li>
+														<img src="../images/school/p5_jpg.png" style="width: 100%;height: auto;margin:42px 0 60px" />
+													</li>
+												</ul>
+												<ul class="p-list">
+													<li class="title"><span>薪酬待遇</span></li>
+													<li>
+														<p><span>基本工资：</span>我们为员工提供在行业内具有竞争性的薪酬待遇，每年会做行业薪酬调研，根据行业市场变化情况来调整公司的薪酬策略。此外，公司每年会根据业务发展状况及个人的业绩表现对员工的薪酬进行复核或调整。<br/>
+															<span>年度绩效奖金：</span>根据公司政策和个人的年度绩效考核结果确定。<br/>
+															<span>专项奖励：</span>根据员工在不同方面的贡献，公司还设立了其他专项奖励，如伯乐奖、分享奖、技术进步奖等。</p>
+													</li>
+													<li class="title"><span>福利体系</span></li>
+													<li>
+														<p><span>社会保险：</span>自员工入职后，公司为每一位员工购买基本社会保险，包括养老保险，失业保险，工伤保险，医疗保险，生育保险。<br/>
+															<span>住房公积金：</span>自员工入职后，公司为每一位员工购买住房公积金。<br/>
+															<span>带薪年假：</span>除法律规定的公休假日及婚假、产假、陪产假等法定休假外，转正员工可以享受5-15天的带薪年假。<br/>
+															<span>带薪病假：</span>自入职之日起，员工每年可享有五天的带薪病假。<br/>
+															<span>员工俱乐部：</span>员工可以在工作之余参加员工俱乐部组织的活动，如羽毛球、足球、自行车、跑步等，不定期进行短途旅行，也可以不定期观看最新上映电影大片。<br/>
+															<span>团建活动：</span>员工每个季度可以由部门自行组织进行内部团建活动，亦可部门间进行跨部门进行联谊活动。<br/>
+															<span>其他福利：</span>贴心的生日贺礼、节日礼品、通讯补贴、话费补贴等等。</p>
+													</li>
+												</ul>
+											</div>
+
+											<div class="sublist xuexi">
+												<ul>
+													<li style="margin:60px 0 48px">
+														<div style="height: 14px;border-left: 3px solid #FFDEDE;"></div>
+														<p style="margin:0;padding: 0; text-align: left;"><span>合利宝</span>始终重视员工的发展，每一位员工在合利宝都将经历充满挑战、快速发展的职业道路。 在合利宝，你将与公司共同成长；在合利宝，我们一起追逐梦想，共同开拓发展互联网金融事业！ 每位拿到offer的同学都可以在正式入职之前，先来合利宝实习，我们将尽我们最大的努力，帮助你们做出最正确的职业选择。
+														</p>
+													</li>
+												</ul>
+												<ul class="p-list">
+													<li class="title"><span>职位发展通道</span></li>
+													<li><img src="../images/school/6p_jpg.png" alt="" style="width: 100%;height: auto;margin:48px 0 76px" /></li>
+													<!--<li class="title"><span>KPI考核原则</span></li>
+													<li>
+														<p>每位实习生我们都会以正式员工要求和标准执行KCI考核原则，让你实习期得到极大锻炼和提高，这样的实习才会有成就感。</p>
+													</li>-->
+													<li class="title"><span>新人培训</span></li>
+													<li>
+														<p><span>部门业务培训：</span>通过精炼版本的部门业务内容培训，让新伙伴来到公司不迷茫。</p>
+														<p><span>新人入职培训：</span>面向当月入职的新人，形成的独立培训项目。包含在职系列培训，公司介绍、 行业发展、公司产品、职业发展、经验分享、团队共创展示等内内容
+														</p>
+														<p><span>新人导师制度：</span>一对一导师制度，每位同学入职3天内配备一名专属导师，悉心指导。</p>
+													</li>
+													<li class="title"><span>岗位专业培训</span></li>
+													<li>
+														<p style="color:#424242;">用于提升全体伙伴岗位专业能力，打造行业专家。</p>
+														<p>产品纷享汇 </p>
+
+														<p>技术交流会 </p>
+
+														<p>职能系列培训课程</p>
+														
+														<p>核心员工训练营</p>
+														<p>后备干部训练营</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer"></div>
+			<div class="contact-right">
+				<div class="contact-box">
+					<ul>
+						<li class="contact-list detail">
+							<a href="javascript:;"><img src="../images/ico_toolsfixed_phone.png"></a>
+						</li>
+						<li class="contact-list detail">
+							<a href="javascript:;"><img src="../images/ico_toolsfixed_wechat.png"></a>
+						</li>
+						<li class="contact-list top">
+							<a href="javascript:;"><img src="../images/ico_toolsfixed_top.png"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="contact-box-detail" style="display: none;">
+					<ul>
+						<li class="contact-detail-list" style="opacity: 0;">
+							<a href="javascript:;"><img src="../images/toolsfixed_phoneSchool.png"></a>
+						</li>
+						<li class="contact-detail-list" style="opacity: 0;">
+							<a href="javascript:;"><img src="../images/toolsfixed_wechat@12x.png"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/topmenu.js"></script>
+		<script type="text/javascript" src="../js/footer.js"></script>
+		<script type="text/javascript" src="../js/about.js"></script>
+		<!--<script type="text/javascript" src="../js/headroom.js"></script>-->
+		<!--<script type="text/javascript" src="../js/doheadrom.js"></script>-->
+		<script type="text/javascript">
+			$('#top').load('header.html');
+			$('.footer').load('footer.html');
+			$(function() {
+				//tab点击事件
+				$('.tabList li').on('click', function() {
+					$(this).addClass('active').siblings().removeClass('active');
+					var index = $(this).index();
+					$('.sublist').eq(index).show().siblings().hide();
+				})
+
+			})
+		</script>
+	</body>
+
+</html>

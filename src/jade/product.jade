@@ -1,0 +1,75 @@
+extends ./layout
+
+block append meta
+	meta(name="keywords" content="合利宝智能POS，合利宝M-POS，合利宝APP，商户转账/理财/贷款/进销存管理/收款/转账/信用卡还款/手机充值")
+	meta(name="description" content="合利宝支付，广州市唯一拥有支付全牌照的第三方支付公司，提供支付服务，包括互联网支付/移动电话支付/银行卡收单/跨境支付/合利金融/合利征信/合利保理")
+
+block title
+	- var title = "合利宝产品-合利宝支付-合利宝代理"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/product.css")
+
+block content
+	.container.product
+		include ./header
+		.section.page
+			//- 合利宝智能POS
+			.page-container.page1(data-id="page1")
+				mixin fullSection
+					.banner.banner1
+						.banner1-bg
+							img(src="dist/images/banner@12x.png")
+						.banner-txt
+							h2 合利宝智能POS
+							//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+				+fullSection
+				.product-wrapper
+					.product-desc
+						.title
+							h2 合利宝智能POS
+						.desc-box
+							p
+								|一款基于互联网和云智能服务的POS终端。
+								|集合多种支付方式可以做到全支付，全受理，会员营销于一体。
+								|同时提供了便民服务和互联网金融增值服务，一站式满足商户转账、还款、理财、贷款、进销存管理等各类金融需求，
+								|助力商户实现智能化的店铺经营。
+						.pro-schema
+							img(src="dist/images/ico_product_suit@12x.png")
+							span 适用客户：便利店、商场专柜、电商连锁门店、批发市场商户等
+					.product-img
+						img(src="dist/images/img_product_znpos@12x.png")
+				.product-scenes
+					.scenes-wrapper
+						.scenes-box
+							- var scenes = [{"index":"1","title":"时尚外观 小巧精致","pre":"5.5英寸IPS触控屏，全屏幕操作，2寸热敏超长打印机口读卡卡槽一体化设计"},{"index":"2","title":"安心支付 到账稳定有保障","pre":"通过银联卡受理终端 PIN输入设备安全评估检测认证，数据存储在国家级数据机房，为您的资金安全和数据保驾护航"},{"index":"3","title":"无线联网 移动性强","pre":"全网络覆盖，支持联通、移动、电信4G/3G/2G网络  支持无线WIFI  随时随地点单收款"},{"index":"4","title":"融合支付 选择多体验好","pre":"主流支付方式一应俱全，支持刷卡支付、支付宝、微信支付、Apple Pay等，同时支持 NFC，支持二维码、条形码等扫描"}]
+							each val in scenes
+								.scenes-item
+									.item-img
+										img(src="dist/images/ico_product_adv#{val.index}@12x.png")
+									.item-desc
+										.title
+											h2= val.title
+										.desc-box
+											p= val.pre
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")

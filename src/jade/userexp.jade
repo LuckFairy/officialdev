@@ -1,0 +1,166 @@
+extends ./layout
+
+block title
+	- var title = "合利宝支付体验-体验中心"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/serve.css")
+
+block content
+	.container.serve
+		include ./header
+		.section.page
+			.page-container.page(data-id="page1")
+				.banner.banner1
+					.banner1-bg
+						img(src="dist/images/banner@12x.png")
+					.banner-txt
+						h2 用户体验中心
+						//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+				.container-ui
+					.tab-ui
+						.tab-box-ui
+							ul.tab-ul.tab-ul-ui
+								- var list = [{"title":"网关支付","img":"icon_serve_exp_wg_1active","dataid":"wgzf"},{"title":"快捷支付","img":"icon_serve_exp_kj_1","dataid":"kjzf"},{"title":"二维码支付","img":"icon_serve_exp_QR_1","dataid":"qrzf"},{"title":"委托支付","img":"icon_serve_exp_wt_1","dataid":"wtzf"}]
+								each val,index in list
+									if(index == '0')
+										li(data-id="#{val.dataid}")
+											a(href="#",class="active")
+												img(src="dist/images/#{val.img}@12x.png")
+												span #{val.title}
+									else
+										li(data-id="#{val.dataid}")
+											a(href="#")
+												img(src="dist/images/#{val.img}@12x.png")
+												span #{val.title}
+					mixin fullSection(dataid)
+						.container-content-ui(data-id="#{dataid}")
+							.wrapper-ui
+								.title-list-ui
+									ul.title-info-ui
+										- var list = [{"index":"1","title":"我的订单"},{"index":"2","title":"银行卡支付"},{"index":"1","title":"合利宝APP支付"}]
+										each val in list
+											li
+												a(href="#",dataid="#{val.index}") #{val.title}
+								.content-box-ui
+									.sub-content-ui
+										ul.sub-list-ui
+											- var list = [{"label":"订单号","content":"238432472374327"},{"label":"订单内容","content":"一分爱支付体验"},{"label":"用户","content":"合利宝"},{"label":"交易时间","content":"2017-02-20"},{"label":"交易类型","content":"及时到帐"},{"label":"金额","content":"0.01元"}]
+											each val in list
+												li
+													span #{val.label}：
+													span #{val.content}
+									.main-content-ui
+										.main-form-ui
+											.check-list-ui
+												form(action="#",method="POST")
+													.check-type-ui
+														input(type="radio",name="check-type",value="0",checked)
+														span 借记卡
+														input(type="radio",name="check-type",value="1")
+														span 信用卡
+													.text-input-ui
+														- var list = [{"label":"请输入银行卡号"},{"label":"开户支行"},{"label":"身份证号码"},{"label":"银行卡预留手机"}]
+														ul.input-list-ui
+															each val in list
+																li
+																	label #{val.label}
+																	input(type="text",name="check-input",placeholder="#{val.label}")
+													.pact-check-ui
+														input(type="checkbox",name="read-pact",value="0",checked)
+														span 同意《合利宝快捷支付协议》
+													.submit-btn-ui
+														input(type="submit",name="submit",value="马上付款",class="sub-btn")
+
+					mixin fullSectionqr(dataid)
+						.container-content-ui(data-id="#{dataid}")
+							.wrapper-ui
+								.title-list-ui
+									ul.title-info-ui
+										- var list = [{"index":"1","title":"我的订单"},{"index":"2","title":"银行卡支付"},{"index":"1","title":"合利宝APP支付"}]
+										each val in list
+											li
+												a(href="#",dataid="#{val.index}") #{val.title}
+								.content-box-ui
+									.sub-content-ui
+										ul.sub-list-ui
+											- var list = [{"label":"订单号","content":"238432472374327"},{"label":"订单内容","content":"一分爱支付体验"},{"label":"用户","content":"合利宝"},{"label":"交易时间","content":"2017-02-20"},{"label":"交易类型","content":"及时到帐"},{"label":"金额","content":"0.01元"}]
+											each val in list
+												li
+													span #{val.label}：
+													span #{val.content}
+									.main-content-ui
+										.main-form-ui
+											form(action="#",method="POST")
+												.pay-type-ui
+													.qr-img-ui
+														img(src="dist/images/QR1@12x.png")
+														span 扫描二维码进行支付
+													.qr-info-ui
+														span 支付金额
+														span 0.01 元
+												.pact-check-ui.qr-pact-ui
+													input(type="checkbox",name="read-pact",value="0",checked)
+													span 同意《合利宝快捷支付协议》
+					+fullSection('wgzf')
+					+fullSection('kjzf')
+					+fullSectionqr('qrzf')
+					+fullSection('wtzf')
+					.my-mask-box
+						.my-mask
+							span 服务即将开通，敬请期待！
+				.container-ui
+					.container-content-hz-ui
+						.wrapper-ui
+							.pay-box-ui
+								.title-ui
+									h2 支持的银行：
+								.pay-list-ui
+									- var list = [{"index":"1"},{"index":"2"},{"index":"3"},{"index":"4"},{"index":"5"},{"index":"6"},{"index":"7"},{"index":"8"},{"index":"9"}]
+									ul.bank-list-ui
+										each val in list
+											li
+												img(src="dist/images/bank-#{val.index}@12x.png")
+
+		//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/finance.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript").
+		$(function() {
+			setImgSection('.container-content-ui');
+			var $btn = $('.sub-btn');
+			var mask = $('.my-mask-box');
+			$btn.bind('click', function(event) {
+				mask.fadeIn('fast');
+				if (event.preventDefault) {
+					event.preventDefault(); //支持DOM标准的浏览器
+				} else {
+					event.returnValue = false; //IE
+				}
+			});
+			$(document).bind("click", function() {
+				var target = $(event.target);
+				if (target.closest('.my-mask-box,.sub-btn').length === 0) {
+					$('.my-mask-box').fadeOut('fast');
+				}
+			});
+		})

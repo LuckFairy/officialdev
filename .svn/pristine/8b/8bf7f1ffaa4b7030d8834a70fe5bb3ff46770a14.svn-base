@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=11;IE=9; IE=8; IE=7; IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="keywords" content="合利宝公司介绍，合利宝广州/北京/深圳/上海,关于合利宝">
+		<meta name="description" content="合利宝支付，广州市唯一拥有支付全牌照的第三方支付公司，提供支付服务，包括互联网支付/移动电话支付/银行卡收单/跨境支付/合利金融/合利征信/合利保理">
+		<title>关于合利宝-合利宝支付-校园招聘</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/layout.css">
+		<link rel="stylesheet" type="text/css" href="../css/animation.css">
+		<link rel="stylesheet" type="text/css" href="../css/about.css">
+		<!--if lt IE9-->
+		<script type="text/javascript" src="../js/html5shiv.min.js"></script>
+		<script type="text/javascript" src="../js/selectivizr.min.js"></script>
+		<script type="text/javascript" src="../js/respond.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/campus.css" />
+		<link rel="stylesheet" type="text/css" href="../css/campus_we.css" />
+		<link rel="stylesheet" type="text/css" href="../css/campus_resumeForm.css" />
+	</head>
+
+	<body>
+
+		<div class="container campus">
+			<div class="top" id="top"></div>
+			<!--内容-->
+			<div class="section page">
+				<div data-id="page1" class="page-container page1">
+					<div class="banner banner1">
+						<div class="banner1-bg"><img src="../images/banner@12x.png"></div>
+						<div class="banner-txt">
+							<!--<h2>认识我们</h2>-->
+						</div>
+					</div>
+					<div class="section-introduce">
+						<div class="clear">
+							<div class="container-shareholder" style="padding-top: 0;">
+								<div class="shareholder-box">
+									<div class="resumeInfo">
+										<span class="c_B32639">*</span> 为必填项目 简历基本完整，才可用于投递，建议优先完善必填项内容。
+									</div>
+									<!--校园左边-->
+									<div class="contLeft">
+
+										<ul class="tabList">
+											<li class="active" data-type="1">
+												<span><img src="../images/school/hlb-zhp-grxx.png" alt="" />个人信息</span>
+												<div></div>
+											</li>
+											<li data-type="2">
+												<span><img src="../images/school/hlb-zhp-jybj.png" alt="" />教育背景</span>
+												<div></div>
+											</li>
+											<li data-type="3">
+												<span><img src="../images/school/hlb-zhp-yynl.png"/>语言能力 </span>
+												<div></div>
+											</li>
+											<li data-type="4">
+												<span><img src="../images/school/hlb-zhp-itjn.png"/>IT技能</span>
+												<div></div>
+											</li>
+											<li data-type="5">
+												<span><img src="../images/school/hlb-zhp-xmjy.png"/>项目经验</span>
+												<div></div>
+											</li>
+											<li data-type="6">
+												<span><img src="../images/school/hlb-zhp-gzjy.png"/>工作经验</span>
+												<div></div>
+											</li>
+											<li data-type="7">
+												<span><img src="../images/school/hlb-zhp-tjtp.png"/>添加照片和附件</span>
+												<div></div>
+											</li>
+										</ul>
+										<div class="weixin-code">
+											<img src="../images/school/icon_wechat.png" />
+											<p>微信扫码关注<br/>合利宝微生活</p>
+										</div>
+										<div><img src="../images/school/erweima.png" alt="" /><img src="../images/school/erwei_mingsheng.jpg" alt="" /></div>
+									</div>
+									<!--校园右边-->
+									<div class="shareholder-content" style="float: left;width: 78%;">
+										<ul class="shareholder-title">
+											<li>
+												<a class="active"><span id="resume-title">个人信息</span></a>
+											</li>
+										</ul>
+										<form action="" id="resumeForm" method="post">
+											
+											
+										</form>
+										
+													
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer"></div>
+			<div class="contact-right">
+				<div class="contact-box">
+					<ul>
+						<li class="contact-list detail">
+							<a href="javascript:;"><img src="../images/ico_toolsfixed_phone.png"></a>
+						</li>
+						<li class="contact-list detail">
+							<a href="javascript:;"><img src="../images/ico_toolsfixed_wechat.png"></a>
+						</li>
+						<li class="contact-list top">
+							<a href="javascript:;"><img src="../images/ico_toolsfixed_top.png"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="contact-box-detail" style="display: none;">
+					<ul>
+						<li class="contact-detail-list" style="opacity: 0;">
+							<a href="javascript:;"><img src="../images/toolsfixed_phoneSchool.png"></a>
+						</li>
+						<li class="contact-detail-list" style="opacity: 0;">
+							<a href="javascript:;"><img src="../images/toolsfixed_wechat@12x.png"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/topmenu.js"></script>
+		<script type="text/javascript" src="../js/footer.js"></script>
+		<script type="text/javascript" src="../js/about.js"></script>
+		<!--<script type="text/javascript" src="../js/headroom.js"></script>-->
+		<!--<script type="text/javascript" src="../js/doheadrom.js"></script>-->
+		<script type="text/javascript">
+			$('#top').load('header.html');
+			$('.footer').load('footer.html');
+			$(function() {
+				var $formCont = $('#resumeForm'),
+				$title = $('#resume-title'),
+				$i=0,//默认打开个人能力
+				$check_flag = false;//验证成功的标识
+				function getData(i){
+					$.get('public/datas/resumeForm.json',function(data, status, xhr){
+						if(status != 'success'){console.log(xhr);alert('数据加载失败');}
+						$title.text(data[i].title)
+						$formCont.attr('action',data[i].action)
+						$.get('public/datas/'+data[i].url+'.txt',function(res){
+							$formCont.html(res);
+						})
+						
+					})
+				}
+				getData($i);
+				//保存函数
+				function submitForm(opt){
+				 var len = $('.tabList li').length-1,
+					index = $i;
+					opt = opt?'exit' :opt;
+					switch(opt){
+						case 'previous':index--;if(index>=0){getData(index)}else{index=0;}break;
+						case 'next':index++;if(index<=len){getData(index)}else{index=len;}break;
+						case 'exit':;
+						default:break;
+					}
+				}
+				
+				function tab(){
+					//tab点击事件
+					$('.tabList li').on('click', function() {
+						$(this).addClass('active').siblings().removeClass('active');
+						var index = $(this).index();
+						$i = index;
+						getData($i);
+					})
+				}
+				//个人信息验证
+				tab()
+				
+			})
+		</script>
+	</body>
+
+</html>

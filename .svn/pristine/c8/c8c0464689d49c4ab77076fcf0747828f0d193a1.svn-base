@@ -1,0 +1,126 @@
+
+											<input type="hidden" id="uuid" name="uuid" value="E9527E769D84D2C03802D75D5302D1EC">
+
+											<input type="hidden" id="id" name="id" value="3177858">
+
+											<table border="0" cellpadding="0" cellspacing="0" class="table_2 m30">
+												<tbody>
+													<tr>
+														<td class="w150">
+															<div align="right"><span class="c_B32639">*</span>英语等级：</div>
+														</td>
+														<td>
+															<select name="englishLevel" id="englishLevel" onchange="checkSelect(this,'英语等级不能为空')">
+																<option value=""></option>
+
+																<option value="1">大学英语考试四级</option>
+
+																<option value="2">大学英语考试六级</option>
+
+																<option value="3">专业四级</option>
+
+																<option value="4">专业八级</option>
+
+																<option value="5">未参加</option>
+
+																<option value="6">未通过</option>
+
+															</select>
+															<span class="err" id="englishLevel_err"></span>
+														</td>
+													</tr>
+													<!-- 
+          			<tr>
+            			<td height="0"  style="width:150px"><div align="right">英语口语：</div></td>
+            			<td class=" width_25p">
+            				<select name="oralEnglishLevel" id="oralEnglishLevel" >
+								<option value=""></option>
+								
+									<option value="1"  >一般</option>
+								
+									<option value="2"  >良好</option>
+								
+									<option value="3"  >熟练</option>
+								
+									<option value="4"  >母语</option>
+								
+							</select>
+            			</td>
+          			</tr>
+          			 -->
+													<tr>
+														<td height="0" style="width:150px">
+															<div align="right">语 言2 ：</div>
+														</td>
+														<td class=" width_25p">
+															<select name="otherLanguage1" id="otherLanguage1">
+																<option value=""></option>
+																<option value="日语">日语</option>
+																<option value="法语">法语</option>
+																<option value="德语">德语</option>
+																<option value="俄语">俄语</option>
+																<option value="韩语">韩语</option>
+																<option value="西班牙语">西班牙语</option>
+																<option value="葡萄牙语">葡萄牙语</option>
+																<option value="阿拉伯语">阿拉伯语</option>
+																<option value="意大利语">意大利语</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td height="1" style="width:150px">
+															<div align="right">等　级：</div>
+														</td>
+														<td class=" width_25p">
+															<select name="level1" id="level1">
+																<option value=""></option>
+
+																<option value="1">一般</option>
+
+																<option value="2">良好</option>
+
+																<option value="3">熟练</option>
+
+																<option value="4">母语</option>
+
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td height="2" style="width:150px">
+															<div align="right">语 言3 ：</div>
+														</td>
+														<td class=" width_25p"><input name="otherLanguage2" id="otherLanguage2" value="" class="input"></td>
+													</tr>
+													<tr>
+														<td height="4" style="width:150px">
+															<div align="right">等　级：</div>
+														</td>
+														<td class=" width_25p">
+															<select name="level2" id="level2">
+																<option value=""></option>
+
+																<option value="1">一般</option>
+
+																<option value="2">良好</option>
+
+																<option value="3">熟练</option>
+
+																<option value="4">母语</option>
+
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td height="45" class="text_right">&nbsp;</td>
+														<td>
+															<input type="submit" onclick="submitForm('previous');" class="redBtn" value="上一项" style="margin:0">
+															<input type="submit" onclick="submitForm('next');" class="redBtn" value="保存，并填写下一项" style="margin:0">
+															<input type="submit" onclick="submitForm('exit');" class="redBtn" value="保存" style="margin:0">
+														</td>
+													</tr>
+												</tbody>
+											</table>
+
+											<input type="hidden" id="action" name="action">
+

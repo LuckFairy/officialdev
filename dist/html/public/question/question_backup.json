@@ -1,0 +1,182 @@
+{
+    "pay_type": {
+        "flag": "1",
+        "title": "支付方式",
+        "keyword":"pay_type",
+        "category": [{
+            "flag": "1",
+            "title": "网银支付",
+            "keyword": "online_bank",
+            "questions": [{
+                "id": "1",
+                "question": "网银支付跳转不到银行页面处理方法"
+            }, {
+                "id": "2",
+                "question": "网银支付的时候提示：会话已过期"
+            }],
+            "time": "2016-04-18"
+        }, {
+            "flag": "2",
+            "title": "快捷支付",
+            "keyword": "quick_payment",
+            "questions": [{
+                "id": "1",
+                "question": "快捷支付的定义"
+            }, {
+                "id": "2",
+                "question": "快捷支付、代扣订单在商户后台的查询方法"
+            }],
+            "time": "2016-04-20"
+        }, {
+            "flag": "3",
+            "title": "一键支付",
+            "keyword": "one_key_payment",
+            "questions": [{
+                "id": "1",
+                "question": "合利宝用户扫码支付定义"
+            }, {
+                "id": "2",
+                "question": "合利宝公众号扫码支付定义"
+            }],
+            "time": "2016-07-25"
+        }, {
+            "flag": "4",
+            "title": "线下支付",
+            "keyword": "offline_payment",
+            "questions": [{
+                "id": "1",
+                "question": "POS机操作刷卡步骤"
+            }, {
+                "id": "2",
+                "question": "POS机小票名称字数"
+            }],
+            "time": "2016-09-21"
+        }]
+    },
+    "business_cooperation": {
+        "flag": "1",
+        "title": "商户合作",
+        "keyword":"business_cooperation",
+        "category": [{
+            "flag": "1",
+            "title": "商户合作",
+            "keyword": "online_bank",
+            "questions": [{
+                "id": "1",
+                "question": "商户合作流程"
+            }, {
+                "id": "2",
+                "question": "商户合作的处理时限"
+            }],
+            "time": "2016-04-18"
+        }]
+    },
+    "merchant_manage": {
+        "flag": "1",
+        "title": "商户后台",
+        "keyword":"merchant_manage",
+        "category": [{
+            "flag": "1",
+            "title": "网银支付",
+            "keyword": "online_bank",
+            "questions": [{
+                "id": "1",
+                "question": "商户登录商户后台提示：3个月未修改密码，需要重新设置密码"
+            }, {
+                "id": "2",
+                "question": "线上商户操作员更换绑定手机号码的方法"
+            }],
+            "time": "2016-04-18"
+        }, {
+            "flag": "2",
+            "title": "快捷支付",
+            "keyword": "quick_payment",
+            "questions": [{
+                "id": "1",
+                "question": "快捷支付的定义"
+            }, {
+                "id": "2",
+                "question": "快捷支付、代扣订单在商户后台的查询方法"
+            }],
+            "time": "2016-04-20"
+        }, {
+            "flag": "3",
+            "title": "一键支付",
+            "keyword": "one_key_payment",
+            "questions": [{
+                "id": "1",
+                "question": "合利宝用户扫码支付定义"
+            }, {
+                "id": "2",
+                "question": "合利宝公众号扫码支付定义"
+            }],
+            "time": "2016-07-25"
+        }, {
+            "flag": "4",
+            "title": "线下支付",
+            "keyword": "offline_payment",
+            "questions": [{
+                "id": "1",
+                "question": "POS机操作刷卡步骤"
+            }, {
+                "id": "2",
+                "question": "POS机小票名称字数"
+            }],
+            "time": "2016-09-21"
+        }]
+    },
+    "payment_fund": {
+        "flag": "1",
+        "title": "款项问题",
+        "keyword":"payment_fund",
+        "category": [{
+            "flag": "1",
+            "title": "网银支付",
+            "keyword": "online_bank",
+            "questions": [{
+                "id": "1",
+                "question": "网银支付跳转不到银行页面处理方法"
+            }, {
+                "id": "2",
+                "question": "网银支付的时候提示：会话已过期"
+            }],
+            "time": "2016-04-18"
+        }, {
+            "flag": "2",
+            "title": "快捷支付",
+            "keyword": "quick_payment",
+            "questions": [{
+                "id": "1",
+                "question": "快捷支付的定义"
+            }, {
+                "id": "2",
+                "question": "快捷支付、代扣订单在商户后台的查询方法"
+            }],
+            "time": "2016-04-20"
+        }, {
+            "flag": "3",
+            "title": "一键支付",
+            "keyword": "one_key_payment",
+            "questions": [{
+                "id": "1",
+                "question": "合利宝用户扫码支付定义"
+            }, {
+                "id": "2",
+                "question": "合利宝公众号扫码支付定义"
+            }],
+            "time": "2016-07-25"
+        }, {
+            "flag": "4",
+            "title": "线下支付",
+            "keyword": "offline_payment",
+            "questions": [{
+                "id": "1",
+                "question": "POS机操作刷卡步骤"
+            }, {
+                "id": "2",
+                "question": "POS机小票名称字数"
+            }],
+            "time": "2016-09-21"
+        }]
+    }
+}

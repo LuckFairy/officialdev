@@ -1,0 +1,25 @@
+[{
+    "id": "1",
+    "docName": "互联网支付服务协议及附件",
+    "downUrl": "pt_hlwzffwxy",
+    "type": ".docx",
+    "docAmount": "2份",
+    "seal": "一式两份加盖公章、骑缝章、签约人签字",
+    "desc": "申请网关支付需提交"
+}, {
+    "id": "2",
+    "docName": "移动快捷支付协议及附件",
+    "downUrl": "pt_ydkjzfxy",
+    "type": ".doc",
+    "docAmount": "2份",
+    "seal": "一式两份加盖公章、骑缝章、签约人签字",
+    "desc": "申请网关支付需提交"
+}, {
+    "id": "4",
+    "docName": "委托结算代付协议及附件",
+    "downUrl": "pt_wtjsdfxy",
+    "type": ".docx",
+    "docAmount": "2份",
+    "seal": "一式两份加盖公章、骑缝章、签约人签字",
+    "desc": ""
+}]

@@ -1,0 +1,159 @@
+body{
+	font-family: "微软雅黑";
+}
+ /*.section{
+	overflow-x: auto;
+}*/
+html,body{
+	min-width:1100px;
+	overflow-x: auto;
+}
+.section-introduce .container-shareholder .shareholder-box .shareholder-content .introduce-box p{
+	font-size: 14px;
+	text-indent: 28px;
+	color:#626262;
+}
+.title{
+	/*font-size: 24px;*/
+	font-size: 18px;
+	color:#424242;
+	border-bottom: 1px solid #E5E9F2;
+}
+.title span{
+	display: inline-block;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #ff4b46;
+}
+.company-event{
+	margin-top: 48px;
+}
+.company-event .event-lists{
+	position: relative;
+	    
+}
+.event-bg{
+	position: absolute;
+	height: 590px;
+	width: 200%;
+	left:-210px;
+	top:56px;
+	z-index: -10;
+	background:url(../images/school/bg_map.png) no-repeat center/100% 100%;
+}
+.event-cont{
+	/*overflow: hidden;*/
+	/*width:100%;*/
+	/*height: auto;*/
+	width: 923px;
+	padding-left: 5px;
+	height: 540px;
+	margin-top:74px;
+	background:url(../images/school/bg_course.png) no-repeat top center/100% 100%;
+}
+.event-cont div{
+	width:100%;
+	height: 33.33%;
+}
+.event-cont div dl{
+	width:20%;
+	height: 100%;
+	position: relative;
+	/*padding-top: 64px;*/
+}
+.event-cont div dl{
+	float: left;
+	transition: all 1s;
+}
+.event-cont div:nth-child(2) dl{
+	float: right;
+}
+
+
+.event-cont div dl dt{
+	margin:0 10px;
+	font-size: 20px;
+	color:#4E92DF;
+	margin-top: 28px;
+}
+.event-cont div:first-child dl dt{
+	margin-top: 64px;
+}
+.event-cont div dl dd{
+	margin:0 10px;
+	line-height: 1.5;;
+}
+
+.event-cont div dd.line{
+	width:18px;
+	height: 3px;
+	margin:2px 10px 5px;
+	background:#4E92DF;
+}
+.event-cont div dd{
+	font-size: 14px;
+	color:#424242;
+}
+.section-introduce .container-shareholder .shareholder-box .shareholder-content .introduce-box .p-list p{
+	text-indent: 0;
+}
+.introduce-box ul>li:nth-child(2n){
+	margin-bottom: 48px;
+}
+.section-introduce .container-shareholder .shareholder-box .shareholder-content .introduce-box  p span{
+	color:#fc4d4c;
+}
+.section-introduce .container-shareholder .shareholder-box .shareholder-content .introduce-box .xuexi p{
+	padding: 0;
+}
+.xuexi .title{
+	margin-bottom: 48px;
+}
+/*hover*/
+.event-cont div dl:hover  dt,.event-cont div dl:hover dd{
+	color: #fff;
+}
+.event-cont div dl:hover dd.line{
+	background: #fff;
+}
+.event-cont div dl .text{
+	position: absolute;
+	width: 90%;
+	height: 100%;
+	overflow: hidden;
+	left: 10px;
+	z-index: 10;
+}
+.event-cont div:nth-child(2) dl .text{
+	top:20px;
+	left: 5px;
+}
+.event-cont div dl .bg{
+	position: absolute;
+	width:100%;
+	height: 100%;
+	z-index: 89;
+	display: none;
+	background:url(../images/school/course_selected.png) no-repeat top center/100% 100%;
+}
+.event-cont div dl:hover .text{
+	z-index: 100;
+}
+@keyframes scale{
+	from{transform: scale(0.5,0.5);}
+	to{transform: scale(1.4,1.4);}
+}
+.event-cont div dl:hover .bg{
+	
+	display: block;
+	animation: scale .3s forwards;
+}
+
+.event-cont div:first-child dl .bg{
+	top:20px;
+}
+.event-cont div:nth-child(2) dl .bg{
+	left: -10px;
+}
+.event-cont div:last-child dl .bg{
+	top:-20px;
+}

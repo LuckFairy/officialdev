@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>备份</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link href="css/iconfont.css" rel="stylesheet"/>
+    <script src="js/global.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/css/swiper-3.4.0.min.css"/>
+    <link rel="stylesheet" type="text/css" href="public/components/font-awesome/css/font-awesome.min.css"/>
+</head>
+<body>
+	<!-- 主界面菜单同时移动 -->
+	    <!-- 侧滑导航根容器 -->
+	    <div class="mui-off-canvas-wrap mui-draggable">
+	        <!-- 主页面容器 -->
+	        <div class="mui-inner-wrap">
+	            <!-- 菜单容器 -->
+	            <aside class="mui-off-canvas-left" id="offCanvasSide">
+	                <div class="mui-scroll-wrapper" id="subMenu">
+	                    <div class="mui-scroll">
+	                        <!-- 菜单具体展示内容 -->
+	                        <!-- logo -->
+	                        <div class="mui-card mui-card-customer-dark">
+								<!--内容区-->
+								<div class="mui-card-content mui-card-content-customer-center">
+									<img src="img/logo_helibao@12x.png"/>
+								</div>
+							</div>
+	                        <ul class="mui-table-view mui-table-view-customer-dark">
+	                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                <a class="mui-navigate-right" href="#" id="home">
+	                                	<span class="mui-icon iconfont icon-qianbao1"></span>
+	                                	<!-- <i class="fa fa-home fa-fw"></i> -->
+	                                	主页
+	                                </a>
+	                            </li>
+	                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+	                                <a class="mui-navigate-right" href="#">
+	                                	<!-- <i class="fa fa-building fa-fw" aria-hidden="true"></i> -->
+	                                	<span class="mui-icon iconfont icon-guanyu"></span>
+	                                	关于公司
+	                                </a>
+	                                    <div class="mui-collapse-content mui-collapse-content-customer-dark">
+	                                    <ul class="mui-table-view mui-table-view-customer-dark">
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right" id="about">
+	                                                	<!-- <i class="fa fa-paperclip fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-jieshao"></span>
+	                                                    公司介绍
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right" id="history">
+	                                                	<!-- <i class="fa fa-history fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-lishi"></span>
+	                                                    公司历史
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right" id="news">
+	                                                	<!-- <i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-xinwen"></span>
+	                                                    公司新闻
+	                                                </a>
+	                                            </li>
+	                                        </ul>
+	                                </div>
+	                            </li>
+	                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+	                                <a class="mui-navigate-right" href="#">
+	                                	<!-- <i class="fa fa-product-hunt fa-fw" aria-hidden="true"></i> -->
+	                                	<span class="mui-icon iconfont icon-chanpin"></span>
+	                                	产品中心
+	                                </a>
+	                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+	                                    <ul class="mui-table-view mui-table-view-customer-dark">
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-check-circle-o fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-pos"></span>
+	                                                    智能POS
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-check-circle-o fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-posji1"></span>
+	                                                     M-POS
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-check-circle-o fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-posji2"></span>
+	                                                    蓝牙POS
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-check-circle-o fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-posji3"></span>
+	                                                    传统POS
+	                                                </a>
+	                                            </li>
+	                                        </ul>
+	                                </div>
+	                            </li>
+	                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+	                                <a class="mui-navigate-right" href="#">
+	                                	<!-- <i class="fa fa-check fa-fw" aria-hidden="true"></i> -->
+	                                	<span class="mui-icon iconfont icon-wangyuanjing"></span>
+	                                	解决方案
+	                                </a>
+	                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+	                                	<ul class="mui-table-view mui-table-view-customer-dark">
+	                                	        <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                	            <a class="mui-navigate-right">
+	                                	            	<!-- <i class="fa fa-cc-amex fa-fw" aria-hidden="true"></i> -->
+	                                	            	<span class="mui-icon iconfont icon-wangguan"></span>
+	                                	                网关支付
+	                                	            </a>
+	                                	        </li>
+	                                	        <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                	            <a class="mui-navigate-right">
+	                                	            	<!-- <i class="fa fa-cc-diners-club fa-fw" aria-hidden="true"></i> -->
+	                                	            	<span class="mui-icon iconfont icon-kuaijie"></span>
+	                                	                 快捷支付
+	                                	            </a>
+	                                	        </li>
+	                                	        <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                	            <a class="mui-navigate-right">
+	                                	            	<!-- <i class="fa fa-cc-mastercard fa-fw" aria-hidden="true"></i> -->
+	                                	            	<span class="mui-icon iconfont icon-saoma"></span>
+	                                	                 二维码支付
+	                                	            </a>
+	                                	        </li>
+	                                	        <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                	            <a class="mui-navigate-right">
+	                                	            	<!-- <i class="fa fa-credit-card fa-fw" aria-hidden="true"></i> -->
+	                                	            	<span class="mui-icon iconfont icon-weituodan"></span>
+	                                	                 委托支付
+	                                	            </a>
+	                                	        </li>
+	                                	        <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                	            <a class="mui-navigate-right">
+	                                	            	<!-- <i class="fa fa-cc-paypal fa-fw" aria-hidden="true"></i> -->
+	                                	            	<span class="mui-icon iconfont icon-shouicon"></span>
+	                                	                 POS收单
+	                                	            </a>
+	                                	        </li>
+	                                	        <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                	            <a class="mui-navigate-right">
+	                                	            	<!-- <i class="fa fa-cc-visa fa-fw" aria-hidden="true"></i> -->
+	                                	            	<span class="mui-icon iconfont icon-kuajing"></span>
+	                                	                 跨境支付
+	                                	            </a>
+	                                	        </li>
+	                                	    </ul>
+	                                </div>
+	                            </li>
+	                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+	                                <a class="mui-navigate-right" href="#">
+	                                	<!-- <i class="fa fa-industry fa-fw" aria-hidden="true"></i> -->
+	                                	<span class="mui-icon mui-icon-flag"></span>
+	                                	行业服务
+	                                </a>
+	                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+	                                    <ul class="mui-table-view mui-table-view-customer-dark">
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+													<span class="mui-icon iconfont icon-yinhang"></span>
+	                                                	<!-- <i class="fa fa-bandcamp fa-fw" aria-hidden="true"></i> -->
+	                                                    银行服务
+	                                                </a>
+	                                            </li>
+	                                        </ul>
+	                                </div>
+	                            </li>
+	                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+	                                <a class="mui-navigate-right" href="#">
+	                                	<!-- <i class="fa fa-google-wallet fa-fw" aria-hidden="true"></i> -->
+	                                	<span class="mui-icon iconfont icon-qianbao"></span>
+	                                	合利宝APP
+	                                </a>
+	                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+	                                    <ul class="mui-table-view mui-table-view-customer-dark">
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-qianbao1"></span>
+	                                                    商户钱包
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-qianbao2"></span>
+	                                                     个人钱包
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-icon"></span>
+	                                                     合利宝钱包
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-qianbao"></span>
+	                                                     合利宝
+	                                                </a>
+	                                            </li>
+	                                        </ul>
+	                                </div>
+	                            </li>
+	                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+	                                <a class="mui-navigate-right" href="#">
+	                                	<!--<span class="mui-icon mui-icon-contact"></span>-->
+	                                	<!-- <i class="fa fa-server fa-fw" aria-hidden="true"></i> -->
+	                                	<span class="mui-icon iconfont icon-fuwu1"></span>
+	                                	服务中心
+	                                </a>
+	                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+	                                    <ul class="mui-table-view mui-table-view-customer-dark">
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-server fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-wenti"></span>
+	                                                     常见问题
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-server fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-iconfonticon3"></span>
+	                                                     体验中心
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-server fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-chuangkou"></span>
+	                                                     金融之窗
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-server fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-kefu"></span>
+	                                                     客服服务
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-server fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-shoufei"></span>
+	                                                     收费说明
+	                                                </a>
+	                                            </li>
+	                                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+	                                                <a class="mui-navigate-right">
+	                                                	<!-- <i class="fa fa-server fa-fw" aria-hidden="true"></i> -->
+	                                                	<span class="mui-icon iconfont icon-agreement"></span>
+	                                                     服务协议
+	                                                </a>
+	                                            </li>
+	                                        </ul>
+	                                </div>
+	                            </li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </aside>
+	            <!-- 主页面标题 -->
+	            <header class="mui-bar mui-bar-nav">
+	                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"><span class="mui-header-menu">菜单</span></a>
+	                <h1 class="mui-title">备份</h1>
+	            </header>
+	            <nav class="mui-bar mui-bar-tab">
+	    		    <a class="mui-tab-item mui-active">
+	    		        <span class="mui-icon mui-icon-home"></span>
+	    		        <span class="mui-tab-label">首页</span>
+	    		    </a>
+	    		    <a class="mui-tab-item">
+	    		        <span class="mui-icon mui-icon-phone"></span>
+	    		        <span class="mui-tab-label">联系我们</span>
+	    		    </a>
+	    		    <a class="mui-tab-item">
+	    		        <span class="mui-icon mui-icon-email"></span>
+	    		        <span class="mui-tab-label">招聘英才</span>
+	    		    </a>
+	    		    <a class="mui-tab-item">
+	    		        <span class="mui-icon mui-icon-gear"></span>
+	    		        <span class="mui-tab-label">设置</span>
+	    		    </a>
+	    		</nav>
+	            <!-- 主页面内容容器 -->
+	            <div class="mui-content" style="height: 100%;position: relative;">
+	            	<div class="mui-swiper-container" style="height: 100%;">
+	            		<div id="swiper-container" class="swiper-container" style="height: 100%;">
+		            		<div class="swiper-wrapper">
+		            			<section class="swiper-slide" style="height: 100%;background-color: lightsteelblue;">1</section>
+		            			<section class="swiper-slide" style="height: 100%;background-color: pink;">2</section>
+		            			<section class="swiper-slide" style="height: 100%;background-color: lightgreen;">3</section>
+		            			<section class="swiper-slide" style="height: 100%;background-color: darkolivegreen;">4</section>
+		            		</div>
+		            		<div class="swiper-pagination"></div>
+	            		</div>
+	            	</div>
+	            </div>
+	       	 <div class="mui-off-canvas-backdrop"></div>
+	        </div>
+	    </div>
+	    <script src="public/js/swiper-3.4.0.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script type="text/javascript">
+	    	window.onload = function () {
+	    		var mySwiper = new Swiper ('.swiper-container', {
+					direction: 'vertical',
+					slidesPerGroup: 1,
+					slidesPerView: 1,
+					loop: true,
+					speed: 800,
+					noSwiping: false,
+					shortSwipes: false,
+					iOSEdgeSwipeDetection: true,
+//					effect : 'cube',
+					effect: 'coverflow',
+					coverflow: {
+						rotate: 25,
+						stretch: 2,
+						depth: 10,
+						modifier: 1.5,
+						slideShadows: true
+					},
+					autoplayDisableOnInteraction : false,
+					pagination : '.swiper-pagination',
+					paginationType : 'bullets',
+					setWrapperSize: true
+				});
+	    	}
+	    </script>
+</body>
+</html>

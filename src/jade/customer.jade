@@ -1,0 +1,171 @@
+extends ./layout
+
+block title
+	- var title = "合利宝客服-客服服务"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/serve.css")
+
+block content
+	.container.serve
+		include ./header
+		.section.page
+			.page-container.page(data-id="page1")
+					.banner.banner1
+						.banner1-bg
+							img(src="dist/images/banner@12x.png")
+						.banner-txt
+							h2 客服服务
+							//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+					.container-ui
+						mixin fullSection(tabs)
+							.tab-container-ui
+								.tab-normal-ui
+									.tab-list
+										each val in tabs
+											if(val.index =='1')
+												.tab-item(data-rel="#{val.dataId}").active
+													.item-img
+														img(src="dist/images/icon_serve_cusservice#{val.index}@12x.png")
+													.item-desc
+														.title
+															h2= val.title
+														.desc-box
+															p= val.content
+											else
+												.tab-item(data-rel="#{val.dataId}")
+													.item-img
+														img(src="dist/images/icon_serve_cusservice#{val.index}@12x.png")
+													.item-desc
+														.title
+															h2= val.title
+														.desc-box
+															p= val.content
+						- var tabs = [{"index":"1","dataId":"online","title":"24小时在线客服","content":"7x24小时全天候在线客服，随时为你解决问题，为你服务。"},{"index":"2","dataId":"phone","title":"电话客服","content":"7x24小时全天候热线客服，随时为您解答问题，为您的业务保驾护航。"},{"index":"3","dataId":"wechat","title":"微信客服","content":"微信搜索：合利宝支付官微 关注合利宝支付公众号，随时咨询问题"},{"index":"4","dataId":"feedback","title":"投诉建议","content":"将您遇到的问题告诉我们，我们帮您解决"}]
+						+fullSection(tabs)
+						.section-container-ui
+							.section-wrapper-ui(data-rel="online")
+								.content-box
+									.flex-items-ui
+										mixin fullContent(list)
+											each val in list
+												.flex-item-ui(data-rel="dir-#{val.dire}")
+													.item-img
+														img(src="dist/images/icon_serve_cusservice1_#{val.index}@12x.png")
+													.item-desc
+														.title
+															h2 #{val.title}
+														.desc-box
+															p #{val.content}
+										- var left = [{"index":"1","title":"个人用户咨询","content":"可咨询个人账号在交易、缴费过程中遇到的问题。","dire":"left"}]
+										- var right = [{"index":"2","title":"商户咨询","content":"可咨询商户账号在收款、结账过程中遇到的问题。","dire":"right"}]
+										+fullContent(left)
+										+fullContent(right)
+							.section-wrapper-ui(data-rel="phone")
+								.content-box
+									.flex-items-ui
+										mixin numSection(nums)
+											.flex-item-ui(data-rel="txt")
+												h3.title 客服热线
+												h2.num 400-096-6263
+												p.desc 致电400客服请根据语音提示，选择咨询内容。
+											.flex-item-ui.num-lock
+												.num-box
+													each val in nums
+														.num-item
+															span.num-circle #{val.num}
+															span.txt #{val.txt}
+										- var nums = [{"num":"1","txt":"互联网支付"},{"num":"2","txt":"银行卡收单"},{"num":"3","txt":"移动电话支付"},{"num":"4","txt":" "},{"num":"5","txt":" "},{"num":"6","txt":" "},{"num":"7","txt":" "},{"num":"9","txt":" "},{"num":"9","txt":" "}]
+										+numSection(nums)
+							.section-wrapper-ui(data-rel="wechat")
+								.content-box
+									.flex-items-ui
+										mixin wechatSection
+											.flex-item-ui(data-rel="wechat")
+												.txt-box
+													h3.title 合利宝微信客服
+													p.desc 欢迎手机扫一扫二维码，关注合利宝支付管微（hlbzfgw），快捷自助，移动查询！
+													.img-item-box
+														img(src="dist/images/QR2@12x.png")
+											.flex-item-ui
+												.wechat-box
+													img(src="dist/images/img_serve_cusservice_wechat@12x.png")
+										+wechatSection
+							.section-wrapper-ui(data-rel="feedback")
+								.tab-wrapper-ui
+									ul.tab
+										li.active
+											span 1.&nbsp;&nbsp;提出问题
+										li
+											span 2.&nbsp;&nbsp;问题受理
+								.form-wrapper-ui
+									form(action="#",method="POST")
+										.text-input-ui
+										ul.input-list-ui
+											li
+												label 问题类型
+												select
+													option(value="选择问题") 选择问题
+													option(value="选择问题") 选择问题
+													option(value="选择问题") 选择问题
+													option(value="选择问题") 选择问题
+													option(value="选择问题") 选择问题
+											li
+												label 涉及订单流水号
+												input(type="text",name="text-input",placeholder="请输入订单流水号...")
+											li.textarea
+												label.textarea 涉及订单流水号
+												textarea(type="text",name="text-input",placeholder="请输入订单流水号...")
+											li
+												label 上传文件
+												input(type="file",name="file-input",value="")
+											li
+												label 您的联系方式
+												input(type="text",name="text-input",placeholder="请输入联系方式...")
+												span.select
+													select
+														option(value="电话") 电话
+														option(value="电话") 电话
+														option(value="电话") 电话
+											li
+												label 验证码
+												input(type="text",name="text-input",placeholder="请输入验证码...")
+										.submit-btn-ui
+											input(type="submit",name="submit",value="提交",class="sub-btn")
+							.section-wrapper-ui(data-rel="feedback")
+								.tab-wrapper-ui(data-rel="solved")
+									ul.tab
+										li.active
+											span 1.&nbsp;&nbsp;提出问题
+										li
+											span 2.&nbsp;&nbsp;问题受理
+								.main-content-ui
+									.title-ui
+										h2 提交成功
+									.main-info
+										p 稍后将由工作人员对您的问题进行处理，请保持联系方式畅通，以便沟通联系
+										p.res-txt
+											span 预计处理时间：
+											span 两个工作日
+		//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/customer.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")

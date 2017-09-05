@@ -1,0 +1,781 @@
+
+											<input type="hidden" id="uuid" name="uuid" value="66165FEE7162B87A3C800759AFC09026">
+
+											<input type="hidden" id="resumeId" name="resumeId" value="3177858">
+
+											<div id="itTech1_box" class="p30">
+												<div id="itTech1_item">
+
+													<div class="information" id="itTech2">
+														<table class="table_2 ">
+															<tbody>
+																<tr>
+																	<td style="width:150px">
+																		<div align="right"></div>
+																	</td>
+																	<td>
+																		<input name="itId" value="" type="hidden">
+																		<h4 class="deleteblk" style="display:none"><a href="#?" onclick="delItem(this)">删除这个IT技能</a></h4>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text_right width_12p">
+																		<div align="right"><span class="c_B32639">*</span>IT技能类别：</div>
+																	</td>
+																	<td>
+																		<select class="width_150" name="techIdC" id="techIdC0" onchange="cC(this,'techIds','3');">
+																			<option value="">-- 请选择 --</option>
+
+																			<option value="Unix/Linux/BSD Devel">Unix/Linux/BSD Devel</option>
+
+																			<option value="Windows Develop">Windows Develop</option>
+
+																			<option value="ERP">ERP</option>
+
+																			<option value="Hardware">Hardware</option>
+
+																			<option value="Web Develop">Web Develop</option>
+
+																			<option value="Help Desk">Help Desk</option>
+
+																			<option value="Office Applications">Office Applications</option>
+
+																			<option value="QA &amp; TEST">QA &amp; TEST</option>
+
+																			<option value="Operating Systems">Operating Systems</option>
+
+																			<option value="Network">Network</option>
+
+																			<option value="Design/Media">Design/Media</option>
+
+																			<option value="Database">Database</option>
+
+																		</select>
+																		<span>
+            			<select name="techIds" id="techIds0">
+            				<option value="">-- 请选择 --</option>
+							
+								
+									<option value="127">Ant</option>
+								
+									<option value="128">Assembly</option>
+								
+									<option value="129">C</option>
+								
+									<option value="130">C#</option>
+								
+									<option value="131">C++</option>
+								
+									<option value="132">CGI Scripts</option>
+								
+									<option value="133">Clipper</option>
+								
+									<option value="134">Cobol</option>
+								
+									<option value="135">CORBA</option>
+								
+									<option value="154">Cvs</option>
+								
+									<option value="136">Embedded</option>
+								
+									<option value="137">Focus</option>
+								
+									<option value="138">Fortran</option>
+								
+									<option value="139">HTML</option>
+								
+									<option value="140">Infobasic</option>
+								
+									<option value="141">Java</option>
+								
+									<option value="142">kylix</option>
+								
+									<option value="143">Nantis</option>
+								
+									<option value="144">Natural</option>
+								
+									<option value="155">Other</option>
+								
+									<option value="145">PAL</option>
+								
+									<option value="146">Perl</option>
+								
+									<option value="147">PL/1</option>
+								
+									<option value="148">PL/SQL</option>
+								
+									<option value="149">Shell Scripts</option>
+								
+									<option value="150">Simula</option>
+								
+									<option value="151">SIR</option>
+								
+									<option value="152">SmallTalk</option>
+								
+									<option value="153">SQL</option>
+								
+							
+								
+									<option value="76">Access</option>
+								
+									<option value="77">ActiveX</option>
+								
+									<option value="78">Ant</option>
+								
+									<option value="79">Assembly</option>
+								
+									<option value="80">BizTalk</option>
+								
+									<option value="81">C</option>
+								
+									<option value="82">C#</option>
+								
+									<option value="84">C++</option>
+								
+									<option value="83">C# Builder</option>
+								
+									<option value="85">C++ builder</option>
+								
+									<option value="86">COM/DCOM</option>
+								
+									<option value="87">CORBA</option>
+								
+									<option value="88">Crystal Reports</option>
+								
+									<option value="89">Delphi</option>
+								
+									<option value="90">Developer/Designer</option>
+								
+									<option value="91">DirectX</option>
+								
+									<option value="92">eMbedded Visual C++</option>
+								
+									<option value="93">Forte</option>
+								
+									<option value="94">Fortran</option>
+								
+									<option value="95">FoxBASE+</option>
+								
+									<option value="96">GUI</option>
+								
+									<option value="97">Java</option>
+								
+									<option value="98">Lotus Notes</option>
+								
+									<option value="99">MapInfo</option>
+								
+									<option value="100">MapPoint</option>
+								
+									<option value="101">MCSD</option>
+								
+									<option value="102">MFC/ATL</option>
+								
+									<option value="103">Mobile</option>
+								
+									<option value="104">Office</option>
+								
+									<option value="105">OLAP</option>
+								
+									<option value="126">Other</option>
+								
+									<option value="106">PowerBuilder</option>
+								
+									<option value="107">Rational ClearCase</option>
+								
+									<option value="108">Smalltalk</option>
+								
+									<option value="109">StarTeam</option>
+								
+									<option value="110">Transact-SQL</option>
+								
+									<option value="111">UML</option>
+								
+									<option value="112">Visual Basic</option>
+								
+									<option value="113">Visual Basic .net</option>
+								
+									<option value="114">Visual C#</option>
+								
+									<option value="115">Visual C++</option>
+								
+									<option value="116">Visual FoxPro</option>
+								
+									<option value="117">Visual InterDev</option>
+								
+									<option value="118">Visual J#</option>
+								
+									<option value="119">Visual J++</option>
+								
+									<option value="120">Visual SourceSafe</option>
+								
+									<option value="125">Visual studio</option>
+								
+									<option value="121">Win32 API</option>
+								
+									<option value="122">WINCVS</option>
+								
+									<option value="123">Wireless</option>
+								
+									<option value="124">XML Web services</option>
+								
+							
+								
+									<option value="223">ACL</option>
+								
+									<option value="224">Autre Stat</option>
+								
+									<option value="225">Baan</option>
+								
+									<option value="226">BAAN</option>
+								
+									<option value="227">J.D.Edwards</option>
+								
+									<option value="228">Lawson</option>
+								
+									<option value="229">Multi Term</option>
+								
+									<option value="230">Navision</option>
+								
+									<option value="231">Oracle</option>
+								
+									<option value="238">Other</option>
+								
+									<option value="232">PeopleSoft</option>
+								
+									<option value="233">SAP</option>
+								
+									<option value="234">SAS</option>
+								
+									<option value="235">Siebel</option>
+								
+									<option value="236">SPSS</option>
+								
+									<option value="237">Swift</option>
+								
+							
+								
+									<option value="274">CAD</option>
+								
+									<option value="271">Computer</option>
+								
+									<option value="272">Computer accessories </option>
+								
+									<option value="269">Digital Product</option>
+								
+									<option value="268">Mobile Network</option>
+								
+									<option value="267">Mobile Phone</option>
+								
+									<option value="275">Other</option>
+								
+									<option value="270">PDA/Handhelds</option>
+								
+									<option value="273">Telecom</option>
+								
+							
+								
+									<option value="156">ActiveX</option>
+								
+									<option value="157">ASP</option>
+								
+									<option value="158">ASP.NET(C#)</option>
+								
+									<option value="159">ASP.NET(VB.NET)</option>
+								
+									<option value="160">CGI</option>
+								
+									<option value="161">Cold Fusion</option>
+								
+									<option value="162">DHTML</option>
+								
+									<option value="163">HTML</option>
+								
+									<option value="164">ISAPI</option>
+								
+									<option value="165">Java</option>
+								
+									<option value="166">Java Script</option>
+								
+									<option value="167">JSP</option>
+								
+									<option value="182">Other</option>
+								
+									<option value="168">Perl</option>
+								
+									<option value="169">PHP</option>
+								
+									<option value="170">Python</option>
+								
+									<option value="171">SGML</option>
+								
+									<option value="180">SHTML</option>
+								
+									<option value="172">Silverstream</option>
+								
+									<option value="173">SMIL</option>
+								
+									<option value="174">SOAP</option>
+								
+									<option value="175">VB Script</option>
+								
+									<option value="181">Visual studio</option>
+								
+									<option value="176">VRML</option>
+								
+									<option value="177">XML</option>
+								
+									<option value="178">XSL/XSLT</option>
+								
+									<option value="179">XSP</option>
+								
+							
+								
+									<option value="239">AS/400</option>
+								
+									<option value="240">CICS</option>
+								
+									<option value="241">Hardware</option>
+								
+									<option value="242">Linux</option>
+								
+									<option value="243">Lotus Notes </option>
+								
+									<option value="244">Mac</option>
+								
+									<option value="245">MS Exchange</option>
+								
+									<option value="246">MS Office</option>
+								
+									<option value="247">Network</option>
+								
+									<option value="248">Novell</option>
+								
+									<option value="254">Other</option>
+								
+									<option value="249">PC/Desktop</option>
+								
+									<option value="250">Unix</option>
+								
+									<option value="253">Windows 2000 Pro/XP</option>
+								
+									<option value="252">Windows 95/98</option>
+								
+									<option value="251">Windows NT/2000 AS/2003</option>
+								
+							
+								
+									<option value="261">Internet Explorer</option>
+								
+									<option value="256">Lotus 123</option>
+								
+									<option value="255">MS Excel</option>
+								
+									<option value="262">MS OneNote</option>
+								
+									<option value="258">MS Powerpoint</option>
+								
+									<option value="257">MS Project</option>
+								
+									<option value="263">Netscape Communicato</option>
+								
+									<option value="266">Other</option>
+								
+									<option value="264">OutLook</option>
+								
+									<option value="265">OutLook Express</option>
+								
+									<option value="259">Word</option>
+								
+									<option value="260">Wordperfect</option>
+								
+							
+								
+									<option value="276">ACT</option>
+								
+									<option value="277">Astra LoadTest</option>
+								
+									<option value="278">Astra QuickTest</option>
+								
+									<option value="279">Bugzilla</option>
+								
+									<option value="281">Cantata</option>
+								
+									<option value="282">ClearQuest</option>
+								
+									<option value="283">CodeTest</option>
+								
+									<option value="280">C++test</option>
+								
+									<option value="284">DevPartner Studio</option>
+								
+									<option value="285">e-Test suite</option>
+								
+									<option value="286">Jtest</option>
+								
+									<option value="287">Junit</option>
+								
+									<option value="288">LoadRunner</option>
+								
+									<option value="289">LOGISCOPE</option>
+								
+									<option value="290">Mantis</option>
+								
+									<option value="291">OpenSTA</option>
+								
+									<option value="292">Optimizeit Suite</option>
+								
+									<option value="320">Other</option>
+								
+									<option value="293">PVCS Tracker</option>
+								
+									<option value="294">QADirector</option>
+								
+									<option value="295">QALoad</option>
+								
+									<option value="296">QARun</option>
+								
+									<option value="297">QuickTest Profession</option>
+								
+									<option value="298">Rational PureCoverag</option>
+								
+									<option value="299">Rational Purify</option>
+								
+									<option value="300">Rational Quantify</option>
+								
+									<option value="301">Rational Test RealTi</option>
+								
+									<option value="302">Robot</option>
+								
+									<option value="303">SilkPerformer</option>
+								
+									<option value="304">SilkPlan Pro</option>
+								
+									<option value="305">SilkRadar</option>
+								
+									<option value="306">SilkTest</option>
+								
+									<option value="307">TestBed</option>
+								
+									<option value="308">TestDirector</option>
+								
+									<option value="309">TestManager</option>
+								
+									<option value="310">TestPartner</option>
+								
+									<option value="311">TestTrack Pro</option>
+								
+									<option value="312">TrackRecord</option>
+								
+									<option value="313">VisualTest</option>
+								
+									<option value="314">WAS</option>
+								
+									<option value="315">WebFT</option>
+								
+									<option value="316">WebLOAD</option>
+								
+									<option value="317">WinRunner</option>
+								
+									<option value="318">XDE Tester</option>
+								
+									<option value="319">Xrunner</option>
+								
+							
+								
+									<option value="1">AIX</option>
+								
+									<option value="7">CS/2</option>
+								
+									<option value="8">CS/400</option>
+								
+									<option value="2">FreeBSD</option>
+								
+									<option value="3">LINUX</option>
+								
+									<option value="4">Mac OS</option>
+								
+									<option value="5">Ms SmartPhone</option>
+								
+									<option value="6">NOVELL</option>
+								
+									<option value="17">Other</option>
+								
+									<option value="9">Palm OS</option>
+								
+									<option value="10">SCO UNIX</option>
+								
+									<option value="11">SOLARIS</option>
+								
+									<option value="12">SUN OS</option>
+								
+									<option value="13">UNIX</option>
+								
+									<option value="14">WIN CE</option>
+								
+									<option value="15">Windows 95/98</option>
+								
+									<option value="16">Windows NT/2000/XP</option>
+								
+							
+								
+									<option value="32">Advance Link</option>
+								
+									<option value="33">Appletalk</option>
+								
+									<option value="34">Asynch</option>
+								
+									<option value="35">ATM</option>
+								
+									<option value="36">Banyan Vines</option>
+								
+									<option value="37">Bay Networks</option>
+								
+									<option value="38">Bridges</option>
+								
+									<option value="39">CC Mail</option>
+								
+									<option value="40">CDMA</option>
+								
+									<option value="41">Cisco Routers</option>
+								
+									<option value="42">Ethernet</option>
+								
+									<option value="43">Firewall</option>
+								
+									<option value="44">GSM</option>
+								
+									<option value="45">HP Open View</option>
+								
+									<option value="46">Hubs</option>
+								
+									<option value="47">IIS</option>
+								
+									<option value="48">ISAM</option>
+								
+									<option value="49">ISDN</option>
+								
+									<option value="50">LAN</option>
+								
+									<option value="51">LanManager</option>
+								
+									<option value="52">LanServer</option>
+								
+									<option value="53">Lantastic</option>
+								
+									<option value="54">Lap Link</option>
+								
+									<option value="55">Lease Lines</option>
+								
+									<option value="56">Load Balancing</option>
+								
+									<option value="57">MS Exchange</option>
+								
+									<option value="58">Multinet</option>
+								
+									<option value="59">MVX</option>
+								
+									<option value="60">Netbios</option>
+								
+									<option value="61">NetMaster</option>
+								
+									<option value="62">Network Cards</option>
+								
+									<option value="63">Novell</option>
+								
+									<option value="64">Optical Fibre</option>
+								
+									<option value="75">Other</option>
+								
+									<option value="65">PABX</option>
+								
+									<option value="66">Pathworks</option>
+								
+									<option value="67">Reflection</option>
+								
+									<option value="68">Relay Gold</option>
+								
+									<option value="69">Routers</option>
+								
+									<option value="70">SMS</option>
+								
+									<option value="71">SNA</option>
+								
+									<option value="72">TCP/IP</option>
+								
+									<option value="73">WAN</option>
+								
+									<option value="74">X400</option>
+								
+							
+								
+									<option value="183">3dStudio</option>
+								
+									<option value="184">3dStudio Max</option>
+								
+									<option value="185">Adobe Photoshop</option>
+								
+									<option value="186">After Effects</option>
+								
+									<option value="187">Alias studio</option>
+								
+									<option value="188">Authorware</option>
+								
+									<option value="189">AutoCAD</option>
+								
+									<option value="190">Cakewalk</option>
+								
+									<option value="191">Corel Draw</option>
+								
+									<option value="192">Director</option>
+								
+									<option value="193">Dreamweaver</option>
+								
+									<option value="194">Fireworks</option>
+								
+									<option value="195">Flash</option>
+								
+									<option value="196">Freehand</option>
+								
+									<option value="197">FrontPage</option>
+								
+									<option value="198">Games</option>
+								
+									<option value="199">GoLive</option>
+								
+									<option value="200">Graphics</option>
+								
+									<option value="201">HomeSite</option>
+								
+									<option value="202">HTML</option>
+								
+									<option value="203">Illustrator</option>
+								
+									<option value="204">Image/Imaging</option>
+								
+									<option value="205">Lightwave</option>
+								
+									<option value="206">Mac</option>
+								
+									<option value="207">Maya</option>
+								
+									<option value="208">Microsoft Photo Edit</option>
+								
+									<option value="209">MS Publisher</option>
+								
+									<option value="210">Multimedia</option>
+								
+									<option value="211">NetObjects Fusion</option>
+								
+									<option value="222">Other</option>
+								
+									<option value="212">PageMaker</option>
+								
+									<option value="213">PhotoShop</option>
+								
+									<option value="214">Premiere</option>
+								
+									<option value="215">Protel</option>
+								
+									<option value="216">Quark Express</option>
+								
+									<option value="217">Shockwave</option>
+								
+									<option value="218">Softimage</option>
+								
+									<option value="219">Strata</option>
+								
+									<option value="220">Streamline</option>
+								
+									<option value="221">Vizact 2000</option>
+								
+							
+								
+									<option value="18">Access</option>
+								
+									<option value="30">Database Management</option>
+								
+									<option value="19">DB2</option>
+								
+									<option value="20">Dbase</option>
+								
+									<option value="21">Infomix</option>
+								
+									<option value="22">Interbase</option>
+								
+									<option value="23">MSSQL SERVER</option>
+								
+									<option value="24">MySQL</option>
+								
+									<option value="25">Oracle</option>
+								
+									<option value="31">Other</option>
+								
+									<option value="26">PostgreSql</option>
+								
+									<option value="27">SAPDB</option>
+								
+									<option value="28">Sybase</option>
+								
+									<option value="29">Visual Foxpro</option>
+								
+							
+						</select>
+            			</span>
+																		<span class="err" key="techIds" id="techIds0_err"></span>
+																	</td>
+																</tr>
+																<!-- 
+        		<tr>
+          			<td class="text_right"><div align="right">使用时间：</div></td>
+          			<td>
+          				<select name="itDuration" id="itDuration">
+			              	<option value="">-- 请选择 --</option>
+			              	<option value="3个月">3个月</option>
+			              	<option value="6个月">6个月</option>
+			              	<option value="1年">1年</option>
+			              	<option value="2年">2年</option>
+			              	<option value="3-5年">3-5年</option>
+			              	<option value="5年以上"> 5年以上</option>
+						</select>
+					</td>
+        		</tr>
+        		 -->
+																<tr>
+																	<td class="text_right">
+																		<div align="right">熟练程度：</div>
+																	</td>
+																	<td>
+																		<select name="itProficiency" id="itProficiency">
+																			<option value="">-- 请选择 --</option>
+																			<option value="一般">一般</option>
+																			<option value="熟练">熟练</option>
+																			<option value="精通">精通</option>
+																		</select>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+											<table border="0" cellpadding="0" cellspacing="0" class="table_2" style="mrgin:0">
+												<tbody>
+													<tr>
+														<td class="w150">&nbsp;</td>
+														<td>
+															<a href="javascript:;" class="btn_add" id="moreEdu" onclick="addItem(item2,'itTech1_item',10)">继续添加IT技能</a>
+														</td>
+													</tr>
+													<tr>
+														<td valign="top">&nbsp;</td>
+														<td>
+															<input type="submit" onclick="submitForm('previous');" class="redBtn" value="上一项" style="margin:0">
+															<input type="submit" onclick="submitForm('next');" class="redBtn" value="保存，并填写下一项" style="margin:0">
+															<input type="submit" onclick="submitForm('exit');" class="redBtn" value="保存" style="margin:0">
+														</td>
+													</tr>
+												</tbody>
+											</table>
+
+											<input type="hidden" id="action" name="action">
+

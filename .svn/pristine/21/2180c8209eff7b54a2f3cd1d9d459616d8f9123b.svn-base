@@ -1,0 +1,21 @@
+[{
+	"id":"1",
+	"position":"区域（华北）银行合作总经理",
+	"keyword":"bank_co_manager"
+},{
+	"id":"2",
+	"position":"区域高级银行合作经理",
+	"keyword":"senior_bank_co_manager"
+},{
+	"id":"3",
+	"position":"银行合作运营专员",
+	"keyword":"bank_co_ordinator"
+},{
+	"id":"4",
+	"position":"线上产品总监",
+	"keyword":"online_product_director"
+},{
+	"id":"5",
+	"position":"线上产品经理",
+	"keyword":"online_product_manager"
+}]

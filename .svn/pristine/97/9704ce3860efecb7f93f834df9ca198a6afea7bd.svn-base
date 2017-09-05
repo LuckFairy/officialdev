@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=11;IE=9; IE=8; IE=7; IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="keywords" content="合利宝公司介绍，合利宝广州/北京/深圳/上海,关于合利宝">
+		<meta name="description" content="合利宝支付，广州市唯一拥有支付全牌照的第三方支付公司，提供支付服务，包括互联网支付/移动电话支付/银行卡收单/跨境支付/合利金融/合利征信/合利保理">
+		<title>关于合利宝-合利宝支付-校园招聘</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/layout.css">
+		<link rel="stylesheet" type="text/css" href="../css/animation.css">
+		<link rel="stylesheet" type="text/css" href="../css/about.css">
+		<!--if lt IE9-->
+		<script type="text/javascript" src="../js/html5shiv.min.js"></script>
+		<script type="text/javascript" src="../js/selectivizr.min.js"></script>
+		<script type="text/javascript" src="../js/respond.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="../css/campus.css" />
+		<link rel="stylesheet" type="text/css" href="../css/layer.css" />
+
+	</head>
+
+	<body>
+
+		<div class="container campus">
+			<div class="top" id="top"></div>
+			<!--内容-->
+			<div class="section page">
+				<div data-id="page1" class="page-container page1">
+					<div class="banner banner1">
+						<div class="banner1-bg"><img src="../images/banner@12x.png"></div>
+						<div class="banner-txt">
+							<h2>校园招聘</h2>
+						</div>
+					</div>
+					<div class="section-introduce">
+						<div class="">
+							<div class="container-shareholder">
+								<div class="shareholder-box">
+
+									<!--校园左边-->
+									<div class="contLeft">
+
+										<ul class="tabList">
+											<li class="active" data-type="1">
+												<img src="../images/school/menu_technology.png" alt="" />
+												<span>技术类</span>
+												<div></div>
+											</li>
+											<li data-type="2">
+												<img src="../images/school/menu_product.png" />
+												<span>产品类</span>
+												<div></div>
+											</li>
+											<li data-type="3">
+												<img src="../images/school/menu_function.png" alt="" />
+												<span>职能类</span>
+												<div></div>
+											</li>
+											<li data-type="4">
+												<img src="../images/school/menu_operate.png" alt="" />
+												<span>运营类</span>
+												<div></div>
+											</li>
+										</ul>
+										<div class="weixin-code">
+											<img src="../images/school/icon_wechat.png" />
+											<p>微信扫码关注<br/>合利宝微生活</p>
+										</div>
+										<div><img src="../images/school/erweima.png" alt="" /><img src="../images/school/erwei_mingsheng.jpg" alt="" /></div>
+									</div>
+									<div class="shareholder-content" style="float: left;width: 78%;">
+										<ul class="shareholder-title">
+											<li>
+												<a class="active"><span>Java开发工程师</span></a>
+												<a><span>Java开发工程师</span></a>
+											</li>
+										</ul>
+										<div class="introduce-box tabcon">
+											<!--<div class="sublist" style="display: block;">
+												<p>岗位职责</p>
+												<ol>
+													<li>dflajsdlfj</li>
+													<li>dflajsdlfj</li>
+													<li>dflajsdlfj</li>
+												</ol>
+												<p>任职要求</p>
+												<ol>
+													<li>dflajsdlfj</li>
+													<li>dflajsdlfj</li>
+													<li>dflajsdlfj</li>
+												</ol>
+												<div class="target">
+													<a href="#">申请岗位</a>
+												</div>
+											</div>-->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer"></div>
+			<div class="contact-right">
+				<div class="contact-box">
+					<ul>
+						<li class="contact-list detail">
+							<a href="javascript:;"><img src="../images/ico_toolsfixed_phone.png"></a>
+						</li>
+						<li class="contact-list detail">
+							<a href="javascript:;"><img src="../images/ico_toolsfixed_wechat.png"></a>
+						</li>
+						<li class="contact-list top">
+							<a href="javascript:;"><img src="../images/ico_toolsfixed_top.png"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="contact-box-detail" style="display: none;">
+					<ul>
+						<li class="contact-detail-list" style="opacity: 0;">
+							<a href="javascript:;"><img src="../images/toolsfixed_phoneSchool.png"></a>
+						</li>
+						<li class="contact-detail-list" style="opacity: 0;">
+							<a href="javascript:;"><img src="../images/toolsfixed_wechat@12x.png"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.form.js"></script>
+		<script type="text/javascript" src="../js/topmenu.js"></script>
+		<script type="text/javascript" src="../js/footer.js"></script>
+		<script type="text/javascript" src="../js/about.js"></script>
+		<script src="../js/layer.js"></script>
+		<script type="text/javascript">
+			$('#top').load('header.html');
+			$('.footer').load('footer.html');
+			$(function() {
+					//tab点击事件
+					var $titleCont = $('.shareholder-title>li'),
+						$tabcon = $('.tabcon'),
+						type = 1,
+						$url = 'http://192.168.33.14:9000/BMS/personInfo/getInfo.do',
+						$check = true,
+						//申请岗位
+						jobObj = {
+							jobName: null,
+							userid: null,
+							name: null,
+							birthDate: null,
+							sex: null,
+							idNum: null,
+							graduteDate: null,
+							email: null,
+							telPhone: null,
+							address: null,
+							addressForHome: null,
+							resumeFile: null,
+							createDate: null
+						};
+
+					function getdata(type) {
+						$.getJSON('public/datas/job.json', function(res) {
+							$.map(res, function(item) {
+								var _html = '',
+									_htmlList = '';
+								if(item.type == type) {
+									var data = item.job;
+									//加载头部
+									$.each(data, function(i, item) {
+										if(i == 0) {
+											_html = _html + '<a  class="active"><span >' + item.name + '</span></a>';
+											_htmlList = _htmlList + '<div class="sublist" style="display: block;">';
+										} else {
+											_html = _html + '<a ><span >' + item.name + '</span></a>';
+											_htmlList = _htmlList + '<div class="sublist">';
+										}
+										_htmlList = _htmlList + '<p>岗位职责</p><ol>';
+										$.map(item.dutyArr, function(item) {
+											_htmlList = _htmlList + '<li>' + item + '</li>';
+										})
+										_htmlList = _htmlList + '</ol><p>任职要求</p><ol>';
+										$.map(item.requestArr, function(item) {
+											_htmlList = _htmlList + '<li>' + item + '</li>';
+										})
+										_htmlList = _htmlList + '</ol><div class="target"><a href="#" data=' + item.name + '>申请岗位</a></div></div>';
+									});
+									$titleCont.html(_html);
+									$tabcon.html(_htmlList);
+								}
+							})
+							//tabList点击事件
+							$('.shareholder-title>li a').on('click', function() {
+								$(this).addClass('active').siblings().removeClass('active');
+								var index = $(this).index();
+								$('.sublist').eq(index).css('display', 'block').siblings().css('display', 'none');
+							})
+
+							//跳窗
+							$('.target a').on('click', function(e) {
+								e.preventDefault();
+								jobObj.jobName = $(this).attr('data');
+								layerOpen(opt);
+								$('#jobName').val(jobObj.jobName);
+								var selectList = $('select'),
+									birthData = '',
+									graduteDate = '',
+									address = '';
+								selectList.on('change select', function() {
+									birthData = $('#birthDateY').val() + '/' + $('#birthDateM').val() + '/' + $('#birthDateD').val();
+									$('#birthDate').val(birthData);
+									graduteDate = $('#graduateDateY').val() + '/' + $('#graduateDateM').val();
+									$('#graduteDate').val(graduteDate);
+									address = $('#currentCityIdP').val() + $('#currentCityId').val();
+									$('#address').val(address);
+								})
+								$('#resumeFile').on('select change input', function() {
+									var val = this.files;
+									if(val.length > 0) {
+										this.style.opacity = 1;
+
+									} else {
+										this.style.opacity = 0;
+									}
+								})
+
+
+								$('.redBtn').on('click', function(e) {
+									var $currDate = new Date();
+									$('#createDate').val($currDate.getFullYear() + '/' + $currDate.getMonth() + '/' + $currDate.getDay());
+									var formGo = $("#ajaxForm")[0];
+									var form = new FormData(formGo);
+									$.ajax({
+										url:$url,
+										type:"POST",
+										data:form,
+										async:true,
+										cache:false,
+										processData: false,  // 告诉jQuery不要去处理发送的数据
+										contentType: false , // 告诉jQuery不要去设置Content-Type请求头
+										success:function(res){
+											alert('提交成功，请耐心等待回复');
+											location.reload();
+										},
+										error:function(XMLHttpRequest, textStatus, errorThrown){
+											console.log(XMLHttpRequest,textStatus,errorThrown)
+											var response = JSON.parse(XMLHttpRequest.responseText);
+											alert(response.msg);
+											if(response.code==00){
+												location.reload();
+											}
+										}
+									});
+								});
+
+							
+
+						})
+
+					})
+			}
+
+			if(sessionStorage.jobStyle != undefined || sessionStorage.jobStyle != null) {
+				var index = sessionStorage.jobStyle;
+				$('.tabList li').eq(index - 1).addClass('active').siblings().removeClass('active');
+				getdata(index);
+			}
+			$('.tabList li').on('click', function() {
+				$(this).addClass('active').siblings().removeClass('active');
+				var type = $(this).attr('data-type');
+				getdata(type);
+			})
+			//跳窗
+			function layerOpen(data) {
+				var layerOpts = {
+					'type': 1,
+					'title': [data.title, 'color:#ff4b46;background:#fff;text-align:left;height:42px;padding-left: 32px;border-bottom:1px solid #ff4b46'],
+					'area': ['700px', '450px'],
+					'content': data.content,
+					'move': false,
+					'zIndex': 1000000000000,
+				};
+				layer.open(layerOpts);
+			}
+
+			var opt = {
+				title: '我的简历',
+			};
+			$.get('public/datas/formSelf.txt', function(data, status, xhr) {
+				if(status != 'success') {
+					console.log(xhr);
+					alert('数据加载失败');
+				}
+				opt.content = data;
+			})
+
+			getdata(type);
+			})
+		</script>
+
+	</body>
+
+</html>

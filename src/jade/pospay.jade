@@ -1,0 +1,143 @@
+extends ./layout
+
+block title
+	- var title = "合利宝解决方案-POS收单"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/product.css")
+
+block content
+	.container.solve
+		include ./header
+		.section.page
+			mixin sectionPage2(title,decs,scenes,img,i)
+				.page-container.page(data-id="page#{i}")
+						mixin fullSection
+							.banner.banner1
+								.banner1-bg
+									img(src="dist/images/banner@12x.png")
+								.banner-txt
+									h2 POS业务介绍
+									//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+						+fullSection
+						.product-wrapper
+							.product-desc
+								.title
+									h2 #{title}
+								.desc-box
+									each val in decs
+										p #{val}
+							.product-img
+								img(src= "dist/images/#{img}.png")
+						.product-scenes
+							.scenes-wrapper
+								.title
+									h2 入网流程
+								.scenes-box
+									.img-time
+										ul.time-line
+											- for(var i=1; i<7;i++)
+												if (i == 1)
+													li.active
+														span= i
+												else
+													li
+														span= i
+											.time-line-move
+									.text-time
+										- var list = ["多渠道POS申请","提交商户资料","沟通签约事宜","安排装机测试","实地考察签约用户","成功签约"]
+										ul.time-line-txt
+											each val,index in list
+												if(index == '0')
+													li.active
+														span= val
+												else
+													li
+														span= val
+						.product-scenes.product-scenes-white#product-scenes
+							.scenes-wrapper
+								.title
+									h2 产品优势
+								.scenes-box.scenes-box-bottom#scenes-items
+									each val in scenes
+										if(val.index == '9')
+											.scenes-item.active
+												.item-img
+													img(src="dist/images/ico_industry_adv_#{val.index}active@12x.png")
+												.item-desc
+													.title
+														if(val.title !== '')
+															h2= val.title
+													.desc-box
+														if(val.pre !== '')
+															p= val.pre
+										else
+											.scenes-item
+												.item-img
+													img(src="dist/images/ico_industry_adv_#{val.index}@12x.png")
+												.item-desc
+													.title
+														if(val.title !== '')
+															h2= val.title
+													.desc-box
+														if(val.pre !== '')
+															p= val.pre
+			- var ptitle = "POS业务介绍"
+			- var pdecs = ["合利宝银行卡收单业务是为商户提供收单服务、增值服务和行业解决方案，通过合利宝完善的支付平台体系，不断丰富、创新收单产品，拓展增值服务；致力于为商户提供专业化与全方位的收单服务。","合利宝为广大服务商及商户提供优质的POS收单服务，以极具竞争力的费率、支持所有国内银行卡、丰富的终端设备、多级分润体系、结算速率享誉行业，成为最受商户欢迎的智能收款终端解决方案。"]
+			- var pscenes = [{"index":"9","title":"系统安全","pre":"合利宝的系统和POS设备都遵循国内最高的安全标准，确保防止持卡人磁条信息、密码泄露，保障商户资金安全；同时提供完善的风险监控机制；"},{"index":"10","title":"支持多种支付方式","pre":"统一受理中国银联借记卡、信用卡，同时可接受支付宝、微信支付等多种支付方式；"},{"index":"11","title":"多种样化的服务","pre":"预约时点的自动结账服务、支持不同地区的T+0 ,T+1清算服务以及高效率的商户审批服务和商户POS管理后台服务等；"},{"index":"12","title":"商户后台功能强大","pre":"方便交易查询、对账及分析，提高财务人员工作效率；"}]
+			- var pimg ="img_project_7@12x"
+			//- pos收单
+			+sectionPage2(ptitle,pdecs,pscenes,pimg,5)
+
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/finance.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript").
+		$(function() {
+			mouseEnterHandler();
+			timeLine();
+		});
+		function timeLine() {
+			var dots = $('.time-line li');
+			var timeLineText = $('.time-line-txt li');
+			var moveLine = $('.time-line-move');
+			var parentWidth = moveLine.parent().width();
+			var moveLineWidth = moveLine.width();
+			// 获取时光轴百分比宽度
+			var percentageWidth = parseFloat(moveLineWidth)*100/parseFloat(parentWidth);
+			dots.bind('click', function() {
+				var index = $(this).index();
+				$(this).prevAll().addClass("active");
+				$(this).addClass('active').nextAll().removeClass('active');
+				timeLineText.prevAll().addClass("active");
+				timeLineText.eq(index).addClass('active').nextAll().removeClass('active');
+				if (index < 3) {
+					moveLine.css('width',percentageWidth*(index+1)+'%');
+				} else if(index < 4) {
+					moveLine.css('width',percentageWidth*(index+1.5)+'%');
+				} else if(index == 4) {
+					moveLine.css('width','88%');
+				} else {
+					moveLine.css('width','100%');
+				}
+			})
+		}

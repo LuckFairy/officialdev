@@ -1,0 +1,2 @@
+function toggleTab(t,i){var n=$(t),a=n.children(".tab-item");a.each(function(){$(this).bind("click",function(){$(this).addClass("active").siblings().removeClass("active");var t=$(this).attr("data-rel");console.log(t),showSection(t,i)})})}function showSection(t,i){var n=$(i);n.each(function(){var i=$(this);$(this).attr("data-rel")!=t?setTimeout(function(){i.hide()},60):setTimeout(function(){i.show()},60)})}$(function(){toggleTab(".tab-list",".section-wrapper-ui")});
+//# sourceMappingURL=customer.js.map

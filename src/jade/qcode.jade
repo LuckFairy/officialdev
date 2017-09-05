@@ -1,0 +1,105 @@
+extends ./layout
+
+block title
+	- var title = "合利宝解决方案-二维码支付"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/product.css")
+
+block content
+	.container.solve
+		include ./header
+		.section.page
+			mixin sectionPage(title,decs,scenes,img,i,use)
+				.page-container.page(data-id="page#{i}")
+						mixin fullSection
+							.banner.banner1
+								.banner1-bg
+									img(src="dist/images/banner@12x.png")
+								.banner-txt
+									h2 二维码支付
+									//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+						+fullSection
+						.product-wrapper
+							.product-desc
+								.title
+									h2 #{title}
+								.desc-box
+									each val in decs
+										p #{val}
+								.pro-schema
+									img(src="dist/images/ico_product_suit@12x.png")
+									span #{use}
+							.product-img
+								img(src= "dist/images/#{img}.png")
+						.product-scenes
+							.scenes-wrapper
+								.title
+									h2 产品优势
+								.scenes-box
+									each val in scenes
+										.scenes-item
+											.item-img
+												if(val.index !== '')
+													img(src="dist/images/ico_project_adv#{val.index}@12x.png")
+											.item-desc
+												.title
+													if(val.title !== '')
+														h2= val.title
+												.desc-box
+													if(val.pre !== '')
+														p= val.pre
+			- var title = "二维码支付"
+			- var decs = ["提供线下C端用户出示二维码，由商户扫码进行收款，以及用户扫商户收款二维码进行付款。线上显示商户二维码，C端用户扫码进行付款。","扫码支付是指用户使用手机上的扫描工具扫描二维码，登录微信或支付宝完成付款，是一种基于近场支付的全新收银模式，只要一个二维码+一部智能手机或扫码设备，就能完成支付和收款。"]
+			- var scenes = [{"index":"13","title":"方便快捷","pre":"微信，支付宝等可绑定信用卡，扫码付款时选择使用信用卡即可。付款人在异地，只需接收收款二维码，消费者即可给商家付款，打破地域限制，随时随地扫码收钱付款。"},{"index":"14","title":"手续费率低","pre":"为商户提供更低的费率，节省收银成本。"},{"index":"15","title":"多店面，多终端统筹管理","pre":"有多个分店或收银员时可设立多个登陆账户分别收银，可单独规划权限，后台统一由指定的财务专员管理，资金安全有保障！"},{"index":"16","title":"收款效率高、资金安全有保证","pre":"通过支付宝、微信钱包等进行付款，只需扫一扫即可完成，收款更便捷。同时也可以有效防止假钞等现金风险的发生，资金安全无忧！"}]
+			- var img ="img_project_qr"
+			- var use ="使用场景：线下二维码收款、线上扫码付款"
+			+sectionPage(title,decs,scenes,img,3,use)
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript").
+		$(function() {
+			var box = $('.item-img');
+			var contentBox = $('.list-content');
+			box.each(function(){
+				$(this).find('.txt').on('click', function() {
+					var dataID = $(this).attr('data-id');
+					$(this).addClass('active').parent().siblings().children('.txt').removeClass('active');
+					showContent(dataID,contentBox);
+				});
+			});
+			function showContent(linkID, secArr) {
+				var secs = $(secArr);
+				secs.each(function() {
+					var self = $(this);
+					if ($(this).attr('data-id') != linkID) {
+						setTimeout(function() {
+							self.hide();
+						},60);
+					} else {
+						setTimeout(function() {
+							self.show();
+						},60);
+					}
+				});
+			}
+		});

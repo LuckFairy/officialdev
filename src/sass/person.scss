@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/**
+ * layout.css
+ * @authors Ou Yuan (beyondouyuan.github.io)
+ * @date    2017-01-06 14:49:40
+ * @version $1.0$
+ */
+
+@mixin fontStyle($fontFamily:Microsoft YaHei, $fontSize: 14px, $letterSpacing: 0.48px, $color: #fff) {
+    font-family: $fontFamily, 微软雅黑;
+    font-size: $fontSize;
+    letter-spacing: $letterSpacing;
+    color: $color;
+}
+
+.wallet {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    & .container-ui {
+        width: 100%;
+        & .wrapper-ui {
+            width: 100%;
+            padding: 18rem 0 7rem 0;
+            position: relative;
+            min-height: 10.0833333rem;
+            background-color: rgba(237, 62, 57, 1);
+            & .banner-ui {
+                width: 70.833333%;
+                margin: 0 auto;
+                display: flex;
+                & .left-box-ui {
+                    width: 35%;
+                    @media screen and (max-width: 1681px) {
+                        width: 45%;
+                    }
+                    & .tip-box-ui {
+                        overflow: hidden;
+                        & .title-ui {
+                            text-align: left;
+                            padding: 1rem;
+                        }
+                        & h2 {
+                            @include fontStyle($fontSize: 42px)
+                        }
+                        & .mian-box-ui {
+                            padding: 2rem;
+                        }
+                        & p {
+                            text-align: justify;
+                            line-height: 2.2rem;
+                            @include fontStyle
+                        }
+                    }
+                    & .ico-box-ui {
+                        padding: 6rem 2rem;
+                        display: flex;
+                        align-items: flex-start;
+                        & .btn-box-ui {
+                            padding: 0 2rem;
+                            display: flex;
+                            flex-wrap: wrap;
+                            & .btn-ui {
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                padding: .8rem;
+                                @include fontStyle($color:rgba(237, 62, 57, 1));
+                                background-color: rgba(255, 255, 255, 1);
+                                &:not(:first-child) {
+                                    margin-top: 1.5rem;
+                                }
+                                & .txt {
+                                    padding-left: .5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                & .right-box-ui {
+                    align-self:flex-end;
+                }
+            }
+            @media screen and (min-width: 1681px) {
+                & .banner-ui {
+                    width: 62.5%;
+                }
+            }
+            @media screen and (max-width: 1441px) {
+                & .banner-ui {
+                    width: 66.666667%;
+                }
+            }
+            @media screen and (max-width: 1367px) {
+                & .banner-ui {
+                    width: 70.278184%;
+                }
+            }
+            @media screen and (max-width: 1281px) {
+                & .banner-ui {
+                    width: 75%;
+                }
+            }
+        }
+        & .wrapper-banner {
+            padding: 25rem 0 8rem 0;
+            background: rgba(0, 0, 0, .1) url(../images/wallet/background_img_banner_1.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        & .content-wrapper-ui {
+            width: 100%;
+            position: relative;
+            min-height: 10.0833333rem;
+            background-color: rgba(255, 255, 255, 1);
+            & .content-main-ui {
+                width: 70.833333%;
+                margin: 0 auto;
+                padding: 8rem 4rem 4rem 4rem;
+                display: flex;
+                & .desc-box-ui {
+                    padding-top: 7rem;
+                    padding-left: 5rem;
+                    & .title-ui {
+                        & h2 {
+                            @include fontStyle($fontSize: 44px,$color:#626262);
+                        }
+                        & h3 {
+                            @include fontStyle($fontSize: 18px,$color:#929292);
+                            padding: 1rem 0;
+                        }
+                    }
+                    & .main-list-ui {
+                        padding-top: 5rem;
+                        & p {
+                            @include fontStyle($fontSize: 14px,$color:#626262);
+                            line-height: 2rem;
+                        }
+                    }
+                }
+                & .ico-list-ui {
+                    padding-top: 4rem;
+                    display: flex;
+                    flex-wrap:wrap;
+                    & .ico-box-ui {
+                        display: flex;
+                        flex-direction:column;
+                        align-items:center;
+                        & span {
+                            justify-content: center;
+                            padding: 2rem 0;
+                            @include fontStyle($fontSize: 14px,$color:#626262);
+                        }
+                        &:not(:last-child) {
+                            padding-right: 3rem;
+                        }
+                    }
+                }
+            }
+            & .content-main-ui[data-rel="reverse"] {
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                padding-left: 10rem;
+                & .ico-list-ui {
+                    & .ico-box-ui {
+                        display: flex;
+                        flex-direction:row;
+                        width: 33.33333%;
+                        padding-right: 0;
+                        margin-bottom: 2rem;
+                    }
+                }
+                & .desc-box-ui {
+                    padding-left: 0;
+                }
+            }
+            @media screen and (min-width: 1681px) {
+                & .content-main-ui {
+                    width: 62.5%;
+                }
+            }
+            @media screen and (max-width: 1441px) {
+                & .content-main-ui {
+                    width: 66.666667%;
+                }
+            }
+            @media screen and (max-width: 1367px) {
+                & .content-main-ui {
+                    width: 70.278184%;
+                }
+            }
+            @media screen and (max-width: 1281px) {
+                & .content-main-ui {
+                    width: 75%;
+                }
+            }
+        }
+    }
+}
+
+.headroom {
+    transition: transform 500ms linear;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+

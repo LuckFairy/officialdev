@@ -1,0 +1,80 @@
+extends ./layout
+
+block title
+	- var title = "收费说明-合利宝支付"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/serve.css")
+
+block content
+	.container.serve
+		include ./header
+		.section.page
+			.page-container.page(data-id="page1")
+				mixin fullSection
+					.banner.banner1
+						.banner1-bg
+							img(src="dist/images/banner@12x.png")
+						.banner-txt
+							h2 收费说明
+					.finance-container
+						.content-container
+							.finance-wrapper
+								#finance-info.finance-info
+									.main-box
+										section.article
+											h2 一、POS机
+											p POS机银联卡收单业务遵循中国银联商户类别及其费率标准收取交易手续费。商户类别大类分为餐饮娱乐类、一般类、民生类等，详细划分请参考银联划分标准。
+										section.article
+											table(border="1" cellpadding="10")
+												tbody
+													tr
+														th 商户大类
+														th 费率
+														th 备注
+													tr
+														td 餐饮娱乐类
+														td 1.25%
+														td 餐饮、宾馆、娱乐、珠宝金饰、工艺美术品、房地产及汽车销售
+													tr
+														td 一般类
+														td 0.78%
+														td 百货、批发、社会培训、中介服务、旅行社及景区门票等
+													tr
+														td 民生类
+														td 0.38%
+														td 超市、大兴仓储式卖场、水电煤气缴费、加油、交通运输售票
+										section.article
+											h2 二、互联网支付
+											p 互联网支付业务面向网关接入商户按签约费率（1%起）收取每笔交易手续费，对该接入网关的网站的用户不收取交易手续费。
+										section.article
+											h2 三、人民币跨境结算
+											p 人民币跨境结算服务按贸易类型分为货物贸易或服务贸易设定单笔交易金额上限，面向结算发起方按签约费率（1.5%起）收取每笔交易手续费。
+										section.article
+											h2 四、跨境电商服务
+											p 跨境电商服务按商家选择接入的业务类型的收费标准收取交易手续费，对接入服务的商家的用户不收取交易手续费。
+
+				+fullSection
+		//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+
+

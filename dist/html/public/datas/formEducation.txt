@@ -1,0 +1,453 @@
+
+											<input type="hidden" id="uuid" name="uuid" value="668931B9236F5C5B8388BEB7A7865FE0">
+
+											<input type="hidden" id="resumeId" name="resumeId" value="3177858">
+
+											<div id="education1_box" class="p30">
+												<div class="contentTips">请从最高学历开始,由高至低填写高中以上的完整教育背景</div>
+
+												<div id="education1_item">
+
+													<div class="information" id="education0" name="education">
+														<table border="0" cellpadding="0" cellspacing="0" class="table_2">
+															<tbody>
+																<tr>
+																	<td style="width:150px"></td>
+																	<td>
+																		<input name="eduId" value="" type="hidden">
+																		<h4 class="deleteblk" style="display:none"><a href="#?" onclick="delItem(this)">删除这个教育背景</a></h4>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text_right">
+																		<div align="right"><span class="c_B32639">*</span> 时间：</div>
+																	</td>
+																	<td>
+																		<select name="eduStartDateY" id="eduStartDateY0" onchange="selectErr(this)">
+																			<option value=""></option>
+
+																			<option value="2019">2019</option>
+
+																			<option value="2018">2018</option>
+
+																			<option value="2017">2017</option>
+
+																			<option value="2016">2016</option>
+
+																			<option value="2015">2015</option>
+
+																			<option value="2014">2014</option>
+
+																			<option value="2013">2013</option>
+
+																			<option value="2012">2012</option>
+
+																			<option value="2011">2011</option>
+
+																			<option value="2010">2010</option>
+
+																			<option value="2009">2009</option>
+
+																			<option value="2008">2008</option>
+
+																			<option value="2007">2007</option>
+
+																			<option value="2006">2006</option>
+
+																			<option value="2005">2005</option>
+
+																			<option value="2004">2004</option>
+
+																			<option value="2003">2003</option>
+
+																			<option value="2002">2002</option>
+
+																			<option value="2001">2001</option>
+
+																			<option value="2000">2000</option>
+
+																			<option value="1999">1999</option>
+
+																			<option value="1998">1998</option>
+
+																			<option value="1997">1997</option>
+
+																			<option value="1996">1996</option>
+
+																			<option value="1995">1995</option>
+
+																			<option value="1994">1994</option>
+
+																			<option value="1993">1993</option>
+
+																			<option value="1992">1992</option>
+
+																			<option value="1991">1991</option>
+
+																			<option value="1990">1990</option>
+
+																			<option value="1989">1989</option>
+
+																			<option value="1988">1988</option>
+
+																			<option value="1987">1987</option>
+
+																			<option value="1986">1986</option>
+
+																			<option value="1985">1985</option>
+
+																			<option value="1984">1984</option>
+
+																			<option value="1983">1983</option>
+
+																			<option value="1982">1982</option>
+
+																			<option value="1981">1981</option>
+
+																			<option value="1980">1980</option>
+
+																			<option value="1979">1979</option>
+
+																			<option value="1978">1978</option>
+
+																			<option value="1977">1977</option>
+
+																			<option value="1976">1976</option>
+
+																			<option value="1975">1975</option>
+
+																			<option value="1974">1974</option>
+
+																		</select>
+																		<label>年</label>
+																		<select title="月" name="eduStartDateM" id="eduStartDateM0" onchange="selectErr(this)">
+																			<option value=""></option>
+																			<option value="01">1</option>
+																			<option value="02">2</option>
+																			<option value="03">3</option>
+																			<option value="04">4</option>
+																			<option value="05">5</option>
+																			<option value="06">6</option>
+																			<option value="07">7</option>
+																			<option value="08">8</option>
+																			<option value="09">9</option>
+																			<option value="10">10</option>
+																			<option value="11">11</option>
+																			<option value="12">12</option>
+																		</select>
+																		<label>月</label>
+																		<label> 到</label>
+																		<label>
+          			<span class="width_41p">
+          			<select name="eduEndDateY" id="eduEndDateY">
+						<option selected="selected" value=""></option>
+						
+							<option value="2021">2021</option>
+						
+							<option value="2020">2020</option>
+						
+							<option value="2019">2019</option>
+						
+							<option value="2018">2018</option>
+						
+							<option value="2017">2017</option>
+						
+							<option value="2016">2016</option>
+						
+							<option value="2015">2015</option>
+						
+							<option value="2014">2014</option>
+						
+							<option value="2013">2013</option>
+						
+							<option value="2012">2012</option>
+						
+							<option value="2011">2011</option>
+						
+							<option value="2010">2010</option>
+						
+							<option value="2009">2009</option>
+						
+							<option value="2008">2008</option>
+						
+							<option value="2007">2007</option>
+						
+							<option value="2006">2006</option>
+						
+							<option value="2005">2005</option>
+						
+							<option value="2004">2004</option>
+						
+							<option value="2003">2003</option>
+						
+							<option value="2002">2002</option>
+						
+							<option value="2001">2001</option>
+						
+							<option value="2000">2000</option>
+						
+							<option value="1999">1999</option>
+						
+							<option value="1998">1998</option>
+						
+							<option value="1997">1997</option>
+						
+							<option value="1996">1996</option>
+						
+							<option value="1995">1995</option>
+						
+							<option value="1994">1994</option>
+						
+							<option value="1993">1993</option>
+						
+							<option value="1992">1992</option>
+						
+							<option value="1991">1991</option>
+						
+							<option value="1990">1990</option>
+						
+							<option value="1989">1989</option>
+						
+							<option value="1988">1988</option>
+						
+							<option value="1987">1987</option>
+						
+							<option value="1986">1986</option>
+						
+							<option value="1985">1985</option>
+						
+							<option value="1984">1984</option>
+						
+							<option value="1983">1983</option>
+						
+							<option value="1982">1982</option>
+						
+							<option value="1981">1981</option>
+						
+							<option value="1980">1980</option>
+						
+							<option value="1979">1979</option>
+						
+							<option value="1978">1978</option>
+						
+							<option value="1977">1977</option>
+						
+							<option value="1976">1976</option>
+						
+					</select>
+          			</span>年
+          			</label>
+																		<select name="eduEndDateM" id="eduEndDateM">
+																			<option selected="selected" value=""></option>
+																			<option value="01">1</option>
+																			<option value="02">2</option>
+																			<option value="03">3</option>
+																			<option value="04">4</option>
+																			<option value="05">5</option>
+																			<option value="06">6</option>
+																			<option value="07">7</option>
+																			<option value="08">8</option>
+																			<option value="09">9</option>
+																			<option value="10">10</option>
+																			<option value="11">11</option>
+																			<option value="12">12</option>
+																		</select>
+																		<label>月</label>
+																		<label>（后一项不填表示至今）</label>
+																		<span class="err" key="eduStartDateY" id="eduStartDateY0_err">&nbsp;</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text_right">
+																		<div align="right"><span class="c_B32639">*</span> 学校：</div>
+																	</td>
+																	<td>
+																		<select name="eduSchoolIdP" id="eduSchoolIdP0" onchange="cC(this,'eduSchoolId','2');">
+																			<option value="">请选择</option>
+
+																			<option value="12">安徽省</option>
+
+																			<option value="34">澳门特别行政区</option>
+
+																			<option value="1">北京市</option>
+
+																			<option value="22">重庆市</option>
+
+																			<option value="13">福建省</option>
+
+																			<option value="28">甘肃省</option>
+
+																			<option value="19">广东省</option>
+
+																			<option value="20">广西壮族自治区</option>
+
+																			<option value="24">贵州省</option>
+
+																			<option value="21">海南省</option>
+
+																			<option value="3">河北省</option>
+
+																			<option value="16">河南省</option>
+
+																			<option value="8">黑龙江省</option>
+
+																			<option value="17">湖北省</option>
+
+																			<option value="18">湖南省</option>
+
+																			<option value="7">吉林省</option>
+
+																			<option value="10">江苏省</option>
+
+																			<option value="14">江西省</option>
+
+																			<option value="6">辽宁省</option>
+
+																			<option value="5">内蒙古自治区</option>
+
+																			<option value="30">宁夏回族自治区</option>
+
+																			<option value="29">青海省</option>
+
+																			<option value="15">山东省</option>
+
+																			<option value="4">山西省</option>
+
+																			<option value="27">陕西省</option>
+
+																			<option value="9">上海市</option>
+
+																			<option value="23">四川省</option>
+
+																			<option value="32">台湾省</option>
+
+																			<option value="2">天津市</option>
+
+																			<option value="26">西藏自治区</option>
+
+																			<option value="33">香港特别行政区</option>
+
+																			<option value="31">新疆维吾尔自治区</option>
+
+																			<option value="25">云南省</option>
+
+																			<option value="11">浙江省</option>
+
+																		</select>省
+																		<span>
+					<select name="eduSchoolId" id="eduSchoolId0">
+						<option value="">请选择</option>
+						
+					</select>
+          			</span>
+																		<input readonly="ture" name="schoolIdT" id="schoolIdT0" style="color: rgb(153, 153, 153);" onclick="this.readOnly=false;this.style.color='#000'; if(this.value=='如果没有请在这里填写'){this.value=''}" class="input" value="如果没有请在这里填写" type="text">
+																		<span class="err" key="eduSchoolIdP" id="eduSchoolIdP0_err">&nbsp;</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text_right">
+																		<div align="right"><span class="c_B32639">*</span> 所在学院：</div>
+																	</td>
+																	<td>
+																		<input class="input" name="eduAcademy" id="eduAcademy0" type="text">
+																		<span class="err" key="eduAcademy" id="eduAcademy0_err"></span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text_right">
+																		<div align="right"><span class="c_B32639">*</span> 专业：</div>
+																	</td>
+																	<td>
+																		<input class="input" name="eduMajor" id="eduMajor0" type="text">
+																		<span class="err" key="eduMajor" id="eduMajor0_err"></span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text_right">
+																		<div align="right"><span class="c_B32639">*</span> 学历：</div>
+																	</td>
+																	<td>
+																		<select name="educations" id="educations0" onchange="checkSelect(this,'学历不能为空');changeEducation(this);">
+																			<option value=""></option>
+
+																			<option value="1">博士</option>
+
+																			<option value="2">MBA</option>
+
+																			<option value="3">硕士</option>
+
+																			<option value="4">本科</option>
+
+																			<option value="5">大专</option>
+
+																			<option value="6">中专</option>
+
+																			<option value="7">中技</option>
+
+																			<option value="8">高中</option>
+
+																			<option value="9">初中</option>
+
+																		</select>
+																		<span class="err" key="educations" id="educations0_err"></span>
+																	</td>
+																</tr>
+																<tr style="display:none" id="laboratory">
+																	<td class="text_right">
+																		<div align="right"><span class="c_B32639">*</span> 实验室名称：</div>
+																	</td>
+																	<td>
+																		<input class="input" name="laboratoryNames" id="laboratoryNames0" type="text"> &nbsp;&nbsp;
+																		<span class="c_B32639">*</span>导师姓名：
+																		<input class="input" name="teacherNames" id="teacherNames0" type="text">
+																		<span class="err" key="teacherNames" id="teacherNames0_err"></span>
+																	</td>
+																</tr>
+																<tr>
+																	<td class=" text_right">
+																		<div align="right"><span class="c_B32639">*</span> 班级排名：</div>
+																	</td>
+																	<td>
+																		<select name="eduClassOrder" id="eduClassOrder0" onchange="checkSelect(this,'班级排名不能为空')">
+																			<option value=""></option>
+
+																			<option value="2">10%</option>
+
+																			<option value="4">30%</option>
+
+																			<option value="5">50%</option>
+
+																			<option value="6">其他</option>
+
+																		</select>
+																		<span class="err" key="eduClassOrder" id="eduClassOrder0_err"></span>
+																	</td>
+																</tr>
+																
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+
+											<table border="0" cellpadding="0" cellspacing="0" class="table_2" style="clear:both;mrgin:0">
+												<tbody>
+													<tr>
+														<td style="width:150px">&nbsp;</td>
+														<td>
+															<a href="javascript:;" class="btn_add" id="moreEdu" onclick="addItem(item1,'education1_item',5,0)">继续添加教育背景</a>
+														</td>
+													</tr>
+													<tr>
+														<td valign="top">&nbsp;</td>
+														<td>
+															<input type="submit" onclick="submitForm('previous');" class="redBtn" value="上一项" style="margin:0">
+															<input type="submit" onclick="submitForm('next');" class="redBtn" value="保存，并填写下一项" style="margin:0">
+															<input type="submit" onclick="submitForm('exit');" class="redBtn" value="保存" style="margin:0">
+														</td>
+													</tr>
+												</tbody>
+											</table>
+
+											<input type="hidden" id="action" name="action">
+

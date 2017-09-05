@@ -1,0 +1,2 @@
+function updateBgImag(e,a){e.style.backgroundImage=a}window.onload=function(){var e=document.getElementById("bg-music"),a=document.getElementById("music-box");new Swiper("#music",{noSwiping:!1,onTap:function(i){e.paused?(e.play(),updateBgImag(a,"url(dist/images/music-active@12x.png)"),a.classList.add("active")):(e.pause(),updateBgImag(a,"url(dist/images/music-default@12x.png)"),a.classList.remove("active"))}})};
+//# sourceMappingURL=app.js.map

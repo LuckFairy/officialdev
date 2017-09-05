@@ -1,0 +1,159 @@
+body{
+	min-width: 980px;
+	overflow-x: auto;
+}			
+/*万能清除浮动*/
+.clear { zoom: 1;}
+.clear:before { display: block; clear: both; visibility: hidden; height: 0; overflow: hidden; content: "";}
+.clear:after { display: block; clear: both; visibility: hidden; height: 0; overflow: hidden; content: "";}
+.f-dn { display: none;}
+.f-db { display: block;}
+.f-dbb { display: block !important;}
+.f-fl { float: left;}
+.f-fr { float: right;}
+.f-oh { overflow: hidden;}
+.f-pr { position: relative;}
+.f-pa { position: absolute;}
+.f-tac { text-align: center;}
+.f-vm { display: table-cell;vertical-align: middle; }
+@media screen and (max-width: 1281px){
+	.wrapper{
+		
+		width:75%;
+	}
+}
+@media screen and (max-width: 1367px){
+	.wrapper{
+		
+		width: 70.278184%;
+	}
+}
+
+@media screen and (max-width: 1441px){
+	.wrapper{
+		
+		width: 66.666667%;
+	}
+}
+			.section-introduce .container-shareholder{
+				padding: 62px 0 58px;
+			}
+			.contLeft{
+				float: left;
+				width: 140px;
+			}
+			.tabList li{
+				position: relative;
+				margin-bottom: 4px;
+				width:140px;
+				height: 76px;
+				cursor: pointer;
+			}
+			.tabList li img{
+				width:100%;
+				height: auto;
+				
+			}
+			.tabList li.active div{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 110%;
+				height: 100%;
+				z-index: 98;
+				background: url(../images/school/menu_selected.png) no-repeat ;
+			}
+			.tabList li span{
+				color: #fff;
+				font:16px/1.2 "微软雅黑";
+				position: absolute;
+				margin-left: -24px;
+				margin-top: -8px;
+				left: 50%;
+				top: 50%;
+				z-index: 99;
+				
+			}
+			.section-introduce .container-shareholder .shareholder-box{
+				min-height: 750px;
+				overflow: visible;
+			}
+			.shareholder-title,.introduce-box{
+				margin-left:70px ;
+	
+			}
+			.section-introduce .container-shareholder .shareholder-box .shareholder-content .introduce-box{
+				width: auto;
+			    padding-top: 0;
+			    overflow: visible;
+			}
+			.section-introduce .container-shareholder .shareholder-box .shareholder-content .introduce-box p{
+				text-indent: 0;
+			}
+			.tabcon{
+				position: relative;
+			}
+			.tabcon .sublist{
+				/*position: absolute;*/
+				left: 0;
+				top: 0;
+				display: none;
+			}
+			.tabcon ol li{
+				color:#929292;
+				font-size: 14px;
+				margin-top: 8px;
+				line-height: 1.5;
+			}
+			.tabcon .target{
+				margin-top:48px;
+			}
+			.tabcon .target a {
+				display: block;
+				font-size: 14px;
+				background: #4990E2;
+				color: #fff;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				width: 140px;
+				
+			}
+			.weixin-code{
+				margin-top: 40px;
+				margin-bottom: 10px;
+			}
+			.weixin-code img{
+				display: inline-block;
+				vertical-align: top;
+				width: 34px;
+				height: 34px;
+				margin-right: 10px;
+			}
+			.weixin-code p{
+				display: inline-block;
+				color:#464646;
+				font-size: 14px;
+				line-height: 1.5;
+			}
+			.section-introduce .container-shareholder .shareholder-box .shareholder-content .shareholder-title a{
+				border-bottom:none;
+				margin-left: 3rem;
+				cursor: pointer;
+				font-size: 18px;
+			}
+			.section-introduce .container-shareholder .shareholder-box .shareholder-content .shareholder-title a:first-child{
+				margin-left: 0;
+			}
+			.section-introduce .container-shareholder .shareholder-box .shareholder-content .shareholder-title a.active{
+				    border-bottom: 2px solid #ff4b46;
+			}
+.err{color:#FF0000;}
+.contLeft>div:last-child img{
+	width:140px;
+	height: auto;
+}
+.contLeft>div:last-child>img:last-child{
+	width:138px;
+	border:1px solid #E6E6E6;
+}

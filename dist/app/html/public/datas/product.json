@@ -1,0 +1,139 @@
+[{
+    "id": "1",
+    "proName": "合利宝智能POS",
+    "proImg": "../images/img_product_znpos@12x.png",
+    "intros": [{
+        "intro": "一款基于互联网和云智能服务的POS终端。 集合多种支付方式可以做到全支付，全受理，会员营销于一体。 同时提供了便民服务和互联网金融增值服务，一站式满足商户转账、还款、理财、贷款、进销存管理等各类金融需求， 助力商户实现智能化的店铺经营。"
+    }, {
+        "intro": "适用客户：便利店、商场专柜、电商连锁门店、批发市场商户等"
+    }],
+    "features": [{
+        "feature": {
+            "img": "../images/ico_product_adv1@12x.png",
+            "title": "时尚外观 小巧精致",
+            "content": "5.5英寸IPS触控屏，全屏幕操作，2寸热敏超长打印机口读卡卡槽一体化设计"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv2@12x.png",
+            "title": "安心支付 到账稳定有保障",
+            "content": "通过银联卡受理终端 PIN输入设备安全评估检测认证，数据存储在国家级数据机房，为您的资金安全和数据保驾护航"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv3@12x.png",
+            "title": "无线联网 移动性强",
+            "content": "全网络覆盖，支持联通、移动、电信4G/3G/2G网络 支持无线WIFI 随时随地点单收款"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv4@12x.png",
+            "title": "融合支付 选择多体验好",
+            "content": "主流支付方式一应俱全，支持刷卡支付、支付宝、微信支付、Apple Pay等，同时支持 NFC，支持二维码、条形码等扫描"
+        }
+    }]
+}, {
+    "id": "2",
+    "proName": "合利宝M-POS",
+    "proImg": "../images/img_product_mpos@12x.png",
+    "intros": [{
+        "intro": "MPOS是合利宝推出的面向小微商户的移动收单产品。 它通过蓝牙及音频连接技术配合相关的客户端， 实现与Android和IOS智能手机进行通讯， 为使用者提供收款、转账、信用卡还款、 手机充值等多项金融服务。"
+    }, {
+        "intro": "合利宝MPOS除了功能贴心全面之外，还通过银行卡检测中心检测， 并获得银联颁发的受理终端设备安全认证证书，在安全上达到金融级别。 机身配置物理密码键盘，用户敏感信息采用硬件加密技术，从源头上保证用户数据安全。 刷卡器如果一旦拆开，安全数据就会销毁， 从源头上防止被安装恶意软件，避免使用者丢失重要信息。"
+    }, {
+        "intro": "适用客户：商店、保险顾问、家政服务、快递、导游导购，以及自由职业者等行业。"
+    }],
+    "features": [{
+        "feature": {
+            "img": "../images/ico_product_adv5@12x.png",
+            "title": "纤薄机身 超长待机",
+            "content": "17.6mm纤薄机身 传统POS机体积的1/4"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv6@12x.png",
+            "title": "安心支付 到账稳定有保障",
+            "content": "通过银行卡检测中心认证；通过银联受理终端准入认证；与全国主流商业银行合作，银联卡全支持，到账有保障"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv7@12x.png",
+            "title": "低成本投入 多平台支持",
+            "content": "远低于同类产品的价格，减少终端投入，节约成本；支持连接智能手机、平板电脑、个人电脑，多平台使用，更加便捷"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv8@12x.png",
+            "title": "融合支付 选择多体验好",
+            "content": "主流支付方式一应俱全，支持刷卡支付、支付宝、微信支付、Apple Pay等；同时支持 NFC，一触即付3毫秒极速收款"
+        }
+    }]
+}, {
+    "id": "3",
+    "proName": "合利宝蓝牙POS",
+    "proImg": "../images/img_product_lypos@12x.png",
+    "intros": [{
+        "intro": "合利宝蓝牙POS通过蓝牙信号和同样具有蓝牙通讯能力的移动终端连接， 利用移动终端提交交易信息，将蓝牙技术应用到POS上， 摆脱传统POS机连线所带来的不便，通过蓝牙连接手机APP对消费的商品或服务和账务支付， 是支持金融IC卡的个人刷卡终端，兼容iphone、三星、小米等各类主流智能手机以及PAD产品； 为用户主要提供还款转账、余额查询、充值缴费等便民金融服务。"
+    }, {
+        "intro": "适用客户：直销人员、行业专家、媒体工作者、保险服务人员、导游等"
+    }],
+    "features": [{
+        "feature": {
+            "img": "../images/ico_product_adv9@12x.png",
+            "title": "极速收款 365天资金快速周转",
+            "content": "D+0资金秒到，365X24资金不休假；与全国主流商业银行合作，到账有保障；足不出户，极速收款，分秒即达；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv10@12x.png",
+            "title": "专业加密 全方位安全保障",
+            "content": "通过银行卡检测中心认证；通过银联受理终端准入认证；独家拥有专业机房，硬件解码；德国进口芯片，一机一密；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv11@12x.png",
+            "title": "电子签购单 明白放心消费",
+            "content": "交易完成自动生成电子签购单，短信加电子签名确认，交易双重保障更放心；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv12@12x.png",
+            "title": "随心享受 专属个人金融服务",
+            "content": "随时随地享受收款、付款、转账、信用卡还款、手机充值、余额查询等多项便民金融服务"
+        }
+    }]
+}, {
+    "id": "4",
+    "proName": "合利宝传统POS",
+    "proImg": "../images/img_product_ctpos@12x.png",
+    "intros": [{
+        "intro": "合利宝传统POS提供了帐户充值信用卡还款、 转账汇款、个人还款、 手机充值、订单支付、个人还贷等。"
+    }, {
+        "intro": "适用客户：传统POS应用商户"
+    }],
+    "features": [{
+        "feature": {
+            "img": "../images/ico_product_adv13@12x.png",
+            "title": "安全便捷",
+            "content": "实现上门刷卡支付功能，商家实现收款便捷的同时也杜绝了资金安全隐患；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv14@12x.png",
+            "title": "交易速度快、稳定性强",
+            "content": "充分利用局域网络和专线网络快速、稳定的特点，提升银行卡刷卡收银速度，稳定性远远优于电话拨号金融POS，大大降低了持卡人账户的差错率和商户的被投诉率；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv15@12x.png",
+            "title": "通讯成本低",
+            "content": "专线月租费用固定，银行卡刷卡交易的通讯费用可成倍的降低，对于大型百货、连锁性超市尤其明显；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_product_adv16@12x.png",
+            "title": "管理功能全面",
+            "content": "产品提供多样化的查询、监控、报表、自动对帐功能，方便财务核算管理。"
+        }
+    }]
+}]

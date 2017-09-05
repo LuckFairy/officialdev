@@ -1,0 +1,612 @@
+@charset "UTF-8";
+/**
+ * lightapp/layout.scss
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-12 11:51:28
+ * @version $Id$
+ */
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-ms-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+// 设置动画属性前缀
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+// 测试
+
+@mixin myAnimation($args...){
+    animation:#{$args};
+}
+// 设置过渡属性前缀
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin transform($args...) {
+    -webkit-transform: $args;
+    -moz-transform: $args;
+    -ms-transform: $args;
+    -o-transform: $args;
+    transform: $args;
+}
+
+
+// 以下两个动画为抖动所定义
+// 右旋抖动
+@keyframes shakeInRight {
+    0% {
+            transform-origin: right bottom;
+            transform: rotate3d(0, 0, 1, -90deg);
+            opacity: 0;
+    }
+    100% {
+            transform-origin: right bottom;
+            transform: none;
+            opacity: 1;
+            filter: alpha(opacity=100)
+    }
+}
+// 抖动无穷次
+@keyframes shakeInfinite {
+    0% {
+            transform: scale3d(1, 1, 1)
+    }
+    10%,
+    20% {
+            transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+    }
+    40%,
+    60%,
+    80% {
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+    }
+    100% {
+            transform: scale3d(1, 1, 1)
+    }
+}
+
+// 放大进入后缩小至原来大小
+@keyframes zoomOut {
+    0% {
+            opacity: 0;
+            transform: scale3d(2, 2, 2)
+    }
+    2% {
+            opacity: 1;
+    }
+    80% {
+            transform: scale3d(1, 1, 1)
+    }
+    100% {
+            opacity: 1;
+    }
+}
+
+// 扩张放大
+
+@include keyframes(zoomInnerToOut) {
+
+    0% {
+            transform: scale(1.0);
+    }
+    70% {
+            transform: scale(1.2);
+            opacity: 1;
+    }
+    100% {
+            opacity: 0;
+    }
+
+}
+// 箭头向上
+@include keyframes(swipeMoveTop) {
+    0% {
+            opacity: 0;
+            transform: translate3d(0, 10px, 0);
+    }
+    70% {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+    }
+    100% {
+            opacity: 0;
+            transform: translate3d(0, -10px, 0);
+    }
+}
+// 右旋向上
+@include keyframes(rotateInUpRight) {
+    0% {
+            transform-origin: right bottom;
+            transform: rotate3d(0, 0, 1, -90deg);
+            opacity: 0;
+    }
+    100% {
+            transform-origin: right bottom;
+            transform: none;
+            opacity: 1;
+    }
+}
+// 向上偏移
+@include keyframes(arrowUpTranslate) {
+    0%{
+            opacity: 0;
+            transform: rotate(-180deg)
+    }
+    100% {
+            opacity: 1;
+            transform: rotate(0deg)
+    }
+}
+// 向下淡入
+@include keyframes(fadeInDown) {
+    0% {
+            opacity: 0;
+            transform: translate3d(0, -100%, 0)
+    }
+    100% {
+            opacity: 1;
+            transform: none
+    }
+}
+// 弹簧式进入
+@include keyframes(bounceIn) {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+            transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+    }
+    0% {
+            opacity: 0;
+            transform: scale3d(2, 2, 2)
+    }
+    40% {
+            transform: scale3d(.9, .9, .9)
+    }
+    60% {
+            transform: scale3d(1.03, 1.03, 1.03)
+    }
+    80% {
+            opacity: 1;
+            transform: scale3d(.97, .97, .97)
+    }
+    100% {
+            opacity:1;
+            transform: scale3d(1, 1, 1)
+    }
+}
+
+// 左旋向上
+
+@include keyframes(rotateInUpLeft) {
+    0% {
+            transform-origin: left bottom;
+            transform: rotate3d(0, 0, 1, 45deg);
+            opacity: 0;
+    }
+    100% {
+            transform-origin: left bottom;
+            transform: none;
+            opacity: 1;
+    }
+}
+
+
+// 下拉滑动
+
+@include keyframes(slideDown) {
+   0% {
+            opacity: 0;
+            transform: translateY(-150%)
+   }
+   50% {
+            transform: translateY(8%)
+   }
+   65% {
+            transform: translateY(-4%)
+   }
+   80% {
+            transform: translateY(4%)
+   }
+   95% {
+            transform: translateY(-2%)
+   }
+   100% {
+            opacity: 1;
+            transform: translateY(0)
+   }
+}
+// 向右滑入
+
+@include keyframes(slideRight) {
+        0% {
+            opacity: 0;
+            transform: translateX(-150%)
+        }
+        50% {
+            transform: translateX(8%)
+        }
+        65% {
+            transform: translateX(-4%)
+        }
+        80% {
+            transform: translateX(4%)
+        }
+        95% {
+            transform: translateX(-2%)
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0)
+        }
+    }
+// 向上淡入
+
+@include keyframes(fadeInUp) {
+    0% {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0)
+    }
+    100% {
+            opacity: 1;
+            transform: none
+    }
+}
+// 向右淡入
+
+@include keyframes(fadeInRight) {
+    0% {
+            opacity: 0;
+            transform: translate3d(-100%, 0, 0)
+    }
+    100% {
+            opacity: 1;
+            transform: none
+    }
+}
+
+// 淡入
+@include keyframes(fadeIn) {
+    0% {
+            opacity: 0;
+    }
+    100% {
+            opacity: 1;
+    }
+}
+
+// loading
+
+// loading animation stayle
+
+@include keyframes(load) {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(45deg);
+    }
+    50%{
+        opacity: 1;
+        transform: rotate(160deg);
+    }
+    62%{
+        opacity: 0;
+    }
+    65%{
+        opacity: 0;
+        transform: rotate(200deg);
+    }
+    90%{
+        transform: rotate(340deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@include keyframes(moveDown) {
+    0%{
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-1.92105882rem);
+    }
+    20% {
+        transform: translateY(-1.92105882 * 2rem);
+    }
+    30% {
+        transform: translateY(-1.92105882 * 3rem);
+    }
+    40% {
+        transform: translateY(-1.92105882 * 4rem);
+    }
+    50% {
+        transform: translateY(-1.92105882 * 5rem);
+    }
+    60% {
+        transform: translateY(-1.92105882 * 6rem);
+    }
+    70% {
+        transform: translateY(-1.92105882 * 7rem);
+    }
+    80% {
+        transform: translateY(-1.92105882 * 8rem);
+    }
+    90% {
+        transform: translateY(-1.92105882 * 9rem);
+    }
+    100%{
+        transform: translateY(-1.92105882 * 10rem);
+    }
+}
+
+// 音乐播放
+@include keyframes(musicRotateRun) {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.swiper-slide-active {
+
+    // 文字统一淡入
+    & .text-box {
+        @include animation('fadeInDown 1s 0.5s 1 both')
+    }
+    & .logo-box {
+        @include animation('fadeInDown 1s 0.5s 1 both')
+    }
+    & .title {
+        @include animation('fadeInDown 1s 0.5s 1 both')
+    }
+    & .arrow {
+        @include animation('swipeMoveTop 1.5s 1s ease infinite')
+    }
+
+    // 第一屏 首页 homePage
+    & .home-list {
+        &:nth-child(1) {
+            @include animation('rotateInUpRight 1s 0.5s 1 both')
+        }
+        &:nth-child(2) {
+            @include animation('arrowUpTranslate 1s 1.5s 1 both')
+        }
+        &:nth-child(3) {
+            animation:shakeInRight 1s 2.5s 1 both,
+                      shakeInfinite 1s 3.5s 1 forwards;
+        }
+        &:nth-child(4) {
+            animation:shakeInRight 1s 2.5s 1 both,
+                      shakeInfinite 1s 3.5s infinite forwards;
+        }
+        &:nth-child(5) {
+            animation:shakeInRight 1s 2.5s 1 both,
+                      shakeInfinite 1s 3.5s infinite forwards;
+        }
+        &:nth-child(6) {
+            @include animation('fadeInDown 1s 0.5s 1 both')
+        }
+    }
+
+    // 第二屏 目录页 listPage
+    & .list-box {
+        &:nth-child(1) {
+            @include animation('slideRight 1s 0.5s 1 both')
+        }
+    }
+
+    // 第十三屏 智能POS intellPage
+
+    & .tit {
+        @include animation('fadeInDown 1s 0.5s 1 both')
+    }
+    & .intell-list {
+        &:nth-child(2) {
+            @include animation('rotateInUpRight 1s 0.5s 1 both')
+        }
+        &:nth-child(3) {
+            @include animation('rotateInUpRight 1s 1.5s 1 both')
+        }
+    }
+
+    // 第八屏 M-POS mPosPage
+    & .mPos-list {
+        &:nth-child(2) {
+            @include animation('rotateInUpLeft 1s 1.5s 1 both')
+        }
+        &:nth-child(3) {
+            @include animation('rotateInUpRight 1s 2.5s 1 both')
+        }
+    }
+    // 蓝牙POS
+    & .bluet-list {
+        &:nth-child(2) {
+            @include animation('rotateInUpRight 1s 1.5s 1 both')
+        }
+        &:nth-child(3) {
+            @include animation('rotateInUpLeft 1s 2.5s 1 both')
+        }
+    }
+
+    // 传统POS
+
+    & .tra-list {
+        &:nth-child(2) {
+            @include animation('rotateInUpRight 1s 2.5s 1 both')
+        }
+        &:nth-child(3) {
+            @include animation('rotateInUpLeft 1s 1.5s 1 both')
+        }
+    }
+
+    // 网关支付
+    & .gate-list {
+        &:nth-child(2) {
+            @include animation('bounceIn 1s 0.5s 1 both')
+        }
+    }
+
+    // 快捷支付
+    & .quick-list {
+        &:nth-child(2) {
+            @include animation('zoomOut 1s 0.5s 1 both')
+        }
+        // bounceIn动画定义方式为sass函数定义而不是css3普通函数定义，在模拟机上正常，而在安卓真机上有兼容问题
+        // 解决方法，将bounceIn动画定义方式改为像zoomOut、shakeInfinite的定义方式，才可形成同一元素多动画队列
+        &:nth-child(3) {
+            animation:bounceIn 1s 0.5s 1 both,
+                      shakeInfinite 1s 2.5s 1 forwards
+        }
+        // 测试同一元素多动画队列可用
+        // &:nth-child(3) {
+        //     @include myAnimation('bounceIn 1s 0.5s 1 both','shakeInfinite 1s 2.5s 1 forwards')
+        // }
+    }
+
+    // 二维码支付
+    & .QRcode-list {
+        &:nth-child(2) {
+            @include animation('bounceIn 1s 0.5s 1 both')
+        }
+    }
+
+    // 委托支付
+    & .ent-list {
+        &:nth-child(2) {
+            @include animation('slideDown 1s 0.5s 1 both')
+        }
+        &:nth-child(3) {
+            @include animation('bounceIn 1s 1.5s 1 both')
+        }
+    }
+
+    // pos收单
+    & .posRec-list {
+        &:nth-child(4) {
+            @include animation('bounceIn 1s 0.5s 1 both')
+        }
+        &:nth-child(3) {
+            @include animation('bounceIn 1s 1.5s 1 both')
+        }
+        &:nth-child(2) {
+            @include animation('bounceIn 1s 2.5s 1 both')
+        }
+    }
+
+    // 大宗交易
+    & .bulk-list {
+        &:nth-child(2) {
+            @include animation('fadeInUp 1s 0.5s 1 both')
+        }
+        &:nth-child(3) {
+            @include animation('bounceIn 1s 1.5s 1 both')
+        }
+    }
+
+    // 跨境支付
+    & .cross-list {
+        &:nth-child(2) {
+            @include animation('bounceIn 1s 0.5s 1 both')
+        }
+    }
+
+    // 优质服务
+    & .ser-list {
+        &:nth-child(2) {
+            @include animation('fadeInRight 1s 0.5s 1 both')
+        }
+        &:nth-child(3) {
+            @include animation('bounceIn 1s 0.5s 1 both')
+        }
+    }
+
+    // 单列客户资源
+    // & .client-list-box {
+    //     // @include animation('moveDown 10s linear infinite')
+    //     & .list-box-item {
+    //         @include animation('moveDown 20s 2s linear infinite')
+    //     }
+    // }
+    // 两列客户资源样式
+
+    // 客户资源
+    & .client-list-box {
+        & .list-box-item {
+            @include animation('fadeIn 1s 0.5s 1 both')
+        }
+    }
+
+    // 尾页
+    & .last-list {
+        &:nth-child(2) {
+            @include animation('bounceIn 1s 0.5s 1 both')
+        }
+    }
+}
+
+// loading style
+
+.loading-container {
+    & .loading {
+        & .load {
+            @include animation('load 2.08s linear infinite');
+            &:nth-child(1) {
+                animation-delay:0.2s;
+            }
+            &:nth-child(2) {
+                animation-delay:0.4s;
+            }
+            &:nth-child(3) {
+                animation-delay:0.6s;
+            }
+            &:nth-child(4) {
+                animation-delay:0.8s;
+            }
+        }
+    }
+}
+// 音乐播放动画
+
+.music-box.active {
+    @include animation('musicRotateRun 2.4s linear infinite');
+}
+.swiper-slide-active {
+    & .visits {
+        @include animation('fadeInUp 1s 0.5s 1 both')
+    }
+}

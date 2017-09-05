@@ -1,0 +1,479 @@
+@charset "UTF-8";
+
+/**
+ * layout.css
+ * @authors Ou Yuan (beyondouyuan.github.io)
+ * @date    2017-01-06 14:49:40
+ * @version $1.0$
+ */
+@mixin fontStyle($fontFamily :Microsoft YaHei,$fontSize: 14px,$letterSpacing: 0.48px,$color: #fff) {
+    font-family: $fontFamily,微软雅黑;
+    font-size: $fontSize;
+    letter-spacing: $letterSpacing;
+    color: $color;
+}
+.product,
+.solve {
+    width: 100%;
+    height: auto;
+    position: relative;
+    & .page-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        & .banner {
+            position: relative;
+            & .banner-txt {
+                text-align: center;
+                margin: 0 auto;
+                width: auto;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform:translateX(-50%);
+                z-index: 10;
+                & h2 {
+                    @include fontStyle($fontSize:40px,$letterSpacing: 0px);
+                }
+                & p {
+                    width: 70%;
+                    margin: 0 auto;
+                    padding-top: .5rem;
+                    line-height: 2rem;
+                    @include fontStyle($fontSize:16px,$letterSpacing: 0px,$color: rgba(255, 255, 255, .8));
+                }
+            }
+        }
+        & .product-wrapper {
+            width: 70.833333%;
+            margin: 2rem auto;
+            display: flex;
+            align-items: stretch;
+            & .product-desc {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: space-around;
+                padding: 2rem 2rem 2rem 5rem;
+                & .title h2 {
+                    width: 100%;
+                    @include fontStyle($fontSize:28px,$letterSpacing: 0px,$color: #626262);
+                }
+                & .desc-box {
+                    width: 100%;
+                    padding-top: 1.7rem;
+                    // flex: 2;
+                    & p {
+                        text-indent: 2em;
+                        text-align: justify;
+                        line-height: 2rem;
+                        @include fontStyle($fontSize:16px,$letterSpacing: 0px,$color: #626262);
+                    }
+                }
+                & .pro-schema {
+                    width: 100%;
+                    padding-top: 2rem;
+                    display: flex;
+                    flex-wrap:wrap;
+                    align-items: flex-start;
+                    & span {
+                        width: 90%;
+                        line-height: 2rem;
+                        @include fontStyle($fontSize:14px,$letterSpacing: 0px,$color: #626262);
+                        padding-left: 1rem;
+                    }
+                    & .wrap-span {
+                        padding-left: 3rem;
+                    }
+                }
+            }
+            & .product-img {
+                width: 50%;
+                text-align: center;
+                padding: 2rem;
+            }
+            & img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        @media screen and (min-width: 1681px){
+            & .product-wrapper {
+                width: 62.5%;
+            }
+        }
+        @media screen and (max-width: 1441px){
+            & .product-wrapper {
+                width: 66.666667%;
+            }
+        }
+        @media screen and (max-width: 1367px){
+            & .product-wrapper {
+                width: 70.278184%;
+            }
+        }
+        @media screen and (max-width: 1281px){
+            & .product-wrapper {
+                width: 75%;
+            }
+        }
+        & .product-scenes {
+            width: 100%;
+            height: auto;
+            background: #F8F8F9;
+            padding-bottom: 1rem;
+            & .scenes-wrapper {
+                width: 70.833333%;
+                margin: 0 auto;
+                & > .title {
+                    margin: 0 auto;
+                    text-align: center;
+                    & h2 {
+                        line-height: 2em;
+                        padding: 2.4rem 1rem 2rem 1rem;
+                        @include fontStyle($fontSize:28px,$letterSpacing: 0px,$color: #929292);
+                    }
+                    & h3 {
+                        line-height: 1em;
+                        padding: 2.4rem 1rem 1rem 1rem;
+                        @include fontStyle($fontSize:18px,$letterSpacing: 0px,$color: #929292);
+                    }
+                }
+                & .features-box {
+                    display: flex;
+                    align-items: stretch;
+                    padding: 5rem 2rem 5rem 5rem;
+                    & .scenes-box-left {
+                        width: 25%;
+                        padding-left: 1%;
+                        height: auto;
+                        display: flex;
+                        flex-wrap: wrap;
+                        & .item-img {
+                            display: flex;
+                            width: 50%;
+                            min-height: 10rem;
+                            background: transparent;
+                            & .txt {
+                                cursor: pointer;
+                                min-width: 9rem;
+                                max-width: 10rem;
+                                min-height: 8rem;
+                                display: flex;
+                                position: relative;
+                                justify-content: center;
+                                align-items: center;
+                                @include fontStyle($fontSize:14px,$letterSpacing: 0px,$color: #626262);
+                                background: url(../images/ico_industry_abi@12x.png) center center no-repeat;
+                                background-size: cover;
+                                &.active {
+                                    @include fontStyle($fontSize:14px,$letterSpacing: 0px);
+                                    background: url(../images/ico_industry_abi_actvie@12x.png) center center no-repeat;
+                                    background-size: cover;
+                                }
+                            }
+                        }
+                        & .item-img:nth-child(odd) {
+                            justify-content: flex-end;
+                        }
+                        & .item-img:nth-child(3) {
+                            width: 66%;
+                            margin-top: -1.8rem;
+                        }
+                        & .item-img:last-child {
+                            width: 34%;
+                            margin-top: -1.8rem;
+                            // 测试用
+                            // & .txt {
+                            //     color: #fff;
+                            //     background-image: url(../images/ico_industry_abi_actvie@12x.png)
+                            // }
+                        }
+                    }
+                    & .scenes-box-right {
+                        width: 45%;
+                        padding-left: 5%;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        & .img-wrapper {
+                            width: 20%;
+                            & img {
+                                width: auto;
+                            }
+                        }
+                        & .list-content {
+                            padding-left: 2rem;
+                            & .list-title {
+                                padding: 1rem 0;
+                            }
+                            & .content-box {
+                                padding: 1.5rem 0;
+                                & p {
+                                    @include fontStyle($fontSize:14px,$letterSpacing: 0px,$color: #626262);
+                                    line-height: 2.88888887rem;
+                                }
+                            }
+                        }
+                        // 只显示第一个.list-content，即显示父元素下的前两个子元素[.img-wrapper和第一个.list-content]
+                        & .list-content:nth-child(n+3) {
+                            display: none;
+                        }
+                    }
+                }
+                & .scenes-box {
+                    width: 100%;
+                    height: 100%;
+                    padding: 1rem 0 1rem 0;
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    // 时光轴
+                    & .img-time {
+                        width: 70.833333%;
+                        margin: 0 auto;
+                        padding-top: 6rem;
+                        position: relative;
+                        & .time-line {
+                            position: relative;
+                            z-index: 10;
+                            height: .4rem;
+                            display: flex;
+                            justify-content: space-between;
+                            background-color: #DDDDDD;
+                            align-items:center;
+                            & li {
+                                position: relative;
+                                z-index: 20;
+                                width: 1.8rem;
+                                height: 1.8rem;
+                                & span {
+                                    transition: all .6s ease-in-out .3s;
+                                    position: absolute;
+                                    z-index: 100;
+                                    cursor: pointer;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items:center;
+                                    @include fontStyle($fontSize:14px,$color: #626262);
+                                    border-radius: 50%;
+                                    background-color: #DDDDDD;
+                                }
+                                &.active span {
+                                    color: #fff;
+                                    background-color:rgba(74,144,226,1);
+                                }
+                            }
+                            & .time-line-move {
+                                width: 15%;
+                                height: .4rem;
+                                background-color: rgba(74,144,226,1);
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: 12;
+                                transition: width 1.1s ease-in-out .2s;
+                            }
+                        }
+                    }
+                    & .text-time {
+                        width: 82%;
+                        margin: 0 auto;
+                        & .time-line-txt {
+                            padding-top: 2.5rem;
+                            padding-bottom: 5rem;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items:center;
+                            & li {
+                                margin-left: -1em;
+                                & span {
+                                    transition: all .6s ease-in-out .3s;
+                                }
+                                &.active span {
+                                    color: rgba(74,144,226,1);
+                                }
+                            }
+                        }
+                    }
+                    & .scenes-item {
+                        width: 39.176471%;
+                        padding: 1rem;
+                        margin: 1em;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        // 实现等高
+                        // align-items: flex-;
+                        cursor: pointer;
+                    }
+                    // 多加一层样式，与父级元素一起组合，实现左边图片与右边内容等高居中
+                    & .item-img {
+                        // display: flex;
+                        // width: 20%;
+                        // justify-content: center;
+                        // // 实现居中
+                        // align-items: center;
+                        & img {
+                            // max-width: 100%;
+                            // height: auto;
+                        }
+                    }
+                    & .item-desc {
+                        padding-left: 1.5rem;
+                        & .title h2 {
+                            // line-height: 2em;
+                            @include fontStyle($fontSize:18px,$letterSpacing: 0px,$color: #424242);
+                        }
+                        & p {
+                            text-align: justify;
+                            line-height: 2em;
+                            @include fontStyle($fontSize:14px,$letterSpacing: 0px,$color: #929292);
+                        }
+                        // 360兼容模式
+                        & .desc-box {
+                            padding-top: 1.2rem;
+                            width: 100%;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                }
+                & .scenes-box-bottom {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: space-around;
+                    flex-wrap: nowrap;
+                    & .scenes-item {
+                        width: 25%;
+                        padding: 1rem;
+                        margin: 1em;
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        transition: all .2s ease-in .01s;
+                        &.active {
+                            background: #4A90E2;
+                            color: #fff;
+                            & .item-desc {
+                                & .title h2 {
+                                    color: #fff;
+                                }
+                                & p {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        & .item-img {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            // 实现居中
+                            align-items: center;
+                        }
+                        & .item-desc {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            // 实现居中
+                            align-items: center;
+                            padding: 1rem 2rem;
+                            line-height: 2em;
+                            @include fontStyle($fontSize:24px,$letterSpacing: 0px,$color: #929292);
+                            & .title h2 {
+                                @include fontStyle($fontSize:18px,$letterSpacing: 0px,$color: #424242);
+                            }
+                            & p {
+                                text-align: justify;
+                                @include fontStyle($fontSize:14px,$letterSpacing: 0px,$color: #929292);
+                            }
+                        }
+                    }
+                    & .scenes-item:not(.active) {
+                        &:after {
+                            content: "";
+                            width: .2rem;
+                            height: 8rem;
+                            background: #EAEDF4;
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            @media screen and (min-width: 1681px){
+                & .scenes-wrapper {
+                    width: 62.5%;
+                }
+            }
+            @media screen and (max-width: 1441px){
+                & .scenes-wrapper {
+                    width: 66.666667%;
+                }
+            }
+            @media screen and (max-width: 1367px){
+                & .scenes-wrapper {
+                    width: 70.278184%;
+                }
+            }
+            @media screen and (max-width: 1281px){
+                & .scenes-wrapper {
+                    width: 75%;
+                }
+            }
+        }
+        & .product-scenes-white {
+            background-color: #fff;
+        }
+    }
+}
+
+// add by Ou Yuan on date 2017-02-19
+.section {
+    & .page-container:not(:first-child) {
+        display: none;
+    }
+}
+
+.headroom {
+    transition: transform 500ms linear;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+// body::-webkit-scrollbar {display:none}
+// body::-moz-scrollbar {display:none}
+// body::-ms-scrollbar {display:none}
+// body::-o-scrollbar {display:none}
+// add for banner height style on date 2017-02-19 by Ou Yuan
+
+
+@media screen and (max-width: 1367px) {
+    // banner banner1
+    .banner {
+        position: relative;
+        height: 30rem;
+        overflow: hidden;
+        & .banner1-bg {
+            position: relative;
+            height: 100%;
+            /* background: url(dist/images/banner@12x.png) center center no-repeat;
+            background-size: cover; */
+            // & img {
+            //     height: auto;
+            // }
+        }
+    }
+}

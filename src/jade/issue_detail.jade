@@ -1,0 +1,43 @@
+extends ./layout
+
+block title
+	- var name = "支付解决-问题详情"
+	title #{name}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/news.css")
+
+block content
+	.container.news
+		include ./header
+		.container-ui
+			.container-content-ui
+				.content-wrapper-ui
+					.title-list-ui
+						- var list = [{"index":"1","link":"issue.html","title":"常见问题"},{"index":"2","link":"issue.html","title":"常见问题"},{"index":"3","link":"issue_detail.html","title":"详情"}]
+						ul.sub-menu-ui#sub-menu
+							each val in list
+								if(val.index == '2')
+									li
+										a(href="#{val.link}").back-link
+											span(id="class-issue") #{val.title}
+											span &gt;
+								else if(val.index == '3')
+									li
+										span #{val.title}
+								else
+									li
+										a(href="#{val.link}").back-link
+											span #{val.title}
+											span &gt;
+					.main-content-ui
+						.mask-ui#mask-ui
+							#loading.loading-container
+								.loading
+									- for(var i=0;i<4;i++)
+										.load
+											span
+						.news-box#bulletin-box
+
+		include ./footer.jade
+block append script
+	script(type="text/javascript" src="dist/js/getIssueDetail.js")

@@ -1,0 +1,425 @@
+@charset "UTF-8";
+
+/**
+ * animation.css
+ * @authors Ou Yuan (beyondouyuan.github.io)
+ * @date    2017-01-09 20:42:02
+ * @version $Id$
+ */
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-ms-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+// 设置动画属性前缀
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+@include keyframes(zoomInnerToOut) {
+
+    0% {
+            transform: scale(.8);
+    }
+    70% {
+            transform: scale(1);
+            opacity: 1;
+    }
+    100% {
+            opacity: 1;
+    }
+
+}
+
+@include keyframes(fadeInUp) {
+    0% {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0)
+    }
+    100% {
+            opacity: 1;
+            transform: none
+    }
+}
+@include keyframes(slideRight) {
+        0% {
+            opacity: 0;
+            transform: translateX(-150%)
+        }
+        50% {
+            transform: translateX(8%)
+        }
+        65% {
+            transform: translateX(-4%)
+        }
+        80% {
+            transform: translateX(4%)
+        }
+        95% {
+            transform: translateX(-2%)
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0)
+        }
+    }
+
+@include keyframes(bounceIn) {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(2, 2, 2)
+    }
+    40% {
+        transform: scale3d(.9, .9, .9)
+    }
+    60% {
+        transform: scale3d(1.03, 1.03, 1.03)
+    }
+    80% {
+        opacity: 1;
+        transform: scale3d(.97, .97, .97)
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+// 向下淡入
+@include keyframes(fadeInDown) {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@include keyframes(fadeIn) {
+    0% {
+            opacity: 0;
+    }
+    100% {
+            opacity: 1;
+    }
+}
+
+// 花环向下淡入
+@keyframes flowerFadeDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(-50%, -100%, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(-50%, 150%, 0)
+    }
+}
+
+@include keyframes(fadeInNodeDown) {
+    0% {
+        opacity: 0;
+        transform: translate3d(-50%, -100%, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(-50%, 0, 0)
+    }
+}
+
+@include keyframes(rotateInUpInfinite) {
+    0% {
+        transform: rotate(-5deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(5deg);
+        opacity: 1;
+    }
+}
+
+@include keyframes(changeBlur) {
+    0% {
+        filter: blur(15px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+
+@include keyframes(load) {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(45deg);
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(160deg);
+    }
+    62% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 0;
+        transform: rotate(200deg);
+    }
+    90% {
+        transform: rotate(340deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@include keyframes(mycircle) {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1);
+    }
+    10% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1);
+    }
+    10% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, .8), 0 0 0 10px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1);
+    }
+    20% {
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, .6), 0 0 0 20px rgba(255, 255, 255, .8), 0 0 0 10px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1);
+    }
+    30% {
+        box-shadow: 0 0 0 90px rgba(255, 255, 255, .4), 0 0 0 50px rgba(255, 255, 255, .6), 0 0 0 20px rgba(255, 255, 255, .8), 0 0 0 10px rgba(255, 255, 255, 1), 0 0 0 0px rgba(255, 255, 255, 1);
+    }
+    40% {
+        box-shadow: 0 0 0 140px rgba(255, 255, 255, .2), 0 0 0 90px rgba(255, 255, 255, .4), 0 0 0 50px rgba(255, 255, 255, .6), 0 0 0 20px rgba(255, 255, 255, .8), 0 0 0 10px rgba(255, 255, 255, 1);
+    }
+    50% {
+        box-shadow: 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 90px rgba(255, 255, 255, .2), 0 0 0 90px rgba(255, 255, 255, .4), 0 0 0 50px rgba(255, 255, 255, .6), 0 0 0 20px rgba(255, 255, 255, .8);
+    }
+    60% {
+        box-shadow: 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, .2), 0 0 0 90px rgba(255, 255, 255, .4), 0 0 0 50px rgba(255, 255, 255, .6);
+    }
+    70% {
+        box-shadow: 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0.2), 0 0 0 90px rgba(255, 255, 255, 0.4);
+    }
+    80% {
+        box-shadow: 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0.2);
+    }
+    90% {
+        box-shadow: 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0), 0 0 0 140px rgba(255, 255, 255, 0);
+    }
+}
+
+@include keyframes(smcircle) {
+    0% {
+        box-shadow: 0 0 0 0px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1);
+    }
+    10% {
+        box-shadow: 0 0 0 10px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1);
+    }
+    10% {
+        box-shadow: 0 0 0 20px rgba(64,107,147, .8), 0 0 0 10px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1);
+    }
+    20% {
+        box-shadow: 0 0 0 50px rgba(64,107,147, .6), 0 0 0 20px rgba(64,107,147, .8), 0 0 0 10px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1);
+    }
+    30% {
+        box-shadow: 0 0 0 90px rgba(64,107,147, .4), 0 0 0 50px rgba(64,107,147, .6), 0 0 0 20px rgba(64,107,147, .8), 0 0 0 10px rgba(64,107,147, 1), 0 0 0 0px rgba(64,107,147, 1);
+    }
+    40% {
+        box-shadow: 0 0 0 140px rgba(64,107,147, .2), 0 0 0 90px rgba(64,107,147, .4), 0 0 0 50px rgba(64,107,147, .6), 0 0 0 20px rgba(64,107,147, .8), 0 0 0 10px rgba(64,107,147, 1);
+    }
+    50% {
+        box-shadow: 0 0 0 140px rgba(64,107,147, 0), 0 0 0 90px rgba(64,107,147, .2), 0 0 0 90px rgba(64,107,147, .4), 0 0 0 50px rgba(64,107,147, .6), 0 0 0 20px rgba(64,107,147, .8);
+    }
+    60% {
+        box-shadow: 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, .2), 0 0 0 90px rgba(64,107,147, .4), 0 0 0 50px rgba(64,107,147, .6);
+    }
+    70% {
+        box-shadow: 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0.2), 0 0 0 90px rgba(64,107,147, 0.4);
+    }
+    80% {
+        box-shadow: 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0.2);
+    }
+    90% {
+        box-shadow: 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0), 0 0 0 140px rgba(64,107,147, 0);
+    }
+}
+
+@include keyframes(masked) {
+    0% { left: 0 ;
+            background-color: rgba(255,255,255,0);
+    }
+    10% { left: 10% ;
+            background-color: rgba(255,255,255,.1);
+    }
+    20% { left: 20% ;
+            background-color: rgba(255,255,255,.2);
+    }
+    30% { left: 30% ;
+            background-color: rgba(255,255,255,.3);
+    }
+    40% { left: 40% ;
+            background-color: rgba(255,255,255,.4);
+    }
+    50% { left: 50% ;
+            background-color: rgba(255,255,255,.4);
+    }
+    60% { left: 60% ;
+            background-color: rgba(255,255,255,.4);
+    }
+    70% { left: 70% ;
+            background-color: rgba(255,255,255,.3);
+    }
+    80% { left: 80% ;
+            background-color: rgba(255,255,255,.2);
+    }
+    90% { left: 90% ;
+            background-color: rgba(255,255,255,.1);
+    }
+    100% { left: 100% ;
+            background-color: rgba(255,255,255,0);
+    }
+}
+// .section0.active {
+//     & .img-box2 {
+//         @include animation('fadeInNodeDown 4s 4s ease-in 1 both')
+//     }
+//     & .img-box3 {
+//         @include animation('rotateInUpInfinite 2s 1s ease-in infinite alternate')
+//     }
+// }
+
+.section1 {
+    & .section-bg {
+        @include animation('changeBlur 1s ease-in 1 both')
+    }
+    & .img-box1 {
+        @include animation('fadeInDown 2s ease 1s 1 both')
+    }
+    & .img-box2 {
+        @include animation('bounceIn 2s 3s 1 both')
+    }
+}
+
+.section2.active {
+    & .section-bg.active {
+        @include animation('changeBlur 1s ease-in 1 both')
+    }
+    & .img-box1.active {
+        @include animation('fadeInDown 2s ease 1s 1 both')
+    }
+    & .img-box2.active {
+        @include animation('bounceIn 2s 3s 1 both')
+    }
+}
+
+.section3.active {
+    & .section-bg.active {
+        @include animation('changeBlur 1s ease-in 1 both')
+    }
+    & .img-box1.active {
+        @include animation('fadeInDown 2s ease 1s 1 both')
+    }
+    & .img-box2.active {
+        @include animation('bounceIn 2s 3s 1 both')
+    }
+}
+
+.section4.active {
+    & .section-bg.active {
+        @include animation('changeBlur 1s ease-in 1 both')
+    }
+    & .img-box1.active {
+        @include animation('fadeInDown 2s ease 1s 1 both')
+    }
+    & .img-box2.active {
+        @include animation('bounceIn 2s 3s 1 both')
+    }
+}
+
+.loading-container {
+    & .loading {
+        & .load {
+            @include animation('load 2.08s linear infinite');
+            &:nth-child(1) {
+                animation-delay: 0.2s;
+            }
+            &:nth-child(2) {
+                animation-delay: 0.4s;
+            }
+            &:nth-child(3) {
+                animation-delay: 0.6s;
+            }
+            &:nth-child(4) {
+                animation-delay: 0.8s;
+            }
+        }
+    }
+}
+
+
+.big-circle-shadow {
+    animation:bounceIn 1s 3s 1 both,
+            mycircle 5s 6s linear infinite;
+}
+
+.bg-animate {
+    @include animation('fadeIn 2s ease 1s 1 both')
+}
+.phone-animate {
+     @include animation('fadeInUp 2s ease 3s 1 both')
+}
+.sm-circle {
+    animation:bounceIn 1s 6s 1 both,
+                smcircle 4s 7s linear infinite;
+}
+
+.flex-left-ui {
+    & .animations {
+        @include animation('slideRight 2s .5s 1 both');
+    }
+}
+.right-box-ui {
+    & .ico-box-ui {
+        @include animation('fadeInDown 2s ease 1s 1 both')
+    }
+}
+
+.desc-container {
+    & .animations {
+        @include animation('fadeInDown 2s ease 1s 1 both')
+    }
+}
+
+
+.banner-txt {
+    @include animation('fadeInNodeDown 2s ease-in-out 1s 1 both')
+}

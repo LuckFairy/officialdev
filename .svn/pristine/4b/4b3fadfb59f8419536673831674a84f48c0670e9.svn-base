@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>收费说明</title>
+    <link href="../css/mui.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <style>
+    .chart {
+        height: 200px;
+        margin: 0px;
+        padding: 0px;
+    }
+    h5 {
+        margin-top: 30px;
+        font-weight: bold;
+    }
+    h5:first-child {
+        margin-top: 15px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 主界面菜单同时移动 -->
+    <!-- 侧滑导航根容器 -->
+    <div class="mui-off-canvas-wrap mui-draggable">
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap">
+            <!-- 菜单容器 -->
+            <aside class="mui-off-canvas-left" id="offCanvasSide">
+                <div class="mui-scroll-wrapper scroll-container" id="subMenu">
+                    <div class="mui-scroll">
+                        <!-- 菜单具体展示内容 -->
+                        <!-- logo -->
+                        <div class="mui-card mui-card-customer-dark">
+                            <!--内容区-->
+                            <div class="mui-card-content mui-card-content-customer-center">
+                                <img src="../images/logo_helibao@12x.png" />
+                            </div>
+                        </div>
+                        <ul class="mui-table-view mui-table-view-customer-dark">
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="home">
+                                    <span class="mui-icon iconfont icon-qianbao1"></span>
+                                    <!-- <i class="fa fa-home fa-fw"></i> -->
+                                    主页
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#">
+                                    <!-- <i class="fa fa-building fa-fw" aria-hidden="true"></i> -->
+                                    <span class="mui-icon iconfont icon-guanyu"></span> 关于公司
+                                </a>
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="about">
+                                                <!-- <i class="fa fa-paperclip fa-fw" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-jieshao"></span> 公司介绍
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="history">
+                                                <!-- <i class="fa fa-history fa-fw" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-lishi"></span> 公司历史
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="news">
+                                                <!-- <i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-xinwen"></span> 公司新闻
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="bulletin">
+                                                <span class="mui-icon iconfont icon-iconfonticon3"></span> 公司公告
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="product">
+                                    <span class="mui-icon mui-icon-plusempty"></span> 产品中心
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="solve">
+                                    <span class="mui-icon mui-icon-checkmarkempty"></span> 解决方案
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="business">
+                                    <span class="mui-icon mui-icon-help"></span> 行业服务
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#">
+                                    <!-- <i class="fa fa-google-wallet fa-fw" aria-hidden="true"></i> -->
+                                    <span class="mui-icon iconfont icon-qianbao"></span> 合利宝APP
+                                </a>
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                        <!--<li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="wallet">
+                                                 <i class="fa fa-briefcase" aria-hidden="true"></i> 
+                                                <span class="mui-icon iconfont icon-qianbao1"></span> 商户钱包
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="person">
+                                                 <i class="fa fa-briefcase" aria-hidden="true"></i> 
+                                                <span class="mui-icon iconfont icon-qianbao2"></span> 个人钱包
+                                            </a>
+                                        </li>-->
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="hlqb">
+                                                <!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-icon"></span> 合利宝钱包
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="mpos">
+                                                <!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-qianbao"></span> 合利宝
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#">
+                                    <!--<span class="mui-icon mui-icon-contact"></span>-->
+                                    <!-- <i class="fa fa-server fa-fw" aria-hidden="true"></i> -->
+                                    <span class="mui-icon iconfont icon-fuwu1"></span> 服务中心
+                                </a>
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="issue">
+                                                <span class="mui-icon iconfont icon-wenti"></span> 常见问题
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="userexp">
+                                                <span class="mui-icon iconfont icon-6"></span> 体验中心
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="customer">
+                                                <span class="mui-icon iconfont icon-kefu"></span> 客服服务
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="charges">
+                                                <span class="mui-icon iconfont icon-shoufei"></span> 收费说明
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <!-- 主页面标题 -->
+            <header class="mui-bar mui-bar-nav">
+                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"><span class="mui-header-menu">菜单</span></a>
+                <h1 class="mui-title">收费说明</h1>
+            </header>
+            <nav class="mui-bar mui-bar-tab" id="footer-bar">
+                <a class="mui-tab-item" href="#" id="contact">
+                    <span class="mui-icon mui-icon-phone"></span>
+                    <span class="mui-tab-label">联系我们</span>
+                </a>
+                <a class="mui-tab-item" href="#" id="recruit">
+                    <span class="mui-icon mui-icon-email"></span>
+                    <span class="mui-tab-label">招聘英才</span>
+                </a>
+                <a class="mui-tab-item" href="#" id="more">
+                    <span class="mui-icon mui-icon-more"></span>
+                    <span class="mui-tab-label">更多</span>
+                </a>
+            </nav>
+            <!-- 主页面内容容器 -->
+            <div class="mui-content mui-scroll-wrapper scroll-container">
+                <div class="mui-scroll">
+                    <div class="mui-card">
+                        <div class="mui-card-header mui-card-media">
+                            <img src="../images/ico_project_adv4@12x.png" />
+                            <div class="mui-media-body">
+                                	合利宝POS机收费说明
+                                <p>Posted by 广州合利宝支付科技有限公司</p>
+                            </div>
+                        </div>
+                        <div class="mui-card-content">
+                            <div class="mui-card-content-inner">
+                                <div class="mui-content-padded">
+                                    <h5>pos机费率：%</h5>
+                                    <div class="chart" id="barChart"></div>
+                                    <div class="text-container" style="padding-top: 1em">
+                                        <p>POS机银联卡收单业务遵循中国银联商户类别及其费率标准收取交易手续费。商户类别大类分为餐饮娱乐类、一般类、民生类等，详细划分请参考银联划分标准。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mui-card">
+                        <div class="mui-card-header mui-card-media">
+                            <img src="../images/ico_project_adv4@12x.png" />
+                            <div class="mui-media-body">
+                                	合利宝互联网支付收费说明
+                                <p>Posted by 广州合利宝支付科技有限公司</p>
+                            </div>
+                        </div>
+                        <div class="mui-card-content">
+                            <div class="mui-card-content-inner">
+                                <div class="mui-content-padded">
+                                    <p>互联网支付业务面向网关接入商户按签约费率（1%起）收取每笔交易手续费，对该接入网关的网站的用户不收取交易手续费。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mui-card">
+                        <div class="mui-card-header mui-card-media">
+                            <img src="../images/ico_project_adv4@12x.png" />
+                            <div class="mui-media-body">
+                                    合利宝人民币跨境结算收费说明
+                                <p>Posted by 广州合利宝支付科技有限公司</p>
+                            </div>
+                        </div>
+                        <div class="mui-card-content">
+                            <div class="mui-card-content-inner">
+                                <div class="mui-content-padded">
+                                    <p>人民币跨境结算服务按贸易类型分为货物贸易或服务贸易设定单笔交易金额上限，面向结算发起方按签约费率（1.5%起）收取每笔交易手续费。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mui-card">
+                        <div class="mui-card-header mui-card-media">
+                            <img src="../images/ico_project_adv4@12x.png" />
+                            <div class="mui-media-body">
+                                    合利宝跨境电商服务收费说明
+                                <p>Posted by 广州合利宝支付科技有限公司</p>
+                            </div>
+                        </div>
+                        <div class="mui-card-content">
+                            <div class="mui-card-content-inner">
+                                <div class="mui-content-padded">
+                                    <p>跨境电商服务按商家选择接入的业务类型的收费标准收取交易手续费，对接入服务的商家的用户不收取交易手续费。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mui-off-canvas-backdrop"></div>
+        </div>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/echarts-all.js"></script>
+    <script>
+    var getOption = function(chartType) {
+        chartOption = {
+            color: ['#3398DB'],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                x: 35,
+                x2: 10,
+                y: 30,
+                y2: 25
+            },
+            xAxis: [{
+                type: 'category',
+                data: ['餐饮娱乐类', '一般类', '民生类'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }],
+            yAxis: [{
+                type: 'value'
+            }],
+            series: [{
+                name: '费率',
+                type: 'bar',
+                data: [1.25, 0.78, 0.38]
+            }]
+        };
+        return chartOption;
+    }
+    window.onload = function() {
+        var byId = function(id) {
+            return document.getElementById(id);
+        };
+        var barChart = echarts.init(byId('barChart'));
+        barChart.setOption(getOption('bar'));
+    }
+    </script>
+</body>
+
+</html>

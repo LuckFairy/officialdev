@@ -1,0 +1,57 @@
+extends ./layout
+
+block title
+	- var title = "合利宝APP-合利宝支付"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/person.css")
+
+block content
+	.container.wallet
+		include ./header
+		.section.page
+			.page-container
+				.container-ui
+					.wrapper-ui.wrapper-banner
+						.banner-ui
+							.left-box-ui
+								.tip-box-ui
+									.title-ui
+										h2 下载合利宝支付钱包
+									.mian-box-ui
+										p
+											|合利宝APP为中国领先的第三方支付平台，自运营以来，凭借对行业的深刻理解，秉承“精彩支付、非凡体验”的服务理念，紧密围绕
+											|商业银行、商户和持卡人的核心服务需求，致力于为广大商家和消费者提供“安全、简单、便捷”的综合电子支付解决方案和服务
+								.ico-box-ui
+									.qrcode-box-ui
+										img(src="dist/images/wallet/heli-ico.png")
+									.btn-box-ui
+										a(href="http://app.helipay.com/bpmposfile/483000/app/android/hlqb.apk",class="btn btn-ui btn-android")
+											span.ico
+												img(src="dist/images/wallet/Android.png")
+											span.txt Android版下载
+										a(href="https://itunes.apple.com/cn/app/he-li-bao-qian-bao/id1111135041?mt=8",class="btn btn-ui btn-ios",target="_blank")
+											span.ico
+												img(src="dist/images/wallet/ios.png")
+											span.txt ios版下载
+		//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")

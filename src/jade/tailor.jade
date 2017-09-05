@@ -1,0 +1,196 @@
+extends ./layout
+
+block title
+	- var title = "行业服务-行业定制"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/business.css")
+
+block content
+	.container.business
+		include ./header
+		.section.page
+			.page-container.page(data-id="page1")
+				mixin fullSection(tab)
+					.banner.banner1
+						.banner1-bg
+							img(src="dist/images/banner@12x.png")
+					.industry-container
+						.industry-tab
+							.tab-box
+								ul.tab-ul
+									each val, index in tab
+										if(index == '0')
+											li(data-id="#{val.dataid}")
+												a(href="#",data-id="#{val.dataid}",class="active")
+													img(src="dist/images/#{val.img}@12x.png")
+													span #{val.title}
+										else
+											li(data-id="#{val.dataid}")
+												a(href="#",data-id="#{val.dataid}")
+													img(src="dist/images/#{val.img}@12x.png")
+													span #{val.title}
+						.content-container(data-id="bpos")
+							.industry-wrapper
+								.industry-content
+									.industry-desc
+										.title
+											h2 服务介绍
+										.desc-box
+											p
+												|合利宝拥有自己的POS品牌，在POS机的管理上拥有大量的专业经验，
+												|并且同国内的主要POS服务机构建立了很好的合作关系。
+												|合利宝拥有中国银联的第三方外包机构认证资质，
+												|为银行客户提供POS专业化外包服务。
+												|服务内容包括POS安装、商户培训、POS维护、耗材配送、POS撤机、
+												|商户日常回访和POS巡检等。
+										.pro-schema
+											img(src="dist/images/ico_product_suit@12x.png")
+											span 使用场景：各类电商
+									.industry-img
+										img(src="dist/images/img_product_lypos@12x.png")
+							.industry-scenes
+								.scenes-wrapper
+									.industry-img
+										img(src="dist/images/img_product_lypos@12x.png")
+									.industry-desc
+										.desc-box
+											p
+												|目前合利宝在全国二十多个省、自治区和直辖市设有分公司，
+												|我们本着一切从银行及其商户利益出发，提供全面、优质、高效的POS专业化服务。
+												|设立7X24小时客服热线，准确记录问题，
+												|及时处理问题，为数百万的商户提供专业化服务。
+										.pro-schema
+											img(src="dist/images/ico_product_suit@12x.png")
+											span 使用场景：各类电商
+						.content-container(data-id="bkh")
+							.industry-wrapper
+								.industry-content
+									.industry-desc
+										.title
+											h2 服务介绍
+										.desc-box
+											p
+												|合利宝拥有自己的POS品牌，在POS机的管理上拥有大量的专业经验，
+												|并且同国内的主要POS服务机构建立了很好的合作关系。
+												|合利宝拥有中国银联的第三方外包机构认证资质，
+												|为银行客户提供POS专业化外包服务。
+												|服务内容包括POS安装、商户培训、POS维护、耗材配送、POS撤机、
+												|商户日常回访和POS巡检等。
+										.pro-schema
+											img(src="dist/images/ico_product_suit@12x.png")
+											span 使用场景：各类电商
+									.industry-img
+										img(src="dist/images/img_product_lypos@12x.png")
+							.industry-scenes
+								.scenes-wrapper
+									.industry-desc
+										.title
+											h2 大数据服务
+										.desc-box
+											p
+												|目前合利宝在全国二十多个省、自治区和直辖市设有分公司，
+												|我们本着一切从银行及其商户利益出发，提供全面、优质、高效的POS专业化服务。
+												|设立7X24小时客服热线，准确记录问题，
+												|及时处理问题，为数百万的商户提供专业化服务。
+										.pro-schema
+											img(src="dist/images/ico_product_suit@12x.png")
+											span 使用场景：各类电商
+									.industry-img
+										img(src="dist/images/img_product_lypos@12x.png")
+							.industry-wrapper
+								.industry-content
+									.industry-img
+										img(src="dist/images/img_product_lypos@12x.png")
+									.industry-desc
+										.title
+											h2 金融服务
+										.desc-box
+											p
+												|合利宝拥有自己的POS品牌，在POS机的管理上拥有大量的专业经验，
+												|并且同国内的主要POS服务机构建立了很好的合作关系。
+												|合利宝拥有中国银联的第三方外包机构认证资质，
+												|为银行客户提供POS专业化外包服务。
+												|服务内容包括POS安装、商户培训、POS维护、耗材配送、POS撤机、
+												|商户日常回访和POS巡检等。
+										.pro-schema
+											img(src="dist/images/ico_product_suit@12x.png")
+											span 使用场景：各类电商
+							.industry-scenes
+								.scenes-wrapper
+									.industry-desc
+										.title
+											h2 便民服务
+										.desc-box
+											p
+												|目前合利宝在全国二十多个省、自治区和直辖市设有分公司，
+												|我们本着一切从银行及其商户利益出发，提供全面、优质、高效的POS专业化服务。
+												|设立7X24小时客服热线，准确记录问题，
+												|及时处理问题，为数百万的商户提供专业化服务。
+										.pro-schema
+											img(src="dist/images/ico_product_suit@12x.png")
+											span 使用场景：各类电商
+									.industry-img
+										img(src="dist/images/img_product_lypos@12x.png")
+							.industry-wrapper
+								.industry-content
+									.industry-img
+										img(src="dist/images/img_product_lypos@12x.png")
+									.industry-desc
+										.title
+											h2 生活服务
+										.desc-box
+											p
+												|合利宝拥有自己的POS品牌，在POS机的管理上拥有大量的专业经验，
+												|并且同国内的主要POS服务机构建立了很好的合作关系。
+												|合利宝拥有中国银联的第三方外包机构认证资质，
+												|为银行客户提供POS专业化外包服务。
+												|服务内容包括POS安装、商户培训、POS维护、耗材配送、POS撤机、
+												|商户日常回访和POS巡检等。
+										.pro-schema
+											img(src="dist/images/ico_product_suit@12x.png")
+											span 使用场景：各类电商
+							.industry-scenes
+								.scenes-wrapper
+									.industry-desc
+										.title
+											h2 电商服务
+										.desc-box
+											p
+												|目前合利宝在全国二十多个省、自治区和直辖市设有分公司，
+												|我们本着一切从银行及其商户利益出发，提供全面、优质、高效的POS专业化服务。
+												|设立7X24小时客服热线，准确记录问题，
+												|及时处理问题，为数百万的商户提供专业化服务。
+										.pro-schema
+											img(src="dist/images/ico_product_suit@12x.png")
+											span 使用场景：各类电商
+									.industry-img
+										img(src="dist/images/img_product_lypos@12x.png")
+				- var tab = [{"title":"便民生活服务","img":"icon_industrydesign_1active","dataid":"bpos"},{"title":"合利宝+4s连锁店收款","img":"icon_industrydesign_2","dataid":"bkh"},{"title":"智慧商圈","img":"icon_industrydesign_3","dataid":"bkh"},{"title":"国际供应链管理综合服务","img":"icon_industrydesign_4","dataid":"bkh"},{"title":"总部型企业供应链分析","img":"icon_industrydesign_5","dataid":"bkh"}]
+				+fullSection(tab)
+		//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/tailor.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript").
+		$(function() {
+			setImgSection('.content-container');
+		});

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>合利宝</title>
+    <link href="../css/mui.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/mpos.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/@media.css"/>
+    <script type="text/javascript">
+		(function(doc,win){
+				function scale(){
+					var deviceWidth = doc.documentElement.clientWidth;
+					if(deviceWidth > 640) deviceWidth = 640;
+					doc.documentElement.style.fontSize = deviceWidth / 37.5 + 'px'; 
+				}
+				scale();
+				var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+				window.addEventListener(evt, scale, false);
+		})(document,window)
+    </script>
+</head>
+
+<body>
+    <!-- 主界面菜单同时移动 -->
+    <!-- 侧滑导航根容器 -->
+    <div class="mui-off-canvas-wrap mui-draggable">
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap">
+            <!-- 菜单容器 -->
+            <aside class="mui-off-canvas-left" id="offCanvasSide">
+                <div class="mui-scroll-wrapper scroll-container" id="subMenu">
+                    <div class="mui-scroll">
+                        <!-- 菜单具体展示内容 -->
+                        <!-- logo -->
+                        <div class="mui-card mui-card-customer-dark">
+                            <!--内容区-->
+                            <div class="mui-card-content mui-card-content-customer-center">
+                                <img src="../images/logo_helibao@12x.png" />
+                            </div>
+                        </div>
+                        <ul class="mui-table-view mui-table-view-customer-dark">
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="home">
+                                    <span class="mui-icon iconfont icon-qianbao1"></span>
+                                    <!-- <i class="fa fa-home fa-fw"></i> -->
+                                    主页
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#">
+                                    <!-- <i class="fa fa-building fa-fw" aria-hidden="true"></i> -->
+                                    <span class="mui-icon iconfont icon-guanyu"></span> 关于公司
+                                </a>
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="about">
+                                                <!-- <i class="fa fa-paperclip fa-fw" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-jieshao"></span> 公司介绍
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="history">
+                                                <!-- <i class="fa fa-history fa-fw" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-lishi"></span> 公司历史
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="news">
+                                                <!-- <i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-xinwen"></span> 公司新闻
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="bulletin">
+                                                <span class="mui-icon iconfont icon-iconfonticon3"></span> 公司公告
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="product">
+                                    <span class="mui-icon mui-icon-plusempty"></span> 产品中心
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="solve">
+                                    <span class="mui-icon mui-icon-checkmarkempty"></span> 解决方案
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="business">
+                                    <span class="mui-icon mui-icon-help"></span> 行业服务
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#">
+                                    <!-- <i class="fa fa-google-wallet fa-fw" aria-hidden="true"></i> -->
+                                    <span class="mui-icon iconfont icon-qianbao"></span> 合利宝APP
+                                </a>
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                        <!--<li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="wallet">
+                                                 <i class="fa fa-briefcase" aria-hidden="true"></i> 
+                                                <span class="mui-icon iconfont icon-qianbao1"></span> 商户钱包
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="person">
+                                                 <i class="fa fa-briefcase" aria-hidden="true"></i> 
+                                                <span class="mui-icon iconfont icon-qianbao2"></span> 个人钱包
+                                            </a>
+                                        </li>-->
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="hlqb">
+                                                <!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-icon"></span> 合利宝钱包
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="mpos">
+                                                <!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-qianbao"></span> 合利宝
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#">
+                                    <!--<span class="mui-icon mui-icon-contact"></span>-->
+                                    <!-- <i class="fa fa-server fa-fw" aria-hidden="true"></i> -->
+                                    <span class="mui-icon iconfont icon-fuwu1"></span> 服务中心
+                                </a>
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="issue">
+                                                <span class="mui-icon iconfont icon-wenti"></span> 常见问题
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="userexp">
+                                                <span class="mui-icon iconfont icon-6"></span> 体验中心
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="customer">
+                                                <span class="mui-icon iconfont icon-kefu"></span> 客服服务
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="charges">
+                                                <span class="mui-icon iconfont icon-shoufei"></span> 收费说明
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <!-- 主页面标题 -->
+            <header class="mui-bar mui-bar-nav">
+                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"><span class="mui-header-menu">菜单</span></a>
+                <h1 class="mui-title">合利宝</h1>
+            </header>
+            <!-- 主页面内容容器 -->
+            <div class="mui-content mui-scroll-wrapper scroll-container" style="height: 100%;">
+                <div class="mui-scroll">
+                    <!-- 首屏 -->
+                    <section class="section-pages section-one" >
+                        <dl>
+                        	<dt>合利宝</dt>
+                        	<dd>国内顶级无卡支付APP</dd>
+                        	<dd>上市公司民盛金科（002647）成员企业</dd>
+                        	<dd>广州市唯一拥有支付全牌照的第三方支付公司</dd>
+                        </dl>
+                        <div class="downcode">
+                        	<div>
+                        		<img src="../images/mops/hlb-saom.png" alt="" />
+                        		<div>扫码立即下载</div>
+                        	</div>
+                        	<div><a class="download" href="https://itunes.apple.com/cn/app/he-li-bao/id1109202720?mt=8"><img src="../images/mops/hlb-button-ios.png"/></a>
+                        		<a class="download" style="margin-top: 1.5rem;" href="http://app.helipay.com/bpmposfile/483000/app/android/helipay.apk"><img src="../images/mops/hlb-button-android.png"/></a></div>
+                        </div>
+                        <div class="hlb-iphone">
+                        	<img src="../images/mops/hlb-iphone.png"/ style="width:50%;height: auto;margin-top:1.9rem;">
+                        </div>
+                    </section>
+                    <!-- 第二屏 -->
+                    <section class="section-pages section-two" style="min-height: 100vh;background-color: white;">
+                       <div>
+                       		<div class="img" style="top:0;"><img src="../images/mops/hlb-cdfl.png"/></div>
+	                       <ul class="text">
+	                       	<li>超低费率</li>
+	                       	<li class="line"></li>
+	                       	<li>充值超低费率，提现最低2元/笔
+	</li>
+	                       	<li>支持储蓄卡、信用卡、微信、支付宝
+	</li>
+	                       </ul >
+                       </div>
+                       <div>
+                       		<div class="img" style="top:50%;">
+                       			<img src="../images/mops/hlb-ksdz.png"/>
+                       		</div>
+                       	
+	                       <ul class="text">
+	                       	<li>快速到账</li>
+	                       	<li class="line"></li>
+	                       	<li>自助提现，资金D0实时到账
+	</li>
+	                       </ul>
+                       </div>
+                       <div>
+                       	<div class="img" style="top:32%;"><img src="../images/mops/hlb-wxzd.png"/></div>
+	                       <ul class="text">
+	                       	<li>无需终端</li>
+	                       	<li class="line"></li>
+	                       	<li>无需带卡，一次绑定，随需随用
+	</li>
+	                       </ul>
+                       </div>
+                       <div>
+                       	<div class="img" style="bottom: 0;"><img src="../images/mops/hlb-aqkk.png"/></div>
+	                       <ul class="text">
+	                       	<li>安全可靠</li>
+	                       	<li class="line"></li>
+	                       	<li>实时查询、同名进出、银行级风控
+	</li>
+	                       </ul>
+                       </div>
+                       <div>
+                       	<div class="img" style="bottom: 30%;">
+                       		<img src="../images/mops/hlb-fxzq.png"/>
+                       	</div>
+	                       <ul class="text">
+	                       	<li>分享即赚钱</li>
+	                       	<li class="line"></li>
+	                       	<li>无限三级裂变，
+	</li>
+	                       	<li>坐在家里也能赚遍全国！</li>
+	                       </ul>
+                       </div>
+                    </section>
+                    <!-- 第三屏 -->
+                    <section class="section-three">
+                    	<div class="one">
+                    		<ul style="width: 14.5rem;">
+                    			<li>合利宝 不只是支付</li>
+                    			<li style="width:14rem;font-size: 12px;">已有<span>200万</span>用户加入</li>
+                    			<li>互联网支付+移动金融 的创业平台
+</li>
+                    			<li>简单分享创造持续高收入</li>
+                    		</ul>
+                    		<div class="img">
+                    			<img src="../images/mops/hlb-pic-bg1.png" alt="" />
+                    		</div>
+                    	</div>
+                    	<div class="two">
+                    		<ul>
+                    			<li>无卡支付 即充即到
+</li>
+                    			<li style="color:#FF5656;list-style:disc inside ;">充值极速到账</li>
+                    		</ul>
+                    		<div class="img">
+                    			<img src="../images/mops/hlb-pic-bg2.png"/>
+                    		</div>
+                    	</div>
+                    	<div class="three">
+                    		<div class="img" style="width: 15.2rem;" >
+                    			<img src="../images/mops/hlb-pic-bg3.png" alt="" />
+                    			</div>
+                    			<ul  style="-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;">
+                    				<ul style="float:right;min-width: 15.2rem;">
+                    					
+                    					<li>扫描支付 便捷收款</li>
+                    					<li style="color:#999;list-style:disc inside ;">商户收款利器</li>
+                    					<li style="color:#999;list-style:disc inside ;">支持微信、支付宝 扫码付款</li>
+                    					<li style="color:#999;list-style:disc inside ;">从此，告别验钞机</li>
+                    					<li style="color:#999;list-style:disc inside ;">不再为备零钱烦恼</li>
+                    				</ul>
+                    			</ul>
+                    		
+                    	</div>
+                    	<div class="four">
+                    		<ul>
+                    			<li>提现D0 极速到账
+</li>
+                    			<li style="color:#FF5656;list-style:disc inside ;">单笔不限额
+</li>
+                    			<li style="color:#FF5656;list-style:disc inside ;">最低2元/笔
+</li>
+                    		</ul>
+                    		<div class="img">
+                    			<img src="../images/mops/hlb-pic-bg4.png"/>
+                    		</div>
+                    	</div>
+                    	<div class="section-footer">
+                    		合利宝APP-让支付更简单
+                    	</div>
+                    </section>
+                </div>
+                <nav class="mui-bar mui-bar-tab" id="footer-bar">
+                    <a class="mui-tab-item mui-active" href="#" id="contact">
+                        <span class="mui-icon mui-icon-phone"></span>
+                        <span class="mui-tab-label">联系我们</span>
+                    </a>
+                    <a class="mui-tab-item" href="#" id="recruit">
+                        <span class="mui-icon mui-icon-email"></span>
+                        <span class="mui-tab-label">招聘英才</span>
+                    </a>
+                    <a class="mui-tab-item" href="#" id="more">
+                        <span class="mui-icon mui-icon-more"></span>
+                        <span class="mui-tab-label">更多</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="mui-off-canvas-backdrop"></div>
+        </div>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script type="text/javascript">
+    	onload = function(){
+    		var list = document.getElementsByClassName('download');
+    		for(var i=0;i<list.length;i++){
+    			list[i].addEventListener('touchstart',function(){
+    					var hrefUrl = this.href;
+    					window.location.href = hrefUrl;
+    			})
+    		}
+    		
+    	}
+    	
+    </script>
+</body>
+
+</html>

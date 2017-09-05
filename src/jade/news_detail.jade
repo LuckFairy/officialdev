@@ -1,0 +1,88 @@
+extends ./layout
+
+block title
+	- var name = "新闻中心"
+	title #{name}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/news.css")
+
+block content
+	.container.news
+		include ./header
+		.container-ui
+			.container-content-ui
+				.content-wrapper-ui
+					.title-list-ui
+						- var list = [{"index":"1","link":"news.html","title":"新闻中心"},{"index":"2","link":"news.html","title":"公司新闻"},{"index":"1","link":"about.html","title":"内容"}]
+						ul.sub-menu-ui#sub-menu
+							each val in list
+								li
+									a(href="#{val.link}")
+										span #{val.title}
+										span &gt;
+					.main-content-ui
+						.news-box#news-box
+
+		include ./footer.jade
+block append script
+	script(type="text/javascript").
+		$(function() {
+			function GetRequest() {
+				var url = location.search; //获取url中"?"符后的字串
+				var theRequest = new Object();
+				if (url.indexOf("?") != -1) {
+					var str = url.substr(1);
+					if (str.indexOf("&") != -1) {
+						strs = str.split("&");
+						for (var i = 0; i < strs.length; i++) {
+							theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+						}
+					} else {
+						theRequest[str.split("=")[0]] = unescape(str.split("=")[1]);
+					}
+				}
+				return theRequest;
+			}
+
+			var req = new GetRequest();
+			var newsID = req.id;
+
+			function findOneNewsByID(id) {
+				var newsBox = $('#news-box');
+				// 清空原有子节点以及文本
+				newsBox.empty();
+				var titleBox = $("<div class='title-ui'></div>");
+				var mainNews = $("<div class='main-news-ui'></div>");
+				var newsImg = $("<div class='news-img-ui'></div>");
+				if (!id) {
+					alert('获取数据出错');
+				}
+				$.ajax({
+					 type: "get",
+					 async: true,
+					 url: "public/datas/news.json",
+					 success: getNewsCallBack,
+					 error: getNewsErrorCallBack
+				});
+
+				function getNewsCallBack(data, status, xhr) {
+					$.each(data, function(index, news) {
+						if (data[index].id == id) {
+							titleBox.append("<h2>" + news.title + "</h2>");
+							// newsImg.append("<img src='dist/images/"+news.img+"' />");
+							newsBox.append(titleBox);
+							// newsBox.append(newsImg);
+							for(key in news.contents) {
+								var content = $('<p>'+news.contents[key].content+'</p>');
+								content.appendTo(mainNews);
+							}
+							mainNews.appendTo(newsBox)
+						}
+					});
+				}
+				function getNewsErrorCallBack(xhr, errorMsg, errorThrown) {
+					alert('获取数据出错');
+				}
+			}
+			findOneNewsByID(newsID);
+		});

@@ -1,0 +1,230 @@
+html{
+	font-size: 10px;
+}
+body{
+	font-size: 17px;
+	font-family: "微软雅黑";
+	line-height: 1;
+}
+img{
+	display: inline-block;
+	vertical-align:top;/*div包裹img，解决3px问题*margin-bottom=-3px;也行font size设成0*/	
+}
+ul,li,ol{
+	list-style: none;
+	    padding-left: 0;
+}
+.section-pages{
+	text-align: center;
+	overflow: hidden;
+}
+.section-one{
+	background: url(../images/mops/hlb-bg.png)  no-repeat 0 0/cover;
+	color: #fff;
+	overflow: hidden;
+}
+.section-one dl dt{
+	font-size: 30px;
+	margin: 6.2rem auto 1.5rem;
+}
+.section-one dl dd{
+	font-size: 9px;
+	margin-bottom: .7rem;
+	    margin-left: 0;
+}
+.section-one .downcode{
+	margin-top: 1.5rem;
+	display: flex;
+	display: -ms-flexbox;
+	justify-content: center;
+}
+.section-one .downcode>div{
+	display: inline-block;
+}
+.section-one .downcode>div:first-child img{
+	width:7.7rem;
+	height: auto;
+}
+.section-one .downcode>div:first-child div{
+	margin-top: .5rem;
+	font-size: 7px;
+
+}
+
+.section-one .downcode>div:nth-child(2){
+	height:7.7rem;
+	margin-left: 1.1rem;
+	 display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-one .downcode>div:nth-child(2) a{
+	display: block;
+}
+.section-one .downcode>div:nth-child(2) img{
+	width: 12.8rem;
+	height: auto;
+}
+.section-two{
+	font-size: 13px;
+	color:#565656;
+}
+.section-two ul>li:first-child{
+	font-size: 15px;
+	color:#323232;
+}
+.line{
+	width:3.7rem;
+	height: 4px;
+	background:#ff5e79;
+	margin:10px 0;
+}
+.section-two img{
+	width:8.2rem;
+	height: auto;
+}
+.section-two .img{
+	position:absolute;
+	z-index: 80;
+}
+.section-two>div{
+	position: relative;
+	padding: 3.2rem 0 2.3rem 0 ;
+}
+.section-two>div:first-child{
+	margin-top: 8rem;
+	padding-top:0;
+}
+.section-two>div .text>li{
+	margin-bottom: 6px;
+}
+.section-two>div:nth-child(odd) {
+	text-align: left;
+	margin-left: 5.8rem;
+	margin-right: 5.8rem;
+	border-left: 1px dashed #D6D6D6;
+	border-bottom: 1px dashed #D6D6D6;
+	padding-left: 6.2rem;
+}
+
+.section-two>div:nth-child(odd) .img{
+	left:-4.1rem;
+}
+.section-two>div:nth-child(odd) .text{
+	width:110%;
+	padding:0;
+}
+.section-two>div:nth-child(even){
+	margin:0 5.8rem 0 5.8rem;
+	text-align: right;
+	padding-right: 6.2rem;
+	border-right: 1px dashed #D6D6D6;
+	border-bottom: 1px dashed #D6D6D6;
+}
+.section-two>div:last-child{
+	border-bottom: none;
+}
+.section-two>div:nth-child(even) .img{
+	right: -4.1rem;
+}
+.section-three>div{
+	overflow: hidden;
+}
+.section-three>div ul{
+	padding:0;
+}
+.section-three>div:nth-child(odd){
+	background: #FAFAFA;
+}
+.section-three>div:nth-child(even){
+	background: #FFF;
+}
+.section-three>div.one ul{
+	width:13.6rem;
+	margin-left: 4.6rem;
+	color:#323232;
+	padding: 0;
+}
+.section-three>div.one ul li:first-child{
+	font-size: 15px;
+}
+.section-three>div.one ul li:nth-child(2){
+	border:1px solid #FF5656;
+	height: 2.4rem;
+	line-height: 2.2rem;
+	border-radius: 1rem;
+	/*margin:.5rem 0;*/
+	text-align: center;
+}
+.section-three>div.one ul li:nth-child(2) span{
+	color:#FF5656;
+}
+.section-three>div.one ul li{
+	font-size: 8px;
+	margin-bottom: 10px;
+}
+.section-three>div.one .img {
+	text-align: center;
+}
+.section-three>div.one .img img{
+	width:29.3rem;
+	height: auto;
+}
+.section-three div.two,.section-three div.three,.section-three div.four{
+	padding:0 1.8rem;
+	display: flex;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.section-three div.two ul{
+	float: left;
+	
+}
+.section-three>div ul li{
+	font-size: 12px;
+}
+.section-three>div ul li:first-child{
+	font-size: 18px;
+}
+.section-three div.two .img{
+	/*width: 21.8rem;*/
+	width: 21rem;
+}
+.section-three>div .img{
+	margin-top: 8px;
+}
+.section-three>div img{
+	width:100%;
+	height: auto;
+}
+.section-three div.three .img{
+	width:16.2rem;
+}
+.section-three div.four .img{
+	width:22.4rem;
+}
+.section-three>div ul>li{
+	line-height: 1.5;
+}
+.section-three>div.one ul>li{
+	line-height: 1;
+}
+.section-three>div:not(.one) ul>li:first-child{
+	margin-bottom: 10px;
+}
+.section-footer{
+	background: url(../images/mops/hlb-botm-bg.png) no-repeat 0 0/100% auto !important;
+	color:#fff;
+	height: 7.1rem;
+	line-height:7.1rem ;
+	text-align: center;
+}
+.section-two>div .text>li{
+	clear: both;
+}
+.section-two>div:nth-child(even) .text .line{
+	float:right
+}

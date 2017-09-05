@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>下载便捷宝</title>
+    <link href="../css/mui.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <style type="text/css">
+    	.mui-h5, .mui-h6, h5, h6, p{
+    		color: #fff;
+    	}
+        .mui-grid-view.mui-grid-9 .mui-table-view-cell.mui-active {
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 主界面菜单同时移动 -->
+    <!-- 侧滑导航根容器 -->
+    <div class="mui-off-canvas-wrap mui-draggable">
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap">
+            <!-- 菜单容器 -->
+            <aside class="mui-off-canvas-left" id="offCanvasSide">
+                <div class="mui-scroll-wrapper scroll-container" id="subMenu">
+                    <div class="mui-scroll">
+                        <!-- 菜单具体展示内容 -->
+                        <!-- logo -->
+                        <div class="mui-card mui-card-customer-dark">
+                            <!--内容区-->
+                            <div class="mui-card-content mui-card-content-customer-center">
+                                <img src="../images/logo_helibao@12x.png" />
+                            </div>
+                        </div>
+                        <ul class="mui-table-view mui-table-view-customer-dark">
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                               
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                               
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                       
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                               
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                       
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <!-- 主页面标题 -->
+            <header class="mui-bar mui-bar-nav">
+                <h1 class="mui-title">下载便捷宝</h1>
+            </header>
+            <!-- 主页面内容容器 -->
+            <div class="mui-content mui-scroll-wrapper scroll-container" style="height: 100%;">
+                <div class="mui-scroll">
+                    <section class="swiper-slide" style="text-align:center;min-height: 100vh;background: url(school_bg.jpg);background-size:cover;background-repeat: no-repeat;">
+                        <div class="text-container" style="width: 80vw; margin: 0 auto;padding: 10vw 0">
+                            <h2 style="font-size: 7.27272727vw;color: white;">下载便捷宝</h2>
+                            <div class="text-main" style="padding-top: 10vw;text-align: left;">
+                                <p>自便捷宝运营以来，凭借对行业的深刻理解，</p>
+                                <p>秉承 “精彩支付，非凡体验” 的服务理念，</p>
+                                <p>紧密围绕商业银行、商户和持卡人的核心服务需求，</p>
+                                <p>致力于为广大商家和消费者提供 “安全、简单、便捷”</p>
+                                <p>的小额、快速电子支付解决方案和服务</p>
+                            </div>
+                        </div>
+                        <div class="download-container" style="width: 80vw; margin: 0 auto;">
+                            <ul class="mui-table-view mui-grid-view mui-grid-9" style="background-color: transparent;border: none;">
+								
+                                <li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7" style="padding: 0;border: none;">
+                                    <div class="down-link-box">
+                                        <div style="padding: 0 1.5vw;margin: 5vw 0">
+										<a class="download" href="http://zouqile.com/heli/apk/helibao_capp_v1.0.0_fir_release.apk" style="display: block;color: #FF7E00;padding: 2vw 2vw; background-color: #F7F8FA;border-radius: 2vw;">便捷宝客户端下载</a>
+										</div>
+                                        <div style="padding: 0 1.5vw;margin: 5vw 0">
+										<a class="download" href="http://zouqile.com/heli/apk/helibao_bapp_v1.0.05_fir_release.apk" style="display: block;color: #FF7E00;padding: 2vw 2vw; background-color: #F7F8FA;border-radius: 2vw;">便捷宝商家端下载</a>
+										</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <nav class="mui-bar mui-bar-tab" id="footer-bar">
+                </nav>
+            </div>
+            <div class="mui-off-canvas-backdrop"></div>
+        </div>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script type="text/javascript">
+    	mui.ready(function(){
+    		
+	    	mui('body').on('tap','a.download',function(){
+				    window.location.href=this.href;
+				});
+    	})
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>常见问题</title>
+    <link href="../css/mui.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/mui.indexedlist.css" rel="stylesheet" />
+    <link href="../css/layout.css" rel="stylesheet" />
+    <style>
+    html,
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+    .mui-bar {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span class="mui-header-menu">返回</span></a>
+        <h1 class="mui-title">常见问题</h1>
+    </header>
+    <nav class="mui-bar mui-bar-tab" id="footer-bar">
+        <a class="mui-tab-item" href="#" id="contact">
+            <span class="mui-icon mui-icon-phone"></span>
+            <span class="mui-tab-label">联系我们</span>
+        </a>
+        <a class="mui-tab-item" href="#" id="recruit">
+            <span class="mui-icon mui-icon-email"></span>
+            <span class="mui-tab-label">招聘英才</span>
+        </a>
+        <a class="mui-tab-item" href="#" id="more">
+            <span class="mui-icon mui-icon-more"></span>
+            <span class="mui-tab-label">更多</span>
+        </a>
+    </nav>
+    <div class="mui-content">
+        <div id='question-list' class="mui-indexed-list">
+            <div class="mui-indexed-list-search mui-input-row mui-search">
+                <input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索问题">
+            </div>
+            <div class="mui-indexed-list-bar" id="group-list">
+                <a>开</a>
+                <a>账</a>
+                <a>交</a>
+                <a>其</a>
+            </div>
+            <div class="mui-indexed-list-alert"></div>
+            <div class="mui-indexed-list-inner">
+                <div class="mui-indexed-list-empty-alert">没有数据</div>
+                <ul class="mui-table-view" id="issue-list">
+                    <li data-group="开" id="open" class="mui-table-view-divider mui-indexed-list-group">开户问题</li>
+                    <li data-group="账" id="account" class="mui-table-view-divider mui-indexed-list-group">账号问题</li>
+                    <li data-group="交" id="trade" class="mui-table-view-divider mui-indexed-list-group">交易问题</li>
+                    <li data-group="其" id="other" class="mui-table-view-divider mui-indexed-list-group">其他问题</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/mui.indexedlist.js"></script>
+    <script src="../js/data.config.js"></script>
+    <script src="../js/zepto-1.2.0.js"></script>
+    <script src="../js/question.js"></script>
+</body>
+
+</html>

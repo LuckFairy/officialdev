@@ -1,0 +1,28 @@
+[{
+    "id": "1",
+    "docName": "合利宝支付账户开立申请表",
+    "downUrl": "pt_hlbzfzhklsqb",
+    "type": ".xlsx",
+    "docAmount": "3份",
+    "isRequired": "true",
+    "seal": "复印件加盖公章",
+    "desc": ""
+}, {
+    "id": "2",
+    "docName": "法定代表人授权委托书",
+    "downUrl": "pt_fddbrsqwts",
+    "type": ".doc",
+    "docAmount": "3份",
+    "isRequired": "false",
+    "seal": "复印件加盖公章",
+    "desc": ""
+}, {
+    "id": "3",
+    "docName": "开票信息确认函",
+    "downUrl": "pt_kpxxqrh",
+    "type": ".docx",
+    "docAmount": "3份",
+    "isRequired": "true",
+    "seal": "复印件加盖公章",
+    "desc": ""
+}]

@@ -1,0 +1,143 @@
+extends ./layout
+
+block title
+	- var title = "跨境支付-合利宝支付"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/product.css")
+
+block content
+	.container.solve
+		include ./header
+		.section.page
+			mixin sectionPage(title,decs,scenes,img,list,contentlist,i)
+				.page-container.page(data-id="page#{i}")
+						mixin fullSection
+							.banner.banner1
+								.banner1-bg
+									img(src="dist/images/banner@12x.png")
+								.banner-txt
+									h2 跨境业务介绍
+									//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+						+fullSection
+						.product-wrapper
+							.product-desc
+								.title
+									h2 #{title}
+								.desc-box
+									each val in decs
+										p #{val}
+							.product-img
+								img(src= "dist/images/#{img}.png")
+						.product-scenes
+							.scenes-wrapper
+								.title
+									h2 产品功能
+								.features-box
+									.scenes-box-left
+										each val, index in list
+											.item-img
+												if(index == '0')
+													.txt(data-id="box-#{index}",class="active")
+														span= val
+												else
+													.txt(data-id="box-#{index}")
+														span= val
+									.scenes-box-right
+										.img-wrapper
+											.img-box
+												img(src="dist/images/ico_industry_abi_speaker@12x.png")
+										each val in contentlist
+											.list-content(data-id="#{val.index}")
+												.list-title
+													h3 #{val.title}
+												.content-box
+													p #{val.content}
+						.product-scenes.product-scenes-white
+							.scenes-wrapper
+								.title
+									h2 产品优势
+								.scenes-box.scenes-box-bottom
+									each val in scenes
+										if(val.index == '5')
+											.scenes-item.active
+												.item-img
+														img(src="dist/images/ico_industry_adv_#{val.index}active@12x.png")
+												.item-desc
+													.title
+														if(val.title !== '')
+															h2= val.title
+													.desc-box
+														if(val.pre !== '')
+															p= val.pre
+										else
+											.scenes-item
+												.item-img
+														img(src="dist/images/ico_industry_adv_#{val.index}@12x.png")
+												.item-desc
+													.title
+														if(val.title !== '')
+															h2= val.title
+													.desc-box
+														if(val.pre !== '')
+															p= val.pre
+
+
+			//- 跨境
+			- var title = "跨境业务介绍"
+			- var decs = ["致力于为广大开展电子商务的境内外商户，提供环球采购货款结算服务整体解决方案。专业为跨境电商平台打造专属的支付账户体系，同时传递支付信息及物流通关信息，生成支付单并实时同步传送至海关电子商务通关管理平台，轻松实现支付单、商品订单和物流单三单合一，快速规范通关安全。同时还为中小出口供货商提供T+0清算实时到账的增值服务。","解决方案提供的产品服务","支付产品服务：网关支付、快捷支付、POS支付等","账户服务：可为商户及平台提供账户管理服务，账户商户对账单对账清算及差错处理服务，附加额度授信服务，并可为商户及平台提供虚拟子账户管理和账户及附加理财等服务。","跨境交易服务：提供线上支付功能，对接海关电子商务通关管理平台提供快速通关服务。对接银行提供汇率转换服务，可为进出口企业提供境外外汇结算，并对接物流企业提供物流信息查询。"]
+			- var scenes = [{"index":"5","title":"T+0 结算","pre":"承诺商家到账时间，提速资金流转"},{"index":"6","title":"最优汇率","pre":"对比CNY/CNH汇率，选择最优汇率"},{"index":"7","title":"实时查询","pre":"实时查询在途资金，掌握资金动向"},{"index":"8","title":"合规牌照","pre":"国内首批持牌企业，跨境渠道合规"}]
+			- var img ="img_project_6@12x"
+			- var list = ["跨境支付","快捷支付","账户服务","跨境交易"]
+			- var contentList = [{"index":"box-0","title":"跨境支付","content":"交易所与合利宝系统之间每天进行自动对帐处理， 确保交易所结算人员能够按时进行银行扎差处理， 以便交易系统能够按时开市。每日根据交易所提供的交易明细， 如账户盈亏、手续费等，对交易所的分户帐进行调账及账户核对处理， 确保双方账务一致。"},{"index":"box-1","title":"快捷支付","content":"快捷支付交易所与合利宝系统之间每天进行自动对帐处理， 确保交易所结算人员能够按时进行银行扎差处理， 以便交易系统能够按时开市。每日根据交易所提供的交易明细， 如账户盈亏、手续费等，对交易所的分户帐进行调账及账户核对处理， 确保双方账务一致。"},{"index":"box-2","title":"账户服务","content":"客服服务交易所与合利宝系统之间每天进行自动对帐处理， 确保交易所结算人员能够按时进行银行扎差处理， 以便交易系统能够按时开市。每日根据交易所提供的交易明细， 如账户盈亏、手续费等，对交易所的分户帐进行调账及账户核对处理， 确保双方账务一致。"},{"index":"box-3","title":"跨境服务","content":"跨境服务交易所与合利宝系统之间每天进行自动对帐处理， 确保交易所结算人员能够按时进行银行扎差处理， 以便交易系统能够按时开市。每日根据交易所提供的交易明细， 如账户盈亏、手续费等，对交易所的分户帐进行调账及账户核对处理， 确保双方账务一致。"}]
+			+sectionPage(title,decs,scenes,img,list,contentList,7)
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/finance.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript").
+		$(function() {
+			var box = $('.item-img');
+			var contentBox = $('.list-content');
+			box.each(function(){
+				$(this).find('.txt').on('click', function() {
+					var dataID = $(this).attr('data-id');
+					$(this).addClass('active').parent().siblings().children('.txt').removeClass('active');
+					showContent(dataID,contentBox);
+				});
+			});
+			function showContent(linkID, secArr) {
+				var secs = $(secArr);
+				secs.each(function() {
+					var self = $(this);
+					if ($(this).attr('data-id') != linkID) {
+						setTimeout(function() {
+							self.hide();
+						},60);
+					} else {
+						setTimeout(function() {
+							self.show();
+						},60);
+					}
+				});
+			}
+			mouseEnterHandler();
+		});

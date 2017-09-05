@@ -1,0 +1,200 @@
+extends ./layout
+
+block append meta
+	meta(name="keywords" content="商户投资/商户理财/商户业务管理/商户客户营销/商户收费工具/流水贷/抵押货")
+	meta(name="description" content="合利宝APP 为商户主量身定做的钱包")
+
+block title
+	- var title = "合利宝APP-合利宝支付"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/wallet.css")
+
+block content
+	.container.wallet
+		include ./header
+		.section.page
+			.page-container
+				.container-ui
+					.wrapper-ui
+						.banner-ui
+							.left-box-ui
+								.tip-box-ui
+									.title-ui
+										h2 为商户主量身定做的钱包
+									.main-box-ui
+										p
+											|不只是商户的收费工具，商户投资、理财、业务管理、
+											|客户营销轻松搞定。
+								.ico-box-ui
+									.qrcode-box-ui
+										img(src="dist/images/wallet/qrcode_img.jpg")
+									.btn-box-ui
+										a(href="javascript:;",class="btn btn-ui btn-android")
+											span.my-sapn
+											span.ico-wrapper
+												span.ico
+													img(src="dist/images/wallet/icon_download_android.png")
+												span.txt Android Store
+										a(href="javascript:;",class="btn btn-ui btn-ios")
+											span.ico-wrapper
+												span.ico
+													img(src="dist/images/wallet/icon_download_ios.png")
+												span.txt Apple Store
+							.right-box-ui
+								.ico-box-ui
+									img(src="dist/images/wallet/img_phone_banner.png")
+						.circle-shadow-ui
+							.circle-shadow.big-circle-shadow
+					.content-wrapper-ui
+						.content-main-ui
+							.title-ui
+								.title
+									h2 轻松收款
+									h4 EASY COLLECTION
+							.main-box-ui
+								mixin icoSection(icoArr)
+									.ico-list-ui
+										each val in icoArr
+											.ico-box-ui
+												span.img-span
+													img(src="dist/images/wallet/icon_collect0#{val.index}_content2.png")
+												if (val.txt !== '')
+													span #{val.txt}
+								- var icoArr = [{"index":"1","txt":"微信、合利宝扫码收款"},{"index":"2","txt":"合利宝余额支付"},{"index":"3","txt":"蓝牙POS.MPOS收款"},{"index":"4","txt":"蓝牙便利收款"}]
+								+icoSection(icoArr)
+								.circle-list-ui
+									-for(var i = 1; i < 6; i++)
+										span
+						.content-main-ui.mt-tab
+							mixin flexTab(dir,infoArr)
+								each val in infoArr
+									.flex-tab-box(data-rel="#{dir}-box-ui")
+										.title-flex
+											.title-ui
+												h2 #{val.h2}
+												h4 #{val.h4}
+										.img-flex
+											img(src="dist/images/wallet/img_#{dir}_content2.jpg")
+							- var infoLeft = [{"h2":"账户管理","h4":"ACCOUNT"}]
+							- var infoRight = [{"h2":"业务能力","h4":"EASY COLLECTION"}]
+							+flexTab('left',infoLeft)
+							+flexTab('right',infoRight)
+						.content-main-ui.mt-btn
+							.btn-container
+								.btn-ui
+									.btn
+										a(href="javascript:;")
+											span.arrow
+											span.txt 了解更多
+					.content-wrapper-ui#animation-box
+						.container-flex-ui
+							.flex-left-ui
+								.img-container#img-animation
+									img(src="dist/images/wallet/imgleft_content3.png")
+							.flex-right-ui
+								.flex-content-ui
+									.rect-box-ui
+									.title-ui
+										h2 融资 & 理财
+										h4 FINANCING AND LOANS
+									.flex-pre-ui
+										ul
+											li 为商户提升资金的利用效率，提供基金理财、贵金属理财、保险理财等理财产品
+											li 为商户获取低成本的资金，包括商户流水贷、抵押货等贷款产品。
+								.flex-btn-ui
+									.btn-ui.btn-left
+										.btn
+											a(href="javascript:;")
+												span.arrow
+												span.txt 投资理财
+									.btn-ui.btn-right
+										.btn
+											a(href="javascript:;")
+												span.arrow
+												span.txt 融资借贷
+								.bottom-btn-ui
+									.btn
+										a(href="javascript:;")
+											span.arrow
+											span.txt 了解更多
+					.content-wrapper-ui#bottom-circle-box
+						.content-main-ui.mt-btn
+							.main-box-ui
+								.title-ui
+									h2 营销好帮手
+									h4 MARKETING
+								.main-flex-ui
+									.flex-left-ui
+										.desc-box
+											.desc-list
+												- var descArr = [{"index":"1","h3":"会员卡","h4":"VIP","pre":"通过会员卡模式为您提供各类会员业务业务管理。"},{"index":"2","h3":"销售闭环活跃用户","h4":"ACTIVE USER","pre":"有利业务交叉营销，活跃用户，帮助打造商户循环消费体系。"},{"index":"3","h3":"卡卷，红包，优惠","h4":"PRIVILEGE SYSTEM","pre":"通过卡卷，红包，优惠等各种方式为您的营销活动提供更多的帮助。"}]
+												each val in descArr
+													.list-box
+														.list
+															.ico-box
+																img(src="dist/images/wallet/content3_icon0#{val.index}.png")
+															.txt-box
+																h3 #{val.h3}
+																	span #{val.h4}
+																p #{val.pre}
+									.flex-right-ui
+										.circle-shadow-ui
+											.circle-shadow.sm-circle-shadow#bottom-circle
+											.img-bg#bg-animate
+											.img-container#an-container
+												img(src="dist/images/wallet/img_lv1_content4.png")
+						.rect-container-ui
+							.rect-box-ui
+					.wrapper-ui.bottom-wrapper-ui#bottom-animation-box
+						.banner-ui
+							.desc-container
+								.img-container#bottom-animation
+									img(src="dist/images/wallet/logo_foot.png")
+								.desc-box
+									p 合利宝商户钱包服务由深圳民盛大数据技术有限公司提供
+		//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript").
+		$(function() {
+			scrollAniamtion('#animation-box','#img-animation','animations');
+			scrollAniamtion('#bottom-animation-box','#bottom-animation','animations');
+			scrollAniamtion('#bottom-circle-box','#bottom-circle','sm-circle');
+			scrollAniamtion('#bottom-circle-box','#an-container','phone-animate');
+			scrollAniamtion('#bottom-circle-box','#bg-animate','bg-animate');
+			function scrollAniamtion(ele,ele2,clName) {
+				var imgAnimation = $(ele);
+				var eTop = imgAnimation.offset().top;//容器距离整个页面顶部的距离
+				var eHeight = imgAnimation.innerHeight();
+				var wTop = $(window).height();//可视区域的高度
+				$(window).scroll(function() {
+					var dTop = $(document).scrollTop();//可视区域上面到页面顶部的距离，会实时改变
+					// (dTop + wTop) - 300 > eTop由上向下动画
+					// dTop < (eTop + eHeight - 150)由下向上动画
+					if (dTop + wTop - 300 > eTop && dTop < eTop + eHeight + 100) {
+						$(ele2).stop().addClass(clName);
+					} else {
+						$(ele2).stop().removeClass(clName);
+					}
+				});
+			}
+		});

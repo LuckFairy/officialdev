@@ -1,0 +1,17 @@
+.container-footer#footer
+	.footer-box
+		footer
+			p
+				span Copyright &copy; 2017 Helipay All Rights Reserved &nbsp;&nbsp;&nbsp;广州合利宝支付科技有限公司&copy;ICP认证：
+				span
+					a(href="http://www.miitbeian.gov.cn",target="_blank") 粤ICP备13053149号
+			ul.button-menu
+				each val in [{"index":"1","datarel":"fade"},{"index":"2","datarel":"fade"},{"index":"3"},{"index":"4"},{"index":"5"},{"index":"6"},{"index":"7"},{"index":"8"}]
+					if(val.datarel !==' ')
+						li(data-rel="#{val.datarel}")
+							a(href="javascript:;")
+								img(src="dist/images/img_Qualifications_#{val.index}@12x.png")
+					else
+						li
+							a(href="javascript:;")
+								img(src="dist/images/img_Qualifications_#{val.index}@12x.png")

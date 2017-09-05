@@ -1,0 +1,47 @@
+extends ./layout
+
+block title
+	- var name = "公告中心"
+	title #{name}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/news.css")
+
+block content
+	.container.news
+		include ./header
+		.container-ui
+			.container-content-ui
+				.content-wrapper-ui
+					.title-list-ui
+						- var list = [{"index":"1","link":"news.html","title":"公告中心"},{"index":"2","link":"news.html","title":"公司公告"},{"index":"3","link":"about.html","title":"详情"}]
+						ul.sub-menu-ui#sub-menu
+							each val in list
+								if(val.index == '3')
+									li
+										span #{val.title}
+								else
+									li
+										a(href="#{val.link}")
+											span #{val.title}
+											span &gt;
+					.main-content-ui
+						.mask-ui#mask-ui
+							#loading.loading-container
+								.loading
+									- for(var i=0;i<4;i++)
+										.load
+											span
+						.news-box#bulletin-box
+						.firm-info#firm-info
+							.firm#firm
+								p 广州合利宝支付科技有限公司
+							.news-time#news-time
+								p 2017年-02月-17日
+
+		include ./footer.jade
+block append script
+	script(type="text/javascript" src="dist/js/getBullDetail.js")
+	script(type="text/javascript").
+		$(function() {
+			footerPosition();
+		});

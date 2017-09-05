@@ -1,0 +1,80 @@
+
+											<input type="hidden" id="uuid" name="uuid" value="A1C445773BA753C1108839ECDD0BB6B1">
+
+											<input type="hidden" id="resumeId" name="resumeId" value="3177858">
+
+											<br>
+											<div class="contentTips">根据网络情况而定，大附件上传速度较慢，请耐心等待</div>
+
+											<table class="table_2 m30" cellpadding="0" cellspacing="0" border="0">
+												<tbody>
+													<tr>
+														<td class="w150">
+															<div align="right">照 片：</div>
+														</td>
+														<td><input size="40" value="" name="photo" id="photo" type="file" value="选择文件都"></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td>
+															建议上传证件照。最佳尺寸：宽90像素，高120像素。请上传JPG、JPEG或者GIF文件，文件大小不要超过200K。<br> 点击 “浏览”按钮指定您要上传的文件。
+														</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td>
+
+															<input name="resumePhotoId" id="resumePhotoId" value="" type="hidden">
+														</td>
+													</tr>
+												</tbody>
+											</table>
+
+											<div id="appen1_box">
+												<div id="appen1_item">
+
+													<div class="information" id="appen1">
+														<h4 class="deleteblk" style="display:none">附件<a href="#?" onclick="delItem(this)">删除这个附件</a></h4>
+														<table class="table_01">
+															<tbody>
+																<tr>
+																	<td width="40px">附件</td>
+																	<td>
+																		<div style="margin-bottom:-26px;" title="按住Ctrl,可选择多个文件">
+																			<a style="font-weight:bold;color:#0068B7;font-size:12px; text-decoration:underline">请选择附件</a>
+																		</div>
+																		<div id="oDivFileUploader">
+																			<embed class="vv" id="oDivFileUploader_Object" name="oDivFileUploader_Object" src="fileUploader/FileUploader.swf?t=1501126241449" flashvars="apiMulti=1&amp;apiListener=oFileUploader.dispatch" quality="high" wmode="transparent" allowscriptaccess="always" width="100%" height="30px" type="application/x-shockwave-flash"></embed>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>&nbsp;</td>
+																	<td>
+																		<span style=" display: inline;"> 只接受doc、pdf、jpg、jpeg、gif、psd、png、swf、avi格式,大小不能超过20M</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td>&nbsp;</td>
+																	<td id="oDivAttach"></td>
+																</tr>
+																<tr>
+																	<td>&nbsp;</td>
+																	<td>
+																		<br>
+																		<input type="button" class="redBtn" style="margin:0" onclick="submitForm('previous')" value="上一步">
+																		<input type="button" class="redBtn" style="margin:0" onclick="submitForm('exit')" value="保存">
+
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<input type="hidden" name="appendixRemarks" id="appendixRemarks">
+														<div id="fileNameZone"></div>
+													</div>
+												</div>
+											</div>
+
+											<input type="hidden" id="action" name="action">
+
+							

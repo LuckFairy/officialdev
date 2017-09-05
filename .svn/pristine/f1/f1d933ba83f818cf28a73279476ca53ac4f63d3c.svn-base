@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=11;IE=9; IE=8; IE=7; IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="keywords" content="合利宝官网，合利宝支付，合利宝APP，合利宝电话，合利宝代理">
+    <meta name="description" content="合利宝支付，广州市唯一拥有支付全牌照的第三方支付公司，提供支付服务，包括互联网支付/移动电话支付/银行卡收单/跨境支付/合利金融/合利征信/合利保理">
+    <title>合利宝-不只是支付-致力于为客户提供综合金融服务</title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="css/tilteffect.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <!--if lt IE9-->
+
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="js/selectivizr.min.js"></script>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <script type="text/javascript">
+      	  var browser = {
+        versions: function() {
+            var u = navigator.userAgent,
+                app = navigator.appVersion;
+            return { //移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    };
+
+    if (browser.versions.mobile || browser.versions.ios || browser.versions.android ||
+        browser.versions.iPhone || browser.versions.iPad) {
+        	window.location.href = "app/html/index.html";
+        } else {
+        	console.log('跳转pc端');
+    }
+
+    </script>
+  </head>
+  <body>
+    <div class="container home">
+      <header id="header" class="header">
+        <div class="top-menu-container">
+          <div class="top-menu">
+            <div class="logo"><a href="http://www.mesonft.com/" class="home-link"><img src="images/logo_honglei@12x.png"><span>民盛金科成员企业</span></a></div>
+                        <ul class="top-menu-tab">
+                          <li><a href="#" class="serve-line"><span></span><span>客服热线：400-096-6263</span><span></span></a>
+                          </li>
+                          <li><a href="https://ewallet.helipay.com/" target="_blank" class="personal"><span></span><span>个人账号</span><span></span></a></li>
+                          <li><a href="#" class="merchant"><span></span><span>商家账号</span><span></span></a>
+                            <ul class="dropdown">
+                              <li><a href="http://customer.helipay.com/customer" target="_blank"><span>线上商户管理平台</span></a></li>
+                              <li><a href="https://merchant.helipay.com/" target="_blank"><span>收单代理人控制台</span></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+          </div>
+        </div>
+        <div id="main-nav" class="nav-container">
+          <div class="main-nav-container">
+                        <nav id="navigation" class="nav">
+                          <div class="logo"><a href="index.html"><img src="images/logo_helibao@12x.png"></a></div>
+                          <ul id="nav-menu" class="nav-menu">
+                            <li class="detail-menu-list"><a href="html/about.html" data-id="about">关于公司</a></li>
+                            <li class="detail-menu-list"><a href="html/product.html" data-id="product">产品中心</a></li>
+                            <li class="detail-menu-list"><a href="html/solve.html" data-id="solve">解决方案</a></li>
+                            <li class="detail-menu-list"><a href="html/business.html" data-id="business">行业服务</a></li>
+                            <li class="detail-menu-list"><a href="html/wallet.html" data-id="wallet">合利宝APP</a></li>
+                            <li class="detail-menu-list"><a href="html/serve.html" data-id="serve">服务中心</a></li>
+                            <li class="detail-menu-list"><a href="html/campus.html" data-id="campus">校园招聘</a></li>
+                          </ul>
+                        </nav>
+          </div>
+        </div>
+      </header>
+      <div id="full-container">
+                <div class="section section1">
+                  <div class="section-bg"><img src="images/onepage1.jpg" data-tilt-options="{ &quot;opacity&quot; : 1, &quot;movement&quot;: { &quot;perspective&quot; : 1500, &quot;translateX&quot; : 10, &quot;translateY&quot; : 10, &quot;translateZ&quot; : 2, &quot;rotateX&quot; : 3, &quot;rotateY&quot; : 3 } }" class="tilt-effect"></div>
+                  <div class="img-box img-box1"><img src="images/onepagetitle1.png"></div>
+                  <div class="img-box img-box2">
+                    <p>合利宝为客户提供从线上到线下，从境内到境外的全方位支付服务以及全新的支付体验</p>
+                  </div>
+                </div>
+                <div class="section section2">
+                  <div class="section-bg"><img src="images/onepage2.jpg" data-tilt-options="{ &quot;opacity&quot; : 1, &quot;movement&quot;: { &quot;perspective&quot; : 1500, &quot;translateX&quot; : 10, &quot;translateY&quot; : 10, &quot;translateZ&quot; : 2, &quot;rotateX&quot; : 3, &quot;rotateY&quot; : 3 } }" class="tilt-effect"></div>
+                  <div class="img-box img-box1"><img src="images/onepagetitle2.png"></div>
+                  <div class="img-box img-box2">
+                    <p>合利宝拥有自己的POS品牌，在POS机的管理上拥有大量的专业经验，并且同国内的主要POS服务机构建立了很好的合作关系</p>
+                  </div>
+                </div>
+                <div class="section section3">
+                  <div class="section-bg"><img src="images/onepage3.jpg" data-tilt-options="{ &quot;opacity&quot; : 1, &quot;movement&quot;: { &quot;perspective&quot; : 1500, &quot;translateX&quot; : 10, &quot;translateY&quot; : 10, &quot;translateZ&quot; : 2, &quot;rotateX&quot; : 3, &quot;rotateY&quot; : 3 } }" class="tilt-effect"></div>
+                  <div class="img-box img-box1"><img src="images/onepagetitle3.png"></div>
+                  <div class="img-box img-box2">
+                    <p>为企业员工提供包括雇员福利、基金、信用评分及财富管理等服务，有了它，不跑银行、不排长队、不欠费方便又快捷。</p>
+                  </div>
+                </div>
+                <div class="section section4">
+                  <div class="section-bg"><img src="images/onepage4.jpg" data-tilt-options="{ &quot;opacity&quot; : 1, &quot;movement&quot;: { &quot;perspective&quot; : 1500, &quot;translateX&quot; : 10, &quot;translateY&quot; : 10, &quot;translateZ&quot; : 2, &quot;rotateX&quot; : 3, &quot;rotateY&quot; : 3 } }" class="tilt-effect"></div>
+                  <div class="img-box img-box1"><img src="images/onepagetitle4.png"></div>
+                  <div class="img-box img-box2">
+                    <p>合利宝支付不只是支付工具，是支付行为带来的信息触达，建立对用户的深度关怀、建立高效安全的综合金融生态圈。</p>
+                  </div>
+                </div>
+        <div class="section section5">
+          <div class="section-container">
+            <div class="page-wrapper">
+              <div class="container-news">
+                <div class="news-box">
+                  <div class="news-content">
+                    <ul class="news-title">
+                      <li><a href="news.html?&amp;flag=news">
+                          <h2>公司新闻</h2></a><a href="html/news.html?&amp;flag=news">
+                          <h2>更多</h2></a></li>
+                    </ul>
+                    <div class="news-list">
+                      <div class="swiper-container">
+                        <div id="swiper-wrapper" class="swiper-wrapper"></div>
+                      </div>
+                    </div>
+                    <div class="newsPagination"></div>
+                  </div>
+                </div>
+                <div class="bulletin-box">
+                  <div class="bulletin-content">
+                    <ul class="bulletin-title">
+                      <li><a href="news.html?&amp;flag=bull" data-api="bull" class="current">
+                          <h2>公司公告</h2></a><a href="html/news.html?&amp;flag=bull">
+                          <h2>更多</h2></a></li>
+                    </ul>
+                    <div class="content-container">
+                      <div id="bull-box" class="news-main">
+                        <div class="bulletin-main-box news-lists">
+                          <div id="bull-main-box" class="bulletin-main"></div>
+                        </div>
+                        <ul id="bull-pagination" class="pagination"></ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page-wrapper">
+              <div class="container-about">
+                <div class="container-about-wrapper">
+                  <div class="parter-box">
+                    <div class="parter-tit">
+                      <h2><a href="partner.html">合作银行</a><a href="html/partner.html">更多</a></h2>
+                    </div>
+                    <div class="parter-main">
+                      <ul class="parter-list">
+                        <li><a href="javascript:;"><img src="images/bank-1@12x.png"></a></li>
+                        <li><a href="javascript:;"><img src="images/bank-2@12x.png"></a></li>
+                        <li><a href="javascript:;"><img src="images/bank-3@12x.png"></a></li>
+                        <li><a href="javascript:;"><img src="images/bank-4@12x.png"></a></li>
+                        <li><a href="javascript:;"><img src="images/bank-5@12x.png"></a></li>
+                        <li><a href="javascript:;"><img src="images/bank-6@12x.png"></a></li>
+                        <li><a href="javascript:;"><img src="images/bank-7@12x.png"></a></li>
+                        <li><a href="javascript:;"><img src="images/bank-8@12x.png"></a></li>
+                        <li><a href="javascript:;"><img src="images/bank-9@12x.png"></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="wechat-box">
+                    <div class="wechat-tit">
+                      <h2><a href="javascript:;">关注我们</a></h2>
+                    </div>
+                    <div class="wechat-main">
+                      <ul class="wechat-list">
+                        <li><a href="javascript:;"><img src="images/QR1@12x.png">
+                            <p>合利宝官微</p></a></li>
+                        <li><a href="javascript:;"><img src="images/QR2@12x.png">
+                            <p>合利宝微生活</p></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="server-box">
+                    <div class="server-tit">
+                      <h2><a href="javascript:;">联系我们</a></h2>
+                    </div>
+                    <div class="server-main">
+                      <ul class="server-list">
+                        <li>
+                          <h1>400-096-6263</h1>
+                        </li>
+                        <!--<li><a href="javascript:;">热线服务：周一到周五 9:00-18:00</a></li>-->
+                        <li><a href="javascript:;">热线服务：7*24小时</a></li>
+                        <li><a href="javascript:;">客服邮箱： cs@helipay.com</a></li>
+                        <!--<li><a href="javascript:;">客户交流群</a></li>-->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page-wrapper">
+              <div id="footer" class="container-footer">
+                <div class="footer-box">
+                  <footer>
+                    <p><span>Copyright &copy; 2017 Helipay All Rights Reserved &nbsp;&nbsp;&nbsp;广州合利宝支付科技有限公司&copy;ICP认证：</span><span><a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备13053149号</a></span></p>
+                    <div class="recordcode"><a href="http://www.beian.gov.cn/portal/registerSystemInfo" target="_blank"><i></i>公安备案号：44010602002726</a></div>
+                    <ul class="button-menu">
+                      <li data-rel="fade"><a href="javascript:;"><img src="images/img_Qualifications_1@12x.png"></a></li>
+                      <li data-rel="fade"><a href="javascript:;"><img src="images/img_Qualifications_2@12x.png"></a></li>
+                      <li data-rel="undefined"><a href="javascript:;"><img src="images/img_Qualifications_3@12x.png"></a></li>
+                      <li data-rel="undefined"><a href="javascript:;"><img src="images/img_Qualifications_4@12x.png"></a></li>
+                      <li data-rel="undefined"><a href="javascript:;"><img src="images/img_Qualifications_5@12x.png"></a></li>
+                      <li data-rel="undefined"><a href="javascript:;"><img src="images/img_Qualifications_6@12x.png"></a></li>
+                      <li data-rel="undefined"><a href="javascript:;"><img src="images/img_Qualifications_7@12x.png"></a></li>
+                      <li data-rel="undefined"><a href="javascript:;"><img src="images/img_Qualifications_8@12x.png"></a></li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/topmenu.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
+    <script type="text/javascript" src="js/jquery.pagination.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/tiltfx.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/flower.js"></script>
+    <script type="text/javascript" src="js/doflake.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+   
+  </body>
+</html>

@@ -1,0 +1,252 @@
+[{
+    "id": "1",
+    "proName": "合利宝网关支付",
+    "proImg": "../images/img_project_wg.png",
+    "intros": [{
+        "intro": "持卡人的储蓄卡或信用卡，开通网上银行即可完成线上付款。满足商户通过PC进行销售产品和服务收款的需求；满足用户通过PC进行购物或服务付款的需求。包括B2C 网关和B2B网关两种支付方式。"
+    }, {
+        "intro": "B2C网关支付即个人网银支付，是在企业与个人通过互联网在电子商务网站进行交易时，为其提供网上资金结算服务的一种业务。支持借记卡和信用卡，开通网银后，输入有关信息即可完成支付。"
+    }, {
+        "intro": "B2B网关支付即企业网银支付，为企业间的网上交易提供资金结算服务，适用于企业间的大额交易业务。"
+    }, {
+        "intro": "为商家提供线上收款服务、退款、资金管理及订单查询的服务"
+    }, {
+        "intro": "使用场景：适用于各类B2C、B2B行业。"
+    }],
+    "features": [{
+        "feature": {
+            "img": "../images/ico_project_adv1@12x.png",
+            "title": "覆盖全国 节约成本",
+            "content": "打破银行间的壁垒，连通全国上百家银行的网上银行通道，使商家不必与多家银行一一连接，合利宝网关支付产品支持国内主要的银行，支持个人网银和企业网银的在线支付支持国内18家主流银行的借记卡和信用卡"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv2@12x.png",
+            "title": "快速接入方式",
+            "content": "简单、专业、标准的技术接口，专人协助快速完成对接"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv3@12x.png",
+            "title": "个性定制 服务完善",
+            "content": "为网站度身定制个性化的结算解决方案及个性化支付页面，提供人民币卡支付一对一的技术支持与客户服务。商家管理后台简单易用、功能强大，带来完美的操作体验账户查询、交易明细，方便商户随时掌握交易"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv4@12x.png",
+            "title": "即时付款 自动对账",
+            "content": "可即时查询货款情况。对账系统自动进行对账，不错失任何一笔网上订单。降低交易取消、交易延迟、支付失败、信用欺诈的风险，提高网站交易成功率"
+        }
+    }]
+}, {
+    "id": "2",
+    "proName": "合利宝快捷支付",
+    "proImg": "../images/img_project_kj.png",
+    "intros": [{
+        "intro": "用户购买商品时,不需开通网银,只需提供银行卡卡号、户名、手机号码等信息,银行验证手机号码正确性后，发送手机动态口令到用户手机号上,用户输入正确的手机动态口令,即可完成支付。合利宝快捷支付是为互联网和移动设备推出的一种支付解决方案，有银行卡就能快速付，支付成功率高。让用户得到极致的支付体验。支持所有PC、手机、一次接入，全网覆盖"
+    }, {
+        "intro": "为商家提供线上收款服务、退款、资金管理及订单查询的服务。"
+    }, {
+        "intro": "使用场景：适用于各类实名并能有效进行风险防控的行业。<br/>电子机票：航空公司、机票代理<br/>酒店：预订、消费<br/>商旅：旅行社、会务<br/>教育考试：考试报名、辅导<br/>实名缴费：全球通缴费、公用事业缴费<br/>保险：保费缴纳、代理人结算；"
+    }],
+    "features": [{
+        "feature": {
+            "img": "../images/ico_project_adv5@12x.png",
+            "title": "极致支付体验",
+            "content": "持卡人无需通过繁复的手续开通网上银行，有信用卡即可通过电话或网络完成支付。用户可选择绑定支付卡信息，二次支付只需输入CVV2和短信验证码，免除中间帐户登陆，让支付提速。交易无需密码，支付流程便捷。"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv6@12x.png",
+            "title": "大额支付 弥补不足",
+            "content": "支付额度取决于信用卡本身额度，远大于扫码支付的限额，弥补了信用卡个人网银支付额度小的劣势，并作为网银支付产品有力补充，满足商家大额收款的需求"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv7@12x.png",
+            "title": "支持多家主流银行",
+            "content": "支持支持国内18家主流银行的借记卡和信用卡，以及国内主要的商业银行。"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv8@12x.png",
+            "title": "接入方式多样",
+            "content": "为商户提供三种不同的接入方式，包 括：接口、网关、商户后台。全方位 满足商户各类需求。"
+        }
+    }]
+}, {
+    "id": "3",
+    "proName": "合利宝二维码支付",
+    "proImg": "../images/img_project_qr.png",
+    "intros": [{
+        "intro": "提供线下C端用户出示二维码，由商户扫码进行收款，以及用户扫商户收款二维码进行付款。线上显示商户二维码，C端用户扫码进行付款。"
+    }, {
+        "intro": "扫码支付是指用户使用手机上的扫描工具扫描二维码，登录微信或支付宝完成付款，是一种基于近场支付的全新收银模式，只要一个二维码+一部智能手机或扫码设备，就能完成支付和收款。"
+    }, {
+        "intro": "使用场景：线下二维码收款、线上扫码付款"
+    }],
+    "features": [{
+        "feature": {
+            "img": "../images/ico_project_adv13@12x.png",
+            "title": "方便快捷",
+            "content": "微信，支付宝等可绑定信用卡，扫码付款时选择使用信用卡即可。付款人在异地，只需接收收款二维码，消费者即可给商家付款，打破地域限制，随时随地扫码收钱付款。"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv14@12x.png",
+            "title": "手续费率低",
+            "content": "为商户提供更低的费率，节省收银成本。"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv15@12x.png",
+            "title": "多店面，多终端统筹管理",
+            "content": "有多个分店或收银员时可设立多个登陆账户分别收银，可单独规划权限，后台统一由指定的财务专员管理，资金安全有保障！"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv16@12x.png",
+            "title": "收款效率高、资金安全有保证",
+            "content": "通过支付宝、微信钱包等进行付款，只需扫一扫即可完成，收款更便捷。同时也可以有效防止假钞等现金风险的发生，资金安全无忧！"
+        }
+    }]
+}, {
+    "id": "4",
+    "proName": "合利宝委托收付款",
+    "proImg": "../images/img_project_wt.png",
+    "intros": [{
+        "intro": "委托收款是指在收费单位得到持卡人授权后，委托合利宝从持卡人的银行卡帐户中扣除收费款项的业务形式；委托付款是指付费单位在提供付款目标相关银行账户信息及对应款项后，通过合利宝代付系统，向目标账户划款的业务模式；支持对私账户和对公账户。"
+    }, {
+        "intro": "使用场景：公用事业收费、代理中介收费、消费分期收款、企业红包等；"
+    }],
+    "features": [{
+        "feature": {
+            "img": "../images/ico_project_adv9@12x.png",
+            "title": "扣款方便",
+            "content": "一次签约后，即可快速完成后续收款"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv6@12x.png",
+            "title": "银行合作、通道全面",
+            "content": "覆盖全国性银行借记卡、贷记卡以及绝大部分区域银行"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv11@12x.png",
+            "title": "多渠道、价格最优",
+            "content": "多渠道为宠户选择最低成本通道，成本相对竞争对手具有优势"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_project_adv10@12x.png",
+            "title": "额度高、结算灵活",
+            "content": "T+0 、T+1 结算快、方便、安全"
+        }
+    }]
+}, {
+    "id": "5",
+    "proName": "合利宝POS收单",
+    "proImg": "../images/img_project_7@12x.png",
+    "intros": [{
+        "intro": "合利宝传统POS提供了帐户充值信用卡还款、 转账汇款、个人还款、 手机充值、订单支付、个人还贷等。"
+    }, {
+        "intro": "适用客户：传统POS应用商户"
+    }],
+    "progressbar": [{
+        "progress": {
+            "img": "../images/ico_industry_adv_9@12x.png",
+            "title": "POS申请",
+            "content": "多渠道POS申请"
+        }
+    }, {
+        "progress": {
+            "img": "../images/img_product_ctpos@12x.png",
+            "title": "提交资料",
+            "content": "提交商户资料"
+        }
+    }, {
+        "progress": {
+            "img": "../images/img_product_ctpos@12x.png",
+            "title": "沟通签约",
+            "content": "沟通签约事宜"
+        }
+    }, {
+        "progress": {
+            "img": "../images/img_product_ctpos@12x.png",
+            "title": "装机测试",
+            "content": "安排装机测试"
+        }
+    }, {
+        "progress": {
+            "img": "../images/img_product_ctpos@12x.png",
+            "title": "实地考察",
+            "content": "实地考察签约用户"
+        }
+    }, {
+        "progress": {
+            "img": "../images/img_product_ctpos@12x.png",
+            "title": "成功签约",
+            "content": "成功签约"
+        }
+    }],
+    "features": [{
+        "feature": {
+            "img": "../images/ico_industry_adv_9@12x.png",
+            "title": "安全便捷",
+            "content": "实现上门刷卡支付功能，商家实现收款便捷的同时也杜绝了资金安全隐患；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_industry_adv_10@12x.png",
+            "title": "交易速度快、稳定性强",
+            "content": "充分利用局域网络和专线网络快速、稳定的特点，提升银行卡刷卡收银速度，稳定性远远优于电话拨号金融POS，大大降低了持卡人账户的差错率和商户的被投诉率；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_industry_adv_11@12x.png",
+            "title": "通讯成本低",
+            "content": "专线月租费用固定，银行卡刷卡交易的通讯费用可成倍的降低，对于大型百货、连锁性超市尤其明显；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_industry_adv_12@12x.png",
+            "title": "管理功能全面",
+            "content": "产品提供多样化的查询、监控、报表、自动对帐功能，方便财务核算管理。"
+        }
+    }]
+}, {
+    "id": "6",
+    "proName": "合利宝跨境支付",
+    "proImg": "../images/img_project_6@12x.png",
+    "intros": [{
+        "intro": "合利宝传统POS提供了帐户充值信用卡还款、 转账汇款、个人还款、 手机充值、订单支付、个人还贷等。"
+    }, {
+        "intro": "适用客户：传统POS应用商户"
+    }],
+    "features": [{
+        "feature": {
+            "img": "../images/ico_industry_adv_5@12x.png",
+            "title": "安全便捷",
+            "content": "实现上门刷卡支付功能，商家实现收款便捷的同时也杜绝了资金安全隐患；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_industry_adv_6@12x.png",
+            "title": "交易速度快、稳定性强",
+            "content": "充分利用局域网络和专线网络快速、稳定的特点，提升银行卡刷卡收银速度，稳定性远远优于电话拨号金融POS，大大降低了持卡人账户的差错率和商户的被投诉率；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_industry_adv_7@12x.png",
+            "title": "通讯成本低",
+            "content": "专线月租费用固定，银行卡刷卡交易的通讯费用可成倍的降低，对于大型百货、连锁性超市尤其明显；"
+        }
+    }, {
+        "feature": {
+            "img": "../images/ico_industry_adv_8@12x.png",
+            "title": "管理功能全面",
+            "content": "产品提供多样化的查询、监控、报表、自动对帐功能，方便财务核算管理。"
+        }
+    }]
+}]

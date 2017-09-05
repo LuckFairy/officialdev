@@ -1,0 +1,99 @@
+extends ./layout
+
+block title
+	- var name = "合利宝新闻-合利宝"
+	title #{name}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/news.css")
+	link(rel="stylesheet" type="text/css" href="dist/css/about.css")
+
+block content
+	.container.about
+		include ./header
+		.section.page
+			.banner.banner1
+				.banner1-bg
+					img(src="dist/images/banner@12x.png")
+				.banner-txt
+					h2 公司新闻
+					//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+			//- 公司公告新闻
+			.page-container.page3(data-id="page3")
+				.section-introduce
+					.container-bulletin
+						//- 公告快
+						.bulletin-box
+							.mask-ui#mask-ui
+								#loading.loading-container
+									.loading
+										- for(var i=0;i<4;i++)
+											.load
+												span
+							.bulletin-content
+								ul.bulletin-title
+									li
+										a(href="javascript:;",data-api="bull",data-id="bull",class="current")
+											h2 公司公告
+										a(href="javascript:;",data-api="news",data-id="news")
+											h2 公司新闻
+								.content-container
+									.news-main#bull-box
+										.bulletin-main-box.news-lists
+											.bulletin-main#bull-main-box
+										ul#bull-pagination.pagination
+									.news-main#news-box
+										.bulletin-main-box.news-lists
+											.bulletin-main#news-main-box
+										ul#news-pagination.pagination
+		+rightContact
+		include ./footer.jade
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript" src="dist/js/jquery.pagination.js")
+	script(type="text/javascript" src="dist/js/getApi.js")
+	script(type="text/javascript").
+		$(function(){
+			var pageList = $('.bulletin-title li a');
+			var hashGroup = ["#bull","#news"];
+			var hashLen = hashGroup.length;
+			// 历史记录处理程序
+			function hasnChangeHandler() {
+				var hash = location.hash;
+				for(var i = 0; i < hashLen; i++) {
+					hash == hashGroup[i] ? (
+						pageClick([i])
+					) : "";
+				}
+			}
+			// 点击处理程序
+			function pageClick(index) {
+				pageList.eq(index).click();
+			}
+			// 更改历史记录
+			pageList.each(function(index) {
+				$(this).bind('click', function() {
+					window.location.hash = hashGroup[index]
+				});
+			});
+			// 触发历史记录处理程序
+			window.onhashchange = hasnChangeHandler;
+			// 初始化
+			hasnChangeHandler();
+		});

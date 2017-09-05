@@ -1,0 +1,64 @@
+extends ./layout
+
+block title
+	- var name = "合利宝合作伙伴-合利宝支付"
+	title #{name}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/about.css")
+
+block content
+	.container.about
+		include ./header
+		.section.page
+			//- 公司介绍
+			.page-container.page1(data-id="page1")
+					.about-container.partner-container
+						.about-banner
+							img(src="dist/images/img_banner_cooperation@12x.png")
+					mixin partnerSection(title,list)
+						.title-ui
+							h2
+								a(href="javascript:;") #{title}
+						.main-content-ui
+							ul.img-list
+								each val in list
+									li
+										a(href="javascript:;")
+											img(src="dist/images/bank-#{val.index}@12x.png")
+					.section-container-ui
+						.section-container
+							.content-container-ui
+								.content-container
+									- var imgList = [{"index":"1"},{"index":"2"},{"index":"3"},{"index":"4"},{"index":"5"},{"index":"6"},{"index":"7"},{"index":"8"},{"index":"9"},{"index":"1"},{"index":"2"},{"index":"3"},{"index":"4"},{"index":"5"},{"index":"6"},{"index":"7"},{"index":"8"},{"index":"9"}]
+									+partnerSection('合作机构',imgList)
+								//- .content-container
+								//- 	- var imgLists = [{"index":"1"},{"index":"2"},{"index":"3"},{"index":"4"},{"index":"5"},{"index":"6"},{"index":"7"},{"index":"8"},{"index":"9"},{"index":"1"},{"index":"2"},{"index":"3"},{"index":"4"},{"index":"5"},{"index":"6"},{"index":"7"},{"index":"8"},{"index":"9"}]
+								//- 	+partnerSection('合作银行',imgLists)
+
+		+rightContact
+		include ./footer.jade
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript").
+		$(function() {
+			footerPosition();
+			$(window).resize(footerPosition);
+		});
+

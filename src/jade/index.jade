@@ -1,0 +1,139 @@
+extends ./layout
+
+block append meta
+	meta(name="keywords" content="合利宝官网，合利宝支付，合利宝APP，合利宝电话，合利宝代理")
+	meta(name="description" content="合利宝支付，广州市唯一拥有支付全牌照的第三方支付公司，提供支付服务，包括互联网支付/移动电话支付/银行卡收单/跨境支付/合利金融/合利征信/合利保理")
+
+block title
+	- var name = "合利宝-不只是支付-致力于为客户提供综合金融服务"
+	title #{name}
+block prepend link
+	link(rel="stylesheet" type="text/css" href="dist/css/swiper.min.css")
+	link(rel="stylesheet" type="text/css" href="dist/css/jquery.fullPage.css")
+	link(rel="stylesheet" type="text/css" href="dist/css/tilteffect.css")
+block content
+	.container.home
+		include ./homehead.jade
+		#full-container
+			mixin fullSection
+				- var dataTitle = '{ "opacity" : 1, "movement": { "perspective" : 1500, "translateX" : 10, "translateY" : 10, "translateZ" : 2, "rotateX" : 3, "rotateY" : 3 } }'
+				//- .section.section0
+				//- 	.section-bg
+				//- 		img(src="dist/images/onepage2017.png")
+				//- 		#hua
+				//- 			#snowflake
+				//- 	.img-box.img-box2
+				//- 		img(src="dist/images/onepage2017_title.png")
+				//- 	.img-box.img-box3
+				//- 		img(src="dist/images/onepage2017_xiaohai.png")
+				.section.section1
+					.section-bg
+						img.tilt-effect(src="dist/images/onepage1.jpg",data-tilt-options= dataTitle)
+					.img-box.img-box1
+						img(src="dist/images/onepagetitle1.png")
+					.img-box.img-box2
+						p 合利宝为客户提供从线上到线下，从境内到境外的全方位支付服务以及全新的支付体验
+				.section.section2
+					.section-bg
+						img.tilt-effect(src="dist/images/onepage2.jpg",data-tilt-options= dataTitle)
+					.img-box.img-box1
+						img(src="dist/images/onepagetitle2.png")
+					.img-box.img-box2
+						p 合利宝拥有自己的POS品牌，在POS机的管理上拥有大量的专业经验，并且同国内的主要POS服务机构建立了很好的合作关系
+				.section.section3
+					.section-bg
+						img.tilt-effect(src="dist/images/onepage3.jpg",data-tilt-options= dataTitle)
+					.img-box.img-box1
+						img(src="dist/images/onepagetitle3.png")
+					.img-box.img-box2
+						p 为企业员工提供包括雇员福利、基金、信用评分及财富管理等服务，有了它，不跑银行、不排长队、不欠费方便又快捷。
+				.section.section4
+					.section-bg
+						img.tilt-effect(src="dist/images/onepage4.jpg",data-tilt-options= dataTitle)
+					.img-box.img-box1
+						img(src="dist/images/onepagetitle4.png")
+					.img-box.img-box2
+						p 合利宝支付不只是支付工具，是支付行为带来的信息触达，建立对用户的深度关怀、建立高效安全的综合金融生态圈。
+			+fullSection
+			.section.section5
+				.section-container
+					.page-wrapper
+						.container-news
+							//- 新闻块
+							.news-box
+								.news-content
+									ul.news-title
+										li
+											a(href="news.html?&flag=news")
+												h2 公司新闻
+											a(href="news.html?&flag=news")
+												h2 更多
+									.news-list
+										.swiper-container
+											.swiper-wrapper#swiper-wrapper
+
+									.newsPagination
+							//- 公告快
+							.bulletin-box
+								.bulletin-content
+									ul.bulletin-title
+										li
+											a(href="news.html?&flag=bull",data-api="bull",class="current")
+												h2 公司公告
+											a(href="news.html?&flag=bull")
+												h2 更多
+									.content-container
+										.news-main#bull-box
+											.bulletin-main-box.news-lists
+												.bulletin-main#bull-main-box
+											ul#bull-pagination.pagination
+					.page-wrapper
+						.container-about
+							.container-about-wrapper
+								.parter-box
+									.parter-tit
+										h2
+											a(href="partner.html") 合作银行
+											a(href="partner.html") 更多
+									.parter-main
+										ul.parter-list
+											-for (var i = 1; i < 10; i++)
+												li
+													a(href="javascript:;")
+														img(src= "dist/images/bank-"+ i +"@12x.png")
+								.wechat-box
+									.wechat-tit
+										h2
+											a(href="javascript:;") 关注我们
+									.wechat-main
+										ul.wechat-list
+											each val, key in {"合利宝官微":"dist/images/QR1@12x.png","合利宝微生活":"dist/images/QR2@12x.png"}
+												li
+													a(href="javascript:;")
+														img(src= val)
+														p= key
+								.server-box
+									.server-tit
+										h2
+											a(href="javascript:;") 联系我们
+									.server-main
+										ul.server-list
+											li
+												h1 400-096-6263
+											li
+												a(href="javascript:;") 热线服务：周一到周五 9:00-18:00
+											li
+												a(href="javascript:;") 客服邮箱： cs@helipay.com
+											li
+												a(href="javascript:;") 客户交流群
+					.page-wrapper
+						include ./footer.jade
+block append script
+	script(type="text/javascript" src="dist/js/jquery.pagination.js")
+	script(type="text/javascript" src="dist/js/jquery.slimscroll.min.js")
+	script(type="text/javascript" src="dist/js/jquery.fullPage.min.js")
+	script(type="text/javascript" src="dist/js/tiltfx.js")
+	script(type="text/javascript" src="dist/js/global.js")
+	script(type="text/javascript" src="dist/js/flower.js")
+	script(type="text/javascript" src="dist/js/doflake.js")
+	script(type="text/javascript" src="dist/js/swiper.min.js")

@@ -1,0 +1,31 @@
+doctype html
+html
+	head
+		block meta
+			meta(charset="utf-8")
+			meta(name="renderer" content="webkit")
+			meta(http-equiv="X-UA-Compatible" content="IE=11;IE=9; IE=8; IE=7; IE=edge,chrome=1")
+			meta(name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no")
+			meta(name="format-detection" content="telephone=no")
+			meta(name="format-detection" content="email=no")
+			meta(name="apple-mobile-web-app-capable" content="yes")
+			meta(name="apple-touch-fullscreen" content="yes")
+			meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+		block title
+			title Default title
+		block link
+			link(rel="stylesheet" type="text/css" href="dist/css/reset.css")
+			link(rel="stylesheet" type="text/css" href="dist/css/layout.css")
+			link(rel="stylesheet" type="text/css" href="dist/css/animation.css")
+		//if lt IE9
+		script(type="text/javascript", src="dist/js/html5shiv.min.js")
+		script(type="text/javascript", src="dist/js/selectivizr.min.js")
+		script(type="text/javascript", src="dist/js/respond.min.js")
+
+	body
+		block content
+
+		block script
+			script(type="text/javascript", src="dist/js/jquery.min.js")
+			script(type="text/javascript", src="dist/js/topmenu.js")
+			script(type="text/javascript", src="dist/js/footer.js")

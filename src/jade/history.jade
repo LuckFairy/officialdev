@@ -1,0 +1,126 @@
+extends ./layout
+
+block append meta
+	meta(name="keywords" content="合利宝支付、人民银行牌照、民盛金科收购、支付业务许可证，合利宝支付，合利宝APP，合利宝电话，合利宝刷卡器，合利宝快捷支付，合利宝智能POS，合利宝支付刷卡器，手机支付，合利宝POS")
+
+block title
+	- var name = "合利宝历史-合利宝公司里程碑"
+	title #{name}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/swiper.min.css")
+	link(rel="stylesheet" type="text/css" href="dist/css/about.css")
+
+block content
+	.container.about
+		include ./header
+		.section.page
+			//- 公司历史
+			.page-container.page2(data-id="page2")
+				.banner.banner1
+					.banner1-bg
+						img(src="dist/images/banner@12x.png")
+					.banner-txt
+						h2 公司历史
+						//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+				.section-introduce
+					//- .section-container
+					.container-history
+						//- 历史块
+						.history-wrapper
+							.title-ui
+								.title
+									h2 企业里程碑
+							.swiper-container-ui
+								.swiper-container.swiper-thumbs#swiper-thumbs
+									- var list =  [{"index":"1","time":"2016.9"},{"index":"2","time":"2016.3"},{"index":"3","time":"2016.2"},{"index":"4","time":"2015.12"},{"index":"5","time":"2015.11"},{"index":"6","time":"2014.8"},{"index":"7","time":"2014.7.10"},{"index":"8","time":"2013.8"},{"index":"9","time":"2013.7"}]
+									.swiper-wrapper
+										each val,index in list
+											.swiper-slide(class="slide-#{index}")
+												span #{val.time}
+									.swiper-pagination
+								.swiper-button-prev
+								.swiper-button-next
+							.swiper-container-ui
+								- var contents = [{"index":"1","title":"2016.9 民盛金科（原名宏磊股份）收购合利宝","pre":"民盛金科（原名宏磊股份）收购合利宝","pre2":""},{"index":"2","title":"2016.3 合利宝线下收单正式上线","pre":"合利宝线下收单正式上线","pre2":""},{"index":"3","title":"2016.2 跨境电商平台正式接入,并上线运行","pre":"跨境电商平台正式接入,并上线运行","pre2":""},{"index":"4","title":"2015.12 浙商银行入股","pre":"浙商银行入股","pre2":""},{"index":"5","title":"2015.11 合利宝移动电话支付（远程支付）正式上线","pre":"合利宝移动电话支付（远程支付）正式上线","pre2":""},{"index":"6","title":"2014 8合利宝获取跨境人民币结算资质","pre":"合利宝获取跨境人民币结算资质","pre2":""},{"index":"7","title":"2014-7 合利宝获得中国人民银行颁布的支付业务许可证","pre":"合利宝获得中国人民银行颁布的支付业务许可证","pre2":""},{"index":"8","title":"2013.8 中国人民银行广州分行的公示","pre":"中国人民银行广州分行的公示","pre2":""},{"index":"9","title":"2013.7合利宝通过中国人民银行指定的检测机构和认证中心的检测和认证","pre":"合利宝通过中国人民银行指定的检测机构和认证中心的检测和认证","pre2":""}]
+								.swiper-container.swiper-bottom#swiper-bottom
+									.swiper-wrapper
+										each val in contents
+												.swiper-slide
+													.main-content-ui
+														.main-title-ui
+															h2= val.title
+														.main-box-ui
+															p= val.pre
+															if(val.pre2 !=='')
+																p= val.pre2
+
+		+rightContact
+		include ./footer.jade
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+block append script
+	script(type="text/javascript" src="dist/js/swiper.min.js")
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript").
+		var swiper = new Swiper('.swiper-thumbs', {
+			autoplay: 5000,
+			slidesPerGroup: 1,
+			spaceBetween: 20,
+			slideToClickedSlide: true,
+			prevButton: '.swiper-button-prev',
+			nextButton: '.swiper-button-next',
+			slidesPerView: 6,
+			loopedSlides: 9,
+			loop: true,
+			grabCursor: true,
+			speed: 1000,
+			autoplayDisableOnInteraction: false,
+			setWrapperSize: true,
+			effect: 'coverflow',
+			coverflow: {
+				rotate: 5,
+				stretch: 1,
+				depth: 5,
+				modifier: 1,
+				slideShadows: true
+			},
+			breakpoints: {
+				1280: {
+					slidesPerView: 4,
+					spaceBetweenSlides: 10
+				},
+				1366: {
+					slidesPerView: 5,
+					spaceBetweenSlides: 15
+				},
+			}
+		});
+		var swiperBottom = new Swiper('.swiper-bottom', {
+			autoplay: 5000,
+			slidesPerGroup: 1,
+			loop:true,
+			loopedSlides: 9,
+			spaceBetween: 20,
+			slidesPerView: 1,
+			grabCursor: true,
+			speed: 1000,
+			slideToClickedSlide: true
+		});
+		swiper.params.control = swiperBottom;
+		swiperBottom.params.control = swiper;
+

@@ -1,0 +1,1025 @@
+@charset "UTF-8";
+/**
+ * lightapp/layout.scss
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-12 11:51:28
+ * @version $Id$
+ */
+
+// // 注意，以下住了特别标注了的高度距离(即top)，都是在没有计算手机浏览器状态栏高度(40px)的数值，实际上应该在每个top值基础上要加上40px/100=0.40rem
+// color style
+$lightblue : #40E0D0;
+// .page-wrap {
+//     width: 100%;
+//     height: 100%;
+//     // position: relative;
+// }
+
+
+
+// 页面统一样式
+.arrow{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 33px;
+    height: 18px;
+    margin-left: -16px;
+    background: url(../images/arrow.png) no-repeat;
+    background-size: 33px auto;
+    opacity: 0;
+}
+.page-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.logo-box {
+    position: absolute;
+    left: 0.348rem;
+    height: 0.342rem;
+    width: 1.596rem;
+    height: 0.504rem;
+    line-height: 0.504rem;
+}
+.logo-box .img-box{
+    width: 100%;
+    height: 100%;
+}
+.title {
+    position: absolute;
+    left: 2.076rem;
+    top: 0.216rem;
+    width: 3.756rem;
+    height: 0.336rem;
+    line-height: 0.336rem;
+    font-size: 0.24rem;
+}
+.text-box {
+    position: absolute;
+    left: .708rem;
+    top: 7.356rem;
+    width: 5.04rem;
+    // height: 1.632rem;
+    // overflow: scroll;
+    opacity: 0;
+    & h2 {
+        font-size: .36rem;
+    }
+    & p {
+        font-family: PingFangSC-Regular;
+        font-size: .24rem;
+        line-height: .48rem;
+    }
+}
+.corss-text {
+    top: 6.534rem;
+}
+.tit{
+    position: absolute;
+    left: 0.366rem;
+    top: 0.276rem;
+    width: 2.892rem;
+    height: 0.336rem;
+    line-height: 0.336rem;
+    font-size: .24rem;
+    opacity: 0;
+}
+
+// /**============================================================*
+// *   add home page style by Ou Yuan on date 2016-12-12
+// **=============================================================*/
+.home-list {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: 1.404rem;
+        top: 2.58rem;
+        width: 3.6rem;
+        height: 3.192rem;
+        line-height: 3.192rem;
+    }
+    &:nth-child(2) {
+        left: 2.052rem;
+        top: 1.936rem;//1.836rem
+        width: 3.6rem;
+        height: 3.1rem;
+        line-height: 3.1rem;
+    }
+    &:nth-child(3) {
+        left: 1.932rem;
+        top: 3.108rem;
+        width: 2.544rem;
+        height: 1.57360825rem;
+        line-height: 1.57360825rem;
+    }
+    &:nth-child(4) {
+        left: 4.904rem;
+        top: 1.786rem;
+        width: 0.36rem;
+        height: 0.30162162rem;
+        line-height:  0.37702703rem;
+    }
+    &:nth-child(5) {
+        left: 4.832rem;
+        top: 1.936rem;
+        width: 0.624rem;
+        height: 0.43986885rem;
+        line-height: 0.43986885rem;
+    }
+    &:nth-child(6) {
+        left: 0.084rem;
+        top: 9.612rem;
+        width: 6.228rem;
+        height: 0.336rem;
+        line-height: 0.336rem;
+        & .text {
+            text-align: center;
+            line-height: 0.336rem;
+            font-size: 0.24rem;
+        }
+    }
+}
+
+// /**============================================================*
+// *   add list page style by Ou Yuan on date 2016-12-13
+// **=============================================================*/
+// listPage style
+.list-box {
+    position: absolute;
+    width: 4.176rem;
+    height: 8.19004986rem;// 高度不取设计稿标注尺寸，按切图宽高比例计算得到
+    line-height: 8.19004986rem;
+    opacity: 0;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: .516rem;
+        top: 1.416rem;
+    }
+}
+
+// gatePage style add on date 2016-12-14 by Ou Yuan
+
+.gate-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: 0.564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: .648rem;
+        top: 3.84rem;
+        width: 5.136rem;
+        height: 1.716rem;
+        line-height: 1.716rem;
+        opacity: 0;
+    }
+}
+
+
+// quickPage style
+
+.quick-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: 0.564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: 1.116rem;
+        top: 2.916rem;
+        width: 4.104rem;
+        height: 3.456rem;
+        line-height: 3.456rem;
+        opacity: 0;
+    }
+    &:nth-child(3) {
+        left: 2.884rem;
+        top: 3.672rem;
+        width: .684rem;
+        height: 1.224rem;
+        line-height: 1.224rem;
+        opacity: 0;
+    }
+}
+
+
+// QRcodePage style
+
+.QRcode-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: 0.564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: 1.392rem;
+        top: 3.06rem;
+        width: 3.612rem;
+        height: 3.168rem;
+        line-height: 3.168rem;
+        opacity: 0;
+    }
+}
+// entPage style
+
+.ent-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: 0.564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: .996rem;
+        top: 2.976rem;
+        width: 4.356rem;
+        height: 2.47205492rem;
+        line-height: 2.47205492rem;
+        opacity: 0;
+    }
+    &:nth-child(3) {
+        left: 2.616rem;
+        top: 5.568rem;
+        width: 1.116rem;// 宽度使用时极高标注尺寸
+        height: 1.56482609rem;// 高度不取设计稿标注尺寸，会有变形，采用切图得到的w:h比例：w:h=92:129
+        line-height: 1.56482609rem;
+        opacity: 0;
+    }
+}
+// posRecPage style
+
+.posRec-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: 0.564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: .792rem;
+        top: 2.94rem;
+        width: 1.536rem;//宽度取设计稿标注尺寸，高度按切图得到的图片W:h比例计算得到
+        height: 1.62193007rem;
+        line-height: 1.62193007rem;
+        z-index: 1;
+        opacity: 0;
+    }
+    &:nth-child(3) {
+        left: 3.504rem;
+        top: 3.336rem;
+        width: 1.812rem;
+        height: 1.91985714rem;
+        line-height: 1.91985714rem;
+        z-index: 1;
+        opacity: 0;
+    }
+    &:nth-child(4) {
+        left: 1.572rem;
+        top: 3.84rem;
+        width: 2.436rem;//宽度按设计稿标注取值
+        height: 2.57550661rem;//高度若按设计稿标注取值，则会有变形，故按images/下切图得到图片的w:h比例计算取值，以消除变形
+        line-height: 2.57550661rem;
+        opacity: 0;
+        // 此处，按设计稿宽度为2.436rem
+        // images/下切图w:h=227:240
+        // 则高度为h=w*240/227====>>>h=2.436*240/227
+    }
+}
+// bulkPage style
+
+.bulk-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: .564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: 1.644rem;
+        top: 2.676rem;
+        width: 3.024rem;
+        height: 2.136rem;
+        line-height: 2.136rem;
+        opacity: 0;
+    }
+    &:nth-child(3) {
+        left: 1.356rem;
+        top: 5.136rem;
+        width: 3.696rem;
+        height: .84rem;
+        line-height: .84rem;
+        opacity: 0;
+    }
+}
+
+// crossPage
+
+.cross-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: 0.564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: 0.336rem;
+        top: 3.156rem;
+        width: 5.796rem;
+        height: 2.856rem;
+        line-height: 2.856rem;
+        opacity: 0;
+    }
+}
+
+// serPage style
+
+.ser-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: .564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: 1.212rem;
+        top: 3.963rem;
+        width: 3.396rem;
+        height: .696rem;
+        line-height: .696rem;
+        opacity: 0;
+    }
+    &:nth-child(3) {
+        left: 1.116rem;
+        top: 4.716rem;
+        width: 4.176rem;
+        height: .696rem;
+        line-height: .696rem;
+        opacity: 0;
+        & p {
+            font-family: Arial-Black;
+            color: #FFFFFF;
+            font-size: .504rem;
+            letter-spacing: .036rem;
+        }
+    }
+}
+
+// clientPage style
+
+.client-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: .564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    // 单列客户表样式
+    // &:nth-child(2) {
+    //     left: .696rem;
+    //     top: 3.156rem;
+    //     width: 5.004rem;
+    //     height: 3.63811764rem;
+    //     line-height: 3.63811764rem;
+    //     overflow: hidden;
+    //     & .client-list-box {
+    //         position: absolute;
+    //         width: 5.004rem;
+    //         height: 3.63811764rem;
+    //         line-height: 3.63811764rem;
+    //         overflow: hidden;
+    //         & img {
+    //             width: 100%;
+    //             height: 100%;
+    //         }
+    //         & .list-box-item {
+    //             position: absolute;
+    //             width: 5.004rem;
+    //             height: 1.71705882rem;
+    //             line-height: 1.71705882rem;
+    //             opacity: 1;
+    //             &:nth-child(1) {
+    //                 top: 0;
+    //             }
+    //             &:nth-child(2) {
+    //                 top: 1.92105882 * 1rem;
+    //             }
+    //             &:nth-child(3) {
+    //                 top: 1.92105882 * 2rem;
+    //             }
+    //             &:nth-child(4) {
+    //                 top: 1.92105882 * 3rem;
+    //             }
+    //             &:nth-child(5) {
+    //                 top: 1.92105882 * 4rem;
+    //             }
+    //             &:nth-child(6) {
+    //                 top: 1.92105882 * 5rem;
+    //             }
+    //             &:nth-child(7) {
+    //                 top: 1.92105882 * 6rem;
+    //             }
+    //             &:nth-child(8) {
+    //                 top: 1.92105882 * 7rem;
+    //             }
+    //             &:nth-child(9) {
+    //                 top: 1.92105882 * 8rem;
+    //             }
+    //             &:nth-child(10) {
+    //                 top: 1.92105882 * 9rem;
+    //             }
+    //         }
+    //     }
+    // }
+
+    // 两列客户列表样式
+    &:nth-child(2) {
+        left: .696rem;
+        top: 3.156rem;
+        width: 4.004rem;
+        height: auto;
+        // line-height: auto;
+        & .client-list-box {
+            position: relative;
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+            & .list-box-item {
+                position: absolute;
+                width: 2.4rem;
+                height: .696rem;
+                line-height: .696rem;
+                opacity: 0;
+                &:nth-child(1) {
+                    left: 0;
+                    top: 0;
+                }
+                &:nth-child(2) {
+                    left: 2.604rem;
+                    top: 0;
+                }
+                &:nth-child(3) {
+                    left: 0;
+                    top: .9rem;
+                }
+                &:nth-child(4) {
+                    left: 2.604rem;
+                    top: .9rem;
+                }
+                &:nth-child(5) {
+                    left: 0;
+                    top: 1.8rem;
+                }
+                &:nth-child(6) {
+                    left: 2.604rem;
+                    top: 1.8rem;
+                }
+                &:nth-child(7) {
+                    left: 0;
+                    top: 2.7rem;
+                }
+                &:nth-child(8) {
+                    left: 2.604rem;
+                    top: 2.7rem;
+                }
+                &:nth-child(9) {
+                    left: 0;
+                    top: 3.6rem;
+                }
+                &:nth-child(10) {
+                    left: 2.604rem;
+                    top: 3.6rem;
+                }
+            }
+        }
+    }
+}
+
+// bankPage style
+.bank-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: .564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: .792rem;
+        top: 3.144rem;
+        width: 4.776rem;
+        height: 5.952rem;
+        line-height: 5.952rem;
+    }
+}
+
+// lastPage style
+
+.last-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    & p {
+        font-size: 0.32rem;
+    }
+    &:nth-child(1) {
+        left: 1.596rem;
+        top: 2.424rem;
+        width: 3.204rem;
+        height: .996rem;
+        line-height: .996rem;
+    }
+    &:nth-child(2) {
+        left: .996rem;
+        top: 3.828rem;
+        width: 4.428rem;
+        height: .456rem;
+        line-height: .456rem;
+        text-align: center;
+        opacity: 0;
+        & p {
+            font-family: PingFangSC-Regular;
+            font-size: .32rem;
+            color: #FFFFFF;
+            letter-spacing: 0px;
+        }
+    }
+    &:nth-child(3) {
+        left: .804rem;
+        top: 5.592rem;
+        width: 2.004rem;
+        height: 2.004rem;
+        // line-height: 2.004rem;
+        text-align: center;
+    }
+    &:nth-child(4) {
+        left: 3.6rem;
+        top: 5.592rem;
+        width: 2.004rem;
+        height: 2.004rem;
+        // line-height: 2.004rem;
+        text-align: center;
+    }
+}
+
+// intellPage style
+
+.intell-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: .564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: 1.296rem;
+        top: 3.972rem;
+        width: 3.408rem;// 宽度取设计稿标准尺寸，通过宽高比例计算得到高度。
+        height: 3.408rem;
+        line-height: 3.408rem;
+        opacity: 0;
+    }
+    &:nth-child(3) {
+        // left: .12rem;
+        left: .7rem;
+        // top: 5.58rem;
+        top: 5.102rem;
+        width: 3.648rem;
+        height: 2.48580531rem;// 宽度取设计稿标准尺寸，通过宽高比例计算得到高度。
+        line-height: 2.48580531rem;
+        opacity: 0;
+    }
+}
+
+// MPosPage style
+
+.mPos-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: 0.564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: 3.6rem;
+        top: 3.8rem;//3.6+0.2
+        width: 2.11997647rem;//高度取设计稿标注尺寸，宽度按宽高比计算14.1rem
+        height: 1.692rem;
+        line-height: 1.692rem;
+        opacity: 0;
+    }
+    &:nth-child(3) {
+        left: 0.544rem;//0.144+0.3
+        top: 3.224rem;//3.024+0.2
+        width: 2.6533758rem;
+        height: 1.572rem;//高度取设计稿标注尺寸，宽度度按宽高比计算
+        line-height: 1.572rem;
+        opacity: 0;
+    }
+    &:nth-child(4) {
+        left: 1.576rem;
+        top: 9rem;
+        width: 2.76rem;
+        height: 0.276rem;//原值0.396，按比例w:h=1:10换算
+        line-height: 0.276rem;
+        opacity: 0;
+    }
+}
+// blutPage style
+.bluet-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: 0.564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        right: 3.636rem;
+        top: 2.64rem;
+        width: 2.2146506rem;
+        height: 1.656rem;//高度取设计稿标注尺寸，宽度按比例得到
+        line-height: 1.656rem;
+        opacity: 0;
+    }
+    &:nth-child(3) {
+        left: 2.7rem;
+        top: 6.132rem;
+        width: 3.02253061rem;
+        height: 1.452rem;//高度取设计稿标注尺寸，宽度按比例得到
+        line-height: 1.452rem;
+        opacity: 0;
+    }
+    &:nth-child(4) {
+        left: 1.776rem;
+        top: 9rem;
+        width: 2.76rem;
+        height: 0.276rem;//原值0.396，按比例w:h=1:10换算
+        line-height: 0.276rem;
+        opacity: 0;
+    }
+}
+
+// traPage style
+
+.tra-list {
+    position: absolute;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-child(1) {
+        left: 0.564rem;
+        top: 1.2rem;
+        width: 1.296rem;
+        height: 1.512rem;
+        line-height: 1.512rem;
+    }
+    &:nth-child(2) {
+        left: .12rem;
+        top: 5.28rem;
+        width: 2.9132093rem;
+        height: 1.716rem;//高度取设计稿标注尺寸，宽度按比例得到
+        line-height: 1.716rem;
+        opacity: 0;
+    }
+    &:nth-child(3) {
+        left: 3.444rem;
+        top: 2.832rem;
+        width: 2.67914697rem;
+        height: 3.456rem;//高度取设计稿标注尺寸，宽度按比例得到
+        line-height: 3.456rem;
+        opacity: 0;
+    }
+    &:nth-child(4) {
+        left: 1.776rem;
+        top: 9rem;
+        width: 2.76rem;
+        height: 0.276rem;//原值0.396，按比例w:h=1:10换算
+        line-height: 0.276rem;
+        opacity: 0;
+    }
+}
+
+// 热点样式
+// .container {
+//     position: absolute;
+//     width: auto;
+//     height: 100%;
+//     right: 2px;
+//     z-index: 2;
+//     // background-color: rgba(0,0,0,0.6);
+//     & .dot-list {
+//         position: absolute;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         right: 2px;
+//         width: 20px;
+//         & li {
+//             width: 10px;
+//             height: 10px;
+//             border-radius: 50%;
+//             text-indent: -9999rem;
+//             background-color: rgba(255,255,255,0.4);
+//         }
+//         & li:not(:first-child) {
+//             margin-top: 5px;
+//         }
+//         & li.active {
+//             background-color: rgba(255,255,255,0.9);
+//         }
+//     }
+// }
+
+// add loading style on date 2016-12-19 by Ou Yuan
+
+.loading-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(255,255,255,.9);
+    & .loading {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform:translateY(-50%);
+        & .load {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            & span {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: lightgreen;
+                position: absolute;
+                left: 50%;
+                margin-top: -10px;
+                margin-left: -10px;
+            }
+        }
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    & .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        & .swiper-slide {
+            width: 100%;
+            height: 100%;
+        }
+        & .sec1 {
+            background: $lightblue url(../images/bg-index@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第二瓶 目录页 listPage
+        & .sec2 {
+            background: $lightblue url(../images/bg-indexdark@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第三屏 网关支付 gatePage
+        & .sec3 {
+            background: $lightblue url(../images/bg-zhifu-wg@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第四屏 快捷支付 quickPage
+        & .sec4 {
+            background: $lightblue url(../images/bg-zhifu-kj.png) no-repeat;
+            background-size: cover;
+        }
+        // 第五屏 二维码支付 QRcodePage
+        & .sec5 {
+            background: $lightblue url(../images/bg-zhifu-QR@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第六屏 委托支付 entPage
+        & .sec6 {
+            background: $lightblue url(../images/bg-zhifu-wt@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第七屏 智能POS机 intellPage
+        & .sec7 {
+            background: $lightblue url(../images/bg-pos-zn@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第八屏 M-POS机 mPosPage
+        & .sec8 {
+            background: $lightblue url(../images/bg-pos-m@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第九屏 蓝牙POS机 bluetPage
+        & .sec9 {
+            background: $lightblue url(../images/bg-pos-ly@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第十屏 传统POST机 traPage
+        & .sec10 {
+            background: $lightblue url(../images/bg-pos-ct@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第十一屏 pos收单 posRecPage
+        & .sec11 {
+            background: $lightblue url(../images/bg-pos-ct1@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第十二屏 大宗交易 bulkPage
+        & .sec12 {
+            background: $lightblue url(../images/bg-zhifu-wt@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第十三屏 跨境支付 crossPage
+        & .sec13 {
+            background: $lightblue url(../images/bg-zhifu-kuajing@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第十四屏 优质服务 serPage
+        & .sec14 {
+            background: $lightblue url(../images/bg-24kf@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第十五屏 客户资源 clientPage
+        & .sec15 {
+            background: $lightblue url(../images/bg-index@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第十六屏 合作银行 bankPage
+        & .sec16 {
+            background: $lightblue url(../images/bg-index@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+        // 第十七屏 末页 lastPage
+        & .sec17 {
+            background: $lightblue url(../images/bg-index@12x.jpg) no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    opacity: .2;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet-active {
+    opacity: .4;
+    background: #fff;
+}
+// 音乐样式
+
+/* .music-container, */
+.music-box {
+    position: absolute;
+    left: 5.46rem;
+    top: .888rem;
+    width: .48rem;
+    height: .48rem;
+    line-height: .48rem;
+    z-index: 5;
+    background-image: url(../images/music-active@12x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+// 分享区域
+.share-container {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.9);
+}
+.share-container.active {
+    display: block;
+}
+
+.share-img {
+    display: none;
+}
+// 底部阅读量
+.visits {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    height: auto;
+    z-index: 100;
+    bottom: 0;
+    & .v-box {
+        display: flex;
+        justify-content:space-between;
+        background-color: rgba(0,0,0,0.6);
+        align-items:stretch;
+        & .v-item {
+            display: flex;
+            flex-direction:column;
+            justify-content:flex-start;
+        }
+    }
+    & a {
+        color: #ffffff;
+        font-size: 14px;
+        padding: .2rem .3rem;
+    }
+}

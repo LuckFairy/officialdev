@@ -1,0 +1,201 @@
+@mixin fontStyle($fontFamily:Microsoft YaHei, $fontSize: 14px, $letterSpacing: 0.48px, $color: #fff) {
+    font-family: $fontFamily, 微软雅黑;
+    font-size: $fontSize;
+    letter-spacing: $letterSpacing;
+    color: $color;
+}
+
+.news {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    & .container-ui {
+        width: 70.833333%;
+        margin: 0 auto;
+        & .container-content-ui {
+            padding-top: 12rem;
+            & .title-list-ui {
+                padding: 1rem;
+                & .sub-menu-ui {
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 2px solid rgba(229, 233, 242, 1);
+                    & li {
+                        line-height: 3rem;
+                        & a {
+                            display: block;
+                            @include fontStyle($fontSize: 14px, $letterSpacing: 0px, $color: #929292);
+                            padding: .4rem 0;
+                            & span:last-child {
+                                padding: 0 .5rem;
+                            }
+                        }
+                        &:last-child {
+                            @include fontStyle($fontSize: 14px, $letterSpacing: 0px, $color: #929292);
+                        }
+                    }
+                }
+            }
+            & .main-content-ui {
+                padding: 3rem 0;
+                min-height: 50rem;
+                overflow: hidden;
+                position: relative;
+                // & .mask-ui {
+                //     width: 100%;
+                //     height: 100%;
+                //     position: absolute;
+                //     background-color: rgba(0,0,0,0.7);
+                //     transition: all .5s;
+                //     & .loading-container {
+                //         position: absolute;
+                //         width: 100%;
+                //         height: 100%;
+                //         z-index: 10;
+                //         background-color: rgba(255,255,255,1);
+                //         & .loading {
+                //             width: 100px;
+                //             height: 100px;
+                //             margin: 0 auto;
+                //             position: relative;
+                //             top: 50%;
+                //             transform:translateY(-50%);
+                //             & .load {
+                //                 width: 100%;
+                //                 height: 100%;
+                //                 position: absolute;
+                //                 & span {
+                //                     display: inline-block;
+                //                     width: 20px;
+                //                     height: 20px;
+                //                     border-radius: 50%;
+                //                     background: lightgreen;
+                //                     position: absolute;
+                //                     left: 50%;
+                //                     margin-top: -10px;
+                //                     margin-left: -10px;
+                //                 }
+                //             }
+                //         }
+                //     }
+                // }
+                & .news-box {
+                    padding: 1rem;
+                    // min-height: 45rem;
+                    & .title-ui {
+                        padding: 3rem 0;
+                        text-align: center;
+                        // word-spacing: wrap;
+                        // white-space: pre-wrap;
+                        & h2 {
+                            @include fontStyle($fontSize: 24px, $letterSpacing: 0px, $color: #424242);
+                        }
+                    }
+                    & .top-tit {
+                        & p {
+                            @include fontStyle($fontSize: 14px, $letterSpacing: 0px, $color: #626262);
+                            line-height: 32px;
+                            text-align: left;
+                            text-indent: 2em;
+                            &:first-child {
+                                text-indent: 0;
+                            }
+                        }
+                    }
+                    & .news-img-ui {
+                        float: left;
+                        width: auto;
+                        margin: .5rem 2rem;
+                    }
+                    & .main-news-ui {
+                        & div {
+                            @include fontStyle($fontSize: 14px, $letterSpacing: 0px, $color: #626262);
+                            line-height: 3rem;
+                            // text-indent: 2em;
+                            text-align: justify;
+                        }
+                        // & p {
+                        //     @include fontStyle($fontSize: 14px, $letterSpacing: 0px, $color: #626262);
+                        //     line-height: 3.2rem;
+                        //     text-indent: 2em;
+                        //     text-align: justify;
+                        // }
+                    }
+                    & img {
+                        display: block;
+                    }
+                }
+                & .firm-info {
+                    text-align: right;
+                    padding: 1rem;
+                    & p {
+                        @include fontStyle($fontSize: 14px, $letterSpacing: 0px, $color: #626262);
+                        line-height: 32px;
+                        text-indent: 2em;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 1681px) {
+        & .container-ui {
+            width: 62.5%;
+        }
+    }
+    @media screen and (max-width: 1441px) {
+        & .container-ui {
+            width: 66.666667%;
+        }
+    }
+    @media screen and (max-width: 1367px) {
+        & .container-ui {
+            width: 70.278184%;
+        }
+    }
+    @media screen and (max-width: 1281px) {
+        & .container-ui {
+            width: 75%;
+        }
+    }
+}
+
+.mask-ui {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all .5s;
+    & .loading-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 1);
+        & .loading {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            & .load {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                & span {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: lightgreen;
+                    position: absolute;
+                    left: 50%;
+                    margin-top: -10px;
+                    margin-left: -10px;
+                }
+            }
+        }
+    }
+}

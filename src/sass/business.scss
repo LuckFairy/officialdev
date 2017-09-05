@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+/**
+ * layout.css
+ * @authors Ou Yuan (beyondouyuan.github.io)
+ * @date    2017-01-06 14:49:40
+ * @version $1.0$
+ */
+@mixin fontStyle($fontFamily :Microsoft YaHei,$fontSize: 14px,$letterSpacing: 0.48px,$color: #fff) {
+    font-family: $fontFamily,微软雅黑;
+    font-size: $fontSize;
+    letter-spacing: $letterSpacing;
+    color: $color;
+}
+.business {
+    & .header {
+        // 不再相对于窗口定位，使之不可遮挡该页面内容，其余页面头部依然相对于视窗
+        // position: absolute;
+    }
+    width: 100%;
+    height: auto;
+    position: relative;
+    & .page-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        & .industry-container {
+            // width: 70.833333%;
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+            & .content-container:last-child {
+                display: none;
+            }
+        }
+        // & .industry-container:last-child {
+        //     display: none;
+        // }
+        & .industry-tab {
+            width: 70.833333%;
+            margin: 0 auto;
+            margin-top: -8rem;
+            // left: 50%;
+            // top: 0;
+            // transform: translateX(-50%) translateY(-50%);
+            // position: absolute;
+            // update by Ou Yuan on date 2017-02-19
+            // position: relative;
+            // z-index: 1000;
+            background: #fff;
+            // box-shadow : inset || offset-x || offset-y || blur-radius || spread-radius || color
+            box-shadow: 0 20px 20px -6px #F2F2F2;
+            & .tab-box {
+                padding: 1.5rem 4.2rem;
+                & ul {
+                    display: flex;
+                    align-items: stretch;
+                    & a {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: stretch;
+                        padding: 1rem;
+                        @include fontStyle($fontSize:20px,$letterSpacing: 0px,$color: #626262);
+                        & span {
+                            width: 100%;
+                            padding-top: 1.5rem;
+                            text-align: center;
+                        }
+                    }
+                    & a.active {
+                        color:rgba(74,144,226,1);
+                    }
+                }
+            }
+        }
+        @media screen and (min-width: 1681px){
+            & .industry-tab {
+                width: 62.5%;
+            }
+        }
+        @media screen and (max-width: 1441px){
+            & .industry-tab {
+                width: 66.666667%;
+            }
+        }
+        @media screen and (max-width: 1367px){
+            & .industry-tab {
+                width: 70.278184%;
+            }
+        }
+        @media screen and (max-width: 1281px){
+            & .industry-tab {
+                width: 75%;
+            }
+        }
+        & .industry-wrapper {
+            position: relative;
+            // z-index: 500;
+            width: 70.833333%;
+            margin: 0 auto;
+            & .industry-content {
+                // width: 70.833333%;
+                margin: 0 auto;
+                display: flex;
+                align-items: stretch;
+                & .industry-desc {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    justify-content: space-around;
+                    padding: 5rem 2rem 7rem 5rem;
+                    & .title h2 {
+                        width: 100%;
+                        @include fontStyle($fontSize:28px,$letterSpacing: 0px,$color: #626262);
+                    }
+                    & .desc-box {
+                        width: 100%;
+                        padding-top: 1.7rem;
+                        flex: 2;
+                        & p {
+                            text-align: justify;
+                            line-height: 2rem;
+                            text-indent: 2em;
+                            @include fontStyle($fontSize:14px,$letterSpacing: 0px,$color: #626262);
+                        }
+                    }
+                    & .pro-schema {
+                        width: 100%;
+                        padding-top: 2rem;
+                        display: flex;
+                        align-items: center;
+                        & span {
+                            @include fontStyle($fontSize:14px,$letterSpacing: 0px,$color: #626262);
+                            padding-left: 1rem;
+                        }
+                    }
+                }
+                & .industry-img {
+                    width: 50%;
+                    text-align: center;
+                    // padding: 2rem;
+                    padding: 5rem 2rem 5rem 5rem;
+                }
+                & img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+
+        @media screen and (min-width: 1681px){
+            & .industry-wrapper {
+                width: 62.5%;
+            }
+        }
+        @media screen and (max-width: 1441px){
+            & .industry-wrapper {
+                width: 66.666667%;
+            }
+        }
+        @media screen and (max-width: 1367px){
+            & .industry-wrapper {
+                width: 70.278184%;
+            }
+        }
+        @media screen and (max-width: 1281px){
+            & .industry-wrapper {
+                width: 75%;
+            }
+        }
+
+        & .industry-scenes {
+            width: 100%;
+            height: auto;
+            background: #F8F8F9;
+            padding-bottom: 5rem;
+            // width: 70.833333%;
+            & .scenes-wrapper {
+                width: 70.833333%;
+                margin: 0 auto;
+                display: flex;
+                align-items: stretch;
+                & .industry-desc {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    justify-content: space-around;
+                    // padding: 5rem 9rem 5rem 5rem;
+                    padding: 5rem 2rem 5rem 5rem;
+                    & .title h2 {
+                        width: 100%;
+                        @include fontStyle($fontSize:28px,$letterSpacing: 0px,$color: #626262);
+                    }
+                    & .desc-box {
+                        width: 100%;
+                        padding-top: 1.7rem;
+                        flex: 2;
+                        & p {
+                            text-align: justify;
+                            line-height: 2rem;
+                            text-indent: 2em;
+                            @include fontStyle($fontSize:14px,$letterSpacing: 0px,$color: #626262);
+                        }
+                    }
+                    & .pro-schema {
+                        width: 100%;
+                        padding-top: 2rem;
+                        display: flex;
+                        align-items: center;
+                        & span {
+                            @include fontStyle($fontSize:14px,$letterSpacing: 0px,$color: #626262);
+                            padding-left: 1rem;
+                        }
+                    }
+                }
+                & .industry-img {
+                    width: 50%;
+                    padding: 5rem 2rem 5rem 5rem;
+                    text-align: center;
+                    // padding: 2rem;
+                    // padding: 5rem 9rem 5rem 5rem;
+                }
+                & img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            // & .scenes-wrapper:nth-child(even) {
+            //     background-color: red;
+            // }
+            @media screen and (min-width: 1681px){
+                & .scenes-wrapper {
+                    width: 62.5%;
+                }
+            }
+            @media screen and (max-width: 1441px){
+                & .scenes-wrapper {
+                    width: 66.666667%;
+                }
+            }
+            @media screen and (max-width: 1367px){
+                & .scenes-wrapper {
+                    width: 70.278184%;
+                }
+            }
+            @media screen and (max-width: 1281px){
+                & .scenes-wrapper {
+                    width: 75%;
+                }
+            }
+        }
+    }
+}
+
+
+// add by Ou Yuan on date 2017-02-19
+.section {
+    & .page-container:not(:first-child) {
+        display: none;
+    }
+}
+
+.headroom {
+    transition: transform 500ms linear;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+// body::-webkit-scrollbar {display:none}
+// body::-moz-scrollbar {display:none}
+// body::-ms-scrollbar {display:none}
+// body::-o-scrollbar {display:none}
+// add for banner height style on date 2017-02-19 by Ou Yuan
+
+
+@media screen and (max-width: 1367px) {
+    // banner banner1
+    .banner {
+        position: relative;
+        height: 30rem;
+        overflow: hidden;
+        & .banner1-bg {
+            position: relative;
+            height: 100%;
+            /* background: url(dist/images/banner@12x.png) center center no-repeat;
+            background-size: cover; */
+            // & img {
+            //     height: auto;
+            // }
+        }
+    }
+}

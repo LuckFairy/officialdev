@@ -1,0 +1,8 @@
+﻿# 忽略依赖项
+node_modules/*
+# 忽略调试文件
+.sass-cache/*
+
+# 忽略js调试文件
+
+*.map

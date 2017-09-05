@@ -1,0 +1,566 @@
+@charset "UTF-8";
+
+/**
+ * layout.css
+ * @authors Ou Yuan (beyondouyuan.github.io)
+ * @date    2017-01-06 14:49:40
+ * @version $1.0$
+ */
+
+@mixin fontStyle($fontFamily:Microsoft YaHei, $fontSize: 14px, $letterSpacing: 0.48px, $color: #fff) {
+    font-family: $fontFamily, 微软雅黑;
+    font-size: $fontSize;
+    letter-spacing: $letterSpacing;
+    color: $color;
+}
+
+.wallet {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    & .container-ui {
+        width: 100%;
+        & .wrapper-ui {
+            width: 100%;
+            position: relative;
+            background: rgba(0, 0, 0, .1) url(../images/wallet/background_img_banner.jpg) center center no-repeat;
+            background-size: cover;
+            & .circle-shadow-ui {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                // right: 5%;
+                position: absolute;
+                overflow: hidden;
+                // z-index: 1;
+                & .circle-shadow {
+                    width: 50rem;
+                    height: 50rem;
+                    background-color: rgba(255,255,255,1);
+                    // background-color: #38a4e1;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 45%;
+                    right: 15%;
+                    @media screen and (max-width: 1681px) {
+                        width: 45rem;
+                        height: 45rem;
+                        top: 50%;
+                        right: 12%;
+                    }
+                    @media screen and (max-width: 1367px) {
+                        width: 40rem;
+                        height: 40rem;
+                        top: 55%;
+                        right: 10%;
+                    }
+                    // transform:translate(-50%)
+                    // box-shadow: 0 0 0 160px rgba(255,255,255,.0), 0 0 0 160px rgba(255,255,255,.2), 0 0 0 80px rgba(255,255,255,.4);
+                }
+            }
+            & .banner-ui {
+                width: 70.833333%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                padding: 22rem 0 20rem 0;
+                position: relative;
+                z-index: 1;
+                & .left-box-ui {
+                    width: 45%;
+                    @media screen and (min-width: 1681px) {
+                        width: 45%;
+                    }
+                    & .tip-box-ui {
+                        overflow: hidden;
+                        & .title-ui {
+                            text-align: left;
+                            padding: 1rem 0;
+                        }
+                        & h2 {
+                            @include fontStyle($fontSize: 48px)
+                        }
+                        & .mian-box-ui {
+                            padding: 2rem 0;
+                        }
+                        & p {
+                            text-align: justify;
+                            line-height: 2.2rem;
+                            @include fontStyle
+                        }
+                    }
+                    & .ico-box-ui {
+                        padding: 4rem 0;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                        align-items: stretch;
+                        & .btn-box-ui {
+                            padding-right: 2.5rem;
+                            display: flex;
+                            flex-direction:column;
+                            justify-content: space-between;
+                            align-items: stretch;
+                            width: 55%;
+                            & .btn-ui {
+                                position: relative;
+                                overflow: hidden;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 6rem;
+                                padding: .4rem 0;
+                                @include fontStyle($color:rgba(255, 255, 255, 1));
+                                background-color: rgba(0, 0, 0, .4);
+                                border: 1px solid rgba(255, 255, 255, 1);
+                                border-radius: 3.4rem;
+                                &:hover {
+                                     background-color: rgba(0, 0, 0, .6);
+                                }
+                                & .txt {
+                                    padding-left: 1rem;
+                                }
+                                & .ico-wrapper {
+                                    width: 75%;
+                                    display: flex;
+                                    align-items: center;
+                                }
+                                & .my-sapn {
+                                    position: absolute;
+                                    z-index: 1;
+                                    left: 0;
+                                    top: -25%;
+                                    width: .3rem;
+                                    height: 150%;
+                                    background-color: rgba(255, 255, 255, 0);
+                                    transform:rotate(30deg);
+                                }
+                            }
+                        }
+                    }
+                }
+                & .right-box-ui {
+                    position: absolute;
+                    z-index: 10;
+                    right: 4%;
+                    @media screen and (max-width: 1681px) {
+                        right: 4%;
+                    }
+                    @media screen and (max-width: 1367px) {
+                        // right: 2%;
+                        width: 30%;
+                        top: 45%;
+                    }
+                    & .ico-box-ui {
+                        width: 100%;
+                        position: relative;
+                        // box-shadow: h-shadow v-shadow blur spread color inset;
+                        box-shadow: 0 80px 55px -60px rgba(0, 0, 0, 0.2);
+                        & img {
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+            @media screen and (min-width: 1681px) {
+                & .banner-ui {
+                    width: 62.5%;
+                }
+            }
+            @media screen and (max-width: 1441px) {
+                & .banner-ui {
+                    width: 66.666667%;
+                }
+            }
+            @media screen and (max-width: 1367px) {
+                & .banner-ui {
+                    width: 70.278184%;
+                }
+            }
+            @media screen and (max-width: 1281px) {
+                & .banner-ui {
+                    width: 75%;
+                }
+            }
+        }
+        & .bottom-wrapper-ui {
+            background: rgba(0, 0, 0, .1) url(../images/wallet/background_img_foot.jpg) center center no-repeat;
+            background-size: cover;
+            & .banner-ui {
+                padding: 15rem 0;
+                justify-content: center;
+                & .desc-container {
+                    @include fontStyle($fontSize:24px,$color:#626262);
+                    & .img-container {
+                        opacity: 0;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    & .desc-box {
+                        padding-top: 2rem;
+                    }
+                }
+            }
+        }
+        & .content-wrapper-ui {
+            width: 100%;
+            position: relative;
+            min-height: 10.0833333rem;
+            background-color: #eeeeee;
+            & .content-main-ui {
+                width: 70.833333%;
+                margin: 0 auto;
+                padding: 4rem;
+                background-color: #fff;
+                & .title-ui {
+                    text-align: left;
+                    padding: 1rem 0;
+                    & h2 {
+                        @include fontStyle($fontSize: 36px, $color:#626262);
+                    }
+                    & h4 {
+                        padding-top: 1rem;
+                        @include fontStyle($fontSize: 18px, $color:#929292);
+                    }
+                }
+                & .main-box-ui {
+                    padding-top: 5rem;
+                    position: relative;
+                    & .circle-list-ui {
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        display: flex;
+                        justify-content: space-between;
+                        & span {
+                            width: 1rem;
+                            height: 1rem;
+                            border-radius: 50%;
+                            background-color: #acacac;
+                        }
+                    }
+                    & .main-flex-ui {
+                        display: flex;
+                        align-items:flex-end;
+                        padding: 4% 0;
+                        & .flex-left-ui {
+                            width: 50%;
+                        }
+                        & .flex-right-ui {
+                            width: 50%;
+                            position: relative;
+                            & .img-container {
+                                // display: flex;
+                                // justify-content: center;
+                                position: relative;
+                                opacity: 0;
+                                // top: 0;
+                                & img {
+                                    max-width: 100%;
+                                }
+                            }
+                            & .circle-shadow-ui {
+                                    display: flex;
+                                    justify-content: center;
+                                    width: 100%;
+                                    height: 100%;
+                                    position: relative;
+                                & .img-bg {
+                                    width: 120%;
+                                    height: 120%;
+                                    // z-index: 10;
+                                    // left: 0;
+                                    // top: 0;
+                                    opacity: 0;
+                                    position: absolute;
+                                    z-index: 1;
+                                    left: 42%;
+                                    top: -40%;
+                                    transform:translateX(-50%);
+                                    background: url(../images/wallet/img_lv2_content4.png) center center no-repeat;
+                                    background-size: contain;
+                                }
+                                & .circle-shadow {
+                                    opacity: 0;
+                                    position: absolute;
+                                    // left: 42%;
+                                    top: 10%;
+                                    transform:translateX(-50%);
+                                    width: 15rem;
+                                    height: 15rem;
+                                    background-color: rgba(64,107,147, 1);
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                        & .list {
+                            display: flex;
+                            align-items: center;
+                            & .ico-box {
+                                padding: 2rem;
+                            }
+                            & .txt-box {
+                                padding: 2rem 1rem;
+                                & h3 {
+                                    @include fontStyle($fontSize: 18px, $color:#424242);
+                                    & span {
+                                        padding-left: 1rem;
+                                        @include fontStyle($fontSize: 14px, $color:#929292);
+                                    }
+                                }
+                                & p {
+                                    padding: 2rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                & .ico-list-ui {
+                    display: flex;
+                    justify-content: space-around;
+                    // flex-wrap:wrap;
+                    & .ico-box-ui {
+                        display: flex;
+                        flex-direction:column;
+                        align-items:center;
+                        position: relative;
+                        & span {
+                            justify-content: center;
+                            padding: 2rem 0;
+                            @include fontStyle($fontSize: 14px,$color:#626262);
+                        }
+                        & img {
+                            border: 1px solid #acacac;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                & .flex-tab-box {
+                    width: 50%;
+                    height: 100%;
+                    background-color: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    & .title-ui {
+                        padding: 4rem 0;
+                    }
+                    & .img-flex {
+                        padding: 4rem 0;
+                    }
+                }
+                & .flex-tab-box[data-rel="left-box-ui"] {
+                    &:after {
+                        content: '';
+                        width: .5rem;
+                        background-color: #EEEEEE;
+                    }
+                }
+                & .flex-tab-box[data-rel="right-box-ui"] {
+                    &:before {
+                        content: '';
+                        width: .5rem;
+                        background-color: #EEEEEE;
+                    }
+                }
+            }
+            & .rect-container-ui {
+                position: absolute;
+                top: 0;
+                width: 18.75%;
+                // overflow: hidden;
+                & .rect-box-ui {
+                    width: 100%;
+                    position: absolute;
+                    top: 1rem;
+                    padding: 18% 0;
+                    border: 2rem solid #d6d6d6;
+                    border-right-width: 0;
+                    &:after {
+                        content: '';
+                        width: 2rem;
+                        height: 20%;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background-color: #d6d6d6;
+                    }
+                }
+            }
+            & .mt-tab {
+                margin-top: 1.2rem;
+                padding: 0 4rem;
+                display: flex;
+                justify-content: space-between;
+            }
+            & .mt-btn {
+                padding-top: .5rem;
+                padding-bottom: 8%;
+                background-color: transparent;
+                & .btn-container {
+                    width: 100%;
+                    margin-left: -4rem;
+                    & .btn {
+                        display: inline-block;
+                        width: auto;
+                        background-color: rgba(0, 0, 0, 0.6);
+                        & a {
+                            padding: 1rem 2rem;
+                            display: flex;
+                            align-items:center;
+                            @include fontStyle($fontSize: 14px);
+                            & .arrow {
+                                border-color: transparent transparent transparent rgba(255,255,255,1);
+                                border-style: solid;
+                                border-width: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (min-width: 1681px) {
+                & .content-main-ui {
+                    width: 62.5%;
+                }
+            }
+            @media screen and (max-width: 1441px) {
+                & .content-main-ui {
+                    width: 66.666667%;
+                }
+            }
+            @media screen and (max-width: 1367px) {
+                & .content-main-ui {
+                    width: 70.278184%;
+                }
+            }
+            @media screen and (max-width: 1281px) {
+                & .content-main-ui {
+                    width: 75%;
+                }
+            }
+            & .container-flex-ui {
+                display: flex;
+                // align-items:stretch;
+                align-items:center;
+                padding-bottom: 10rem;
+                & .flex-left-ui {
+                    width: 37.5%;
+                    display: flex;
+                    justify-content: flex-end;
+                    background: url(../images/wallet/bgleft_img_content3.jpg) center center no-repeat;
+                    background-size: cover;
+                    & .img-container {
+                        padding-top: 6%;
+                        padding-right: 3%;
+                        opacity: 0;
+                    }
+                    & img {
+                        max-width: 100%;
+                    }
+                }
+                & .flex-right-ui {
+                    width: 62.5%;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    & .flex-content-ui {
+                        position: relative;
+                        padding: 25% 0 2% 5%;
+                        & .rect-box-ui {
+                            position: absolute;
+                            top: 20%;
+                            padding: 6% 7%;
+                            border: 2rem solid #383838;
+                            border-right-width: 0;
+                            &:after {
+                                content: '';
+                                width: 2rem;
+                                height: 20%;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                background-color: #383838;
+                            }
+                        }
+                        & .title-ui {
+                            // width: auto;
+                            position: absolute;
+                            top: 35%;
+                            left: 9%;
+                            & h2 {
+                                @include fontStyle($fontSize: 48px, $color:rgba(255, 255, 255,.9));
+                            }
+                            & h4 {
+                                padding-top: 1rem;
+                                @include fontStyle($fontSize: 18px, $color:#929292);
+                            }
+                        }
+                        & .flex-pre-ui {
+                            padding: 2% 0 5% 5%;
+                            @include fontStyle($fontSize: 16px, $color:#929292);
+                            & li {
+                                line-height: 3rem;
+                                list-style-type: disc;
+                            }
+                        }
+                    }
+                    & .flex-btn-ui {
+                        display: flex;
+                        padding: 10%;
+                        & .btn-ui {
+                            padding: 8% 0;
+                            width: 37.083333%;
+                            text-align: center;
+                            background-color: rgba(0, 0, 0, 0.6);
+                            border: 2px solid #287AE8;
+                            box-sizing:border-box;
+                        }
+                        & .btn-left {
+                            background-color: #287AE8;
+                        }
+                        & .btn {
+                            & a {
+                                display: block;
+                                @include fontStyle($fontSize: 36px);
+                            }
+                        }
+                    }
+                    & .bottom-btn-ui {
+                        width: 80%;
+                        margin: 0 auto;
+                        position: relative;
+                        & .btn {
+                            position: absolute;
+                            padding: 2% 4%;
+                            margin-top: -4%;
+                            right: 25.833333%;
+                            display: inline-block;
+                            background-color: rgba(47,47,47,1);
+                            & a {
+                                display: flex;
+                                align-items:center;
+                                @include fontStyle($fontSize: 14px);
+                                & .arrow {
+                                    border-color: transparent transparent transparent rgba(255,255,255,1);
+                                    border-style: solid;
+                                    border-width: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.headroom {
+    transition: transform 500ms linear;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}

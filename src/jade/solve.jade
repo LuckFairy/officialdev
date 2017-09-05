@@ -1,0 +1,112 @@
+extends ./layout
+
+block append meta
+	meta(name="keywords" content="合利宝网关支付，B2C 网关，B2B网关")
+	meta(name="description" content="合利宝网关支付，满足商户通过PC进行销售产品和服务收款的需求，满足用户通过PC进行购物或服务付款的需求")
+
+block title
+	- var title = "合利宝解决方案-为商家提供线上收款服务、退款、资金管理及订单查询的服务"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/product.css")
+
+block content
+	.container.solve
+		include ./header
+		.section.page
+			mixin sectionPage(title,decs,scenes,img,i,use)
+				.page-container.page(data-id="page#{i}")
+						mixin fullSection
+							.banner.banner1
+								.banner1-bg
+									img(src="dist/images/banner@12x.png")
+								.banner-txt
+									h2 合利宝网关支付
+									//- p 极具竞争力的收单产品，是最受商户欢迎的智能收款终端解决方案。
+						+fullSection
+						.product-wrapper
+							.product-desc
+								.title
+									h2 #{title}
+								.desc-box
+									each val in decs
+										p #{val}
+								.pro-schema
+									img(src="dist/images/ico_product_suit@12x.png")
+									span #{use}
+									span.wrap-span 实物：零售电商、经销商进货、机票旅游等。
+									span.wrap-span 虚拟：电信、彩票、社区、软件应用、数字娱乐、教育培训、金融产品等。
+							.product-img
+								img(src= "dist/images/#{img}.png")
+						.product-scenes
+							.scenes-wrapper
+								.title
+									h2 产品优势
+								.scenes-box
+									each val in scenes
+										.scenes-item
+											.item-img
+												if(val.index !== '')
+													img(src="dist/images/ico_project_adv#{val.index}@12x.png")
+											.item-desc
+												.title
+													if(val.title !== '')
+														h2= val.title
+												.desc-box
+													if(val.pre !== '')
+														p= val.pre
+			- var title = "合利宝网关支付"
+			- var decs = ["持卡人的储蓄卡或信用卡，开通网上银行即可完成线上付款。满足商户通过PC进行销售产品和服务收款的需求；满足用户通过PC进行购物或服务付款的需求。包括B2C 网关和B2B网关两种支付方式。","B2C网关支付即个人网银支付，是在企业与个人通过互联网在电子商务网站进行交易时，为其提供网上资金结算服务的一种业务。支持借记卡和信用卡，开通网银后，输入有关信息即可完成支付。","B2B网关支付即企业网银支付，为企业间的网上交易提供资金结算服务，适用于企业间的大额交易业务。","为商家提供线上收款服务、退款、资金管理及订单查询的服务"]
+			- var scenes = [{"index":"1","title":"覆盖全国 节约成本","pre":"打破银行间的壁垒，连通全国上百家银行的网上银行通道，使商家不必与多家银行一一连接，合利宝网关支付产品支持国内主要的银行，支持个人网银和企业网银的在线支付支持国内18家主流银行的借记卡和信用卡"},{"index":"2","title":"快速接入方式","pre":"简单、专业、标准的技术接口，专人协助快速完成对接"},{"index":"3","title":"个性定制 服务完善","pre":"为网站度身定制个性化的结算解决方案及个性化支付页面，提供人民币卡支付一对一的技术支持与客户服务。商家管理后台简单易用、功能强大，带来完美的操作体验账户查询、交易明细，方便商户随时掌握交易"},{"index":"4","title":"即时付款 自动对账","pre":"可即时查询货款情况。对账系统自动进行对账，不错失任何一笔网上订单。降低交易取消、交易延迟、支付失败、信用欺诈的风险，提高网站交易成功率"}]
+			- var img = "img_project_wg"
+			- var use = "使用场景：适用于各类B2C、B2B行业。"
+			+sectionPage(title,decs,scenes,img,1,use)
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript").
+		$(function() {
+			var box = $('.item-img');
+			var contentBox = $('.list-content');
+			box.each(function(){
+				$(this).find('.txt').on('click', function() {
+					var dataID = $(this).attr('data-id');
+					// console.log(dataID);
+					$(this).addClass('active').parent().siblings().children('.txt').removeClass('active');
+					showContent(dataID,contentBox);
+				});
+			});
+			function showContent(linkID, secArr) {
+				var secs = $(secArr);
+				secs.each(function() {
+					var self = $(this);
+					if ($(this).attr('data-id') != linkID) {
+						setTimeout(function() {
+							self.hide();
+						},60);
+					} else {
+						setTimeout(function() {
+							self.show();
+						},60);
+					}
+				});
+			}
+		});

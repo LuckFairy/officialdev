@@ -1,0 +1,122 @@
+/**
+ * 获取公告
+ * bulletin.js
+ * @authors beyondouyuan (beyondouyuan.github.io)
+ * @date    2017-05-23 17:43:14
+ * @version $1.0.0$
+ */
+
+/**
+ * params：
+ * myRootPath：请求根路径
+ * myBullMethod：请求方法
+ * ajaxData：ajax方法
+ * page：ajax方法初始参数(数据页码)
+ * pullIn：ajax方法元素插入位置
+ * pulldownRefresh：mui下拉刷新方法
+ * pullupRefresh：mui上滑加载方法
+ **/
+
+
+var myPathConfig = pathConfig;
+var myRootPath = myPathConfig.rootPath;
+var myBullMethod = myPathConfig.bullMethod;
+
+var ajaxData = function(page, pullIn) {
+    $.ajax({
+        url: myRootPath + myBullMethod + page + '&pageNum=5',
+        type: 'GET',
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        async: false,
+        timeout: 30000,
+        crossDomain: true,
+        success: successHandler,
+        complete: completeCallBack,
+        error: errorCallBack
+    });
+
+    function successHandler(data, status, xhr) {
+        var list = document.getElementById("bulletin-list");
+        if (pullIn == 'down') {
+            list.insertBefore(createFragment(data, page), list.firstChild);
+        } else if (pullIn == 'up') {
+            list.appendChild(createFragment(data, page));
+        } else {
+            list.appendChild(createFragment(data, page));
+        }
+    }
+    function completeCallBack() {
+        mui('#bulletin-list').on('tap', 'a', function(e) {
+            mui.openWindow({
+                url: this.getAttribute('href'),
+                id: 'bulletin',
+                extras: {
+                    name: 'bulletin', //扩展参数 TIPS:好吧，使用浏览器模式无话使用plus.openWindow传递参数
+                    version: '1.0.0'
+                }
+            });
+        });
+    }
+    function errorCallBack(xhr, textStatus, errorMessage) {
+        if (errorMessage == 'timeout') {
+            alert('请求超时');
+        } else {
+            alert('获取数据失败');
+        }
+    }
+};
+
+mui.ready(function() {
+    ajaxData(1);
+})
+var createFragment = function($data, $page) {
+    var fragment = document.createDocumentFragment();
+    var li;
+    mui($data.list).each(function(index, contents) {
+        li = document.createElement('li');
+        li.className = 'mui-table-view-cell mui-media news-list';
+        li.innerHTML = '<a class="mui-navigate-right" href="bulletin_detail.html?&id=' + contents.bulletinid + '"><div class="mui-media-body">' + contents.title + '<p class="mui-ellipsis">' + timeTranfer(contents.time) + '</p></div></a>';
+        fragment.appendChild(li);
+    });
+    return fragment;
+};
+
+
+mui.init({
+    // 监听下拉事件
+    pullRefresh: {
+        container: '#pullrefresh',
+        down: {
+            contentdown: "下拉可以刷新",
+            contentover: "释放立即刷新",
+            contentnomore: '没有更多数据了',
+            contentrefresh: '正在加载...',
+            callback: pulldownRefresh
+        },
+        // up: {
+        //     contentrefresh: '正在加载...',
+        //     callback: pullupRefresh
+        // }
+    }
+});
+var pageNo = 2;
+
+function pulldownRefresh() {
+    setTimeout(function() {
+        ajaxData(pageNo, 'down');
+        pageNo++;
+        mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+    }, 1500);
+    return pageNo;
+}
+
+
+function pullupRefresh() {
+    setTimeout(function() {
+        mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+        ajaxData(pageNo, 'up');
+        pageNo++;
+    }, 1500);
+    return pageNo;
+}

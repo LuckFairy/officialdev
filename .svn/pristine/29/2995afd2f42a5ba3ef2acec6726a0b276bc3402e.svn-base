@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>合利宝</title>
+    <link href="css/mui.css" rel="stylesheet" />
+    <link href="css/iconfont.css" rel="stylesheet" />
+    
+</head>
+
+<body>
+    <!-- 主界面菜单同时移动 -->
+    <!-- 侧滑导航根容器 -->
+    <div class="mui-off-canvas-wrap mui-draggable">
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap">
+            <!-- 菜单容器 -->
+           
+            <!-- 主页面标题 -->
+            <header class="mui-bar mui-bar-nav">
+                <!--<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"><span class="mui-header-menu">菜单</span></a>-->
+                <h1 class="mui-title">合利宝</h1>
+            </header>
+            <!-- 主页面内容容器 -->
+            <div class="mui-content mui-scroll-wrapper scroll-container" style="height: 100%;">
+                <div class="mui-scroll">
+                    <!-- 首屏 -->
+                    <section class="section-pages" style="min-height: 100vh;background-color: #ED3E39;">
+                        <div class="logo-container" style="padding: 5vw">
+                            <img src="images/helb-logo.png">
+                        </div>
+                        <div class="cartoon-container" style="text-align: center;">
+                            <img src="images/helb-top-pic.png" style="width: 70vw;max-width: 100%">
+                        </div>
+                        <div class="text-container" style="width: 70vw; margin: 0 auto;text-align: center;">
+                            <div class="text-main" style="padding-top: 10vw">
+                                <p style="color: #540604;font-size: 17.5vw;line-height: 17.5vw">快乐支付</p>
+                                <p style="color: #540604;font-size: 17.5vw;line-height: 17.5vw">触手可及</p>
+                            </div>
+                        </div>
+                        <div class="download-container" style="width: 70vw; margin: 0 auto;text-align: center;">
+                            <a href="#" class="download" style="display: inline-block;color: #ED3E39;padding: 5vw 20vw; margin: 10vw 0; background-color: white;border-radius: 10vw;">立即下载</a>
+                        </div>
+                        <div class="arrow-container" style="width: 70vw; margin: 0 auto;text-align: center;padding: 10vw 0">
+                            <img src="images/helf-jiant-b.png">
+                        </div>
+                    </section>
+                    <!-- 第二屏 -->
+                    <section class="section-pages" style="min-height: 100vh;background-color: white;">
+                        <div class="text-container" style="width: 80vw; margin: 0 auto;padding: 10vw 0">
+                            <h2 style="font-size: 7.27272727vw">随时随地 快速收款</h2>
+                            <div class="text-main" style="padding-top: 10vw">
+                                <p>手机在手，随时收款</p>
+                                <p>实时到帐，操作简单，资金安全。</p>
+                            </div>
+                        </div>
+                        <div class="phone-container" style="text-align: center;">
+                            <img src="images/helb-shj-1.png" style="width: 80vw; max-width: 100%;">
+                        </div>
+                        <div class="arrow-container" style="width: 80vw; margin: 0 auto;text-align: center;padding: 10vw 0">
+                            <img src="images/helf-jiant-h.png">
+                        </div>
+                    </section>
+                    <!-- 第三屏 -->
+                    <section class="section-pages" style="min-height: 100vh;background-color: white;">
+                        <div class="text-container" style="width: 80vw; margin: 0 auto;padding: 10vw 0">
+                            <h2 style="font-size: 7.27272727vw">生活缴费 方便快捷</h2>
+                            <div class="text-main" style="padding-top: 10vw">
+                                <p>水电煤缴费，手机充值，流量充值</p>
+                                <p>足不出户，缴纳天下</p>
+                            </div>
+                        </div>
+                        <div class="phone-container" style="text-align: center;">
+                            <img src="images/helb-shj-3.png" style="width: 80vw; max-width: 100%;">
+                        </div>
+                        <div class="arrow-container" style="width: 80vw; margin: 0 auto;text-align: center;padding: 10vw 0">
+                            <img src="images/helf-jiant-h.png">
+                        </div>
+                    </section>
+                    <!-- 第四屏 -->
+                    <section class="section-pages" style="min-height: 100vh;background-color: white;">
+                        <div class="text-container" style="width: 80vw; margin: 0 auto; text-align: center; padding: 5vw 0">
+                            <h2 style="font-size: 7.27272727vw">合利付</h2>
+                            <div class="text-main" style="padding-top: 5vw">
+                                <p>一款专业的金融钱包</p>
+                            </div>
+                        </div>
+                        <div class="desc-container">
+                            <ul class="mui-table-view mui-grid-view mui-grid-9" style="background-color: white;border:none">
+                                <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+                                    <a href="#">
+                                        <div class="icon-container">
+                                            <img id="avatar-img" src="images/helb-zjaq.png" class="cicle-img avatar-img" style="width: 25vw; max-width: 100%" />
+                                        </div>
+                                        <div class="mui-media-body">资金安全</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+                                    <a href="#">
+                                        <div class="icon-container">
+                                            <img id="avatar-img" src="images/helb-dzwd.png" class="cicle-img avatar-img" style="width: 25vw; max-width: 100%" />
+                                        </div>
+                                        <div class="mui-media-body">到帐稳定</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" style="border-bottom: none;">
+                                    <a href="#">
+                                        <div class="icon-container">
+                                            <img id="avatar-img" src="images/helb-gnqq.png" class="cicle-img avatar-img" style="width: 25vw; max-width: 100%" />
+                                        </div>
+                                        <div class="mui-media-body">功能齐全</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" style="border-bottom: none;">
+                                    <a href="#">
+                                        <div class="icon-container">
+                                            <img id="avatar-img" src="images/helb-bhys.png" class="cicle-img avatar-img" style="width: 25vw; max-width: 100%" />
+                                        </div>
+                                        <div class="mui-media-body">保护隐私</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="download-container" style="width: 70vw; margin: 0 auto;text-align: center;">
+                            <a href="#" class="download" style="display: inline-block;color: white;padding: 5vw 20vw; margin: 15vw 0; background-color: #ED3E39;border-radius: 10vw;">立即下载</a>
+                        </div>
+                        <div class="arrow-container" style="width: 80vw; margin: 0 auto;text-align: center;padding: 5vw 0">
+                            <img src="images/helf-jiant-h.png">
+                        </div>
+                    </section>
+                </div>
+                <!--<nav class="mui-bar mui-bar-tab" id="footer-bar">
+                    <a class="mui-tab-item mui-active" href="#" id="contact">
+                        <span class="mui-icon mui-icon-phone"></span>
+                        <span class="mui-tab-label">联系我们</span>
+                    </a>
+                    <a class="mui-tab-item" href="#" id="recruit">
+                        <span class="mui-icon mui-icon-email"></span>
+                        <span class="mui-tab-label">招聘英才</span>
+                    </a>
+                    <a class="mui-tab-item" href="#" id="more">
+                        <span class="mui-icon mui-icon-more"></span>
+                        <span class="mui-tab-label">更多</span>
+                    </a>
+                </nav>-->
+            </div>
+            <div class="mui-off-canvas-backdrop"></div>
+        </div>
+    </div>
+    <script src="js/mui.min.js"></script>
+    <script src="js/global.js"></script>
+    <script type="text/javascript">
+    	onload = function(){
+    		var list = document.getElementsByClassName('download');
+    		for(var i=0;i<list.length;i++){
+    			list[i].addEventListener('touchstart',function(){
+    					if(isAndroid()){
+    						location.href= 'http://app.helipay.com/bpmposfile/483000/app/android/helipay.apk'
+    					}else{
+    						location.href='https://itunes.apple.com/cn/app/he-li-bao/id1109202720?mt=8'
+    					}
+    			})
+    		}
+    		
+    	}
+    	
+    </script>
+</body>
+
+</html>

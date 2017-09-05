@@ -1,0 +1,19 @@
+
+<div id="footer" class="container-footer">
+  <div class="footer-box">
+    <footer>
+      <p><span>Copyright &copy; 2017 Helipay All Rights Reserved &nbsp;&nbsp;&nbsp;广州合利宝支付科技有限公司&copy;ICP认证：</span><span><a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备13053149号</a></span></p>
+      <div class="recordcode"><a href="http://www.beian.gov.cn/portal/registerSystemInfo" target="_blank"><i></i>公安备案号：44010602002726</a></div>
+      <ul class="button-menu">
+        <li data-rel="fade"><a href="javascript:;"><img src="../images/img_Qualifications_1@12x.png"/></a></li>
+        <li data-rel="fade"><a href="javascript:;"><img src="../images/img_Qualifications_2@12x.png"/></a></li>
+        <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_3@12x.png"/></a></li>
+        <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_4@12x.png"/></a></li>
+        <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_5@12x.png"/></a></li>
+        <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_6@12x.png"/></a></li>
+        <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_7@12x.png"/></a></li>
+        <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_8@12x.png"/></a></li>
+      </ul>
+    </footer>
+  </div>
+</div>

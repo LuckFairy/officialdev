@@ -1,0 +1,68 @@
+extends ./layout
+
+block title
+	- var name = "合利宝招聘-招聘英才"
+	title #{name}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/about.css")
+
+block content
+	.container.about
+		include ./header
+		.section.page
+			//- 招聘
+			.page-container.page5(data-id="page5")
+					.banner-container
+						.emp-banner
+							img(src="dist/images/img_banner_recruit@12x.png")
+					.section-introduce
+						.section-container
+							.container-emp
+								//- 招聘
+								.emp-box
+									.emp-content
+										.emp-tab-box#post-list-tab
+											ul.post-list
+										.emp-wrapper#emp-wrapper
+											mixin empList(emp, desc, reqs)
+												.emp-main
+													.emp-title
+														a(href="javascript:;") #{emp}
+													.emp-detail
+														ul.emp-desc
+															li 岗位描述
+															each val in desc
+																li= val.content
+														ul.emp-require
+															li 岗位要求
+															each val,index in reqs
+																li= val.content
+														ul.emp-info
+															li 岗位性质：全职
+															li 工作地区：北京
+															li 应聘渠道：发送个人简历到 HR@helibao.com
+											//- +empList('区域（华北）银行合作总经理',[{"index":"1","content":"1、负责区域团队的建设与管理：负责带领团队进行银行合作关系的拓展与维护，确保与银行各类合作项目的顺利实施；"},{"index":"2","content":"2、负责带领团队银行完成相关支付接口的采购，执行价谈判，确保在支付公司中采购成本领先；"},{"index":"3","content":"3、负责组织团队公司支付产品面向银行的销售工作，洽谈合作事宜；"},{"index":"4","content":"4、根据公司业务发展需要，开拓与银行或银联等机构的创新支付业务的合作。"}],[{"index":"1","content":"1、本科及以上学历，5年以上工作经验，银行、第三方支付相关行业背景及银行合作管理经验；"},{"index":"2","content":"2、熟知电子支付产品知识，了解各支付产品的银行接口需求；"},{"index":"3","content":"3、拥有丰富的银行渠道资源，具有面向银行采购、销售相关经验者优先；"},{"index":"4","content":"4、组织、沟通、协调能力强，具有良好的团队建设管理、公关能力和较好的商务谈判能力"}])
+		+rightContact
+		include ./footer.jade
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="#")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="#")
+									img(src= val)
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+	script(type="text/javascript" src="dist/js/getRecruit.js")
+
+

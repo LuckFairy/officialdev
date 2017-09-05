@@ -1,0 +1,74 @@
+extends ./layout
+
+block title
+	- var title = "合利宝POS支付-传统POS-合利宝产品"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/product.css")
+
+block content
+	.container.product
+		include ./header
+		.section.page
+			//- 合利宝传统POS
+			.page-container.page4(data-id="page4")
+				mixin fullSection
+					.banner.banner1
+						.banner1-bg
+							img(src="dist/images/banner@12x.png")
+						.banner-txt
+							h2 合利宝传统POS
+							p 合利宝传统POS提供了帐户充值信用卡还款。
+				+fullSection
+				.product-wrapper
+					.product-desc
+						.title
+							h2 合利宝传统POS
+						.desc-box
+							p
+								|合利宝传统POS提供了帐户充值信用卡还款、
+								|转账汇款、个人还款、
+								|手机充值、订单支付、个人还贷等。
+						.pro-schema
+							img(src="dist/images/ico_product_suit@12x.png")
+							span 适用客户：传统POS应用商户
+					.product-img
+						img(src="dist/images/img_product_ctpos@12x.png")
+				.product-scenes
+					.scenes-wrapper
+						.scenes-box
+							- var scenes = [{"index":"13","title":"安全便捷","pre":"实现上门刷卡支付功能，商家实现收款便捷的同时也杜绝了资金安全隐患；"},{"index":"14","title":"交易速度快、稳定性强","pre":"充分利用局域网络和专线网络快速、稳定的特点，提升银行卡刷卡收银速度，稳定性远远优于电话拨号金融POS，大大降低了持卡人账户的差错率和商户的被投诉率；"},{"index":"15","title":"通讯成本低","pre":"专线月租费用固定，银行卡刷卡交易的通讯费用可成倍的降低，对于大型百货、连锁性超市尤其明显；"},{"index":"16","title":"管理功能全面","pre":"产品提供多样化的查询、监控、报表、自动对帐功能，方便财务核算管理。"}]
+							each val in scenes
+								.scenes-item
+									.item-img
+										if(val.index !== '')
+											img(src="dist/images/ico_product_adv#{val.index}@12x.png")
+									.item-desc
+										.title
+											if(val.title !== '')
+												h2= val.title
+										.desc-box
+											if(val.pre !== '')
+												p= val.pre
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")
+

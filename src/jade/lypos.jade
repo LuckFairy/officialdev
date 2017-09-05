@@ -1,0 +1,71 @@
+extends ./layout
+
+block title
+	- var title = "蓝牙POS-合利宝POS支付"
+	title #{title}
+block append link
+	link(rel="stylesheet" type="text/css" href="dist/css/product.css")
+
+block content
+	.container.product
+		include ./header
+		.section.page
+			.page-container.page3(data-id="page3")
+				mixin fullSection
+					.banner.banner1
+						.banner1-bg
+							img(src="dist/images/banner@12x.png")
+						.banner-txt
+							h2 合利宝蓝牙POS
+							//- p 合利宝蓝牙POS通过蓝牙信号和同样具有蓝牙通讯能力的移动终端连接。
+				+fullSection
+				.product-wrapper
+					.product-desc
+						.title
+							h2 合利宝蓝牙POS
+						.desc-box
+							p
+								|合利宝蓝牙POS通过蓝牙信号和同样具有蓝牙通讯能力的移动终端连接，
+								|利用移动终端提交交易信息，将蓝牙技术应用到POS上，
+								|摆脱传统POS机连线所带来的不便，通过蓝牙连接手机APP对消费的商品或服务和账务支付，
+								|是支持金融IC卡的个人刷卡终端，兼容iphone、三星、小米等各类主流智能手机以及PAD产品；
+								|为用户主要提供还款转账、余额查询、充值缴费等便民金融服务。
+						.pro-schema
+							img(src="dist/images/ico_product_suit@12x.png")
+							span 适用客户：直销人员、行业专家、媒体工作者、保险服务人员、导游等
+					.product-img
+						img(src="dist/images/img_product_lypos@12x.png")
+				.product-scenes
+					.scenes-wrapper
+						.scenes-box
+							- var scenes = [{"index":"9","title":"极速收款 365天资金快速周转","pre":"D+0资金秒到，365X24资金不休假；与全国主流商业银行合作，到账有保障；足不出户，极速收款，分秒即达；"},{"index":"10","title":"专业加密 全方位安全保障","pre":"通过银行卡检测中心认证；通过银联受理终端准入认证；独家拥有专业机房，硬件解码；德国进口芯片，一机一密；"},{"index":"11","title":"电子签购单 明白放心消费","pre":"交易完成自动生成电子签购单，短信加电子签名确认，交易双重保障更放心；"},{"index":"12","title":"随心享受 专属个人金融服务","pre":"随时随地享受收款、付款、转账、信用卡还款、手机充值、余额查询等多项便民金融服务"}]
+							each val in scenes
+								.scenes-item
+									.item-img
+										img(src="dist/images/ico_product_adv#{val.index}@12x.png")
+									.item-desc
+										.title
+											h2= val.title
+										.desc-box
+											p= val.pre
+			//- 右侧-联系我们
+		mixin rightContact
+			.contact-right
+				.contact-box
+					ul
+						each val in [{"img":"dist/images/ico_toolsfixed_phone.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_wechat.png","className":"detail"},{"img":"dist/images/ico_toolsfixed_top.png","className":"top"}]
+							li.contact-list(class="#{val.className}")
+								a(href="javascript:;")
+									img(src= val.img)
+				.contact-box-detail
+					ul
+						each val in ["dist/images/toolsfixed_phone@12x.png","dist/images/toolsfixed_wechat@12x.png"]
+							li.contact-detail-list
+								a(href="javascript:;")
+									img(src= val)
+		+rightContact
+		include ./footer
+block append script
+	script(type="text/javascript" src="dist/js/about.js")
+	script(type="text/javascript" src="dist/js/headroom.js")
+	script(type="text/javascript" src="dist/js/doheadrom.js")

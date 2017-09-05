@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=11;IE=9; IE=8; IE=7; IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>合利宝POS支付-传统POS-合利宝产品</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/animation.css">
+    <link rel="stylesheet" type="text/css" href="../css/product.css">
+    <!--if lt IE9-->
+    <script type="text/javascript" src="../js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="../js/selectivizr.min.js"></script>
+    <script type="text/javascript" src="../js/respond.min.js"></script>
+  </head>
+  <body>
+    <div class="container product">
+      <header id="header" class="header">
+        <div class="top-menu-container">
+          <div class="top-menu">
+            <div class="logo"><a href="http://www.mesonft.com/" class="home-link"><img src="../images/logo_honglei@12x.png"><span>民盛金科成员企业</span></a></div>
+                        <ul class="top-menu-tab">
+                          <li><a href="#" class="serve-line"><span></span><span>客服热线：400-096-6263</span><span></span></a>
+                          </li>
+                          <li><a href="https://ewallet.helipay.com/" target="_blank" class="personal"><span></span><span>个人账号</span><span></span></a></li>
+                          <li><a href="#" class="merchant"><span></span><span>商家账号</span><span></span></a>
+                            <ul class="dropdown">
+                              <li><a href="http://customer.helipay.com/customer" target="_blank"><span>线上商户管理平台</span></a></li>
+                              <li><a href="https://merchant.helipay.com/" target="_blank"><span>收单代理人控制台</span></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+          </div>
+        </div>
+        <div id="main-nav" class="nav-container">
+          <div class="main-nav-container">
+                        <nav id="navigation" class="nav">
+                          <div class="logo"><a href="../index.html"><img src="../images/logo_helibao@12x.png"></a></div>
+                          <ul id="nav-menu" class="nav-menu">
+                            <li class="detail-menu-list"><a href="about.html" data-id="about">关于公司</a></li>
+                            <li class="detail-menu-list"><a href="product.html" data-id="product">产品中心</a></li>
+                            <li class="detail-menu-list"><a href="solve.html" data-id="solve">解决方案</a></li>
+                            <li class="detail-menu-list"><a href="business.html" data-id="business">行业服务</a></li>
+                            <li class="detail-menu-list"><a href="down/mpos.html" data-id="wallet">合利宝APP</a></li>
+                            <li class="detail-menu-list"><a href="serve.html" data-id="serve">服务中心</a></li>
+                            <li class="detail-menu-list">
+									<a href="campus.html" data-id="campus">校园招聘</a>
+								</li>
+                          </ul>
+                        </nav>
+          </div>
+          <div id="detail" class="nav-container-detail">
+            <div id="detail-box" class="nav-detail-box">
+              <div class="nav-detail-mask">
+                                <div class="nav-detail-wapper">
+                                  <ul class="nav-menu-box">
+                                    <li><a href="about.html" data-id="about"><span><img src="../images/ico_menu_about_white1@12x.png"></span><span>公司介绍</span></a></li>
+                                    <li><a href="history.html" data-id="about"><span><img src="../images/ico_menu_about_white2@12x.png"></span><span>公司历史</span></a></li>
+                                    <li><a href="news.html" data-id="about"><span><img src="../images/ico_menu_about_white3@12x.png"></span><span>公司新闻</span></a></li>
+                                    <li><a href="contactus.html" data-id="about"><span><img src="../images/ico_menu_about_white4@12x.png"></span><span>联系我们</span></a></li>
+                                    <li><a href="recruit.html" data-id="about"><span><img src="../images/ico_menu_about_white5@12x.png"></span><span>招聘英才</span></a></li>
+                                  </ul>
+                                </div>
+                                <div class="nav-detail-wapper">
+                                  <ul class="nav-menu-box">
+                                    <li><a href="product.html" data-id="product"><span><img src="../images/ico_menu_product_white1@12x.png"></span><span>智能POS</span></a></li>
+                                    <li><a href="mpos.html" data-id="product"><span><img src="../images/ico_menu_product_white2@12x.png"></span><span>M-POS</span></a></li>
+                                    <li><a href="lypos.html" data-id="product"><span><img src="../images/ico_menu_product_white3@12x.png"></span><span>蓝牙POS</span></a></li>
+                                    <li><a href="ctpos.html" data-id="product"><span><img src="../images/ico_menu_product_white4@12x.png"></span><span>传统POS</span></a></li>
+                                  </ul>
+                                </div>
+                                <div class="nav-detail-wapper">
+                                  <ul class="nav-menu-box">
+                                    <li><a href="solve.html" data-id="solve"><span><img src="../images/ico_menu_industry_white1@12x.png"></span><span>网关支付</span></a></li>
+                                    <li><a href="quick.html" data-id="solve"><span><img src="../images/ico_menu_industry_white2@12x.png"></span><span>快捷支付</span></a></li>
+                                    <li><a href="qcode.html" data-id="solve"><span><img src="../images/ico_menu_industry_white3@12x.png"></span><span>二维码支付</span></a></li>
+                                    <li><a href="wtpay.html" data-id="solve"><span><img src="../images/ico_menu_industry_white4@12x.png"></span><span>委托支付</span></a></li>
+                                    <li><a href="pospay.html" data-id="solve"><span><img src="../images/ico_menu_industry_white5@12x.png"></span><span>POS收单</span></a></li>
+                                    <li><a href="crosspay.html" data-id="solve"><span><img src="../images/ico_menu_industry_white7@12x.png"></span><span>跨境支付</span></a></li>
+                                  </ul>
+                                </div>
+                                <div class="nav-detail-wapper">
+                                  <ul class="nav-menu-box">
+                                    <li><a href="business.html" data-id="business"><span><img src="../images/ico_menu_trade_white1@12x.png"></span><span>银行服务</span></a></li>
+                                  </ul>
+                                </div>
+                                <div class="nav-detail-wapper">
+                                  <ul class="nav-menu-box">
+                                    <li><a href="down/mpos.html" data-id="wallet"><span><img src="../images/ico_menu_wallet_white5@12x.png"></span><span>合利宝</span></a></li>
+                                    <li><a href="down/hlqb.html" data-id="wallet"><span><img src="../images/ico_menu_wallet_white4@12x.png"></span><span>合利宝钱包</span></a></li>
+                                  </ul>
+                                </div>
+                                <div class="nav-detail-wapper">
+                                  <ul class="nav-menu-box">
+                                    <li><a href="serve.html" data-id="serve"><span><img src="../images/ico_menu_service_white1@12x.png"></span><span>签约指南</span></a></li>
+                                    <li><a href="issue.html" data-id="serve"><span><img src="../images/ico_menu_service_white2@12x.png"></span><span>常见问题</span></a></li>
+                                    <li><a href="download.html" data-id="serve"><span><img src="../images/ico_menu_service_white3@12x.png"></span><span>下载中心</span></a></li>
+                                    <li><a href="userexp.html" data-id="serve"><span><img src="../images/ico_menu_service_white4@12x.png"></span><span>用户体验中心</span></a></li>
+                                    <li><a href="finance.html" data-id="serve"><span><img src="../images/ico_menu_service_white6@12x.png"></span><span>金融之窗</span></a></li>
+                                    <li><a href="customer.html" data-id="serve"><span><img src="../images/ico_menu_service_white7@12x.png"></span><span>客服服务</span></a></li>
+                                    <li><a href="charges.html" data-id="serve"><span><img src="../images/ico_menu_service_white8@12x.png"></span><span>收费说明</span></a></li>
+                                    <li><a href="pact.html" data-id="serve"><span><img src="../images/ico_menu_service_white9@12x.png"></span><span>服务协议</span></a></li>
+                                  </ul>
+                                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="section page">
+        <div data-id="page4" class="page-container page4">
+                    <div class="banner banner1">
+                      <div class="banner1-bg"><img src="../images/banner@12x.png"></div>
+                      <div class="banner-txt">
+                        <h2>合利宝传统POS</h2>
+                        <p>合利宝传统POS提供了帐户充值信用卡还款。</p>
+                      </div>
+                    </div>
+          <div class="product-wrapper">
+            <div class="product-desc">
+              <div class="title">
+                <h2>合利宝传统POS</h2>
+              </div>
+              <div class="desc-box">
+                <p>
+                  合利宝传统POS提供了帐户充值信用卡还款、
+                  转账汇款、个人还款、
+                  手机充值、订单支付、个人还贷等。
+                </p>
+              </div>
+              <div class="pro-schema"><img src="../images/ico_product_suit@12x.png"><span>适用客户：传统POS应用商户</span></div>
+            </div>
+            <div class="product-img"><img src="../images/img_product_ctpos@12x.png"></div>
+          </div>
+          <div class="product-scenes">
+            <div class="scenes-wrapper">
+              <div class="scenes-box">
+                <div class="scenes-item">
+                  <div class="item-img"><img src="../images/ico_product_adv13@12x.png">
+                  </div>
+                  <div class="item-desc">
+                    <div class="title">
+                      <h2>安全便捷</h2>
+                    </div>
+                    <div class="desc-box">
+                      <p>实现上门刷卡支付功能，商家实现收款便捷的同时也杜绝了资金安全隐患；</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="scenes-item">
+                  <div class="item-img"><img src="../images/ico_product_adv14@12x.png">
+                  </div>
+                  <div class="item-desc">
+                    <div class="title">
+                      <h2>交易速度快、稳定性强</h2>
+                    </div>
+                    <div class="desc-box">
+                      <p>充分利用局域网络和专线网络快速、稳定的特点，提升银行卡刷卡收银速度，稳定性远远优于电话拨号金融POS，大大降低了持卡人账户的差错率和商户的被投诉率；</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="scenes-item">
+                  <div class="item-img"><img src="../images/ico_product_adv15@12x.png">
+                  </div>
+                  <div class="item-desc">
+                    <div class="title">
+                      <h2>通讯成本低</h2>
+                    </div>
+                    <div class="desc-box">
+                      <p>专线月租费用固定，银行卡刷卡交易的通讯费用可成倍的降低，对于大型百货、连锁性超市尤其明显；</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="scenes-item">
+                  <div class="item-img"><img src="../images/ico_product_adv16@12x.png">
+                  </div>
+                  <div class="item-desc">
+                    <div class="title">
+                      <h2>管理功能全面</h2>
+                    </div>
+                    <div class="desc-box">
+                      <p>产品提供多样化的查询、监控、报表、自动对帐功能，方便财务核算管理。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="contact-right">
+              <div class="contact-box">
+                <ul>
+                  <li class="contact-list detail"><a href="javascript:;"><img src="../images/ico_toolsfixed_phone.png"></a></li>
+                  <li class="contact-list detail"><a href="javascript:;"><img src="../images/ico_toolsfixed_wechat.png"></a></li>
+                  <li class="contact-list top"><a href="javascript:;"><img src="../images/ico_toolsfixed_top.png"></a></li>
+                </ul>
+              </div>
+              <div class="contact-box-detail">
+                <ul>
+                  <li class="contact-detail-list"><a href="javascript:;"><img src="../images/toolsfixed_phone@12x.png"></a></li>
+                  <li class="contact-detail-list"><a href="javascript:;"><img src="../images/toolsfixed_wechat@12x.png"></a></li>
+                </ul>
+              </div>
+            </div>
+      <div id="footer" class="container-footer">
+        <div class="footer-box">
+          <footer>
+            <p><span>Copyright &copy; 2017 Helipay All Rights Reserved &nbsp;&nbsp;&nbsp;广州合利宝支付科技有限公司&copy;ICP认证：</span><span><a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备13053149号</a></span></p>
+            <div class="recordcode"><a href="http://www.beian.gov.cn/portal/registerSystemInfo" target="_blank"><i></i>公安备案号：44010602002726</a></div>
+            <ul class="button-menu">
+              <li data-rel="fade"><a href="javascript:;"><img src="../images/img_Qualifications_1@12x.png"></a></li>
+              <li data-rel="fade"><a href="javascript:;"><img src="../images/img_Qualifications_2@12x.png"></a></li>
+              <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_3@12x.png"></a></li>
+              <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_4@12x.png"></a></li>
+              <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_5@12x.png"></a></li>
+              <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_6@12x.png"></a></li>
+              <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_7@12x.png"></a></li>
+              <li data-rel="undefined"><a href="javascript:;"><img src="../images/img_Qualifications_8@12x.png"></a></li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/topmenu.js"></script>
+    <script type="text/javascript" src="../js/footer.js"></script>
+    <script type="text/javascript" src="../js/about.js"></script>
+    <script type="text/javascript" src="../js/headroom.js"></script>
+    <script type="text/javascript" src="../js/doheadrom.js"></script>
+  </body>
+</html>
