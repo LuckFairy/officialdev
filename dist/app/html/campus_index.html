@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>校园招聘</title>
+    <link href="../css/mui.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/icon.css" rel="stylesheet" />
+    <link href="../css/campus_index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/layer.css" />
+    <style type="text/css">
+    	header a{
+    		color:#007aff;
+    	}
+    	.editInfos li{overflow: hidden;}
+    #editForm .file input{
+    		line-height: inherit;
+    		border: none;
+		    text-decoration: none;
+		    background: #fff;
+		        border-radius: 0;
+		    -webkit-border-radius: 0;
+		    box-shadow:none;
+		    -webkit-box-shadow: none;
+    	}
+    	#editForm input{
+    		/*line-height: 21px;*/
+    	}
+    	#editForm input[type=date]{
+    		height: 25px;
+    	}
+    </style>
+</head>
+
+<body>
+    <!-- 主界面菜单同时移动 -->
+    <!-- 侧滑导航根容器 -->
+    <div class="mui-off-canvas-wrap mui-draggable">
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap">
+            <!-- 菜单容器 -->
+            <aside class="mui-off-canvas-left" id="offCanvasSide">
+                <div class="mui-scroll-wrapper scroll-container" id="subMenu">
+                    <div class="mui-scroll">
+                        <!-- 菜单具体展示内容 -->
+                        <!-- logo -->
+                        <div class="mui-card mui-card-customer-dark">
+                            <!--内容区-->
+                            <div class="mui-card-content mui-card-content-customer-center">
+                                <img src="../images/logo_helibao@12x.png" />
+                            </div>
+                        </div>
+                        <ul class="mui-table-view mui-table-view-customer-dark">
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="home">
+                                    <span class="mui-icon iconfont icon-qianbao1"></span>
+                                    <!-- <i class="fa fa-home fa-fw"></i> -->
+                                    主页
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#">
+                                    <!-- <i class="fa fa-building fa-fw" aria-hidden="true"></i> -->
+                                    <span class="mui-icon iconfont icon-guanyu"></span> 关于公司
+                                </a>
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="about">
+                                                <!-- <i class="fa fa-paperclip fa-fw" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-jieshao"></span> 公司介绍
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="history">
+                                                <!-- <i class="fa fa-history fa-fw" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-lishi"></span> 公司历史
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="news">
+                                                <!-- <i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-xinwen"></span> 公司新闻
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="bulletin">
+                                                <span class="mui-icon iconfont icon-iconfonticon3"></span> 公司公告
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="product">
+                                    <span class="mui-icon mui-icon-plusempty"></span> 产品中心
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="solve">
+                                    <span class="mui-icon mui-icon-checkmarkempty"></span> 解决方案
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" id="business">
+                                    <span class="mui-icon mui-icon-help"></span> 行业服务
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#">
+                                    <!-- <i class="fa fa-google-wallet fa-fw" aria-hidden="true"></i> -->
+                                    <span class="mui-icon iconfont icon-qianbao"></span> 合利宝APP
+                                </a>
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                        
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="hlqb">
+                                                <!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-icon"></span> 合利宝钱包
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="mpos">
+                                                <!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+                                                <span class="mui-icon iconfont icon-qianbao"></span> 合利宝
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#" >
+                                    <!-- <i class="fa fa-google-wallet fa-fw" aria-hidden="true"></i> -->
+                                    <span class="mui-icon icon icon-campus"></span> 校园招聘
+                                </a>
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                        
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="campus_index">
+                                                <!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+                                                <span class="mui-icon icon icon-campus_index"></span> 岗位信息
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="campus_consult">
+                                                <!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+                                                <span class="mui-icon icon icon-campas_zixun"></span> 校招咨询
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="campus_we">
+                                                <!-- <i class="fa fa-briefcase" aria-hidden="true"></i> -->
+                                                <span class="mui-icon icon icon-campus_we"></span> 认识我们
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse mui-table-view-cell-customer">
+                                <a class="mui-navigate-right" href="#">
+                                    <!--<span class="mui-icon mui-icon-contact"></span>-->
+                                    <!-- <i class="fa fa-server fa-fw" aria-hidden="true"></i> -->
+                                    <span class="mui-icon iconfont icon-fuwu1"></span> 服务中心
+                                </a>
+                                <div class="mui-collapse-content mui-collapse-content-customer-dark">
+                                    <ul class="mui-table-view mui-table-view-customer-dark">
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="issue">
+                                                <span class="mui-icon iconfont icon-wenti"></span> 常见问题
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="userexp">
+                                                <span class="mui-icon iconfont icon-3"></span> 体验中心
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="customer">
+                                                <span class="mui-icon iconfont icon-kefu"></span> 客服服务
+                                            </a>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-table-view-cell-customer">
+                                            <a class="mui-navigate-right" href="#" id="charges">
+                                                <span class="mui-icon iconfont icon-shoufei"></span> 收费说明
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <!-- 主页面标题 -->
+            <header class="mui-bar mui-bar-nav" >
+            <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"><span class="mui-header-menu">菜单</span></a>
+                <h1 class="mui-title">校园招聘</h1>
+                <a class="mui-icon mui-icon-home mui-pull-right opened-link" href="campus.html"></a> 
+            </header>
+            <nav class="mui-bar mui-bar-tab" id="footer-bar">
+                <a class="mui-tab-item" href="#" id="contact">
+                    <span class="mui-icon mui-icon-phone"></span>
+                    <span class="mui-tab-label">联系我们</span>
+                </a>
+                <a class="mui-tab-item" href="#" id="recruit">
+                    <span class="mui-icon mui-icon-email"></span>
+                    <span class="mui-tab-label">招聘英才</span>
+                </a>
+                <a class="mui-tab-item" href="#" id="more">
+                    <span class="mui-icon mui-icon-more"></span>
+                    <span class="mui-tab-label">更多</span>
+                </a>
+            </nav>
+            <footer class="footer-tab">
+            	<button id="open-form" class="f-btn">申请职位</button>
+            </footer>
+            <!--弹窗-->
+          <div class="box">
+            <div id="dialogBg"></div>
+			<div id="dialog" class="animated ">
+				<img class="dialogIco" width="50" height="50" src="../images/ico.png" alt="" />
+				<div class="dialogTop">
+					<a href="javascript:;" class="claseDialogBtn" style="padding: 5px 0px 5px 20px;">关闭</a>
+				</div>
+				<form action="" method="post" id="editForm">
+					<input type="hidden" id="jobName" name="jobName" value="">
+					<input type="hidden" id="createDate" name="createDate" value="">
+					<input type="hidden" id="birthDate" name="birthDate" value="">
+					<input type="hidden" id="graduteDate" name="graduteDate" value="">
+					<ul class="editInfos">
+						<li><label><font color="#ff0000">* </font>姓&nbsp;&nbsp;名<input type="text" name="name" required value="" class="ipt" /></label></li>
+						<li><label><font color="#ff0000">* </font>出生日期<input id="birthInput" type="date" min="1950-1-01" max="2002-12-31" name="birth" required value="" class="ipt" /></label></li>
+						<li><label><font color="#ff0000">* </font>性&nbsp;&nbsp;别
+							<select name="sex" required class="ipt">
+							  <option value ="男">男</option>
+							  <option value ="女">女</option>
+							 
+							</select>
+							<!--<input type="text" name="sex" required value="" class="ipt" />-->
+						</label></li>
+						<li><label><font color="#ff0000">* </font>毕业时间<input id="graduteInput" type="date" min="1990-6-01" max="2017-9-31"  name="gradute" required value="" class="ipt" /></label></li>
+						<li><label><font color="#ff0000">* </font>毕业学院<input type="text" name="granduateSchool" required value="" class="ipt" /></label></li>
+						<li><label><font color="#ff0000">* </font>Email<input type="email" name="email" required value="" class="ipt" /></label></li>
+						<li><label><font color="#ff0000">* </font>手机号码<input type="tel" name="telPhone" required value="" class="ipt" maxlength="11"/></label></li>
+						<li><label><font color="#ff0000">* </font>目前所在城市<input type="text" name="address" required value="" class="ipt" /></label></li>
+						<li><label><font color="#ff0000"> </font>家庭所在城市<input type="text" name="addressForHome"  value="" class="ipt" /></label></li>
+						<li class="file"><label><font color="#ff0000">* </font>附件
+							<!--<a href="javascript:;" class="file">选择文件
+							    <input type="file" name="" id="">
+							</a>-->
+							<input type="file" name="resumeFile"  multiple="multiple"  class="ipt"  />
+						</label></li>
+						<li><label for=""><font color="#ff0000" style="float: right;">请尽量选择pdf/doc文件</font></label></li>
+					</ul>
+				</form>
+				<div id="submit"><input type="button" value="确认提交" id="submitBtn" /></div>
+			</div>
+		</div>
+            <!-- 主页面内容容器 -->
+            <div class="mui-content">
+                    
+            	<div id="slider" class="mui-slider">
+            		<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                        <a class="mui-control-item" href="#item1">技术类</a>
+                        <a class="mui-control-item" href="#item2">产品类</a>
+                        <a class="mui-control-item" href="#item3">职能类</a>
+                        <a class="mui-control-item" href="#item4">运营类</a>
+                    </div>
+                    <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
+            	
+					<div class="mui-slider-group mui-slider-group-customer">
+				<!--第一个容器-->
+                <div id="item1" class="mui-slider-item mui-control-content">
+                    <div class="mui-scroll-wrapper scroll-container">
+                        <div class="mui-scroll">
+	                             
+                        </div>
+                    </div>
+                </div>
+                <!--第二个容器-->
+                <div id="item2" class="mui-slider-item mui-control-content">
+                    <div class="mui-scroll-wrapper scroll-container">
+                        <div class="mui-scroll" id="scroll-wrapper">
+                            
+                                <div class="mui-loading" id="loading-container">
+                                    <div class="mui-spinner"></div>
+                                </div>
+                         
+                        </div>
+                    </div>
+                </div>
+                <!--第三个容器-->
+                <div id="item3" class="mui-slider-item mui-control-content">
+                    <div class="mui-scroll-wrapper scroll-container">
+                        <div class="mui-scroll" id="scroll-wrapper">
+                            
+                                <div class="mui-loading" id="loading-container">
+                                    <div class="mui-spinner"></div>
+                                </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <!--第四个容器-->
+                <div id="item4" class="mui-slider-item mui-control-content">
+                    <div class="mui-scroll-wrapper scroll-container">
+                        <div class="mui-scroll" id="scroll-wrapper">
+                            
+                                <div class="mui-loading" id="loading-container">
+                                    <div class="mui-spinner"></div>
+                                </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+               
+            </div>
+            
+      			</div>
+            	
+            </div>
+            <div class="mui-off-canvas-backdrop"></div>
+        </div>
+    </div>
+    <script src="../js/jquery-1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/form.js"></script>
+
+    <script>
+
+    (function($,jquery) {
+    	$('body').on('tap','.opened-link',function(){
+    		var $url = this.href;
+    		$.openWindow($url)
+    	})
+    	$.ready(function(){
+//		var $url = 'http://192.168.33.14:9000/BMS/personInfo/getInfo.do';
+      		var $url = 'http://119.147.172.215:8088/BMS/personInfo/getInfo.do';
+    		var w,h,className,check=false,txt ='',
+    		 $dialogBg = jquery('#dialogBg'),
+    		 $dialog = jquery('#dialog'),
+    		 $close = jquery('.claseDialogBtn'),
+    		 $openForm = jquery('#open-form');
+    		
+    		 window.jobName = '';//申请岗位名称
+    		function getSrceenWH(){
+				w = jquery(window).width();
+				h = jquery(window).height();
+				jquery('#dialogBg').width(w).height(h);
+			}
+    		getSrceenWH();
+ //打开表单，填写表单   		
+    		$openForm.on('click',function(){
+				jquery('#jobName').val(window.jobName);
+				jquery('#dialogBg').show();
+				jquery('#dialog').show();
+//关闭表单事件
+				$('.box').on('tap','.claseDialogBtn',function(){
+	    			$dialog.hide();
+	    			$dialogBg.hide();
+					
+	    		})
+	    		$('.box').on('tap','#dialogBg',function(){
+	    			$dialog.hide();
+	    			$dialogBg.hide();
+	
+	    		})
+	    		
+//提交表单事件	
+
+    		var mustInput = $('input:required'),
+    			telInput = $('input[type=tel]')[0],
+    			emailInput = $('input[type=email]')[0];
+			var inputBirth = jquery('#birthInput');
+			var inputGradute = jquery('#graduteInput');
+			inputBirth.change(function(){
+			    inputBirth.attr("value",jquery(this).val()); //赋值
+			});
+			inputGradute.change(function(){
+			    inputGradute.attr("value",jquery(this).val()); //赋值
+			});
+			$('.box').on('click','#submitBtn',function(){
+				var reCheck = true;
+				mustInput.each(function(){
+					if(this.value==null||this.value.length==0){
+						reCheck = false,txt='有*的必须填写';
+					}
+				})
+				if(reCheck){check=true,txt='';}else{check=false;}
+				var telCheck = checkPhone(telInput.value);
+				var emailCheck = checkEmail(emailInput.value);
+				var v = inputBirth.val().split('-').join('/');
+				var b = inputGradute.val().split('-').join('/');
+				jquery('#birthDate').val(v);
+				jquery('#graduteDate').val(b);
+				
+				if(telCheck.flag&&emailCheck.flag&&check){
+					
+			
+				var $currDate = new Date();
+				jquery('#createDate').val($currDate.getFullYear() + '/' + ($currDate.getMonth()+1) + '/' + $currDate.getDate());
+				var formGo = $('#editForm')[0];
+					formGo.setAttribute('action',$url);
+				var form = new FormData(formGo);
+				jquery.ajax({
+					url:$url,
+					type:"POST",
+					data:form,
+					async:true,//异步加载
+					cache:false,
+//					dataType:'jsonp',
+					processData: false,  // 告诉jQuery不要去处理发送的数据
+					contentType: false , // 告诉jQuery不要去设置Content-Type请求头
+					success:function(res){console.info('进入成功')
+						$.alert(res);
+						if(res.code==00){
+							$dialog.hide();
+	    					$dialogBg.hide();
+						}
+					},
+					error:function(XMLHttpRequest, textStatus, errorThrown){console.info('进入失败')
+						console.log(XMLHttpRequest.statusText,textStatus,errorThrown)
+						if(XMLHttpRequest.status==200 && XMLHttpRequest.readyState==4){
+							var respose =JSON.parse(XMLHttpRequest.responseText);
+							$.alert(respose.msg,'','',function(){
+								$dialog.hide();
+	    						$dialogBg.hide();
+							},'div');
+					
+						}else{
+							$.alert('请求数据失败，请重新提交')
+						}
+					}
+				})
+				
+				}else{console.info('没有进入ajax')
+					mui.toast(txt+' '+ telCheck.txt + ' '+ emailCheck.txt);
+				}
+			
+			})
+		})
+    		
+    //-----获取数据
+    	$.getJSON('./public/datas/job.json',function(res){
+        		window.res = res;
+        		var contain = $('#item1 .mui-scroll')[0];
+        		var type = sessionStorage.type?sessionStorage.type:1;
+        		console.log(type)
+        		var dom = data(window.res,type);
+        		contain.appendChild(dom);
+        		window.jobName = $('#item1 .mui-collapse.mui-active>a')[0].innerText;
+        		sessionStorage.removeItem("type");
+        })
+    //----选项卡切换事件	
+        var item2Show = false,item3Show = false,item4Show = false;//子选项卡是否显示标志
+        $('.mui-slider')[0].addEventListener('slide',function(event){
+        	console.info(event.detail.slideNumber)
+        	var index = event.detail.slideNumber+1;
+        	if($('#item'+index+' .mui-loading')[0]){
+        		var contain = $('#item'+index+' .mui-scroll')[0];
+        		contain.innerHTML = '';
+        		var dom = data(window.res,index);
+        		contain.appendChild(dom);
+        		window.jobName = $('#item'+index+' .mui-collapse.mui-active>a')[0].innerText;
+        	}
+        	
+        })
+    //---加载本地数据封装
+        var tabList = $('.mui-control-item');
+        var itemList = $('.mui-slider-item');
+        var slide = $('#sliderProgressBar')[0];
+        var w = slide.clientWidth;console.info(w)
+        function data(res,type){
+        	var index = type-1;
+        	slide.style= 'transform:translate3d('+ index*w +'px, 0px, 0px) translateZ(0px);';
+        	tabList.each(function(){
+        		this.classList.remove('mui-active');
+        	})
+        	tabList[index].classList.add('mui-active');
+        	itemList.each(function(){
+        		this.classList.remove('mui-active');
+        	})
+        	
+        	$('#item'+type).classList = 'mui-active';
+        	var frag  = document.createDocumentFragment();
+        	var ul = document.createElement('ul');
+        	ul.className = 'mui-table-view a-n';
+        	$.each(res,function(i,item){
+        		if(item.type == type){
+        			$.each(item.job,function(i,dom){
+        				var li = document.createElement('li');
+        				li.className = 'mui-table-view-cell mui-collapse ';
+        				if(i==0){
+        					li.classList.add('mui-active');
+        				}
+        				var a = document.createElement('a');
+        				a.className = 'mui-navigate-right';
+        				a.innerHTML = '<span class="red_line"></span> '+dom.name;
+        				li.appendChild(a);
+        				var div = document.createElement('div');
+        				div.className = 'mui-collapse-content';
+        				var _html = '<p>岗位职责</p><ul>';
+        				$.each(dom.dutyArr,function(i,dom){
+        					_html = _html+'<li>'+dom+'</li>';
+        				})
+        				_html = _html +'</ul><p>任职要求</p><ul>';
+        				$.each(dom.requestArr,function(i,dom){
+        					_html = _html+'<li>'+dom+'</li>';
+        				})
+        				_html = _html+'</ul>';
+        				div.innerHTML = _html;
+        				li.appendChild(div);
+        				if(i>0){
+        					var gap = document.createElement('div');
+        					gap.className = 'gap10';
+        					ul.appendChild(gap);
+        				}
+        				ul.appendChild(li);
+        			})
+        		}
+        	})
+        	frag.appendChild(ul);
+        	var footer = document.createElement('div');
+        	footer.className = 'footer';
+        	frag.appendChild(footer);
+        	return frag;
+        	
+        }
+        
+      })
+    })(mui,jQuery);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+
+
+ /*campus样式*/   
+   .mui-scroll{
+   		height: 702.5px;
+   }
+    
+    .campus-container {
+    	height: 100%;
+    	background: url(../images/school/index_bg.png) no-repeat center/100% 100%;
+    }
+    
+   .campus-container .nav {
+    	height: 100%;
+    	position: relative;
+    }
+    
+    .campus-jobList {
+    	width: 100%;
+    	text-align: center;
+    	position: absolute;
+    	/*top:70.888%;*/
+    	top: 498px;
+    }
+    
+    .campus-jobList li {
+    	text-align: center;
+    	color: #2cf8f9;
+    }
+    .campus-jobList li:nth-of-type(3),.campus-jobList li:nth-of-type(4){
+    	margin-top: 38px !important; 
+    }
+    .campus-jobList .title {
+    	font-size: 12px;
+    	color: #2cf8f9;
+    	display: inline-block;
+    	margin-top: 11px;
+    	width: 69px;
+    	height: 20px;
+    	line-height: 20px;
+    	background: url(../images/school/btn_bg_nomal.png) no-repeat center/100%;
+    }
+    
+    img {
+    	vertical-align: middle;
+    }
+    
+    .campus-jobList .img {
+    	position: relative;
+    	height: 17px;
+    	line-height: 17px;
+    	background: url(../images/school/icon_technology_nomal.png) no-repeat center/auto 100%;
+    }
+    
+    .campus-jobList .img2 {
+    	background-image: url(../images/school/icon_product_nomal.png);
+    }
+    
+    .campus-jobList .img3 {
+    	background-image: url(../images/school/icon_function_nomal.png);
+    }
+    
+    .campus-jobList .img4 {
+    	background-image: url(../images/school/icon_operate_nomal.png);
+    }
+    /*背景旋转*/
+    
+    .bg {
+    	position: absolute;
+    	left: 50%;
+    	margin-left:-17px;
+    	top: -10px;
+    	height: 34px;
+    	width: 34px;
+    	background: url(../images/school/index_half_nomal.png) no-repeat center/100% 100%;
+    	-webkit-animation: mymove .8s linear infinite;
+    	        animation: mymove .8s linear infinite;
+    }
+    
+    @-webkit-keyframes mymove {
+    	from {
+    		-webkit-transform: rotateZ(0deg);
+    		        transform: rotateZ(0deg);
+    	}
+    	to {
+    		-webkit-transform: rotateZ(360deg);
+    		        transform: rotateZ(360deg);
+    	}
+    }
+    
+    @keyframes mymove {
+    	from {
+    		-webkit-transform: rotateZ(0deg);
+    		        transform: rotateZ(0deg);
+    	}
+    	to {
+    		-webkit-transform: rotateZ(360deg);
+    		        transform: rotateZ(360deg);
+    	}
+    }
+    
+    .bg1 {
+    	-webkit-animation-delay: 0s;
+    	        animation-delay: 0s;
+    }
+    
+    .bg2 {
+    	-webkit-animation-delay: .3s;
+    	        animation-delay: .3s;
+    }
+    
+    .bg3 {
+    	-webkit-animation-delay: .6s;
+    	        animation-delay: .6s;
+    }
+    
+    .bg4 {
+    	-webkit-animation-delay: .2s;
+    	        animation-delay: .2s;
+    }
+    /*鼠标变色*/
+    .campus-jobList li:nth-child(1).mui-table-view-cell.mui-active .title {
+    	color: #fff;
+    	background-image: url(../images/school/btn_bg_hover.png);
+    }
+    
+    .campus-jobList li:nth-child(1).mui-table-view-cell.mui-active .img1 {
+    	background-image: url(../images/school/icon_technology_hover.png);
+    }
+    
+    .campus-jobList li:nth-child(1).mui-table-view-cell.mui-active .bg1 {
+    	background-image: url(../images/school/index_half_hover.png);
+    	-webkit-animation-play-state: paused;
+    	        animation-play-state: paused;
+    }
+    
+    .campus-jobList li:nth-child(2).mui-table-view-cell.mui-active .title {
+    	color: #fff;
+    	background-image: url(../images/school/btn_bg_hover.png);
+    }
+    
+    .campus-jobList li:nth-child(2).mui-table-view-cell.mui-active .img2 {
+    	background-image: url(../images/school/icon_product_hover.png);
+    }
+    
+    .campus-jobList li:nth-child(2).mui-table-view-cell.mui-active .bg2 {
+    	background-image: url(../images/school/index_half_hover.png);
+    	-webkit-animation-play-state: paused;
+    	        animation-play-state: paused;
+    }
+    
+    .campus-jobList li:nth-child(3).mui-table-view-cell.mui-active .title {
+    	color: #fff;
+    	background-image: url(../images/school/btn_bg_hover.png);
+    }
+    
+    .campus-jobList li:nth-child(3).mui-table-view-cell.mui-active .img3 {
+    	background-image: url(../images/school/icon_function_hover.png);
+    }
+    
+    .campus-jobList li:nth-child(3).mui-table-view-cell.mui-active .bg3 {
+    	background-image: url(../images/school/index_half_hover.png);
+    	-webkit-animation-play-state: paused;
+    	        animation-play-state: paused;
+    }
+    
+    .campus-jobList li:nth-child(4).mui-table-view-cell.mui-active .title {
+    	color: #fff;
+    	background-image: url(../images/school/btn_bg_hover.png);
+    }
+    
+    .campus-jobList li:nth-child(4).mui-table-view-cell.mui-active .img4 {
+    	background-image: url(../images/school/icon_operate_hover.png);
+    }
+    
+    .campus-jobList li:nth-child(4).mui-table-view-cell.mui-active .bg4 {
+    	background-image: url(../images/school/index_half_hover.png);
+    	-webkit-animation-play-state: paused;
+    	        animation-play-state: paused;
+    }
+    
+   
+.mui-grid-view.mui-grid-9{
+	background:none;
+	border: none;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell{
+	    overflow: visible;
+	padding:0 15px;
+	background:none;
+	border: none;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell.mui-active{
+	background: none;
+}

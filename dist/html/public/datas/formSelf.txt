@@ -12,7 +12,7 @@
 
 		<tr>
 			<td>
-				<div align="right"><span class="c_B32639">*</span> 姓 &nbsp;&nbsp; 名：</div>
+				<div align="right"><span class="c_B32639">*</span> 姓 &nbsp;&nbsp;名：</div>
 			</td>
 			<td>
 				<input name="name" id="name" class="input" type="text" value=""  >

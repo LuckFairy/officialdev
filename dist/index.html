@@ -10,6 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link  type="image/x-icon" rel="shortcut icon" href="./favicon.ico" />
     <meta name="keywords" content="合利宝官网，合利宝支付，合利宝APP，合利宝电话，合利宝代理">
     <meta name="description" content="合利宝支付，广州市唯一拥有支付全牌照的第三方支付公司，提供支付服务，包括互联网支付/移动电话支付/银行卡收单/跨境支付/合利金融/合利征信/合利保理">
     <title>合利宝-不只是支付-致力于为客户提供综合金融服务</title>
@@ -19,17 +20,17 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
+    
     <style type="text/css">
     	.f-dn{
     		display: none;
     	}
-    	
     	.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
     		width: 10px;height: 10px;
     	}
     	.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 10%;}
     	#swiper1{_width:768px;min-width: 768px;}
-    	#img-index{background: url(images/onepage1.jpg) no-repeat center/auto;}
+    	#img-index{background: url(images/onepage1.jpg) no-repeat center/100% auto ;}
 			#img-youyouqian{background: url(images/index/banner-bg2.png) no-repeat center/auto;}
 			#img-youyouqian .img{width: 100%;height: 100%; background: url(images/index/banner-bg3.png) no-repeat center;background-size: auto 66%;}
     	/* PC客户端或大屏幕设备: 1028px 至更大 */
@@ -88,12 +89,13 @@
                           <li><a href="#" class="serve-line"><span></span><span>客服热线：400-096-6263</span><span></span></a>
                           </li>
                           <li><a href="https://ewallet.helipay.com/" target="_blank" class="personal"><span></span><span>个人账号</span><span></span></a></li>
-                          <li><a href="#" class="merchant"><span></span><span>商家账号</span><span></span></a>
+                          <li><a href="http://customer.helipay.com/customer" target="_blank" ><span></span><span>商户管理平台</span><span></span></a></li>
+                          <!--<li><a href="#" class="merchant"><span></span><span>商家账号</span><span></span></a>
                             <ul class="dropdown">
                               <li><a href="http://customer.helipay.com/customer" target="_blank"><span>线上商户管理平台</span></a></li>
                               <li><a href="https://merchant.helipay.com/" target="_blank"><span>收单代理人控制台</span></a></li>
                             </ul>
-                          </li>
+                          </li>-->
                         </ul>
           </div>
         </div>
@@ -116,19 +118,17 @@
       </header>
       <!--<div id="full-container">-->
       	<div>
-                <!--<div class=" section1">
-                  <div class="section-bg"><img src="images/onepage1.jpg" data-tilt-options="{ &quot;opacity&quot; : 1, &quot;movement&quot;: { &quot;perspective&quot; : 1500, &quot;translateX&quot; : 10, &quot;translateY&quot; : 10, &quot;translateZ&quot; : 2, &quot;rotateX&quot; : 3, &quot;rotateY&quot; : 3 } }" class="tilt-effect"></div>
-                  <div class="img-box img-box1"><img src="images/onepagetitle1.png"></div>
-                  <div class="img-box img-box2">
-                    <p>合利宝为客户提供从线上到线下，从境内到境外的全方位支付服务以及全新的支付体验</p>
-                  </div>
-                </div>-->
+                
                <div class="swiper-container" id="swiper1" >
 					        <div class="swiper-wrapper" >
-					            <a class="swiper-slide section1 section-slide" href="index.html">
-					            	<div class="section-bg" id="img-index" >
-					            		
+					            <a class="swiper-slide section1 section-slide" href="index.html" style="min-height: 400px;">
+					            	<!--解决苹果兼容问题-->
+					            	<div id="onepage" style="width:100%;height:100%;background:url(images/onepage1.jpg) no-repeat center/ 100% auto">
 					            	</div>
+					            		
+							            	<div class="section-bg" id="img-index" >
+							            	</div>
+					            		
 					                  <div class="img-box img-box1"><img src="images/onepagetitle1.png"></div>
 					                  <div class="img-box img-box2">
 					                    <p>合利宝为客户提供从线上到线下，从境内到境外的全方位支付服务以及全新的支付体验</p>
@@ -262,6 +262,7 @@
     	<div style="position: relative;">
 	    	<img src="images/school/pic.png" style="width: 100%;bottom: 0;"/>
 	    	<div class="close" style="position:absolute; bottom:50%; right: 19%;cursor: pointer;"><img src="images/school/close.png" alt="" /></div>
+	    	<div class="click" style="position: absolute;width: 30%; height: 40%; left: 40%; bottom:10%;cursor: pointer;" onclick="javascript:location.href='html/campus.html'"></div>
     	</div>
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -276,7 +277,11 @@
     <script type="text/javascript" src="js/doflake.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
    <script>
-
+				if(browser.versions.webKit){
+					$('#onepage').show();
+				}else{
+					$('#onepage').hide();
+				}
    			$('.section-slide').height(window.innerHeight);
 		    var swiper = new Swiper('#swiper1', {
 				 loop: true,
@@ -287,7 +292,7 @@
 				nextButton: '.swiper-button-next',
 			    prevButton: '.swiper-button-prev',
 				height : window.innerHeight,
-				autoHeight: true, //高度随内容变化
+//				autoHeight: true, //高度随内容变化
 		    });
 		
 		    window.onresize = function()

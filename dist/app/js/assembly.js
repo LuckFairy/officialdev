@@ -95,17 +95,12 @@ var assemblyContainer = function($datas, $flag) {
         muiContentImg.setAttribute('alt', $data.proName);
         muiCardContentInner.appendChild(muiContentImg);
         // 简介内容遍历
-//      var $intros = $data.intros;
-        var intros = $data.addrArr;
+        var $intros = $data.intros;
+//      var intros = $data.addrArr;
         var $introBox = '';
-//      mui.each($intros, function(index, intros) {
-	if(!intros.faxTel||intros.faxTel.length==0){
-		$introBox += '<p>' + intros.adrr +'</br>'+intros.coding+'</br>'+intros.tel+'</br>'+intros.hotTel+'</br>'+intros.meil+ '<br /></p>';
-	}else{
-		
-		$introBox += '<p>' + intros.adrr +'</br>'+intros.coding+'</br>'+intros.tel+'</br>'+intros.faxTel+'</br>'+intros.hotTel+'</br>'+intros.meil+ '<br /></p>';
-	}
-//      });
+        mui.each($intros, function(index, intros) {
+			$introBox += '<p>' + intros.intro +'</p>';
+        });
         // 简介内容
         muiView = document.createElement('ul');
         muiView.className = 'mui-table-view';

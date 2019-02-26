@@ -2,7 +2,9 @@
 node_modules/*
 # 忽略调试文件
 .sass-cache/*
-
+.sass/
+.svn
+.project
 # 忽略js调试文件
 
 *.map

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<base href="./" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=3, user-scalable=yes">
+		<meta name="flexible" content="initial-dpr=1"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link type="image/x-icon" rel="shortcut icon" href="./favicon.ico">
+		<meta name="keywords" content="合利宝，合利宝支付，合利宝APP，合理宝产品介绍">
+		<meta name="description" content="合利宝，广州市唯一拥有支付全牌照的第三方支付公司">
+		<title>合利宝产品介绍</title>
+		<link rel="stylesheet" type="text/css" href="mui.min.css"/>
+		<style type="text/css">
+		.txt { white-space:nowrap; }
+		#f0 { font-family:sans-serif; font-weight:normal; font-style:normal; }
+		#f1 { font-family:sans-serif; font-weight:normal; font-style:normal; }
+		#f2 { font-family:sans-serif; font-weight:normal; font-style:normal; }
+		#background{
+			width:100%;
+			height: auto;
+		}
+		</style>
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="jweixin-1.0.0.js"></script>
+		<script src="function.js"></script>
+		
+		
+	</head>
+	<body>
+	
+		<img id="background" src="page1.jpg"/>
+		
+	</body>
+	<script type="text/javascript">
+		var opt = {
+				title:'合利宝产品介绍',//分享标题
+				desc:'合利宝，广州市唯一拥有支付全牌照的第三方支付公司',//分享描述
+				link:'http://www.helipay.com/product/flack/index.html',//分享的url,以http或https开头
+				imgUrl:'http://www.helipay.com/product/flack/favicon.ico',//分享的图标的url，以http或https开头
+				appid:'wxa9e4c6fe9bf92452',//公众号唯一的标识
+			}
+		//当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+			document.addEventListener('WeixinJSBridgeReady',function onBridgeRead(){
+				WeChat(opt.link,opt.title,opt.imgUrl,opt.desc);//当需要动态加载的时候，就调用一下。
+			},false);
+	</script>
+</html>

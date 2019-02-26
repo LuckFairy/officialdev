@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link  type="image/x-icon" rel="shortcut icon" href="../favicon.ico" />
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=11;IE=9; IE=8; IE=7; IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -19,6 +20,10 @@
     <script type="text/javascript" src="../js/html5shiv.min.js"></script>
     <script type="text/javascript" src="../js/selectivizr.min.js"></script>
     <script type="text/javascript" src="../js/respond.min.js"></script>
+    <style type="text/css">
+    .submit-btn-ui input	{padding:1rem 4rem;background:#F45F5B;border:1px solid #D80500;border-radius: 5px;font-size: 18px;color: #fff;margin: 0 auto;margin-left: 37%;}
+    	.submit-btn-ui input:hover{background: #D80500;}
+    </style>
   </head>
   <body>
     <div class="container serve">
@@ -30,12 +35,7 @@
                           <li><a href="#" class="serve-line"><span></span><span>客服热线：400-096-6263</span><span></span></a>
                           </li>
                           <li><a href="https://ewallet.helipay.com/" target="_blank" class="personal"><span></span><span>个人账号</span><span></span></a></li>
-                          <li><a href="#" class="merchant"><span></span><span>商家账号</span><span></span></a>
-                            <ul class="dropdown">
-                              <li><a href="http://customer.helipay.com/customer" target="_blank"><span>线上商户管理平台</span></a></li>
-                              <li><a href="https://merchant.helipay.com/" target="_blank"><span>收单代理人控制台</span></a></li>
-                            </ul>
-                          </li>
+                         <li><a href="http://customer.helipay.com/customer" target="_blank" ><span></span><span>商户管理平台</span><span></span></a></li>
                         </ul>
           </div>
         </div>
@@ -133,68 +133,40 @@
                 </ul>
               </div>
             </div>
-            						<div data-id="wgzf" class="container-content-ui">
-                          <div class="wrapper-ui">
+                        <div data-id="wgzf" class="container-content-ui">
+                          <div class="wrapper-ui" style="width: 52%;">
                             <div class="title-list-ui">
                               <ul class="title-info-ui">
-                                <li><a href="#" dataid="1">我的订单</a></li>
-                                <li><a href="#" dataid="2">银行卡支付</a></li>
-                                <li><a href="#" dataid="1">合利宝APP支付</a></li>
+                                <li style="width: 100%;text-align: center;background-color: #f45f5b;"><a href="#" dataid="1" style="color: #fff;    padding: 1rem .5rem;font-size: 18px;">我的订单</a></li>
+                                <!--<li><a href="#" dataid="2">银行卡支付</a></li>
+                                <li><a href="#" dataid="1">合利宝APP支付</a></li>-->
                               </ul>
                             </div>
                             <div class="content-box-ui">
-                              <div class="sub-content-ui">
-                                <ul class="sub-list-ui">
-                                  <li><span>订单号：</span><span>238432472374327</span></li>
-                                  <li><span>订单内容：</span><span>一分爱支付体验</span></li>
-                                  <li><span>用户：</span><span>合利宝</span></li>
-                                  <li><span>交易时间：</span><span>2017-02-20</span></li>
+                              <div class="sub-content-ui" style="width: 100%;">
+                                <ul class="sub-list-ui" style="padding-left: 20%;">
+                                  <li><span>订单号：</span><span id="orderIdInfo"></span></li>
+                                  <li><span>订单内容：</span><span>一份爱支付体验</span></li>
+                                  <li><span>用户：</span><span>合利宝演示用户</span></li>
+                                  <li><span>交易时间：</span><span id="tradeTime"></span></li>
                                   <li><span>交易类型：</span><span>及时到帐</span></li>
-                                  <li><span>金额：</span><span>0.01元</span></li>
+                                  <li style="margin-top: 0;"><span>金额：</span><span>0.12元</span></li>
                                 </ul>
-                              </div>
-                              <div class="main-content-ui">
-                                <div class="main-form-ui">
-                                  <div class="check-list-ui">
-                                    <form action="#" method="POST">
-                                      <div class="check-type-ui">
-                                        <input type="radio" name="check-type" value="0" checked=""><span>借记卡</span>
-                                        <input type="radio" name="check-type" value="1"><span>信用卡</span>
-                                      </div>
-                                      <div class="text-input-ui">
-                                        <ul class="input-list-ui">
-                                          <li>
-                                            <label>请输入银行卡号</label>
-                                            <input type="text" name="check-input" placeholder="请输入银行卡号">
-                                          </li>
-                                          <li>
-                                            <label>开户支行</label>
-                                            <input type="text" name="check-input" placeholder="开户支行">
-                                          </li>
-                                          <li>
-                                            <label>身份证号码</label>
-                                            <input type="text" name="check-input" placeholder="身份证号码">
-                                          </li>
-                                          <li>
-                                            <label>银行卡预留手机</label>
-                                            <input type="text" name="check-input" placeholder="银行卡预留手机">
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="pact-check-ui">
-                                        <input type="checkbox" name="read-pact" value="0" checked=""><span>同意《合利宝快捷支付协议》</span>
-                                      </div>
-                                      <div class="submit-btn-ui">
-                                        <input type="submit" name="submit" value="马上付款" class="sub-btn">
-                                      </div>
-                                    </form>
-                                  </div>
+                                <div class="submit-btn-ui" style="padding-top: 4rem;">
+                                        <!--<input type="submit" name="submit" value="马上付款" class="sub-btn" >-->
+				                              <!--表单-->
+				                              <form id="loginForm" name="loginForm" action="http://119.147.172.215:8088/BMS/cash/getCashInfo.do" method="post"  enctype="multipart/form-data" >
+																				<input id="orderId" name="P4_orderId" type="text" placeholder="订单号"   hidden="hidden">
+																				<input id="timesTamp" name="P5_timestamp"  type="text" placeholder="时间戳"   hidden="hidden">
+																				<input id="goodsName" name="P6_goodsName" type="text" placeholder="商品名称"  value="一份爱支付体验" hidden="hidden">
+																				<input type="submit" value="马上付款" name="submit" id="sub-btn" >
+																			</form>
                                 </div>
                               </div>
-                            </div>
+                           </div>
                           </div>
                         </div>
-                          <div data-id="kjzf" class="container-content-ui">
+                        <div data-id="kjzf" class="container-content-ui">
                           <div class="wrapper-ui">
                             <div class="title-list-ui">
                               <ul class="title-info-ui">
@@ -291,71 +263,7 @@
                             </div>
                           </div>
                         </div>
-                      <!--
-                      	
-                       
-                        <div data-id="wtzf" class="container-content-ui">
-                          <div class="wrapper-ui">
-                            <div class="title-list-ui">
-                              <ul class="title-info-ui">
-                                <li><a href="#" dataid="1">我的订单</a></li>
-                                <li><a href="#" dataid="2">银行卡支付</a></li>
-                                <li><a href="#" dataid="1">合利宝APP支付</a></li>
-                              </ul>
-                            </div>
-                            <div class="content-box-ui">
-                              <div class="sub-content-ui">
-                                <ul class="sub-list-ui">
-                                  <li><span>订单号：</span><span>238432472374327</span></li>
-                                  <li><span>订单内容：</span><span>一分爱支付体验</span></li>
-                                  <li><span>用户：</span><span>合利宝</span></li>
-                                  <li><span>交易时间：</span><span>2017-02-20</span></li>
-                                  <li><span>交易类型：</span><span>及时到帐</span></li>
-                                  <li><span>金额：</span><span>0.01元</span></li>
-                                </ul>
-                              </div>
-                              <div class="main-content-ui">
-                                <div class="main-form-ui">
-                                  <div class="check-list-ui">
-                                    <form action="#" method="POST">
-                                      <div class="check-type-ui">
-                                        <input type="radio" name="check-type" value="0" checked><span>借记卡</span>
-                                        <input type="radio" name="check-type" value="1"><span>信用卡</span>
-                                      </div>
-                                      <div class="text-input-ui">
-                                        <ul class="input-list-ui">
-                                          <li>
-                                            <label>请输入银行卡号</label>
-                                            <input type="text" name="check-input" placeholder="请输入银行卡号">
-                                          </li>
-                                          <li>
-                                            <label>开户支行</label>
-                                            <input type="text" name="check-input" placeholder="开户支行">
-                                          </li>
-                                          <li>
-                                            <label>身份证号码</label>
-                                            <input type="text" name="check-input" placeholder="身份证号码">
-                                          </li>
-                                          <li>
-                                            <label>银行卡预留手机</label>
-                                            <input type="text" name="check-input" placeholder="银行卡预留手机">
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="pact-check-ui">
-                                        <input type="checkbox" name="read-pact" value="0" checked><span>同意《合利宝快捷支付协议》</span>
-                                      </div>
-                                      <div class="submit-btn-ui">
-                                        <input type="submit" name="submit" value="马上付款" class="sub-btn">
-                                      </div>
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        --> 
+    
                       <!--修改开始-->  
                         <div data-id="wtzf" class="container-content-ui">
                           <div class="wrapper-ui">
@@ -511,7 +419,41 @@
       			$('.my-mask-box').fadeOut('fast');
       		}
       	});
+      	
+      	//一分钱体验
+      var $order_info = $('#orderIdInfo'),
+      		$trade_info = $('#tradeTime'),
+      		$order_id = document.getElementById('orderId'),
+      		$timesTamp = document.getElementById('timesTamp'),
+      		$goodsName = $('#goodsName'),
+//    		$url = 'http://192.168.33.14:9000/BMS/cash/getCashInfo.do',
+      		$url = 'http://119.147.172.215:8088/BMS/cash/getCashInfo.do',
+      		timeTamp = new Date(),
+      		time = dateCatch(timeTamp),
+      		orderId_val =  'BMS'+time;
+      		$order_info.text(orderId_val);
+      		$trade_info.text(date(timeTamp));
+      		$order_id.setAttribute('value',orderId_val);
+      		$timesTamp.setAttribute('value',time);
+
       })
+      function dateCatch(time){
+      	var y = time.getFullYear();
+      	var m = time.getMonth()+1;
+      	 m = m>=10?m:'0'+m;
+      	var d = time.getDate()>=10?time.getDate():'0'+time.getDate();
+      	var h = time.getHours()>=10?time.getHours():'0'+time.getHours();
+      	var c = time.getMinutes()>=10?time.getMinutes():'0'+time.getMinutes();
+      	var s = time.getMinutes()>=10?time.getSeconds():'0'+time.getSeconds();
+      	return y+m+d+h+c+s;
+      }
+      function date(time){
+      	var y = time.getFullYear();
+      	var m = time.getMonth()+1;
+      	 m = m>=10?m:'0'+m;
+      	var d = time.getDate()>=10?time.getDate():'0'+time.getDate();
+      	return y+'-'+m+'-'+d;
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,19 @@
+.icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	background: url(../images/school/nav_recruit.png) no-repeat center/100% auto;
+}
+.icon-campus{
+	background-image: url(../images/school/nav_recruit.png);
+}
+.icon-campus_index{
+	background-image: url(../images/school/nav_recruit.png);
+}
+.icon-campas_zixun{
+	background-image: url(../images/school/nav_new.png);
+}
+.icon-campus_we{
+	background-image: url(../images/school/nav_we.png);
+}

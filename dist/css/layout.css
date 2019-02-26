@@ -22,3 +22,13 @@ footer{
 	    justify-content: center;
 	    margin: 1.1em  auto 0;
 }
+.top-menu-container .top-menu .top-menu-tab li:first-child a span:first-child{
+	background: none;
+}
+.top-menu-container .top-menu .top-menu-tab li a span:first-child {
+	display: inline-block;
+	vertical-align: text-bottom;
+    width: 16px;
+    height: 18px;
+    background: url(../images/ico_MerchantAccount@12x.png) center center no-repeat ;
+}

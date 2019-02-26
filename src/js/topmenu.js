@@ -1,5 +1,4 @@
 $(function() {
-	
     var btn = $('.merchant');
     var dropdown = $('.dropdown');
     btn.bind('click', function(event) {

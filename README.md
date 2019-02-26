@@ -1,3 +1,5 @@
+该项目是很早的一个web官方网站项目，使用gulp+juery技术，已经过时，请勿下载
+
 # 项目名称
 
 - 合利宝官网
@@ -23,8 +25,9 @@
 - jade
 
 # 构建工具
-
 - gulp
+  [gulp官方api](https://www.gulpjs.com.cn/docs/api/).
+  
 
 # css预处理
 

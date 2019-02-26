@@ -4,21 +4,22 @@
   "description": "合利宝官网",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beyondouyuan/officialdev.git"
+    "url": "git+https://github.com/LuckFairy/officialdev.git"
   },
   "keywords": [
     "合利宝"
   ],
-  "author": "beyondouyuan",
+  "author": "LuckFairy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/beyondouyuan/officialdev/issues"
+    "url": "https://github.com/LuckFairy/officialdev/issues"
   },
-  "homepage": "https://github.com/beyondouyuan/officialdev#readme",
+  "homepage": "https://github.com/LuckFairy/officialdev#readme",
   "devDependencies": {
     "codecov": "1.0.1",
     "gulp": "3.9.1",

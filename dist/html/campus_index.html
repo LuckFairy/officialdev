@@ -3,6 +3,7 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link  type="image/x-icon" rel="shortcut icon" href="../favicon.ico" />
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=11;IE=9; IE=8; IE=7; IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -85,23 +86,7 @@
 											</li>
 										</ul>
 										<div class="introduce-box tabcon">
-											<!--<div class="sublist" style="display: block;">
-												<p>岗位职责</p>
-												<ol>
-													<li>dflajsdlfj</li>
-													<li>dflajsdlfj</li>
-													<li>dflajsdlfj</li>
-												</ol>
-												<p>任职要求</p>
-												<ol>
-													<li>dflajsdlfj</li>
-													<li>dflajsdlfj</li>
-													<li>dflajsdlfj</li>
-												</ol>
-												<div class="target">
-													<a href="#">申请岗位</a>
-												</div>
-											</div>-->
+										
 										</div>
 									</div>
 								</div>
@@ -268,7 +253,7 @@
 
 								$('.redBtn').on('click', function(e) {
 									var $currDate = new Date();
-									$('#createDate').val($currDate.getFullYear() + '/' + $currDate.getMonth() + '/' + $currDate.getDay());
+									$('#createDate').val($currDate.getFullYear() + '/' + ($currDate.getMonth()+1) + '/' + $currDate.getDate());
 									var formGo = $("#ajaxForm")[0];
 									var form = new FormData(formGo);
 									$.ajax({

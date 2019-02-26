@@ -1,0 +1,121 @@
+.mui-content .scroll-container{
+	/*color: #424242;*/
+	background-color: #fff;
+	}
+.mui-table-view-cell:after{
+	background-color: #E6E6E6;
+	right: 15px;
+}
+.mui-table-view-cell.gap50{
+	padding:15px 15px;
+}
+.collapse-content{
+	padding-top: 21px;
+}
+.collapse-content .bg{
+	position: relative;
+	height: 119px;
+	width: 100%;
+	background: url(../images/school/line.png) no-repeat top right/auto 100%;
+	background-position: top;
+}
+.collapse-content .bg-item{
+	position: absolute;
+	width: 154px;
+	text-align: center;
+}
+.collapse-content .bg-item>img{
+	width:23px;
+	height: auto;
+}
+.collapse-content .bg-item .block{
+	margin-top: 10px;
+}
+.collapse-content .bg-item .gray{
+	margin-top: 9px;
+	font-size: 13px;
+}
+.collapse-content .bg-item:first-of-type{
+	top:-12px;
+	left:-4%;
+}
+.collapse-content .bg-item:nth-of-type(2){
+	top:-12px;
+	left:36%;
+}
+.collapse-content .bg-item:nth-of-type(3){
+	bottom:-76px;
+	left:18%;
+}
+.collapse-content .bg-item:nth-of-type(4){
+	bottom:-76px;
+	left:50%;
+}
+.step-img{
+	text-align: center;
+}
+.step-img>img{
+	width: 21px;
+	height: auto;
+}
+.step-tile {
+	margin-top: 20px;
+	text-align: center;
+}
+.step-detail{
+	list-style: none;
+	padding:0;
+	margin-top: 9px;
+}
+.step-detail li{
+	line-height: 18px;
+	font-size: 13px;
+	text-align: center;
+}
+.step-detail li:last-of-type img{
+	width: 20px;
+	margin-top:14px ;
+	margin-bottom: 28px;
+}
+/*修改*/
+.preach-list li{
+	position: relative;
+}
+.preach-list h3{
+	color: #464646;
+	font-size: 14px;
+	margin-bottom: 17px;
+}
+.preach-list .img{
+	width: 108px;
+	position: absolute;
+	right: 15px;
+	top:14px;
+}
+.preach-list .img>img{
+	width: 100%;
+}
+.preach-list .mui-table-view-cell{
+	padding-bottom: 25px;
+}
+
+.icon_address {
+	width: 13px;
+	height: 13px;
+    margin-right: 10px;
+    display: inline-block;
+    background: url(../images/school/preach_p.png) no-repeat center/100% auto;
+}
+.icon_time {
+	width: 13px;
+	height: 13px;
+    margin-right: 10px;
+    display: inline-block;
+    background: url(../images/school/preach_time.png) no-repeat center/100% auto;
+}
+.mui-slider .mui-slider-group #item1 img{
+	width: 23px !important;
+}
+.mui-slider .mui-slider-group #item1 .step-img>img{
+	width: 21px !important;
+}

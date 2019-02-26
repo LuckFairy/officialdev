@@ -151,3 +151,54 @@
 				margin-bottom: 52px;
 				font-size: 28px;
 			}
+			/*修改*/
+			.section-intr{
+				background: #F8F8F9;
+			}
+			.top-cont{
+				padding-bottom: 50px;
+			}
+			.bottom-cont{
+				background: #F8F8F9;
+			}
+			.preach{
+				background: #fff;
+				padding-bottom: 175px;
+			}
+			.preach li.title{
+				padding-top: 26px;
+				font-size: 28px;
+				margin-bottom: 80px;
+			}
+			.preach li{
+					position: relative;
+				    width: 62.5%;
+   					margin: 0 auto;
+   					color: #626262;
+				    text-align: left;
+				    font-size: 14px;
+				    height: 110px;
+			}
+			.preach li .img{
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -99px;
+				width: 30%;
+			}
+			.preach li.first h3{
+				margin-top: 0;
+			}
+			.preach li h3{
+				margin-top: 140px;
+				font-weight: normal;
+				color:#424242;
+				font-size: 22px;
+				margin-bottom: 22px;
+			}
+			.preach li p{
+				line-height: 22px;
+			}
+			.preach li p>span{
+				margin-right: 24px;
+			}
